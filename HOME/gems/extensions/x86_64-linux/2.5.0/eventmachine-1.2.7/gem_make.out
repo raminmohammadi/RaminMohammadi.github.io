@@ -1,0 +1,16 @@
+current directory: /home/ramin/Documents/RaminMohammadi.github.io/HOME/gems/gems/eventmachine-1.2.7/ext/fastfilereader
+/usr/bin/ruby2.5 -r ./siteconf20220511-10146-1m8bqh0.rb extconf.rb
+creating Makefile
+
+current directory: /home/ramin/Documents/RaminMohammadi.github.io/HOME/gems/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR=" clean
+
+current directory: /home/ramin/Documents/RaminMohammadi.github.io/HOME/gems/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR="
+compiling mapper.cpp
+compiling rubymain.cpp
+linking shared-object fastfilereaderext.so
+
+current directory: /home/ramin/Documents/RaminMohammadi.github.io/HOME/gems/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 fastfilereaderext.so ./.gem.20220511-10146-1wv6km9
