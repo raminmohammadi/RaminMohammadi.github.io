@@ -1,9 +1,9 @@
 basic_settings:
-  site_title: Personal
+  site_title: Machine Learning For Engineering
   favicon_image: /images/NEU.png
 
 header_settings:
-  logo_image: 
+  logo_image: /images/NEU.png
   logo_width: 200
 
 menu_settings:
@@ -58,7 +58,7 @@ social_settings:
   soundcloud_url: ''
   spotify_url: ''
   bandcamp_url: ''
-  linkedin_url: ''
+  linkedin_url: 'https://www.linkedin.com/in/ramin-mohammadi-ml/'
 
 color_settings:
   background_color: '#ffffff'
