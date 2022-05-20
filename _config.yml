@@ -1,7 +1,7 @@
-site: Personal Jekyll Theme
+site: Machine Learning For Engineering
 
-url: 
-baseurl: "RaminMohammadi"
+url: http://www.machinelearningforengineering.com/
+baseurl: 
 
 collections:
   pages:
