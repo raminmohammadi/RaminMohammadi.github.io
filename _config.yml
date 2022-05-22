@@ -1,7 +1,7 @@
-site: Personal Jekyll Theme
+site:
 
 url: 
-baseurl: 
+baseurl:
 
 collections:
   pages:

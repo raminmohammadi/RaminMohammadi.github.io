@@ -1,6 +1,6 @@
 ---
 title: Contact
-subtitle: Personal comes with a built-in contact form that's free and easy to set up.
+subtitle: You can reach out to me with your questions and inquiries, and I will try to respond as soon as possible.
 description: Personal is the perfect theme for developers, designers and other creatives.
 featured_image: /images/demo/contact.jpg
 ---
