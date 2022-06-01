@@ -14,10 +14,11 @@ menu_settings:
       url: '/'
     - title: 'Contact'
       url: '/contact'
-    - title: 'About Me'
-      url: '/about'
+    - title: 'Meet Our Team'
+      url: '/about/'
+
 footer_settings:
-  footer_tagline: A sleek, modern Jekyll theme for personal websites.
+  footer_tagline:
 
 hero_settings:
   overlay_opacity: 0.8
