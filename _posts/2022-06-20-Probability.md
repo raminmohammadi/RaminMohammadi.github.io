@@ -3,7 +3,7 @@ title: Probabilities and Statistics
 subtitle: Sai Akhilesh Ande
 date: 2022-06-20 00:00:00
 description: 
-featured_image: '/images/Posts/Probabilities/demo/demo-square.jpg'
+featured_image: '/images/demo/demo-square.jpg'
 ---
 
 

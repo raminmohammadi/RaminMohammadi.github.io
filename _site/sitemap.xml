@@ -6,11 +6,11 @@
 </url>
 <url>
 <loc>http://localhost:4000/contact</loc>
-<lastmod>2022-06-26T11:38:29-04:00</lastmod>
+<lastmod>2022-06-26T12:41:27-04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/thanks</loc>
-<lastmod>2022-06-26T11:38:29-04:00</lastmod>
+<lastmod>2022-06-26T12:41:27-04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/blog/linear-algebra</loc>
@@ -19,6 +19,10 @@
 <url>
 <loc>http://localhost:4000/blog/probability</loc>
 <lastmod>2022-06-19T20:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog/eigendecomposition-pca</loc>
+<lastmod>2022-06-25T20:00:00-04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/project/demo-project</loc>
