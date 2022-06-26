@@ -38,12 +38,12 @@ arrow pointing from the origin to the end point given by the list of numbers.
 
 ## 2.	Matrix
 
-<img src="/images/Posts/Linear_Algebra/p3.gif" width="500" height="200">
+<img src="/images/Posts/Linear_Algebra/p3.gif" width="356" height="150" alt="">
 
 __Definition__: Matrices are logical and convenient representations of large 
 sets of real numbers or variables, which are arranged in arrays of rows and columns.
 
-Matrix $$A\in \Re^{n*d}$$ is represented as $$ \begin{bmatrix}a_{11}& ... & a_{1,d} \\ . & ... & .\\ . & ... & . \\ a_{n,1} & ... & a_{n,d} \end{bmatrix} $$
+Matrix $$ A\in \Re^{n*d}$$ is represented as $$ \begin{bmatrix}a_{11}& ... & a_{1,d} \\ . & ... & .\\ . & ... & . \\ a_{n,1} & ... & a_{n,d} \end{bmatrix} $$
 
 ## 3. Properties of matrix
 
@@ -51,16 +51,16 @@ Matrix $$A\in \Re^{n*d}$$ is represented as $$ \begin{bmatrix}a_{11}& ... & a_{1
 Definition: The transpose of an m x n matrix A is an n x m matrix obtained by 
 interchanging rows and columns of A.
 
-<img src="/images/Posts/Linear_Algebra/p5.png" width="550" height="170">
+<img src="/images/Posts/Linear_Algebra/p5.png" width="553" height="174" alt="">
 
 Try transposing a matrix using your right hand (following this paw):
 
-<img src="/images/Posts/Linear_Algebra/p6.png" width="500" height="210">
+<img src="/images/Posts/Linear_Algebra/p6.png" width="1004" height="384" alt="">
 
 
 3.2 Inverse of a matrix
 
-<img src="/images/Posts/Linear_Algebra/p7.png" width="380" height="220">
+<img src="/images/Posts/Linear_Algebra/p7.png" width="399" height="221" alt="">
 
 The inverse of matrix is another matrix, which on multiplication with the given 
 matrix gives the multiplicative identity. 
@@ -68,7 +68,7 @@ matrix gives the multiplicative identity.
 For a matrix A, its inverse is $$A^{-1}$$ and $$A.A^{-1} = A^{-1}.A = I_n$$
 where $$I_n$$ is the identity matrix.
               
-<img src="/images/Posts/Linear_Algebra/p8.png" width="237" height="200">
+<img src="/images/Posts/Linear_Algebra/p8.png" width="237" height="200" alt="">
 
 3.3 Determinant of a matrix
 Determinant of a matrix, indirectly calculated the area covered by columns or 
@@ -87,15 +87,15 @@ $$ |W| = a*d - b*c$$
 
 Definition: The dot product is an algebraic operation that takes two same-sized vectors and returns a single number.
 
-<img src="/images/Posts/Linear_Algebra/p9.png" width="600" height="120">
+<img src="/images/Posts/Linear_Algebra/p9.png" width="1434" height="200" alt="">
                                  
 Geometric definition: the dot product is the product of the Euclidean magnitudes of two vectors and the cosine of the angle between two.
 
-<img src="/images/Posts/Linear_Algebra/p10.png" width="600" height="230">
+<img src="/images/Posts/Linear_Algebra/p10.png" width="1156" height="424" alt="">
 
 Definition of Matrix multiplication: basically, a matrix version of the dot product. Remember the result of dot product is a scalar. The result of matrix multiplication is a matrix, whose elements are the dot products of pairs of vectors in each matrix. 
 
-<img src="/images/Posts/Linear_Algebra/p11.png" width="485" height="230">
+<img src="/images/Posts/Linear_Algebra/p11.png" width="484" height="227" alt="">
 
 
 Requirement: 
@@ -108,11 +108,11 @@ Eigenvector: Every vector (list of numbers) has a direction when it is plotted o
 
 Eigenvalue: The scalar that is used to transform (stretch/compress) an Eigenvector.
  
-<img src="/images/Posts/Linear_Algebra/eigen1.png" width="275" height="109">
+<img src="/images/Posts/Linear_Algebra/eigen1.png" width="275" height="109" alt="">
 
 In matrix form
 
-<img src="/images/Posts/Linear_Algebra/eigen2.png" width="1000" height="360">
+<img src="/images/Posts/Linear_Algebra/eigen2.png" width="1056" height="371" alt="">
 
 Meaning: 
 
