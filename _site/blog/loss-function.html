@@ -1,0 +1,546 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+
+
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+	Machine Learning For Engineering
+
+	Personal Theme by https://jekyllthemes.io
+	Premium + free Jekyll themes for your blog or website.
+
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Page Info -->
+	<link rel="shortcut icon" href="/images/favicon.png">
+	<title>Loss Function – Machine Learning For Engineering</title>
+	<meta name="description" content="">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Loss Function – Machine Learning For Engineering">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:image:src" content="http://localhost:4000/images/demo/demo-square.jpg">
+
+	<!-- Facebook OpenGraph -->
+	<meta property="og:title" content="Loss Function – Machine Learning For Engineering" />
+	<meta property="og:description" content="" />
+	<meta property="og:image" content="http://localhost:4000/images/demo/demo-square.jpg" />
+
+	
+	<!-- Font Embed Code -->
+	<link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+	
+
+	<!-- Styles -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<!-- Icons -->
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/solid.js" integrity="sha384-GXi56ipjsBwAe6v5X4xSrVNXGOmpdJYZEEh/0/GqJ3JTHsfDsF8v0YQvZCJYAiGu" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/brands.js" integrity="sha384-0inRy4HkP0hJ038ZyfQ4vLl+F4POKbqnaUB6ewmU4dWP0ki8Q27A0VFiVRIpscvL" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/fontawesome.js" integrity="sha384-NY6PHjYLP2f+gL3uaVfqUZImmw71ArL9+Roi9o+I4+RBqArA2CfW1sJ1wkABFfPe" crossorigin="anonymous"></script>
+
+	
+	<!-- Custom Styles -->
+	<style></style>
+	
+
+	
+	<!-- Analytics Code -->
+	
+	
+
+	
+	<!-- Extra Header JS Code -->
+	
+	
+	
+</head>
+
+
+<body class="loading ajax-loading" data-site-url="http://localhost:4000" data-page-url="/blog/loss-function">
+
+
+	<header class="header">
+
+	<div class="wrap">
+
+		
+		<a href="/" class="header__title">
+			Machine Learning For Engineering
+		</a>
+		
+
+		<div class="menu">
+			<div class="menu__toggle js-menu-toggle">
+				<div class="menu__toggle__icon"><span></span></div>
+			</div>
+			<div class="menu__wrap">
+				<ul class="menu__list">
+					
+					<li class="menu__list__item">
+						<a href="/blog/" class="menu__list__item__link">Blog</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/" class="menu__list__item__link">Projects</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/contact" class="menu__list__item__link">Contact</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/about/" class="menu__list__item__link">Meet Our Team</a>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+</header>
+
+
+	<div class="loader"><svg width="120" height="30" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="60" cy="15" r="9" fill-opacity="0.3"><animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="105" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle></svg></div>
+
+	<div class="page-loader"></div>
+
+	
+	<div class="page">
+
+		<div class="page__content" data-page-title="Loss Function – Machine Learning For Engineering">
+
+			<section class="hero hero--single">
+
+	<div class="hero__image" style="background-image: url(/images/demo/demo-square.jpg)">
+		<div class="hero__overlay"></div>
+	</div>
+
+	<div class="wrap">
+
+		<h1>Loss Function</h1>
+		<p>30 June 2022</p>
+
+	</div>
+
+</section>
+
+<section class="single">
+
+	<div class="wrap">
+
+		<article class="single-post">
+
+			<h3 id="you-are-going-to-experience-some-huhaah-moments-in-this-post-lets-dive">you are going to experience some Huh…aah!! moments in this post. lets dive!</h3>
+
+<h3 id="disclaimer-ill-try-to-make-sense-of-loss-functions-numerically-this-post-doesnt-involve-any-mathematical-proofs-or-equations">DISCLAIMER: I’ll try to make sense of loss functions numerically, this post doesn’t involve any mathematical proof’s or equations.</h3>
+<p><br /></p>
+
+<h2 id="pre-school">Pre-School</h2>
+
+<p>To start of with, what is error function? 
+in a lame language consider pre school 4 table… like the multiples of 4. <br />
+4 * 5 = 20 (consider 4 as a feature and 5 as weight to be multiplied which is unknown and 20 is the target), while training a simple linear regression model, remember you initialize weights(in this case 5-still unknown) to a random number or zero. so, your linear regression model starts at ‘0’ as a weight
+and train until it gets updated to 5. as follows<br />
+4 * 0 = 0 (error: 20 - 0 = 20) - error is something which the predicted value is deviated from.<br />
+4 * 1 = 4 (error: 20 - 4 = 16) - you see here error is decreased in the next step!</p>
+
+<p><strong>what did you do? - you updated the weight from 0 to 1. that is all you do in Machine Learning, you are supposed to find a weight vector/matrix/value that can lessen your error. <br /> 
+voila!.. now you understand that your error should decrease to get to the actual target. (small huh…ah!)</strong> <br />
+you passed pre-school 
+<br />
+<br /></p>
+
+<h2 id="middle-school">Middle School</h2>
+
+<p>You may ask now, okay i understand this weight concept, what is this to do 
+anything with datasets. let’s see an example.<br />
+sample dataset</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Car Model</th>
+      <th style="text-align: center">mpg</th>
+      <th style="text-align: center">cyl</th>
+      <th style="text-align: center">disp</th>
+      <th style="text-align: center">hp</th>
+      <th style="text-align: center">drat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">MazdaRX4</td>
+      <td style="text-align: center">21.0</td>
+      <td style="text-align: center">6</td>
+      <td style="text-align: center">160</td>
+      <td style="text-align: center">110</td>
+      <td style="text-align: center">3.90</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Mazda RX4 Wag</td>
+      <td style="text-align: center">21.0</td>
+      <td style="text-align: center">6</td>
+      <td style="text-align: center">160</td>
+      <td style="text-align: center">110</td>
+      <td style="text-align: center">3.9</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Datsun</td>
+      <td style="text-align: center">710</td>
+      <td style="text-align: center">22.8</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">108</td>
+      <td style="text-align: center">93</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Hornet 4 Drive</td>
+      <td style="text-align: center">21.4</td>
+      <td style="text-align: center">6</td>
+      <td style="text-align: center">258</td>
+      <td style="text-align: center">110</td>
+      <td style="text-align: center">3.08</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Hornet Sportabout</td>
+      <td style="text-align: center">18.7</td>
+      <td style="text-align: center">8</td>
+      <td style="text-align: center">360</td>
+      <td style="text-align: center">175</td>
+      <td style="text-align: center">3.15</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>unlike we have seen in pre-school, we have 5 features instead of one(4 in pre-school example).</p>
+
+<p>that is <span style="color:black;"> mpg ,cyl, disp, hp, drat.  </span></p>
+
+<p>so, as you expected we need to find 5 different weights to get target output.
+let’s have a notation for weights as ‘θ’. so our weights look like  <span style="color:red;">θ1, θ2, θ3, θ4, θ5</span>.</p>
+
+<p>our LR eq look like <span style="color:blue;">mpg * θ1 + cyl * θ2 + disp * 
+θ3 + hp * θ4 + drat * θ5</span>. and that’s it, you need to constantly update the weights until you hit the target.</p>
+
+<p>Also, one more thing, there are 5 samples in the above dataset, so you need 
+to sum up all the 5 errors to get total error of the model. your new 
+objective now is to reduce total error(i.e error from all the samples).</p>
+
+<p>You have pretty much seen the basics of how machine learning works 
+numerically. Let’s see the actual content of this post.</p>
+
+<h2 id="the-costloss-function">THE COST/LOSS FUNCTION!!!</h2>
+
+<h3 id="high-school">High-School</h3>
+
+<p>There are many different types of cost/loss functions you see in the internet, you may ask me the question, Sid, we have seen in pre-school the difference itself makes sense to calculate the loss, why do we have many kinds of them? Let’s break them down.</p>
+
+<h3 id="regression">Regression</h3>
+
+<ul>
+  <li>MAE (mean absolute error)</li>
+  <li>RMSE (mean squared error)</li>
+  <li>Mean Squared Logarithmic Error Loss</li>
+  <li>Huber Loss</li>
+</ul>
+
+<h3 id="classification">Classification</h3>
+
+<ul>
+  <li>Binary Cross Entropy Loss</li>
+  <li>Hinge Loss</li>
+  <li>Square Hinge Loss</li>
+  <li>Multi-Class Cross Entropy Loss(Categorical Cross Entropy Loss)</li>
+  <li>Kullback Leigler Divergence Loss</li>
+</ul>
+
+<h3 id="regression-1">Regression</h3>
+
+<p><strong>MAE:</strong> 
+we have seen all the positivity in your algo, now its time to have some negativity!
+As you know Absolute value refers to make negetive values to positive. i.e negative error to positive in our case. from basic linear algebra, we know that -ve sign refers to opposite direction.<br />
+<br />
+<img src="/images/Posts/Cost_function/vector.jpg" style="display: block;          margin-left: auto;         margin-right: auto; height:250px;width:450px" />
+<br />
+That’s how it feels if you have same value with different signs, yes, they 
+both cancel out and results in wrong total error, hence we make an Absolute 
+decision to Absolute the negative values.<br />
+<br />
+i.e MAE = (1/m) * sum(| actual - predicted |) -&gt; {| | indicates Absolute}<br />
+<br />
+I would also like to give you an example of how to interpret MAE, in the 
+example you have seen in middle-school, say you are predicting car prices, 
+and you got MAE of 1500, which means your model is giving +/- $1500 in 
+error. which is +1500 is bad for the customer and -1500 is bad for the company/website.</p>
+
+<p><strong>RMSE:</strong> Let’s say some of your samples have high error when compared to 
+others, when taking a mean of them, you kind of neutralize the error on 
+total error, but you missed the samples that have high error, to handle this 
+you kind to impose penalty to the high error by squaring them. The squaring 
+means that larger mistakes result in more error than smaller mistakes, 
+meaning that the model is punished for making larger mistakes. Doesn’t it 
+makes sense! (another small huh..ah! moment). This also handles the opposite
+direction vectors problem, ain’t it?<br />
+<br /></p>
+
+<script type="math/tex; mode=display">MAE = \frac{1}{m}\sum_{i=1}^{m}(actual_i - predicted_i)^{2}</script>
+
+<p>and ofcourse root mean squared error makes the value on same scale.</p>
+
+<p><strong>Root Mean Squared Log Error:</strong> 
+First ill introduce the equation:<br />
+<br />
+<img src="/images/Posts/Cost_function/rmsle.png" style="display: block; display:block;         margin-left: auto;         margin-right: auto; height:125px;width:350px" />
+<br /></p>
+
+<p>That’s as lot in a equation compared to what we have seen earlier. let’s break it down.<br />
++1 makes log(0) not actual being undefined or error. where log(1) = 0. 
+<br />
+In the case of RMSE, the presence of outliers can explode the error term to 
+a very high value. But, in the case of RMLSE the outliers are drastically 
+scaled down therefore nullifying their effect. Let’s understand this with a small example:
+<br /></p>
+
+<table>
+
+<tr><th>Table 1  </th><th>Table 2 </th></tr>
+
+<tr><td>
+
+|         |   X    | 	Y  |
+|:-------:|:------:|:---:|
+| Case 1  |   30   | 35  |
+|         |   70   | 90  |
+|         |   90   | 90  |
+|  RMSE   | 4.123  |  -  | 
+|  RMSLE  | 0.0019 |  -  |
+
+
+</td><td>
+
+
+|        |   X    | 	Y  |
+|:------:|:------:|:---:|
+| Case 2 |   30   | 35  |
+|        |   70   | 90  |
+|        |   90   | 90  |
+|        |  102   | 750 |
+|  RMSE  | 168.4  |  -  | 
+| RMSLE  | 0.7504 |  -  |
+
+
+</td></tr> 
+
+</table>
+
+<p>We can clearly see that the value of the RMSE explodes in magnitude as soon 
+as it encounters an outlier. In contrast, even on the introduction of the 
+outlier, the RMSE error is not affected much. From this small example, we 
+can clearly infer that RMSE is very robust when outliers.
+<br />
+if you observe the equation. it can be re-written as</p>
+
+<p><strong>log( (predicted+1) / (actual+1))</strong></p>
+
+<p>which is broadly written as relative error between the predicted and the actual.</p>
+
+<p>lets see a couple of examples to understand this effect:</p>
+
+<center>
+<table>
+<tr><th>Table 1  </th><th>Table 2 </th></tr>
+<tr><td>
+
+| | Y | X |  RMLSE | RMSE |
+|-------:|--:|--:|----:|---|
+|Case 1: | 100| 90|0.1053 |10|
+
+</td><td>
+
+| | Y | X |  RMLSE | RMSE |
+|-------:|--:|--:|----:|---|
+|Case 2: | 10000| 9000|0.1053 |1000
+
+</td></tr> </table>
+</center>
+
+<p><br />
+Now you should have understood the relative error which we mentioned above, RMSLE metric only considers the relative error between the Predicted and the actual value and the scale of the error is not omitted. where, RMSE value Increases in magnitude as the scale of error increases.  <br />
+<br /></p>
+
+<p><strong>In simple words, more penalty is incurred when the predicted Value is less than the Actual Value. and, Less penalty is incurred when the predicted value is more than the actual value.</strong><br />
+ <br />
+<em>I’ll give you a perfect example of how this works in real world scenario.<br />
+Consider a ride scenario like uber/lyft. you are predicting the time taken to end the ride. 
+if the algorithm overstimates the ride time, its perfectly fine to end the ride before the estimated time and acceptable.<br />
+on the contrary if algorithm predicts ride time is less than what it takes, the uber driver/uber gets bad reviews, which is not acceptable.</em><br />
+<br />
+<strong>huh…ah! moment isnt it?</strong></p>
+
+<p><br /></p>
+
+<ul>
+  <li><strong>Huber Loss:</strong><br />
+when you use the MAE in optimizations that use gradient descent, you’ll face the fact that the gradients are continuously large. This is bad for learning - it’s easy to overshoot the minimum contineously, which makes hard to converge at minimum. Consider Huber loss. Hold on lets make sense of what we have just read!
+<img src="/images/Posts/Cost_function/huber.png" style="display: block;        margin-left: auto;       margin-right: auto; height:125px;width:350px" />
+Interpreting the equation:</li>
+  <li>in the first part, we perform this only when the absolute error is less than or equal to 𝛿 which we can configure.</li>
+  <li>we use the second part otherwise. let’s see how 𝛿 differs when predicting the target and respective huber loss.
+<img src="/images/Posts/Cost_function/huber_viz.png" style="display: block;        margin-left: auto;       margin-right: auto; height:300px;width:450px" />
+<br />
+For relatively small 𝛿’s (in our case, with 𝛿 = 0.25, you’ll see that the loss function becomes relatively flat. It takes quite a long time before loss increases, even when predictions are getting larger and larger.<br />
+For larger 𝛿’s, the slope of the function increases. As you can see, the larger the 𝛿, the slower the increase of this slope: eventually, for really large 𝛿 the slope of the loss tends to converge to some maximum.
+If you look closely, you’ll notice the following:<br />
+<br /> 
+With large 𝛿, the loss becomes increasingly sensitive to larger errors and outliers. That might be good if your errors are small, but you’ll face trouble when your dataset contains outliers.</li>
+</ul>
+
+<p><strong>Huber loss approaches MAE when 𝛿 ~ 0 and MSE when 𝛿 ~ ∞ (large numbers.)</strong></p>
+
+<p><strong>That means You are controlling the ‘degree’ of MAE vs MSE-ness you’ll introduce in your loss function.</strong> As we have this benifit, you may ask then why dont we use huber everytime. As you have to configure them manually you’ll have to spend time and resources on finding the most optimum 𝛿 for your dataset. This is an iterative problem that, in the extreme case, may become impractical at best and costly at worst. However, in most cases, it’s best just to experiment - perhaps, you’ll find better results!</p>
+
+<p><br /></p>
+
+<p><strong>Everything is great with regression, what if the problem is classification?, which loss do we use frequently?. well that’s a story for another WHAT IF</strong><br />
+<br /></p>
+
+<p>Almost forgot you passed High School.</p>
+
+<p>-Siddhartha Putti <br />
+putti.s@northeasten.edu</p>
+
+
+
+		</article>
+
+	</div>
+
+</section>
+
+		</div>
+
+	</div>
+
+
+	<footer class="footer">
+
+	<div class="wrap">
+
+		<p class="footer__text"></p>
+
+		<div class="footer__copyright">
+			<span>© 2022 Machine Learning For Engineering</span>
+			<a href="https://jekyllthemes.io" target="_blank">Jekyll Themes</a>
+		</div>
+
+		<ul class="socials">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://medium.com/@mohammadi.r" target="_blank" class="socials__item__link" title="Medium">
+			<i class="fab fa-medium" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://www.linkedin.com/in/ramin-mohammadi-ml/" target="_blank" class="socials__item__link" title="Linkedin">
+			<i class="fab fa-linkedin" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+</ul>
+
+	</div>
+
+</footer>
+
+
+	<!-- Javascript Assets -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/js/plugins-min.js"></script>
+	<script src="/js/personal-min.js"></script>
+
+	
+	<!-- Extra Footer JS Code -->
+	
+	
+
+
+</body>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ["\\(", "\\)"] ],
+      displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
+
+</html>
