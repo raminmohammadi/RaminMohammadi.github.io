@@ -1,5 +1,5 @@
 ---
-title: Cost Functions - part 1 
+title: Loss Functions - part 1 
 subtitle: by Siddhartha Putti 
 date: 2022-07-01 00:00:00
 description: 
