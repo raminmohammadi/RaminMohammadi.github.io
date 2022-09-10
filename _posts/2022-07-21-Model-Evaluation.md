@@ -1,5 +1,5 @@
 ---
-title: Loss Functions - part 1 
+title: Model Evaluation 
 subtitle: by Jinchuan He 
 date: 2022-07-21 00:00:00
 description: 
