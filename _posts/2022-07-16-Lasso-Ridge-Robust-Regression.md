@@ -49,7 +49,7 @@ Robust regression is an alternative approach to ordinary linear regression, when
 
 Let's recall the Loss function of Linear Regression, which is Mean Square Error (MSE) i.e Norm 2. It increases sharply with the size of the residual.<br>**Residual:** The difference between the predicted value and the actual value.<br>
 
-<font size="3">  $$   J(θ) = \frac{1}{n} \displaystyle\sum_{i=1}^n(y - ŷ)^2  $$<br>
+<font size="3">  $$   J(θ) = \frac{1}{n} \displaystyle\sum_{i=1}^n(y - ŷ)^2  $$<br></font>
 
 <img src="/images/Posts/Lasso_Ridge_Robust_Regression/Norm 2.png"
      style="display: block; 
@@ -62,7 +62,7 @@ The problem with MSE is that, it is highly sensitive towards large errors compar
 <img src="/images/Posts/Lasso_Ridge_Robust_Regression/Norm 1.png"
      style="display: block; 
         margin-left: auto;
-        margin-right: auto; height:250px;width:300px"/>
+        margin-right: auto; height:250px;width:300px"/> </font>
 
 
 **Huber loss** solves this problem. It preserves the differentiability of a function like Norm 2 and insensitive to outliers like Norm 1.
@@ -78,7 +78,8 @@ Huber loss is a combination of L2 and L1 functions, it looks like as below.<br>
          \end{cases}\\[3pt]
           \label{equ:yannibel}
        \end{aligned} 
-       $$
+       $$ 
+       </font>
  <br>
 <img src="/images/Posts/Lasso_Ridge_Robust_Regression/Huber Loss.png"
      style="display: block; 
@@ -143,7 +144,7 @@ Below is the hypothesis, which gives the relationship between input variables an
         
 The model fitting involves a cost/loss function known as the sum of squares, which is sum of the squared differences between the actual Y value and predicted value using the defined hypothesis.<br>
 
-<font size="4"> $$L(θ) = \displaystyle\sum_{i=1}^n (y_i -h_θ(x_i))^2 $$
+<font size="4"> $$L(θ) = \displaystyle\sum_{i=1}^n (y_i -h_θ(x_i))^2 $$ </font>
 
 The minimum value of cost function represents the relationship between X and Y in the best possible manner. So,  ***our goal is to reduce the cost function (i.e error difference) using best weights by adjusting regularization factor.***
 <br>
@@ -160,7 +161,7 @@ Lasso Regression uses ***L1 regularization technique***. This technique is used 
 ##### Why don't we directly add model parameters as penalty? 
 Because, our model parameters can be negative, adding them might decrease our loss instead of increasing it. In order to circumvent this, we can either take their absolute values(Lasso) or square our model parameters(Ridge).
 
-  <font size="4"> $$ L1 = ║θ║_1 = \displaystyle\sum_{i=1}^n ┃θ_i┃$$ 
+  <font size="4"> $$ L1 = ║θ║_1 = \displaystyle\sum_{i=1}^n ┃θ_i┃$$ </font>
 
 ### Working of Lasso Regression:
 In Linear Regression, during the training phase, if the model feels like any specific features are particularly important, the model may place a large weight to those features (i.e assigns large coefficient values). The model is not penalized for its choice of weights, at all. This sometimes leads to overfitting in small datasets.
@@ -171,7 +172,7 @@ L1 regularization adds a penalty that is equal to the absolute value of the magn
 
     
   <font size="4"> $$ L(θ) =  \displaystyle\sum_{i=1}^n (y_i-h_θ(x_i))^2 + λ \displaystyle\sum_{i=1}^n 
-  ┃θ_i┃$$ 
+  ┃θ_i┃$$ </font>
   
 It forces to get weights from shape of Norm 1, as shown below.<br>
 
@@ -224,7 +225,8 @@ Let’s say the main cause behind overfitting is large coefficients/weights (i.e
 ***Let’s extend the same example:*** We want to predict the price of a house based on age of the house, Sq.ft, #No. of. Rooms, Neighborhood and #Avg Temperature. <br>
 
 As per the hypothesis,
-**Price (y pred) = $θ_0$ + $θ_1$$*$Age + $θ_2$$*$Sq.ft + $θ_3$$*$#No. of. Rooms + $θ_4$$*$Neighborhood + $θ_5$$*$#Avg Temperature**
+
+$$ Price (y_{pred}) = \theta_0 + θ_1 * Age + θ_2 * Sq.ft + θ_3 * \#No. of. Rooms + θ_4 * Neighborhood + θ_5* Avg \; Temperature $$
 
 From above hypothesis, age of the house, Sq.ft and #No. of. Rooms are most relevant features. However, the Neighborhood is less relevant, and average temperature is might be irrelevant to derive the price of the house.<br>
 
@@ -237,26 +239,26 @@ Remember, I mentioned in working of lasso Regression that during the training ph
 Consider the weights/coefficients corresponding to 5 input features as below.<br>
 This is just an example.<br>
 
-$θ  = [θ_0, θ_1 , θ_2 , θ_3 , θ_4 , θ_5] \\
-θ  = [5, 10, 8, 6, 4, 2]$ 
+$$ θ  = [θ_0, θ_1 , θ_2 , θ_3 , θ_4 , θ_5] \\
+   θ  = [5, 10, 8, 6, 4, 2] $$ 
 
-      
-$ \begin{aligned} 
+$$ \begin{aligned} 
         Lasso  \space / \space L1 \space  penalty & =   \space |θ_0+θ_1+θ_2+θ_3+θ_4+θ_5| \\ 
                 &  =\space |5| + |10| + |8| + |6| + |4| + |2| = 35 \\
-\end{aligned} $
+\end{aligned} $$
 <br>
       
 If we shrink each parameter by 1, The penalty looks like below. <br>
-$ \begin{aligned} 
-        θ_0 & \space = \space   |4| + |10| + |8| + |6| + |4| + |2| = 34 \\
-        age \space of \space the \space house & \space = \space   |5| + |9| + |8| + |6| + |4| + |2| = 34  \\ 
-              Sq.ft  & \space = \space |5| + |10| + |7| + |6| + |4| + |2| = 34\\
-              No. of. Rooms  & \space = \space |5| + |10| + |8| + |5| + |4| + |2| = 34\\
-              Neighborhood  & \space = \space |5| + |10| + |8| + |6| + |3| + |2| = 34\\
-              Avg \space Temp  & \space = \space |5| + |10| + |8| + |6| + |4| + |1| = 34\\
-\end{aligned} $
+$$ \begin{aligned} 
+        θ_0 & \space => \space   |4| + |10| + |8| + |6| + |4| + |2| = 34 \\
+        age \space of \space the \space house & \space => \space   |5| + |9| + |8| + |6| + |4| + |2| = 34  \\ 
+              Sq.ft  & \space => \space |5| + |10| + |7| + |6| + |4| + |2| = 34\\
+              No. of. Rooms  & \space => \space |5| + |10| + |8| + |5| + |4| + |2| = 34\\
+              Neighborhood  & \space => \space |5| + |10| + |8| + |6| + |3| + |2| = 34\\
+              Avg \space Temp  & \space => \space |5| + |10| + |8| + |6| + |4| + |1| = 34\\
+\end{aligned} $$
 <br>
+
 <br>
 This means that, by reducing each parameter by one, ***our penalty is reduced from 35 to 34***.
 **Since the lasso penalty consists of the absolute model parameters, large values are not considered more strongly than smaller values.** This means that the lasso penalty gives same importance to all parameters, it would not prioritize minimizing any particular model parameter, unlike the ridge penalty, which prioritizes large parameters.<br>
@@ -268,7 +270,7 @@ As the λ value increases, coefficients decrease and eventually ***become zero**
 
 
   <font size="3"> $$ L(θ) =  \displaystyle\sum_{i=1}^n (y_i-h_θ(x_i))^2 + λ \displaystyle\sum_{i=1}^n 
-  ┃θ_i┃$$ 
+  ┃θ_i┃$$ </font>
       
 Let’s try to minimize the loss function of Lasso Regression <br>
 - When **λ = 0**, regularization term becomes 0, the objective becomes similar to simple linear regression, hence no coefficients are eliminated from the equation.<br>
@@ -307,14 +309,14 @@ However, when two or more predictors in a regression model are highly related to
 Ridge regression uses ***L2 regularization technique.*** This technique is used to deal with the multicollinearity problems through constructing the coefficient and by keeping all the variables. ***The penalty term in Ridge regression is equal to sum of squared magnitude” of the coefficient.***<br>
 
 
-  <font size="4"> $$ L2 = ║θ║^2_2 = \displaystyle\sum_{i=1}^n θ_i^2 $$ 
+  <font size="4"> $$ L2 = ║θ║^2_2 = \displaystyle\sum_{i=1}^n θ_i^2 $$ </font>
         
 
 ### L2 Regularization:
 L2 regularization adds a penalty that is equal to the  sum of squared magnitude of the coefficients. Job of Ridge regularization is to penalize a model based on the sum of the squared coefficient values using L2 penalty.<br>
 
   <font size="4"> $$ L(θ) =  \displaystyle\sum_{i=1}^n (y_i-h_θ(x))^2 + λ \displaystyle\sum_{i=1}^n 
- θ_i^2 $$ 
+ θ_i^2 $$ </font>
 
 ##### L2/Ridge regularization is used when,
 - The number of predictor variables in a given set exceeds the number of observations.<br>
@@ -358,7 +360,8 @@ $$ \begin{aligned}
 \end{aligned} $$
 
 
-Optimal θ, i.e $θ^*$  will become 0 only when λ = ∞, ***so it is clear that in ridge regression, coefficients can never become zero.***<br>
+Optimal θ, i.e $$ θ^* $$  will become 0 only when λ = ∞, ***so it is clear that in ridge regression, coefficients can never become zero.***
+
 <br>
 
  **Unequal importance given to all features during Feature selection**
@@ -367,28 +370,28 @@ Let’s see the working of Ridge Regression
 Consider the weights/coefficients corresponding to 5 input features as below.<br>
 This is just an example. <br>
 
-$θ  = [θ_0, θ_1 , θ_2 , θ_3 , θ_4 , θ_5] \\
-θ  = [5, 10, 8, 6, 4, 2]$ 
+$$ θ  = [θ_0, θ_1 , θ_2 , θ_3 , θ_4 , θ_5] \\
+θ  = [5, 10, 8, 6, 4, 2] $$ 
     
-$ \begin{aligned} 
+$$ \begin{aligned} 
         Ridge  \space / \space L2 \space  penalty & =   \space θ_0^2+θ_1^2+θ_2^2+θ_3^2+θ_4^2+θ_5^2 \\ 
                 &  =\space 25 + 100 + 64 + 36 + 16 + 4 = 245 \\
-\end{aligned} $
+\end{aligned} $$
 <br>
       
 If we shrink each parameter by 1, The penalty looks like below. <br>
-$ \begin{aligned} 
-            θ_0 & \space = \space  16 + 100 + 64 + 36 + 16 + 4 = 236 \\ 
-        age \space of \space the \space house & \space = \space  25 + 81 + 64 + 36 + 16 + 4 = 226 \\ 
-              Sq.ft  & \space = \space 25 + 100 + 49 + 36 + 16 + 4 = 230\\
-              No. of. Rooms  & \space = \space 25 + 100 + 64 + 25 + 16 + 4 = 234\\
-              Neighborhood  & \space = \space 25 + 100 + 64 + 36 + 9 + 4 = 238\\
-              Avg \space Temp  & \space = \space 25 + 100 + 64 + 36 + 16 + 1 = 242\\
-\end{aligned} $
+$$ \begin{aligned} 
+            θ_0 & \space => \space  16 + 100 + 64 + 36 + 16 + 4 = 236 \\ 
+        age \space of \space the \space house & \space => \space  25 + 81 + 64 + 36 + 16 + 4 = 226 \\ 
+              Sq.ft  & \space => \space 25 + 100 + 49 + 36 + 16 + 4 = 230\\
+              No. of. Rooms  & \space => \space 25 + 100 + 64 + 25 + 16 + 4 = 234\\
+              Neighborhood  & \space => \space 25 + 100 + 64 + 36 + 9 + 4 = 238\\
+              Avg \space Temp  & \space => \space 25 + 100 + 64 + 36 + 16 + 1 = 242\\
+\end{aligned} $$
 <br>
     
 
-By shrinking $θ_0$ from 5 to 4, the ridge penalty is reduced by 9, from 245 to 236<br>
+By shrinking $$ θ_0 $$ from 5 to 4, the ridge penalty is reduced by 9, from 245 to 236<br>
       by shrinking age parameter from 10 to 9, the ridge penalty is reduced by 19, from 245 to 226<br>
       by shrinking Year manufactured parameter from 8 to 7, the ridge penalty is reduced by 15, from 245 to 230<br>
       by shrinking Origin parameter from 6 to 5, the ridge penalty is reduced by 9, from 245 to 234<br>
