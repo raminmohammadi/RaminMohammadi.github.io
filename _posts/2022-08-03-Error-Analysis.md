@@ -10,7 +10,7 @@ featured_image: '/images/demo/demo-square.jpg'
 <br/>
     
 
-<img src="/images/Posts/Error-Analysis/Error Analysis image.JPG"
+<img src="/images/Posts/Error_Analysis/Error Analysis image.jpg"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:370px;width:500px"/>
@@ -65,7 +65,7 @@ It produces four different possible outcomes. Again, **a cut-off (threshold) is 
 - The predicted value was falsely predicted, where the actual value was positive but the model predicted a negative value.
 - Also known as the Type 2 error
 
-<img src="/images/Posts/Error-Analysis/Confusion Matrix.png"
+<img src="/images/Posts/Error_Analysis/Confusion Matrix.png"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:300px;width:400px"/>
@@ -81,14 +81,16 @@ Accuracy and Error are the most common and intuitive measures derived from a con
 Let's look at few metrics !!
 
 ### 3.1 Accuracy<a name="accuracy"></a>
+
 Accuracy is used to find how often the classifier is correct? 
 Accuracy is the proportion of correctly classified data points among the total number of cases examined.
 The number of true positives and true negatives divided by the number of true positives, true negatives, false positives, and false negatives.
 
-<font size="3">  $$   Accuracy = \frac{Number\space of\space Correct\space Predictions}{Total\space Number\space of\space Predictions} $$<br>
-<font size="3">  $$   Accuracy = \frac{TP + TN}{TP + TN + FP + FN} $$<br>
+<font size="3">  $$   Accuracy = \frac{Number\space of\space Correct\space Predictions}{Total\space Number\space of\space Predictions} $$</font><br>
+<font size="3">  $$   Accuracy = \frac{TP + TN}{TP + TN + FP + FN} $$</font><br>
 
 ***Accuracy is not really a reliable metric for the real performance of a classifier when there are unequal number of observations in each class***, because it will yield misleading results.<br>
+
 Let's take a simple classification example of highily imbalances dataset. If there were 100 patients with cancer, 5 patients are diagnosed with cancer and 95 patients tested negative, the classifier could easily be biased into classifying all the samples as negative(No Cancer). It's a terrible outcome, as 5 out of all 5 cancer patients go undiagnosed.
 Though the overall accuracy would be 95%, but in practice the classifier would have a 100% recognition rate for Negative class but 0% recognition rate for Postive class.
 It may obscure important differences in costs associated with different errors. 
@@ -99,18 +101,18 @@ In this case 1. keeping a healthy patient in the hospital (low cost), or 2. send
 Error is used to find how often the classifier is incorrect? Error is the proportion of  misclassified data points among the total number of cases examined.
 the number of false positives and false negatives divided by the number of true positives, true negatives, false positives, and false negatives.
     
-<font size="3">  $$   Error = \frac{Number\space of\space Incorrect\space Predictions}{Total\space Number\space of\space Predictions} $$<br>
+<font size="3">  $$   Error = \frac{Number\space of\space Incorrect\space Predictions}{Total\space Number\space of\space Predictions} $$</font><br>
 
-<font size="3">  $$   Error = \frac{FP + FN}{TP + TN + FP + FN} $$<br>
+<font size="3">  $$   Error = \frac{FP + FN}{TP + TN + FP + FN} $$</font><br>
     
     
-<font size="3">  $$   Error = 1 - Accuracy $$
+<font size="3">  $$   Error = 1 - Accuracy $$</font>
 
 
 ### 3.3 Precision<a name="precision"></a>
 Precision talks about how precise/accurate the model is? Precision is the measure of correctly predicted positive observations to the total predicted positive observations. Precision is also known as the *Positive Predictive Value*. It is a good measure to determine, when the costs of False Positive is high.
      
-<font size="3">  $$   Precision = \frac{TP}{TP + FP} $$<br>
+<font size="3">  $$   Precision = \frac{TP}{TP + FP} $$</font><br>
  
 **When do we consider Precision as Evaluaction Mesure in Classification?**<br>
 The precision is an useful measure of prediction when the classes are highily imbalanced. It is more important where False Positives are more costly than False Negatives. ***For a good classifier, Precision should ideally be 1 (high)***. Precision becomes 1 only when both the numerator and denominator are equal. i.e TP = TP +FP, this also means FP should be zero. As FP increases, the value of denominator becomes greater than the numerator and precision value decreases (which we don’t want). Precision is mainly used when we need to predict the positive class and there is a greater cost associated with false positives than with false negatives, such as in medical diagnosis or spam filtering. <br>
@@ -125,7 +127,7 @@ Conversely, if we want to minimize false negatives, we would choose a model with
 ### 3.4 Recall<a name="recall"></a>
 Recall is a measure of correctly predicted positive observations over all the positive observations in the data. ***Recall is also known as Sensitivity (or) True Positive Rate.***
     
-<font size="3">  $$   Recall = \frac{TP}{TP + FN} $$<br>
+<font size="3">  $$   Recall = \frac{TP}{TP + FN} $$</font><br>
     
 **When do we consider Recall as Evaluaction Mesure in Classification?**<br>
 Recall is more important when False Negatives are more costly than False Positive. ***For a good classifier, Recall should ideally be 1 (high).*** It becomes 1 only when the numerator and denominator are equal i.e TP = TP +FN, this also means FN should be zero. As FN increases the value of denominator becomes greater than the numerator and recall value decreases (which we don’t want). Recall is mainly used when we need to predict the positive class and there is a greater cost associated with false negatives than with false positives.
@@ -143,7 +145,7 @@ F1 Score is the weighted average of Precision and Recall. So ideally in a good c
     
 F1 Score becomes 1 only when precision and recall are both 1. F1 score is the harmonic mean of precision and recall and is a better measure than accuracy.
     
-<font size="3">  $$   F1 Score = \frac{2* Precision * Recall}{Precision + Recall} $$<br>
+<font size="3">  $$   F1 Score = \frac{2* Precision * Recall}{Precision + Recall} $$</font><br>
     
     
 **When to use F1 Score?**  
@@ -163,20 +165,20 @@ ROC curve (Receiver Operating Characteristic Curve) is a probability curve showi
 **How to plot ROC Curve?** <br>
 The graphical ROC curve is produced by plotting sensitivity (True Positive Rate) on the y-axis against 1–specificity (False Positive Rate) on the x-axis for the various values tabulated. An ROC curve that follows the diagonal line y=x produces false positive results at the same rate as true positive results. Therefore, we expect a diagnostic test with reasonable accuracy to have an ROC curve in the upper left triangle above the y=x line. <BR>
  
-<img src="/images/Posts/Error-Analysis/ROC Curve.png"
+<img src="/images/Posts/Error_Analysis/ROC Curve.png"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:300px;width:400px"/>
     
-<font size="3">  $$   TPR\space/ Recall\space/Sensitivity\space = \frac{TP}{TP+FN} $$<br>
-<font size="3">  $$   FPR = 1- Specificity = \frac{FP}{TN+FP} $$<br>
-<font size="2">$$\space \space \space (where \space Specificity = \frac{TN}{TN+FP})$$
+<font size="3">  $$   TPR\space/ Recall\space/Sensitivity\space = \frac{TP}{TP+FN} $$</font><br>
+<font size="3">  $$   FPR = 1- Specificity = \frac{FP}{TN+FP} $$</font><br>
+<font size="2">$$\space \space \space (where \space Specificity = \frac{TN}{TN+FP})$$</font>
     
  
 #### 4.1 AUC(Area under the ROC Curve) <a name="auc_curve"></a>
 AUC measures the entire two-dimensional area underneath the entire ROC curve, which represents the overall performance of the classification. ROC is a probability curve and AUC represents the degree or measure of separability. It tells how much the model is capable of distinguishing between classes. AUC takes values between 0 and 1, where 0 indicates a perfectly inaccurate classification and 1 reflects a perfectly accurate classifiaction. The higher the AUC, the better the performance of the model at distinguishing between the positive and negative classes (i.e predicting 0 classes as 0 and 1 classes as 1).
     
-<img src="/images/Posts/Error-Analysis/AUC Curve.png"
+<img src="/images/Posts/Error_Analysis/AUC Curve.png"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:300px;width:400px"/>
@@ -190,14 +192,14 @@ Let's look into these methods in details with below example.
 ##### Eample:       
 Let's consider a simple example of a diagnostic test performed on the group with disease and the group without disease. When a diagnostic test is performed, the group with the disease and the group without the disease cannot be completely divided, as overlapping may exists. the ROC curve aims to classify a patient’s disease state as either positive or negative based on test results and to find the optimal cut-off value with the best diagnostic performance. ***For any diagnosis, this means that even for a certain diagnostic test, the cut-off value is not universal and should be determined for each region and for each disease condition.***
     
-<img src="/images/Posts/Error-Analysis/Probability_Density_example.png"
+<img src="/images/Posts/Error_Analysis/Probability_Density_example.png"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:400px;width:450px"/> 
 
 - Let's take below sample dataset with predicted probability and actual class. Predicted probability is the probability derived using our classification algorithm, and actual class is whether a patient has cancer or not in real.     
 
-<img src="/images/Posts/Error-Analysis/Sample Dataset.png"
+<img src="/images/Posts/Error_Analysis/Sample Dataset.png"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; 
@@ -205,22 +207,22 @@ height:750px;width:320px"/>
 
 - Now build a confusion matrix based on threshold values 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 and 1, derive respective True Positive Rate (Sensitivity) and False Positive Rate (1 - Specificity) to plot ROC Curve.
     
-<img src="/images/Posts/Error-Analysis/Confusion Matrix_for_cutoffValues.png"
+<img src="/images/Posts/Error_Analysis/Confusion Matrix_for_cutoffValues.png"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:650px;width:1050px"/>
 
 - Let's derive the True Positive Rate and False Positive Rate for the each cut-off value from the above sample dataset.
  
-<font size="2">  $$   TPR\space (or)\space Sensitivity\space = \frac{TP}{TP+FN} $$<br>
-<font size="2">  $$   FPR\space (or)\space 1- Specificity = \frac{FP}{TN+FP} $$ 
-<img src="/images/Posts/Error-Analysis/Sensitivity_Specificity_values.png"
+<font size="2">  $$   TPR\space (or)\space Sensitivity\space = \frac{TP}{TP+FN} $$</font><br>
+<font size="2">  $$   FPR\space (or)\space 1- Specificity = \frac{FP}{TN+FP} $$</font> 
+<img src="/images/Posts/Error_Analysis/Sensitivity_Specificity_values.png"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:400px;width:380px"/>
 - Let's plot the ROC Curve using above sensitivity and 1-specificity.<br>
     
-<img src="/images/Posts/Error-Analysis/ROC Curve_example.png"
+<img src="/images/Posts/Error_Analysis/ROC Curve_example.png"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:300px;width:350px"/>
@@ -238,7 +240,7 @@ There are three ways to calculate optimal cut-off :
 ##### 1. Youden's J index
 Youden's J index is used to select the optimal cut-off. It is a diagnostic test which captures the maximum vertical distance between ROC curve and diagonal line. The idea is to maximize the difference between True Positives and False Positives. 
     
-<img src="/images/Posts/Error-Analysis/Youden index.png"
+<img src="/images/Posts/Error_Analysis/Youden index.png"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:300px;width:350px"/>
@@ -246,17 +248,19 @@ Youden's J index is used to select the optimal cut-off. It is a diagnostic test 
     
 ##### 2. Euclidean Distance 
 Another "optimal cut-off" is the value for which the point on the ROC curve has the minimum distance to the upper left corner (where sensitivity=1 and specificity=1).
-    <font size="3">  $$  Euclidean Distance =  \sqrt{(1-sensitivity)^2 + (1-specificity)^2} $$<br>
+    <font size="3">  $$  Euclidean Distance =  \sqrt{(1-sensitivity)^2 + (1-specificity)^2} $$</font><br>
 
-<img src="/images/Posts/Error-Analysis/ROC_Euclidean Distance.png"
+<img src="/images/Posts/Error_Analysis/ROC_Euclidean Distance.png"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:300px;width:350px"/>
            
 
 ##### 3. Profit Maximization / Cost Minimization
-Profit/Cost is another most useful methods for determining an optimal classification probability cut-off depending on the business impact. The cost is calculated at different cutoff values to achieve a reasonable balance between false positives and false negatives. While the ROC curve helps in finding the best threshold based on the various statistics or domain expertise, a profit curve helps to pick a threshold based on the costs of true and false positive and negative predictions. It provides a sense of model sensitivity in the context of your business problem.<br>
+Profit/Cost is another most useful methods for determining an optimal classification probability cut-off depending on the business impact. The cost is calculated at different cutoff values to achieve a reasonable balance between false positives and false negatives. While the ROC curve helps in finding the best threshold based on the various statistics or domain expertise, a profit curve helps to pick a threshold based on the costs of true and false positive and negative predictions. It provides a sense of model sensitivity in the context of your business problem.
+<br>
+<br>
 
-<font size="3"> To summarize, in this post we have learnt error analysis of a Classification problem and several ways of defining optimal ʻThresholdʼ value. 
+To summarize, in this post we have learnt error analysis of a Classification problem and several ways of defining optimal ʻThresholdʼ value.
 
-<font size="3">$$Yayy...\space  We\space have\space reached\space  to\space  the\space  end. That's\space another\space  great\space  learning😎\space  See\space  you\space  in\space  next\space  post👋 👋$$
+<font size="3">$$Yayy...\space  We\space have\space reached\space  to\space  the\space  end. That's\space another\space  great\space  learning😎\space  See\space  you\space  in\space  next\space  post👋 👋$$</font>
