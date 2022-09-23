@@ -9,12 +9,12 @@ featured_image: '/images/demo/demo-square.jpg'
 
 # Loss functions
 
-### you are going to experience some Huh...aah!! moments in this post. let's dive!
+#### you are going to experience some Huh...aah!! moments in this post. let's dive!
 
-### DISCLAIMER: I'll try to make sense of loss functions numerically, this post doesn't involve any mathematical proofs or equations. 
+#### DISCLAIMER: I'll try to make sense of loss functions numerically, this post doesn't involve any mathematical proofs or equations. 
 <br>
 
-* ## Pre-School
+## Pre-School
 
 To start with, what is an error function? 
 in a lame language consider preschool 4 tables... like the multiples of 4. <br>
@@ -25,24 +25,25 @@ and train until it gets updated to 5. as follows
 
 **what did you do? - you updated the weight from 0 to 1. that is all you do in Machine Learning, you are supposed to find a weight vector/matrix/value that can lessen your error. <br> 
 voila!.. now you understand that your error should decrease to get to the actual target. (small huh...ah!)** <br>
-you passed pre-school 
-<br>
+you passed pre-school
+
+
 <br>
 
-* ## Middle School 
+## Middle School 
 
 You may ask now, okay I understand this weight concept, what is this to do anything with datasets? let's see an example.  
 sample dataset  
 
- |  | mpg |	cyl |	disp |	hp |	drat|
+ |  | mpg |     cyl |   disp |  hp |    drat|
  |-----|:---:|-----:|-------:|----:|-------:|
- |MazdaRX4|21.0	 |6    |	160 |	110|	3.90
-Mazda RX4 Wag|	21.0|	6|	160|	110|	3.90
-Datsun| 710|	22.8|	4|	108|	93|	3.85
-Hornet 4 Drive|	21.4|	6|	258|	110|	3.08
-Hornet Sportabout|	18.7|	8|	360|	175|	3.15  
+ |MazdaRX4|21.0  |6    |        160 |   110|    3.90
+Mazda RX4 Wag|  21.0|   6|      160|    110|    3.90
+Datsun|         22.8|   4|      108|    93|     3.85
+Hornet 4 Drive| 21.4|   6|      258|    110|    3.08
+Hornet Sportabout|      18.7|   8|      360|    175|    3.15  
 
-unlike we have seen in pre-school, we have 5 features instead of one(4 in the preschool example).that is mpg ,cyl, disp, hp, drat.  
+unlike we have seen in pre-school, we have 5 features instead of one(4 in the preschool example).that is mpg, cyl, disp, hp, drat.  
 
 so, as you expected we need to find 5 different weights to get the target output. let's have a notation for weights as 'θ'.  
 so our weights look like <span style="color:red;">θ1, θ2, θ3, θ4, θ5</span>.  
@@ -52,9 +53,9 @@ Also, one more thing, there are 5 samples in the above dataset, so you need to s
 
 You have pretty much seen the basics of how machine learning works numerically. Let's see the actual content of this post.  
 
-# THE COST/LOSS FUNCTION!!!
+## THE COST/LOSS FUNCTION!!!
 
-* ## High-School
+## High-School
 
 There are many different types of cost/loss functions you see on the internet, you may ask me the question, Sid, we have seen in pre-school the difference itself makes sense to calculate the loss, why do we have many kinds of them? Let's break them down. 
 
@@ -74,52 +75,46 @@ There are many different types of cost/loss functions you see on the internet, y
 
 ### Regression 
 
-* **MAE:** 
-we have seen all the positivity in your algorithm, now it's time to have some negativity!
+**MAE:** We have seen all the positivity in your algorithm, now it's time to have some negativity!
 As you know Absolute value refers to making negative values positive. i.e negative error to positive in our case. from basic linear algebra, we know that the -ve sign refers to the opposite direction.  
-<br>
+
 <img src="/images/Posts/Cost_function/vector.jpg"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:250px;width:450px" />
-<br>
 That's how it feels if you have the same value with different signs, yes, they both cancel out and result in the wrong total error, hence we make an Absolute decision to Absolute the negative values.  
-<br>
+
 <img src="/images/Posts/Cost_function/mae.jpg"
      style="display: block; display:block;
         margin-left: auto;
         margin-right: auto; height:150px;width:350px" />
 <br>
+
 I would also like to give you an example of how to interpret MAE, in the example you have seen in middle school, say you are predicting car prices, and you got MAE of 1500, which means your model is giving +/- $1500 in error. which is +1500 is bad for the customer and -1500 is bad for the company/website.  
 
-* **RMSE:** Let's say some of your samples have a high error when compared to others, when taking a mean of them, you kind of neutralize the error on total error, but you missed the samples that have a high error, to handle this you kind to impose a penalty to the high error by squaring them. The squaring means that larger mistakes result in high errors than smaller mistakes, meaning that the model is punished for making larger mistakes. Doesn't it make sense? (another small huh..ah! moment). This also handles the opposite direction vectors problem, ain't it?  
-<br>
-<br>
+**RMSE:** Let's say some of your samples have a high error when compared to others, when taking a mean of them, you kind of neutralize the error on total error, but you missed the samples that have a high error, to handle this you kind to impose a penalty to the high error by squaring them. The squaring means that larger mistakes result in high errors than smaller mistakes, meaning that the model is punished for making larger mistakes. Doesn't it make sense? (another small huh..ah! moment). This also handles the opposite direction vectors problem, ain't it?  
+
 <img src="/images/Posts/Cost_function/rmse.png"
      style="display: block; display:block;
         margin-left: auto;
         margin-right: auto; height:125px;width:350px" />
-<br>
+
 and of course, root mean squared error makes the value on the same scale.  
 
-* **Root Mean Squared Log Error:** 
-First ill introduce the equation:  
-<br>
+**Root Mean Squared Log Error:** First I'll introduce the equation:  
+
 <img src="/images/Posts/Cost_function/rmsle.png"
      style="display: block; display:block;
         margin-left: auto;
         margin-right: auto; height:125px;width:350px" />
-<br>
 That's a lot in an equation compared to what we have seen earlier. let's break it down.  
 +1 makes log(0) not actual being undefined or an error. where log(1) = 0. 
-<br>
+
 In the case of RMSE, the presence of outliers can explode the error term to a very high value. But, in the case of RMLSE, the outliers are drastically scaled-down therefore, nullifying their effect. Let’s understand this with a small example:
-<br>  
 
 | | X | Y | 
 |-------:|--:|--:|
-|Case 1: ||
-|| 30| 35|
+|Case 1: | 30| 35|
 |        | 70| 90|
 |        | 90| 90|
 |RMSE| 4.123| 
@@ -191,7 +186,7 @@ With large 𝛿, the loss becomes increasingly sensitive to larger errors and ou
 
 **Huber loss approaches MAE when 𝛿 ~ 0 and MSE when 𝛿 ~ ∞ (large numbers.)**  
 
-**That means You are controlling the 'degree' of MAE vs MSE-ness you'll introduce in your loss function.** As we have this benefit, you may ask then why don't we use huber every time. As you have to configure them manually you'll have to spend time and resources on finding the most optimum 𝛿 for your dataset. This is an iterative problem that, in the extreme case, may become impractical at best and costly at worst. However, in most cases, it's best just to experiment - perhaps, you'll find better results!  
+**That means You are controlling the 'degree' of MAE vs MSE-ness you'll introduce in your loss function.** As we have this benefit, you may ask then why don't we use Huber every time. As you have to configure them manually you'll have to spend time and resources on finding the most optimum 𝛿 for your dataset. This is an iterative problem that, in the extreme case, may become impractical at best and costly at worst. However, in most cases, it's best just to experiment - perhaps, you'll find better results!  
 
 <br>
 
