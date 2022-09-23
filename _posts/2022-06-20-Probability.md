@@ -99,10 +99,8 @@ given that another event (by assumption, presumption, assertion, or evidence) ha
 - If the event of interest is A and the event B is known or assumed to have 
 occurred,  "the conditional probability of A given B", or "the probability
 of A under  the condition B", is usually written as $P(A\|B)$ or occasionally $P_B(A)$.
-
 - This can also be understood as the fraction of probability B that 
 intersects with A.
-
 - It is important to note that $P(A\|B)$ is **not the same** as $P(B\|A)$. 
 
 $$ \large P(A|B) = \frac{P(A \cap B)}{P(B)} $$
@@ -137,11 +135,9 @@ There are four parts:
     
 ## 2. Statistics <a name='statistics'>
 
-While *Probability* deals with quantifying uncertainty and predicting the 
-likelihood  of future events, ***Statistics*** involves the analysis of the  
-frequency of past events. It concerns the collection, organization, 
-displaying,  analysis, interpretation, and presentation of data. In 
-statistics,  we apply probability(probability theory) to draw conclusions from data.
+While *Probability* deals with quantifying uncertainty and predicting the likelihood  of future events, ***Statistics*** involves the analysis of the frequency of past events.
+
+It concerns the collection, organization, displaying,  analysis, interpretation, and presentation of data. In statistics,  we apply probability(probability theory) to draw conclusions from data.
     
 ### 2.1 Population <a name='population'>
     
@@ -203,36 +199,18 @@ The general form of its probability density function is
 $$ \LARGE f(x) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{1}{2} (\frac- {x-\mu}{\sigma})^2 } $$
 
 - The parameters $\mu$ and $\sigma$ are also called ***location*** and ***scale*** parameters respectively.   
-    
-Compared to other probability distributions, a normal distribution has several notable properties.
-**Its graph has a distinctive symmetrical shape** - A normal distribution curve appears symmetrically in the shape of a bell.
 
-**It is characterized by equal values** 
-The mean, median, and mode of its data set will all be the same number. 
-
-**Data distribution is equally split** 
-Regardless of sample size and the sample mean, half the data points will be 
+Compared to other probability distributions, a normal distribution has several notable properties:
+- <ins>Its graph has a distinctive symmetrical shape</ins> - A normal distribution curve appears symmetrically in the shape of a bell.
+- <ins>It is characterized by equal values</ins> - The mean, median, and mode of its data set will all be the same number. 
+- <ins>Data distribution is equally split</ins>  - Regardless of sample size and the sample mean, half the data points will be 
 below  the mean, and half the data points will be above the mean.    
-
-**It divides its data using standard deviations** 
-A standard deviation is a measurement of how far away a data point is from 
+- <ins>It divides its data using standard deviations</ins> - A standard deviation is a measurement of how far away a data point is from 
 the mean.  The skewness of a data point will depend on the number of 
 standard deviations  it falls from the sample mean.
-
-**The distribution of data follows an empirical rule of normal probability**  
-With a normal distribution of data, 99.7 percent of all data points fall 
-within three  standard deviations from the mean in either direction. The 
-first standard  deviation of the mean covers 34.1 percent of all data points 
-above the  mean and 34.1 percent of all data points below the mean. The 
-second standard  deviation encompasses an additional 13.6 percent of data 
-points above  the mean and another 13.6 percent below the mean. The third 
-standard deviation  includes 2.1 percent of data points in either 
-direction—both at the  very top of the scale and the very bottom of the 
-scale. This means  you could fall on the ninety-ninth percentile of sample 
-size and still  be within three standard deviations of the mean. You have to 
-be a true outlier,  or special case, to go beyond three standard deviations. 
-
-**The total area under the curve has a value of one** - If you were to 
+- <ins>The distribution of data follows an empirical rule of normal probability</ins> - With a normal distribution of data, 99.7 percent of all data points fall within three  standard deviations from the mean in either direction. The first standard  deviation of the mean covers 34.1 percent of all data points above the  mean and 34.1 percent of all data points below the mean. The 
+second standard  deviation encompasses an additional 13.6 percent of data points above  the mean and another 13.6 percent below the mean. The third standard deviation  includes 2.1 percent of data points in either direction—both at the  very top of the scale and the very bottom of the scale. This means  you could fall on the ninety-ninth percentile of sample size and still  be within three standard deviations of the mean. You have to be a true outlier,  or special case, to go beyond three standard deviations. 
+- <ins>The total area under the curve has a value of one</ins> - If you were to 
 calculate  the total area under a normal distribution curve, its value would 
 equal  one unit of measure.    
     
@@ -245,6 +223,5 @@ equal  one unit of measure.
     
 
 ## References
-***
-[Gaussian Distribution - Clearly Explained](https://www.youtube.com/watch?v=rzFX5NWojp0)
 
+- [Gaussian Distribution - Clearly Explained](https://www.youtube.com/watch?v=rzFX5NWojp0)
