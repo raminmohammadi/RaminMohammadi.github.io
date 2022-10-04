@@ -1,0 +1,64 @@
+---
+layout: default
+title: Resources
+description: Resources like Textbooks, etc.
+featured_image: /images/demo/home.jpg
+---
+
+<section class="hero">
+
+	<div class="hero__image" style="background-image: url({{ page.featured_image | relative_url }})">
+		<div class="hero__overlay"></div>
+	</div>
+
+	<div class="wrap">
+
+		<h1>Text Books</h1>
+		<p>The following text books are recommended for the course.</p>
+
+		{% include socials.html %}
+
+	</div>
+
+</section>
+
+<section class="listing">
+
+	<div class="wrap">
+
+		<article class="post">
+
+			<div class="post__image-wrap">
+				<div class="post__image" style="background-image: url('/images/Resources/TextBooks/prml.jpg'); background-size: 50%; "></div>
+			</div>
+
+			<div class="post__content-wrap">
+				<div class="post__content">
+					<h2 class="post__title"><a href="https://www.microsoft.com/en-us/research/people/cmbishop/prml-book/">Pattern Recognition and Machine Learning</a></h2>
+					<p class="post__subtitle"></p>
+					<p class="post__description">Christopher M. Bishop</p>
+				</div>
+			</div>
+
+		</article>
+
+		<article class="post">
+
+			<div class="post__image-wrap">
+				<div class="post__image" style="background-image: url('/images/Resources/TextBooks/pml_cover.jpg'); background-size: 50%"></div>
+			</div>
+
+			<div class="post__content-wrap">
+				<div class="post__content">
+					<h2 class="post__title"><a href="https://probml.github.io/pml-book/">Probabilistic Machine Learning</a></h2>
+					<p class="post__subtitle"></p>
+					<p class="post__description">Kevin P. Murphy</p>
+				</div>
+			</div>
+
+		</article>		
+
+	</div>
+
+</section>
+
