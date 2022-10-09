@@ -8,6 +8,8 @@ header_settings:
 
 menu_settings:
   menu_items:
+    - title: 'Resources'
+      url: '/resource/'  
     - title: 'Blog'
       url: '/blog/'
     - title: 'Projects'
