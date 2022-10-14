@@ -21,7 +21,7 @@
 	// State change event
 	History.Adapter.bind(window,'statechange',function(){
 		var state = History.getState();
-		// console.log(state);
+		//console.log(state);
 
 		// Loading state
 		$('body').addClass('loading');
@@ -118,7 +118,9 @@
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Page load
 
 	function pageFunctions() {
-
+		
+		// Reload all math
+		if(MathJax){MathJax.Hub.Typeset();}
 
 		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Show content
 
@@ -147,8 +149,6 @@
 			// Hide the menu
 			$('body').removeClass('menu--open');
 		});
-
-
 
 		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Active links
 
@@ -371,7 +371,7 @@
 	$(document).on('click', '.post', function (){
 
 		var targetPost = $(this).find('.post__title a').attr('href');
-
+		
 		if ( $('body').hasClass('ajax-loading') ) {
 
 			// Change navTarget
@@ -431,7 +431,5 @@
 		}
 
 	});
-	
-	
 	
 }(jQuery));
