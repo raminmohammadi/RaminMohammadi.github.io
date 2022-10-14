@@ -120,7 +120,9 @@
 	function pageFunctions() {
 		
 		// Reload all math
-		if(MathJax){MathJax.Hub.Typeset();}
+		if(typeof MathJax !== 'undefined'){
+			MathJax.Hub.Typeset();
+		}
 
 		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Show content
 
