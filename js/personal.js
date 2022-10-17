@@ -389,49 +389,5 @@
 		}
 	});
 
-
-
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Contact Form
-
-	// Override the submit event
-	$(document).on('submit', '#contact-form', function (e) {
-
-		// Clear previous classes
-		$('.contact-form__item--error').removeClass('contact-form__item--error');
-
-		// Get form elements
-		var emailField = $('.contact-form__input[name="email"]');
-		var nameField = $('.contact-form__input[name="name"]');
-		var messageField = $('.contact-form__textarea[name="message"]');
-		var gotchaField = $('.contact-form__gotcha');
-
-		// Validate email
-		if ( emailField.val() === '' ) {
-			emailField.closest('.contact-form__item').addClass('contact-form__item--error');
-		}
-
-		// Validate name
-		if ( nameField.val() === '' ) {
-			nameField.closest('.contact-form__item').addClass('contact-form__item--error');
-		}
-
-		// Validate message
-		if ( messageField.val() === '' ) {
-			messageField.closest('.contact-form__item').addClass('contact-form__item--error');
-		}
-
-		// If all fields are filled, except gotcha
-		if ( emailField.val() !== '' && nameField.val() !== '' && messageField.val() !== '' && gotchaField.val().length === 0 ) {
-
-			// Submit the form!
-		}
-
-		else {
-
-			// Stop submission
-			e.preventDefault();
-		}
-
-	});
 	
 }(jQuery));
