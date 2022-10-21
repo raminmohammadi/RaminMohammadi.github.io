@@ -15,16 +15,23 @@ Bias is an error introduced in the model due to the oversimplification of the al
 Variance is error introduced in the model due to a too complex algorithm, which means the model basically remembers the training data and produces lower error while training but fails in test dataset. which is also termed as overfitting. 
 
 <br>
+
 Let's go through complexity of the model.  
 
 <br>
+
+<p align='center'>
+
+<a href='https://www.endtoend.ai/blog/bias-variance-tradeoff-in-reinforcement-learning/#:~:text=Bias%2Dvariance%20tradeoff%20is%20a,the%20data%20has%20high%20variance.'>
+
 <img src="/images/Posts/Bias_Variance_Tradeoff/underfit_right_overfit.png"
      style="display: block; 
         margin-left: auto;
-        margin-right: auto; height:200px;width:450px" />
-        <p align = "center">
-image credits: endtoend.ai
+        margin-right: auto; height:200px;width:600px" ></a>
+Figure 1. <a href='https://www.endtoend.ai/blog/bias-variance-tradeoff-in-reinforcement-learning/#:~:text=Bias%2Dvariance%20tradeoff%20is%20a,the%20data%20has%20high%20variance.'>  endtoend.ai</a>
+
 </p>
+
 <br>
 
 Say, the complexity of the model is defined by degree of polynomial. now, you fit a model with degree of polynomial 'd' and get some estimates of how well your fitted hypothesis will generalise to new examples. In the above image you can interpret how well various degrees of polynomials fits to the data, i.e the increase in complexity of the model increases variance in the model(overfitting). 
@@ -36,10 +43,12 @@ Now that we have two kinds of error we define the right degree of polynomial by 
 The following graph shows the bias variance tradeoff considering degree of polynomail (model complexity) and error on cross validation and train data. 
 
 <br>
+
 <img src="/images/Posts/Bias_Variance_Tradeoff/poly2.jpeg"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:300px;width:550px" />
+
 <br>
 
 Refer to the bias and variance combination of validation and train error from the image. As the degree of polynomial increases the model tends to remember the data thus training have low error, but in cross validation the model performs poor. you need to select a degree of polynomial where both bias and variance are low. Hence, the name TRADEOFF. 
@@ -51,25 +60,31 @@ I will not got into nuts and bolts of regularization, but we will see the effect
 Lets consider L2 regularization.
 
 <br>
+
 <img src="/images/Posts/Bias_Variance_Tradeoff/poly4.jpeg"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:200px;width:450px" />
+
 <br>
 
 As our objective is to minimize the loss function in any setting, The decrease in lambda values should increase the values of Theta, as the overall loss should be decreased. that means the values of theta are still higher which means the model have high variance(overfitting). Remember that higher values of theta is same as higher value of degree of polynomial. 
 
 
 <br>
+
 <img src="/images/Posts/Bias_Variance_Tradeoff/poly3.jpeg"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:300px;width:450px" />
+
 <br>
+
 As previously said, even here we consider a sweet spot for the lambda value using cross validation error to balance bias and variance. There is no escaping the relationship between bias and variance in machine learning. Increasing the bias 
 will decrease the variance. Increasing the variance will decrease bias. 
 
 <br>
+
 Some tips if your model isnt working: 
 
 * Get more training data - fix high variance problem

@@ -16,7 +16,10 @@ Suppose we are given the undergraduate GPA and GRE score of n students that prev
 
 The task is to build a supervised learning model that correctly predicts if a pair [Undergraduate GPA, GRE score] will be accepted to the university or not.
 
-<img src="/images/Posts/PAC/PAC.png" width="600px">
+<img src="/images/Posts/PAC/PAC.png" width="550px">
+<p align='center'>
+Figure. True trend (T) and derived hypothesis (H) of university acceptance
+</p>
 
 This figure presents the GPAs and the GRE scores on the x-axis and y-axis respectively. T represents the true trend line, while H represents the hypothesis formulated to closely represent the true trend. The hypothesis misclassifies true positive records that fall in the false negative region as reject and true negative records that fall in the false positive region as accept.
 
