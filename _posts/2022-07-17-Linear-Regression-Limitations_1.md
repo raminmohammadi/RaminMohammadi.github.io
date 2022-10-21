@@ -52,7 +52,8 @@ We use a classic example, the price of the car, to explain the disadvantage of a
 Building a multiple regression model to evaluate the price of the car, the specific form of which is as follows:
 - Price = -55089.98 + 87.34 x engine size + 60.93 x horsepower + 770.42 x width<br>
 
-<img src="/images/Posts/Linear_Regression_Limitations_1/car.jpg" width="500" height="500"><p>
+<img src="/images/Posts/Linear_Regression_Limitations_1/car.jpg" width="600" height="400"><p>
+<p align='center'>Figure 1. <a href='https://afdc.energy.gov/vehicles/how-do-flexible-fuel-cars-work'>Car Components</a></p>
 
 The model predicts or estimates the price of a car based on engine size, horsepower, and width. The multivariate regression model assumes that the predictors are independent of each other, i.e. engine size, horsepower, and width are uncorrelated and independent.
 
@@ -70,7 +71,8 @@ The outlier is a point that is far from a value predicted by the model. If there
 
 The linear regression model is prone to outliers. If in the pre-procressing step, we cannot clean the data well, the performance of the model will be worse. In the linear regression model, OLS is used as the loss function to evaluate the parameter. When there are outliers in the data, the ordinary least squares(OLS) method will make the model fit to the outliers.
 
-<img src="/images/Posts/Linear_Regression_Limitations_1/outlier.jpg" width="300" height="200"><p>
+<img src="/images/Posts/Linear_Regression_Limitations_1/outlier.jpg" width="600" height="300"><p>
+<p align='center'>Figure 2. Effect of Outliers on Linear Regression</p>
 
 This picture clearly shows that the linear regression model is sensitive to outliers.
 
