@@ -10,7 +10,7 @@ menu_settings:
   menu_items:
     - title: 'Text Books'
       url: '/textbooks/'  
-    - title: 'Blog'
+    - title: 'Blogs'
       url: '/blog/'
     - title: 'Projects'
       url: '/'
