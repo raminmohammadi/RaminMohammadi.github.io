@@ -20,9 +20,13 @@ A Closed-Form Solution is an equation which can be solved in terms of functions 
 
 In order to get the weight(s) vector - θ we take the derivative of the cost function and do some geeky calculations (which you will learn in class) to arrive at the following equation: <br/>
 
-![image1](/images/Posts/Closed_Form_Solution/1.png)
-<br/>
-    
+<p align='center'>
+<a href='https://towardsdatascience.com/machine-learning-basics-part-1-concept-of-regression-31982e8d8ced'>
+<img src="/images/Posts/Closed_Form_Solution/1.png"></a>
+Figure 1. <a href='https://towardsdatascience.com/machine-learning-basics-part-1-concept-of-regression-31982e8d8ced'>
+Closed Form Solution</a>
+</p>
+
 Here:
     
 X - data (dependent variables)<br/>
@@ -35,7 +39,13 @@ In simpler terms, we multiply the data with its transpose, take the inverse of t
 Liner Regression, yes, this is all there is to linear regression if approached via closed-form solution method. <br/><br/>
 But, Machine Learning wouldn't be this much fun if things were so straight forward, right?
 
-<img src="/images/Posts/Closed_Form_Solution/2.jpeg" width="500" height="600">
+
+<p align='center'>
+<a href='https://br.pinterest.com/pin/680606562427547114/'>
+<img src="/images/Posts/Closed_Form_Solution/2.jpeg" width="500" height="700"></a>
+Figure 2. <a href='https://br.pinterest.com/pin/680606562427547114/'>
+Constraints of Close-Form Solution for Linear Regression</a>
+</p>
 
 As expected, there are some constraints which we need to keep in mind while using Closed-Form Solution and they are:<br/>   
 
@@ -47,7 +57,12 @@ As expected, there are some constraints which we need to keep in mind while usin
 
 Major drawback of this method is that, typically, we cannot use Closed-Form Solution on very large datasets. This is because, we cannot invert large datasets,
 
-<img src="/images/Posts/Closed_Form_Solution/3.png">
+<p align='center'>
+<a href='https://towardsdatascience.com/machine-learning-basics-part-1-concept-of-regression-31982e8d8ced'>
+<img src="/images/Posts/Closed_Form_Solution/3.png"></a>
+Figure 3. <a href='https://towardsdatascience.com/machine-learning-basics-part-1-concept-of-regression-31982e8d8ced'>
+Matrix Inversion</a>
+</p>
 
 part of the equation. Why can we not invert? Because the computer will run out of memory while trying to do so.
  
