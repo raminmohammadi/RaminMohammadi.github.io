@@ -13,10 +13,10 @@ Model Evaluation is a process of evaluating model preference. It uses different 
 
 <br>
     <p style="text-align: center;">
-    <img src="/images/Posts/Model_Evaluation/Evaluation Model.png" width="400" height="250">
+    <img src="/images/Posts/Model_Evaluation/Evaluation Model.png" width="600" height="400">
     </p>
 <br>
-
+<p align='center'><a href='https://medium.com/@skyl/evaluating-a-machine-learning-model-7cab1f597046'>Figure 1. Schematic</a></p>
 
 <h2 id="table-of-contents">Table of contents</h2>
 <ol>
@@ -34,29 +34,33 @@ Model Evaluation is a process of evaluating model preference. It uses different 
  3.4 <a href="#ROC_chart">ROC Chart</a><br /></li>   
 </ol>
 
-<h2 id="1-dataset-separate-">1. Dataset Separatey <a name="dataset_separate"></a></h2>
-<h3 id="11-Hold-out-">1. Hold-out <a name="hold-out"></a>
+<h2 id="1-dataset-separate-">1 Dataset Separatey <a name="dataset_separate"></a></h2>
+<h3 id="11-Hold-out-">1.1 Hold-out <a name="hold-out"></a>
 </h3>
 In this method, the dataset is separated into third sets, called the Training set, Test set, and Validation set.
 <br>
-1. Training set is a part of the dataset. The data in the training set is used to build machine learning models.
+- Training set is a part of the dataset. The data in the training set is used to build machine learning models.
 <br>
-2. Validation set is used to evaluate the performance of the model built in the training phase. It uses to fine-tuning model's parameters and selecting the best model.
+- Validation set is used to evaluate the performance of the model built in the training phase. It uses to fine-tuning model's parameters and selecting the best model.
 <br>
-3. Test set is used to assess the future performance of a model. If the preference of a model in the training set is much better than it in the test set, overfitting is probably the cause.
+- Test set is used to assess the future performance of a model. If the preference of a model in the training set is much better than it in the test set, overfitting is probably the cause.
 <br>
     <p style="text-align: center;">
-    <img src="/images/Posts/Model_Evaluation/data separate.png" width="300" height="200">
+    <img src="/images/Posts/Model_Evaluation/data separate.png" width="600" height="400">
     </p>
 <br>
-<h3 id="12-Cross-Validation-">2. Cross-Validation <a name="cross-validation"></a>
+<p align='center'><a href='https://medium.com/@skyl/evaluating-a-machine-learning-model-7cab1f597046'>Figure 2. Data Split - Train, Validation, Test</a></p>
+
+<h3 id="12-Cross-Validation-">1.2 Cross-Validation <a name="cross-validation"></a>
 </h3>
 When the size of the data is not large or there is a limited amount of data, the separation of data will lose some important information. When only a limited amount of data is available, to achieve an unbiased estimate of the model performance we use k-fold cross-validation. In k-fold cross-validation, the data is divided into k subsets of equal size. This method will build models k times and each time leave out one of the subsets from training and use it as the test set.
 <br>
     <p style="text-align: center;">
-    <img src="/images/Posts/Model_Evaluation/k-fold.png" width="300" height="200">
+    <img src="/images/Posts/Model_Evaluation/k-fold.png" width="600" height="400">
     </p>
 <br>
+<p align='center'><a href='https://medium.com/@skyl/evaluating-a-machine-learning-model-7cab1f597046'>Figure 3. k-Folds</a></p>
+
 <h2 id="2-regression-evaluation-">2. Regression Evaluation <a name="regression_evaluation"></a></h2>
 There are many different evaluation metrics in machine learning. However, only some metrics are suitable to be used for regression. Next, I will introduce three important evaluation matrics and their differences of them.
 <br>
@@ -128,7 +132,7 @@ $$ MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y_i}| $$
 <p style="text-align: left;">
 Difference: MSE gives larger penalization to big prediction error by square it while MAE treats all errors the same.
 <h2 align = "left" id="3-classification-evaluation-">3. Classification Evaluation <a name="classification-evaluation"></a></h2>
-<h3 align = "left" id="31-confusion-matrix-">1. Confusion Matrix <a name="confusion_matrix"></a>
+<h3 align = "left" id="31-confusion-matrix-">3.1 Confusion Matrix <a name="confusion_matrix"></a>
     </h3>
 <p style="text-align: left;">
 The confusion matrix (or confusion table) shows a more detailed breakdown of correct and incorrect classifications for each class. Using a confusion matrix is useful when you want to understand the distinction between classes, particularly when the cost of misclassification might differ for the two classes, or you have a lot more test data on one class than the other. 
@@ -136,8 +140,10 @@ The confusion matrix (or confusion table) shows a more detailed breakdown of cor
 Here is Confusion Matrix:
 <br>
     <p style="text-align: center;">
-    <img src="/images/Posts/Model_Evaluation/confuse matrix.png" width="300" height="170">
+    <img src="/images/Posts/Model_Evaluation/confuse matrix.png" width="600" height="400">
 <br>
+<p align='center'><a href='https://stats.stackexchange.com/questions/569062/why-i-am-getting-tp-and-fp-in-confusion-matrix-is-0-how-to-get-it-right'>Figure 4. Confusion Matrix</a></p>
+
 <p style="text-align: left;">
 True Positive(TP) signifies how many positive class samples your model predicted correctly.
 <p>
@@ -150,7 +156,7 @@ This error positioning in the confusion matrix depends on the choice of the null
 False Negative(FN) signifies how many positive class samples your model predicted incorrectly. 
 This factor represents Type-II error in statistical nomenclature. 
 This error positioning in the confusion matrix also depends on the choice of the null hypothesis.
-<h3 align = "left" id="32-precision-and-recall-">2. Precision and Recall<a name="precision_and_recall"></a>
+<h3 align = "left" id="32-precision-and-recall-">3.2 Precision and Recall<a name="precision_and_recall"></a>
     </h3>
 <p style="text-align: left;">
 Precision and recall are mainly used for binary classification problems.
@@ -162,9 +168,12 @@ $$ Recall = \dfrac{True Positive}{True Positive + False Negative} $$
 Ideally, precision and recall are as high as possible. In fact, they are contradictory in some cases. When the precision rate is high, the recall rate is low; when the precision rate is low, the recall rate is high. It is not difficult to observe this property by observing the PR curve. For example, when searching web pages, if only the most relevant web page is returned, the precision rate is 100%, and the recall rate is very low; if all web pages are returned, the recall rate is 100%, and the precision rate is very low. Therefore, in different cases, it is necessary to judge which indicator is more important according to the actual needs.
 <br>
     <p style="text-align: center;">
-    <img src="/images/Posts/Model_Evaluation/Precision recall.png" width="300" height="170">
+    <img src="/images/Posts/Model_Evaluation/Precision recall.png" width="400" height="170">
 <br>
-<h3 align = "left" id="33-accuracy_and_errorate-">3. Accuracy and Errorate<a name="accuracy_and_errorate"></a>
+
+<p align='center'><a href='https://en.wikipedia.org/wiki/Precision_and_recall'>Figure 5. Precision and Recall</a></p>
+
+<h3 align = "left" id="33-accuracy_and_errorate-">3.3 Accuracy and Errorate<a name="accuracy_and_errorate"></a>
     </h3>
 <p style="text-align: left;">
 Accuracy and errorates can be used for both binary and multi-class classification.
@@ -180,7 +189,7 @@ $$ Accuracy = \frac{1}{n}\sum_{i=1}^{n}I(f(x_i)= y_i) $$
 
 I(indicator function):<br>
 If input True return 1, else return 0
-<h3 align = "left" id="34-ROC_chart-">4. ROC Chart<a name="ROC_chart"></a>
+<h3 align = "left" id="34-ROC_chart-">3.4 ROC Chart<a name="ROC_chart"></a>
     </h3>
 <p style="text-align: left;">
 ROC(Receiver Operating Characteristic) chart shows false positive rate (1-specificity) on X-axis, against true positive rate (sensitivity) on Y-axis.
@@ -202,9 +211,12 @@ $$ Specificity = P(Y_h = 0 | Y = 0) $$
 The formulation shows that sensitivity and specificity are conditional on the probability of the real label Y. We know that in the conditional probability no matter what the true probability of Y is, it will not affect sensitivity and specificity. This is the advantage of the ROC chart. The two evaluation matrix in the ROC chart is not affected by the imbalanced data. However, for the precision, it will be affected by the true and false ratio in the test data.</p>
 <br>
     <p style="text-align: center;">
-    <img src="/images/Posts/Model_Evaluation/ROC Chart.png" width="300" height="170">
+    <img src="/images/Posts/Model_Evaluation/ROC Chart.png" width="600" height="400">
     </p>
 <br>
+
+<p align='center'><a href='https://medium.com/@skyl/evaluating-a-machine-learning-model-7cab1f597046'>Figure 6. ROC Chart</a></p>
+
 <p style="text-align: left;">
 If the ROC curve is close to the upper left corner, the performance of the model is better. The coordinates of the upper left corner are (0, 1). At this point, FPR=0, TPR=1. The formulation of FPR and TPR shows that FN=0, FP=0. Therefore, the model classifies all samples correctly.
 You can find this ROC chart is not smooth. What determines how smooth the ROC chart is?
