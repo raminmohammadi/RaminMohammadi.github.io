@@ -12,12 +12,17 @@ featured_image: '/images/demo/demo-square.jpg'
 
 The real-world data is often noisy with some true underlying signal. By applying Machine Learning, we hope to identify the signal from the noise. We require a language for quantifying "noise" or uncertainty. Quantification of uncertainty is the realm of Probability Theory.   
 
-<img src="/images/Posts/Probabilities/0.jpg"
-     style="display: block; 
-        margin-left: auto;
-        margin-right: auto; height:250px;width:450px"/>
+
+<img src="/images/Posts/Probabilities/0.jpg" width="500" height="400">
+
+<p align='center'>
+   <a href='https://www.all-about-psychology.com/psychology-jokes.html'>
+      image credit
+   </a>
+</p>
 
 ## Table of contents
+
 1. [Probability](#probability)<br>
     1.1 [Basic Terminology](#basic_terminology)<br>
     1.2 [Marginal Probability](#marginal_probability)<br>
@@ -45,6 +50,11 @@ The real-world data is often noisy with some true underlying signal. By applying
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:250px;width:450px"/>
+<p align='center'>
+   <a href='https://www.mathsisfun.com/data/probability.html'>
+      image credit
+   </a>
+</p>
 
 ### 1.1 Basic Terminology <a name='basic_terminology'>
 
@@ -90,7 +100,12 @@ events will occur simultaneously.
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:250px;width:300px"/>    
-    
+<p align='center'>
+   <a href='https://www.flexiprep.com/Important-Topics/Mathematics/Joint-Probability.html'>
+      image credit
+   </a>
+</p>
+
 ## 1.4 Conditional Probability <a name='conditional_probability'>
 
 ***Conditional probability***  is a measure of the probability of an event occurring,
@@ -114,7 +129,12 @@ $$ \large P(A|B) = \frac{P(A \cap B)}{P(B)} $$
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:250px;width:450px"/>    
-    
+<p align='center'>
+   <a href='https://www.freecodecamp.org/news/bayes-rule-explained/'>
+      image credit
+   </a>
+</p>
+
 There are four parts:
 
 1. **Posterior probability** (updated probability after the evidence is considered)
@@ -126,7 +146,12 @@ There are four parts:
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:250px;width:600px"/>     
-    
+<p align='center'>
+   <a href='https://medium.com/@mark.rethana/bayesian-statistics-and-naive-bayes-classifier-33b735ad7b16'>
+      image credit
+   </a>
+</p>
+
 ### 1.6 References <a name='references'>
 - [Probability basics](https://www.youtube.com/playlist?list=PLC58778F28211FA19)
 - [Bayes Rule - for beignners](https://www.freecodecamp.org/news/bayes-rule-explained/)
@@ -162,7 +187,12 @@ the  **arithmetic average**, and it is one of several measures of central tenden
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:250px;width:450px"/>    
- 
+<p align='center'>
+   <a href='https://www.c-sharpcorner.com/learn/learn-machine-learning-with-python/statistics-measure-of-central-tendency'>
+      image credit
+   </a>
+</p>
+
 ### 2.4 Variance <a name='variance'>
   
 ***Variance*** is a measure of variability. It is calculated by taking the 
@@ -175,7 +205,12 @@ variance  is in relation to the mean.
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:250px;width:450px"/>
-    
+<p align='center'>
+   <a href='https://www.onlinemathlearning.com/variance.html'>
+      image credit
+   </a>
+</p>
+
 ### 2.5 Standard Deviation <a name='std'>
     
 The ***Standard Deviation*** is a statistic that measures the dispersion of 
@@ -218,7 +253,11 @@ equal  one unit of measure.
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:350px;width:650px"/>
-    
+<p align='center'>
+   <a href='https://www.scribbr.com/statistics/normal-distribution/'>
+      image credit
+   </a>
+</p>    
 
     
 

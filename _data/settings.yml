@@ -8,9 +8,9 @@ header_settings:
 
 menu_settings:
   menu_items:
-    - title: 'Resources'
-      url: '/resource/'  
-    - title: 'Blog'
+    - title: 'Text Books'
+      url: '/textbooks/'  
+    - title: 'Blogs'
       url: '/blog/'
     - title: 'Projects'
       url: '/'
