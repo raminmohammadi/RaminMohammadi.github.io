@@ -1,9 +1,11 @@
 ---
 title: Error Analysis 
 subtitle: by Keerthi Godha
-date: 2022-08-03 00:00:00
+date: 2022-02-12 00:00:00
 description: 
 featured_image: '/images/demo/demo-square.jpg'
+author: Keerthi Godha
+categories: ml
 ---
 
 ## Error Analysis (Threshold - Cut-off selection) 

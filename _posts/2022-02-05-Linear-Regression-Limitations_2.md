@@ -1,9 +1,11 @@
 ---
 title: Linear Regression Limitations - part 2
 subtitle: by Yanming Liu 
-date: 2022-10-06 00:00:00
+date: 2022-02-05 00:00:00
 description: 
 featured_image: '/images/demo/demo-square.jpg'
+author: Yanming Liu
+categories: ml
 ---
 
 

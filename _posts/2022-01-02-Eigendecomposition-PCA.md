@@ -1,9 +1,11 @@
 ---
 title: Eigen Value Decomposition
 subtitle: Eigen Value Decomposition and PCA - By Yue Chen
-date: 2022-06-26 00:00:00
+date: 2022-01-02 00:00:00
 description: 
 featured_image: '/images/demo/demo-square.jpg'
+author: Yue Chen
+categories: math
 ---
 
 

@@ -1,9 +1,11 @@
 ---
 title: Probably Approximately Correct(PAC) Learning 
 subtitle: by Sachini Weerasekara 
-date: 2022-10-06 00:00:00
+date: 2022-02-01 00:00:00
 description: 
 featured_image: '/images/demo/demo-square.jpg'
+author: Sachini Weerasekara
+categories: ml
 ---
 
 PAC learning is a framework for mathematical analysis of machine learning, that aims to select a hypothesis that has a low error, with high probability.
