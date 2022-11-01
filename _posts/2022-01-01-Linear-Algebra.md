@@ -1,9 +1,11 @@
 ---
 title: Linear Algebra
 subtitle: The Robin of Dataman - By Yue Chen
-date: 2022-05-23 00:00:00
+date: 2022-01-01 00:00:00
 description: 
 featured_image: '/images/demo/demo-square.jpg'
+author: Yue Chen
+categories: math
 ---
 
 

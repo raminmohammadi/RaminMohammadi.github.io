@@ -1,9 +1,11 @@
 ---
 title: Bias-Variance Tradeoff 
 subtitle: by Siddhartha Putti 
-date: 2022-07-10 00:00:00
+date: 2022-02-11 00:00:00
 description: 
 featured_image: '/images/demo/demo-square.jpg'
+author: Siddhartha Putti
+categories: ml
 ---
 
 

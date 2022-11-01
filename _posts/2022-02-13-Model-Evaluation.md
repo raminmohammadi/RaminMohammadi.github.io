@@ -1,9 +1,11 @@
 ---
 title: Model Evaluation 
 subtitle: by Jinchuan He 
-date: 2022-07-21 00:00:00
+date: 2022-02-13 00:00:00
 description: 
 featured_image: '/images/demo/demo-square.jpg'
+author: Jinchuan He
+categories: ml
 ---
 
 

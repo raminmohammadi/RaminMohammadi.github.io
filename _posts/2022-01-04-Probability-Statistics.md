@@ -1,17 +1,18 @@
 ---
 title: Probabilities and Statistics
 subtitle: Sai Akhilesh Ande
-date: 2022-06-20 00:00:00
+date: 2022-01-04 00:00:00
 description: 
 featured_image: '/images/demo/demo-square.jpg'
+author: Sai Akhilesh Ande
+categories: math
 ---
 
 
-# Probability and Statistics
+
 > <cite>Learn Statistics and think Probabilities</cite>
 
 The real-world data is often noisy with some true underlying signal. By applying Machine Learning, we hope to identify the signal from the noise. We require a language for quantifying "noise" or uncertainty. Quantification of uncertainty is the realm of Probability Theory.   
-
 
 <img src="/images/Posts/Probabilities/0.jpg" width="500" height="400">
 

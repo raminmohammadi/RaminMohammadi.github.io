@@ -1,9 +1,11 @@
 ---
 title: Gradient Descent 
 subtitle: by Jinchuan He 
-date: 2022-08-07 00:00:00
+date: 2022-02-10 00:00:00
 description: 
 featured_image: '/images/demo/demo-square.jpg'
+author: Jinchuan He
+categories: ml
 ---
 
 

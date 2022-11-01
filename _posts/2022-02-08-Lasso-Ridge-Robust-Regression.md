@@ -1,9 +1,11 @@
 ---
 title: Lasso, Ridge, and Robust Regression 
 subtitle: by Keerthi Godha
-date: 2022-07-16 00:00:00
+date: 2022-02-08 00:00:00
 description: 
 featured_image: '/images/demo/demo-square.jpg'
+author: Keerthi Godha
+categories: ml
 ---
 
 

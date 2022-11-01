@@ -1,9 +1,11 @@
 ---
 title: Closed Form Solution 
 subtitle: by Karan Desai
-date: 2022-07-15 00:00:00
+date: 2022-02-03 00:00:00
 description: 
 featured_image: '/images/demo/demo-square.jpg'
+author: Karan Desai
+categories: ml
 ---
 
 # Closed Form Solution

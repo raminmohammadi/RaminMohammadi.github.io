@@ -1,9 +1,11 @@
 ---
 title: Linear Regression Limitations - part 1
 subtitle: by Jinchuan He 
-date: 2022-07-17 00:00:00
+date: 2022-02-04 00:00:00
 description: 
 featured_image: '/images/demo/demo-square.jpg'
+author: Jinchuan He
+categories: ml
 ---
 
 <br>
