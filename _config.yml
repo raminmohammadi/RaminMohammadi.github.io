@@ -13,6 +13,12 @@ collections:
   projects:
     output: true
     permalink: /project/:slug
+  projects_toc:
+    output: true
+    permalink: /semester/:slug
+    order:
+      - 22_summer.md
+      - 22_fall.md
   abouts:
     output: true
     permalink: /about/:slug
@@ -47,6 +53,12 @@ defaults:
       type: "abouts"
     values:
       layout: "about"
+  -
+    scope:
+      path: ""
+      type: "projects_toc"
+    values:
+      layout: "project"      
 
 markdown: kramdown
 
