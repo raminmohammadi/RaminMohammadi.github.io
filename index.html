@@ -22,7 +22,7 @@ featured_image: /images/demo/home.jpg
 
 </section>
 
-<section class="listing">
+<!-- <section class="listing">
 
 	<div class="wrap">
 
@@ -45,6 +45,21 @@ featured_image: /images/demo/home.jpg
 		</article>
 
 		{% endfor %}
+
+	</div>
+
+</section> -->
+
+<section class="single">
+
+	<div class="wrap">
+
+		<article class="single-post">
+
+		{%- assign page = site.pages | where: 'title', 'Projects - Table of Contents' | first-%}
+		{{page.content}}
+
+		</article>
 
 	</div>
 
