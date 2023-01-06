@@ -5,7 +5,7 @@ date: 2022-12-07 00:00:00
 description: 
 featured_image: '/images/demo/demo-square.jpg'
 author: Sachini Weerasekara
-categories: ml
+categories: math
 ---
 
 # Hypothesis Testing
