@@ -31,7 +31,11 @@ featured_image: /images/demo/home.jpg
 		<article class="post">
 
 			<div class="post__image-wrap">
+				{% if project.title == "About Me" %}
 				<div class="post__image" style="background-image: url({{ project.featured_image | relative_url }}); background-size: 50%; "></div>
+				{% else %}
+				<div class="post__image" style="background-image: url({{ project.featured_image | relative_url }}); background-size: 85%"></div>
+				{% endif %}
 			</div>
 
 			<div class="post__content-wrap">
