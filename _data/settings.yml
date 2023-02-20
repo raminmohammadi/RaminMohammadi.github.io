@@ -24,7 +24,8 @@ footer_settings:
 
 hero_settings:
   overlay_opacity: 0.8
-
+  overlay_opacity_custom: 1
+  
 post_settings:
   grid_spacing: 10
 

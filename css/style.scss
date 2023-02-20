@@ -120,6 +120,7 @@ $footer-logo-width: {{ site.data.settings.footer_settings.logo_width }}px;
 
 // Post details
 $overlay-opacity: {{ site.data.settings.hero_settings.overlay_opacity }};
+$overlay-opacity-custom: {{ site.data.settings.hero_settings.overlay_opacity_custom }};
 $grid-spacing: {{ site.data.settings.post_settings.grid_spacing }}px;
 
 

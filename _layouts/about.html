@@ -2,15 +2,24 @@
 layout: default
 ---
 
+{% if page.title  == "TA Team" %}
+	{% assign image_class = "hero__overlay_custom" %}
+	{% assign cover_image = page.cover_image %}
+{% else %}
+	{% assign image_class = "hero__overlay" %}
+	{% assign cover_image = page.featured_image %}
+{% endif %}
+
 <section class="hero hero--single">
-	<div class="hero__image" style="background-image: url({{ page.featured_image | relative_url }})">
-		<div class="hero__overlay"></div>
+	<div class="hero__image" style="background-image: url({{ cover_image | relative_url }})">
+		<div class = {{image_class}}> </div>
 	</div>
 
 	<div class="wrap">
+		{% if page.title != "TA Team" %}
 		<h1>{{ page.title }}</h1>
+		{% endif %}
 		<p>{{ page.subtitle }}</p>
-
 	</div>
 
 </section>
