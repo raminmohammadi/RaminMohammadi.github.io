@@ -54,7 +54,7 @@ Document 1: "the cat in the hat" \\
 Document 2: "the cat sat on the mat" \\
 Document 3: "the dog chased the ball" 
 
-The vocabulary for these documents is ["the", "cat", "in", "hat", "sat", "on", "mat", "dog", "chased"]. The vector representation for Document 1 is [1, 1, 1, 1, 0, 0, 0, 0, 0], the vector representation for Document 2 is [1, 1, 0, 0, 1, 1, 1, 0, 0], and the vector representation for Document 3 is [1, 1, 0, 0, 0, 0, 0, 1, 1].
+The vocabulary for these documents is ["the", "cat", "in", "hat", "sat", "on", "mat", "dog", "chased", "ball"]. The vector representation for Document 1 is [2, 1, 1, 1, 0, 0, 0, 0, 0, 0], the vector representation for Document 2 is [2, 1, 0, 0, 1, 1, 1, 0, 0, 0], and the vector representation for Document 3 is [2, 0, 0, 0, 0, 0, 1, 1, 1].
 
 ```python
 import numpy as np
@@ -68,7 +68,7 @@ print(X.toarray())
 
 
 #### TF-IDF
-Suppose we have the same three documents as in the previous example. The term frequency for the word "cat" in Document 1 is 1/5, the term frequency for "cat" in Document 2 is 1/6, and the term frequency for "cat" in Document 3 is 0/6. The inverse document frequency for "cat" is log(3/2) = 0.176, since there are three documents in the corpus and "cat" appears in two of them. The TF-IDF value for "cat" in Document 1 is (1/5) * 0.176 = 0.035, the TF-IDF value for "cat" in Document 2 is (1/6) * 0.176 = 0.029, and the TF-IDF value for "cat" in Document 3 is 0 * 0.176 = 0.
+Suppose we have the same three documents as in the previous example. The term frequency for the word "cat" in Document 1 is 1/5, the term frequency for "cat" in Document 2 is 1/6, and the term frequency for "cat" in Document 3 is 0/5. The inverse document frequency for "cat" is log(3/2) = 0.176, since there are three documents in the corpus and "cat" appears in two of them. The TF-IDF value for "cat" in Document 1 is (1/5) * 0.176 = 0.035, the TF-IDF value for "cat" in Document 2 is (1/6) * 0.176 = 0.029, and the TF-IDF value for "cat" in Document 3 is 0 * 0.176 = 0.
 
 ```python
 import numpy as np
