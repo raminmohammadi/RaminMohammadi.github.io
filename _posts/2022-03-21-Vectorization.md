@@ -54,11 +54,15 @@ For example, consider the same two documents from the bag of words example. The 
 
 For smothing purpose, idf can be calculated using the formula below, 
 
+<<<<<<< HEAD
 \begin{equation}
     idf = log\frac{N+1}{c+1} + 1
 \end{equation}
 For example, the `TF-IDF` value for the word "the" in Document 1 is $2 * (log((1+3)/(3+1))+1) = 2$, which 
 can be seen as the last element of the first list inside the below Output.
+=======
+The vocabulary for these documents is ["the", "cat", "in", "hat", "sat", "on", "mat", "dog", "chased", "ball"]. The vector representation for Document 1 is [2, 1, 1, 1, 0, 0, 0, 0, 0, 0], the vector representation for Document 2 is [2, 1, 0, 0, 1, 1, 1, 0, 0, 0], and the vector representation for Document 3 is [2, 0, 0, 0, 0, 0, 1, 1, 1].
+>>>>>>> 44450ac1ea27c1f4558adc32109ff45928fc60c5
 
 ```python
 import numpy as np
@@ -82,8 +86,13 @@ Output:
   0.         0.         0.         2.        ]]
 ```
 
+<<<<<<< HEAD
 As most model will require a normalized input matrix, l2 normalization is recommended for the above output.
 What we need to do is to assign the parameter `norm='l2'` or leave it as an empty (default),
+=======
+#### TF-IDF
+Suppose we have the same three documents as in the previous example. The term frequency for the word "cat" in Document 1 is 1/5, the term frequency for "cat" in Document 2 is 1/6, and the term frequency for "cat" in Document 3 is 0/5. The inverse document frequency for "cat" is log(3/2) = 0.176, since there are three documents in the corpus and "cat" appears in two of them. The TF-IDF value for "cat" in Document 1 is (1/5) * 0.176 = 0.035, the TF-IDF value for "cat" in Document 2 is (1/6) * 0.176 = 0.029, and the TF-IDF value for "cat" in Document 3 is 0 * 0.176 = 0.
+>>>>>>> 44450ac1ea27c1f4558adc32109ff45928fc60c5
 
 ```python
 vectorizer = TfidfVectorizer(norm='l2')
