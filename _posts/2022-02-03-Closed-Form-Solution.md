@@ -3,7 +3,7 @@ title: Closed Form Solution
 subtitle: by Karan Desai
 date: 2022-02-03 00:00:00
 description: 
-featured_image: '/images/demo/demo-square.jpg'
+featured_image: '/images/demo/demo-square.webp'
 author: Karan Desai
 categories: ml
 ---
@@ -24,7 +24,7 @@ In order to get the weight(s) vector - θ we take the derivative of the cost fun
 
 <p align='center'>
 <a href='https://towardsdatascience.com/machine-learning-basics-part-1-concept-of-regression-31982e8d8ced'>
-<img src="/images/Posts/Closed_Form_Solution/1.png"></a>
+<img src="/images/Posts/Closed_Form_Solution/1.webp"></a>
 Figure 1. <a href='https://towardsdatascience.com/machine-learning-basics-part-1-concept-of-regression-31982e8d8ced'>
 Closed Form Solution</a>
 </p>
@@ -44,7 +44,7 @@ But, Machine Learning wouldn't be this much fun if things were so straight forwa
 
 <p align='center'>
 <a href='https://br.pinterest.com/pin/680606562427547114/'>
-<img src="/images/Posts/Closed_Form_Solution/2.jpeg" width="500" height="700"></a>
+<img src="/images/Posts/Closed_Form_Solution/2.webp" width="500" height="700"></a>
 Figure 2. <a href='https://br.pinterest.com/pin/680606562427547114/'>
 Constraints of Close-Form Solution for Linear Regression</a>
 </p>
@@ -61,7 +61,7 @@ Major drawback of this method is that, typically, we cannot use Closed-Form Solu
 
 <p align='center'>
 <a href='https://towardsdatascience.com/machine-learning-basics-part-1-concept-of-regression-31982e8d8ced'>
-<img src="/images/Posts/Closed_Form_Solution/3.png"></a>
+<img src="/images/Posts/Closed_Form_Solution/3.webp"></a>
 Figure 3. <a href='https://towardsdatascience.com/machine-learning-basics-part-1-concept-of-regression-31982e8d8ced'>
 Matrix Inversion</a>
 </p>

@@ -3,7 +3,7 @@ title: Probabilities and Statistics
 subtitle: Sai Akhilesh Ande
 date: 2022-01-04 00:00:00
 description: 
-featured_image: '/images/demo/demo-square.jpg'
+featured_image: '/images/demo/demo-square.webp'
 author: Sai Akhilesh Ande
 categories: math
 ---
@@ -14,7 +14,7 @@ categories: math
 
 The real-world data is often noisy with some true underlying signal. By applying Machine Learning, we hope to identify the signal from the noise. We require a language for quantifying "noise" or uncertainty. Quantification of uncertainty is the realm of Probability Theory.   
 
-<img src="/images/Posts/Probabilities/0.jpg" width="500" height="400">
+<img src="/images/Posts/Probabilities/0.webp" width="500" height="400">
 
 <p align='center'>
    <a href='https://www.all-about-psychology.com/psychology-jokes.html'>
@@ -97,7 +97,7 @@ Example-1:
 events will occur simultaneously.
 - The joint probability of two events A and B is denoted as $P(A,B)$ or $P(A \cap B)$.
 
-<img src="/images/Posts/Probabilities/joint-probability.png"
+<img src="/images/Posts/Probabilities/joint-probability.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:250px;width:300px"/>    
@@ -126,7 +126,7 @@ $$ \large P(A|B) = \frac{P(A \cap B)}{P(B)} $$
 
 - Equation:
 
-<img src="/images/Posts/Probabilities/bt.png"
+<img src="/images/Posts/Probabilities/bt.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:250px;width:450px"/>    
@@ -143,7 +143,7 @@ There are four parts:
 3. **Likelihood** (probability of the evidence, given the belief is true)
 4. **Marginal probability** (probability of the evidence, under any circumstance)
 
-<img src="/images/Posts/Probabilities/bayes-rule.png"
+<img src="/images/Posts/Probabilities/bayes-rule.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:250px;width:600px"/>     
@@ -184,7 +184,7 @@ representing the  data's center point or typical value. It is also known as
 the  **arithmetic average**, and it is one of several measures of central tendency.
 - Population mean is denoted by $\mu$ while sample mean is denoted by $\bar{X}$
 
-<img src="/images/Posts/Probabilities/mean.png"
+<img src="/images/Posts/Probabilities/mean.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:250px;width:450px"/>    
@@ -202,7 +202,7 @@ of  spread in your data set. The more spread the data, the larger the
 variance  is in relation to the mean.
 - Population variance is denoted by $ \sigma^2$ while sample variance is denoted by $s^2$
     
-<img src="/images/Posts/Probabilities/variance.png"
+<img src="/images/Posts/Probabilities/variance.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:250px;width:450px"/>
@@ -250,7 +250,7 @@ second standard  deviation encompasses an additional 13.6 percent of data points
 calculate  the total area under a normal distribution curve, its value would 
 equal  one unit of measure.    
     
-<img src="/images/Posts/Probabilities/normal-distribution.png"
+<img src="/images/Posts/Probabilities/normal-distribution.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:350px;width:650px"/>

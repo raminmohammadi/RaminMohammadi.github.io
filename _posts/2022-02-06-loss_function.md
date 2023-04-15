@@ -3,7 +3,7 @@ title: Loss Functions - part 1
 subtitle: by Siddhartha Putti 
 date: 2022-02-06 00:00:00
 description: 
-featured_image: '/images/demo/demo-square.jpg'
+featured_image: '/images/demo/demo-square.webp'
 author: Siddhartha Putti
 categories: ml
 ---
@@ -92,7 +92,7 @@ As you know Absolute value refers to making negative values positive. i.e negati
 <p align='center'>
 
 <a href='https://www.dreamstime.com/stock-image-man-two-opposite-directions-hand-drawn-cartoon-characters-image32035501'>
-<img src="/images/Posts/Cost_function/vector.jpg"
+<img src="/images/Posts/Cost_function/vector.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:250px;width:450px" />
@@ -111,7 +111,7 @@ That's how it feels if you have the same value with different signs, yes, they b
 <p align='center'>
 
 <a href='https://medium.com/@polanitzer/the-minimum-mean-absolute-error-mae-challenge-928dc081f031'>
-<img src="/images/Posts/Cost_function/mae.jpg"
+<img src="/images/Posts/Cost_function/mae.webp"
         style="display: block; display:block;
         margin-left: auto;
         margin-right: auto; height:250px;width:550px" />
@@ -131,7 +131,7 @@ I would also like to give you an example of how to interpret MAE, in the example
 <p align='center'>
 
 <a href='https://www.geeksforgeeks.org/root-mean-square-error-in-r-programming/'>
-<img src="/images/Posts/Cost_function/rmse.png"
+<img src="/images/Posts/Cost_function/rmse.webp"
         style="display: block; display:block;
         margin-left: auto;
         margin-right: auto; height:125px;width:350px" />
@@ -154,7 +154,7 @@ First ill introduce the equation:
 <p align='center'>
 
 <a href='https://medium.com/analytics-vidhya/root-mean-square-log-error-rmse-vs-rmlse-935c6cc1802a'>
-<img src="/images/Posts/Cost_function/rmsle.png"
+<img src="/images/Posts/Cost_function/rmsle.webp"
         style="display: block; display:block;
         margin-left: auto;
         margin-right: auto; height:125px;width:350px" />
@@ -241,7 +241,7 @@ when you use the MAE in optimizations that use gradient descent, you'll face the
 <p align='center'>
 
 <a href='https://medium.com/artificialis/loss-functions-361b2ad439a0'>
-<img src="/images/Posts/Cost_function/huber.png"
+<img src="/images/Posts/Cost_function/huber.webp"
         style="display: block; 
         margin-left: auto;
         margin-right: auto; height:120px;width:400px" />
@@ -262,7 +262,7 @@ Interpreting the equation:
 <p align='center'>
 
 <a href='https://medium.com/artificialis/loss-functions-361b2ad439a0'>
-<img src="/images/Posts/Cost_function/huber_viz.png"
+<img src="/images/Posts/Cost_function/huber_viz.webp"
         style="display: block; 
         margin-left: auto;
         margin-right: auto; height:300px;width:450px" />

@@ -3,7 +3,7 @@ title: Probably Approximately Correct(PAC) Learning
 subtitle: by Sachini Weerasekara 
 date: 2022-02-01 00:00:00
 description: 
-featured_image: '/images/demo/demo-square.jpg'
+featured_image: '/images/demo/demo-square.webp'
 author: Sachini Weerasekara
 categories: ml
 ---
@@ -18,7 +18,7 @@ Suppose we are given the undergraduate GPA and GRE score of n students that prev
 
 The task is to build a supervised learning model that correctly predicts if a pair [Undergraduate GPA, GRE score] will be accepted to the university or not.
 
-<img src="/images/Posts/PAC/PAC.png" width="550px">
+<img src="/images/Posts/PAC/PAC.webp" width="550px">
 <p align='center'>
 Figure. True trend (T) and derived hypothesis (H) of university acceptance
 </p>

@@ -3,7 +3,7 @@ title: Model Evaluation
 subtitle: by Jinchuan He 
 date: 2022-02-13 00:00:00
 description: 
-featured_image: '/images/demo/demo-square.jpg'
+featured_image: '/images/demo/demo-square.webp'
 author: Jinchuan He
 categories: ml
 ---
@@ -15,7 +15,7 @@ Model Evaluation is a process of evaluating model preference. It uses different 
 
 <br>
     <p style="text-align: center;">
-    <img src="/images/Posts/Model_Evaluation/Evaluation Model.png" width="600" height="400">
+    <img src="/images/Posts/Model_Evaluation/Evaluation Model.webp" width="600" height="400">
     </p>
 <br>
 <p align='center'><a href='https://medium.com/@skyl/evaluating-a-machine-learning-model-7cab1f597046'>Figure 1. Schematic</a></p>
@@ -48,7 +48,7 @@ In this method, the dataset is separated into third sets, called the Training se
 - Test set is used to assess the future performance of a model. If the preference of a model in the training set is much better than it in the test set, overfitting is probably the cause.
 <br>
     <p style="text-align: center;">
-    <img src="/images/Posts/Model_Evaluation/data separate.png" width="600" height="400">
+    <img src="/images/Posts/Model_Evaluation/data separate.webp" width="600" height="400">
     </p>
 <br>
 <p align='center'><a href='https://medium.com/@skyl/evaluating-a-machine-learning-model-7cab1f597046'>Figure 2. Data Split - Train, Validation, Test</a></p>
@@ -58,7 +58,7 @@ In this method, the dataset is separated into third sets, called the Training se
 When the size of the data is not large or there is a limited amount of data, the separation of data will lose some important information. When only a limited amount of data is available, to achieve an unbiased estimate of the model performance we use k-fold cross-validation. In k-fold cross-validation, the data is divided into k subsets of equal size. This method will build models k times and each time leave out one of the subsets from training and use it as the test set.
 <br>
     <p style="text-align: center;">
-    <img src="/images/Posts/Model_Evaluation/k-fold.png" width="600" height="400">
+    <img src="/images/Posts/Model_Evaluation/k-fold.webp" width="600" height="400">
     </p>
 <br>
 <p align='center'><a href='https://medium.com/@skyl/evaluating-a-machine-learning-model-7cab1f597046'>Figure 3. k-Folds</a></p>
@@ -119,7 +119,7 @@ $$ MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y_i})^2 $$
 In order to remeber this concept, I marked each apart.
 <br>
     <p style="text-align: center;">
-    <img src="/images/Posts/Model_Evaluation/MSE.png" width="200" height="100">
+    <img src="/images/Posts/Model_Evaluation/MSE.webp" width="200" height="100">
 <p style="text-align: left;">
 RMSE is the root of MSE. When MSE is too large to hard to read, we used to use RMSE to evaluate the model.
 
@@ -142,7 +142,7 @@ The confusion matrix (or confusion table) shows a more detailed breakdown of cor
 Here is Confusion Matrix:
 <br>
     <p style="text-align: center;">
-    <img src="/images/Posts/Model_Evaluation/confuse matrix.png" width="600" height="400">
+    <img src="/images/Posts/Model_Evaluation/confuse matrix.webp" width="600" height="400">
 <br>
 <p align='center'><a href='https://stats.stackexchange.com/questions/569062/why-i-am-getting-tp-and-fp-in-confusion-matrix-is-0-how-to-get-it-right'>Figure 4. Confusion Matrix</a></p>
 
@@ -170,7 +170,7 @@ $$ Recall = \dfrac{True Positive}{True Positive + False Negative} $$
 Ideally, precision and recall are as high as possible. In fact, they are contradictory in some cases. When the precision rate is high, the recall rate is low; when the precision rate is low, the recall rate is high. It is not difficult to observe this property by observing the PR curve. For example, when searching web pages, if only the most relevant web page is returned, the precision rate is 100%, and the recall rate is very low; if all web pages are returned, the recall rate is 100%, and the precision rate is very low. Therefore, in different cases, it is necessary to judge which indicator is more important according to the actual needs.
 <br>
     <p style="text-align: center;">
-    <img src="/images/Posts/Model_Evaluation/Precision recall.png" width="400" height="170">
+    <img src="/images/Posts/Model_Evaluation/Precision recall.webp" width="400" height="170">
 <br>
 
 <p align='center'><a href='https://en.wikipedia.org/wiki/Precision_and_recall'>Figure 5. Precision and Recall</a></p>
@@ -213,7 +213,7 @@ $$ Specificity = P(Y_h = 0 | Y = 0) $$
 The formulation shows that sensitivity and specificity are conditional on the probability of the real label Y. We know that in the conditional probability no matter what the true probability of Y is, it will not affect sensitivity and specificity. This is the advantage of the ROC chart. The two evaluation matrix in the ROC chart is not affected by the imbalanced data. However, for the precision, it will be affected by the true and false ratio in the test data.</p>
 <br>
     <p style="text-align: center;">
-    <img src="/images/Posts/Model_Evaluation/ROC Chart.png" width="600" height="400">
+    <img src="/images/Posts/Model_Evaluation/ROC Chart.webp" width="600" height="400">
     </p>
 <br>
 

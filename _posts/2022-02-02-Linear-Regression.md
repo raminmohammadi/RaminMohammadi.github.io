@@ -3,7 +3,7 @@ title: Linear Regression
 subtitle: by Karan Desai
 date: 2022-02-02 00:00:00
 description: 
-featured_image: '/images/demo/demo-square.jpg'
+featured_image: '/images/demo/demo-square.webp'
 author: Karan Desai
 categories: ml
 ---
@@ -12,7 +12,7 @@ categories: ml
 # Linear Regression
 
 <p align='center'>
-<img src="/images/Posts/Linear_Regression/img0.png"
+<img src="/images/Posts/Linear_Regression/img0.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:370px;width:800px" />
@@ -31,7 +31,7 @@ Linear regression is a basic and commonly used type of predictive analysis.  The
 
 
 <p align='center'>
-<img src="/images/Posts/Linear_Regression/img1.png"
+<img src="/images/Posts/Linear_Regression/img1.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:400px;width:500px" />
@@ -54,7 +54,7 @@ For example, say we have housing data with columns  - “# of bedrooms”, “ar
 We just need to make sure that the features are converted to numeric values. Once the preprocessing is done, we train the model to find a linear relationship between the rest of features and the price. This linear relationship is called Linear Regression. In other terms, “best fit”, something like...
 
 <p align='center'>
-<img src="/images/Posts/Linear_Regression/img2.png"
+<img src="/images/Posts/Linear_Regression/img2.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:400px;width:500px" />
@@ -62,7 +62,7 @@ We just need to make sure that the features are converted to numeric values. Onc
 
 <p align='center'>
 Figure 3. 
-<a href='https://commons.wikimedia.org/wiki/File:Normdist_regression.png'>
+<a href='https://commons.wikimedia.org/wiki/File:Normdist_regression.webp'>
 Linear Regression</a>
 </p>
 
@@ -73,7 +73,7 @@ Linear Regression</a>
 We find this relation using the equation:
 
 <p align='center'>
-<img src="/images/Posts/Linear_Regression/img3.png"
+<img src="/images/Posts/Linear_Regression/img3.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:100px;width:400px" />
@@ -119,7 +119,7 @@ By achieving the best-fit regression line, the model aims to predict y value suc
 One of the Cost function(J) of Linear Regression is the Root Mean Squared Error (RMSE)
 
 <p align='center'>
-<img src="/images/Posts/Linear_Regression/img4.png"
+<img src="/images/Posts/Linear_Regression/img4.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:100px;width:300px" />

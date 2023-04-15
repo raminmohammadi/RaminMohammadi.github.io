@@ -3,7 +3,7 @@ title: Error Analysis
 subtitle: by Keerthi Godha
 date: 2022-02-12 00:00:00
 description: 
-featured_image: '/images/demo/demo-square.jpg'
+featured_image: '/images/demo/demo-square.webp'
 author: Keerthi Godha
 categories: ml
 ---
@@ -11,7 +11,7 @@ categories: ml
 ## Error Analysis (Threshold - Cut-off selection) 
             
 <p align='center'>
-<img src="/images/Posts/Error_Analysis/Error Analysis image.jpg"
+<img src="/images/Posts/Error_Analysis/Error Analysis image.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:370px;width:500px" />
@@ -78,7 +78,7 @@ It produces four different possible outcomes. Again, **a cut-off (threshold) is 
 - Also known as the Type 2 error
 
 <p align='center'>
-<img src="/images/Posts/Error_Analysis/Confusion Matrix.png"
+<img src="/images/Posts/Error_Analysis/Confusion Matrix.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:300px;width:500px"/>
@@ -183,7 +183,7 @@ The graphical ROC curve is produced by plotting sensitivity (True Positive Rate)
  
     
 <p align='center'>
-<img src="/images/Posts/Error_Analysis/ROC Curve.png"
+<img src="/images/Posts/Error_Analysis/ROC Curve.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:400px;width:600px">
@@ -204,7 +204,7 @@ AUC measures the entire two-dimensional area underneath the entire ROC curve, wh
       
     
 <p align='center'>
-<img src="/images/Posts/Error_Analysis/AUC Curve.png"
+<img src="/images/Posts/Error_Analysis/AUC Curve.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:400px;width:600px"/>
@@ -225,7 +225,7 @@ Let's consider a simple example of a diagnostic test performed on the group with
 
 
 <p align='center'>
-<img src="/images/Posts/Error_Analysis/Probability_Density_example.png"
+<img src="/images/Posts/Error_Analysis/Probability_Density_example.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:400px;width:450px"/> 
@@ -239,7 +239,7 @@ Overlapping datasets will always generate false positives and false negatives </
 - Let's take below sample dataset with predicted probability and actual class. Predicted probability is the probability derived using our classification algorithm, and the actual class is whether a patient has cancer or not in reality.     
 
 <p align='center'>
-<img src="/images/Posts/Error_Analysis/Sample Dataset.png"
+<img src="/images/Posts/Error_Analysis/Sample Dataset.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; 
@@ -252,7 +252,7 @@ Figure 6. Sample Dataset
 - Now build a confusion matrix based on threshold values 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 and 1, derive respective True Positive Rate (Sensitivity) and False Positive Rate (1 - Specificity) to plot ROC Curve.
 
 <p align='center'> 
-<img src="/images/Posts/Error_Analysis/Confusion Matrix_for_cutoffValues.png"
+<img src="/images/Posts/Error_Analysis/Confusion Matrix_for_cutoffValues.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:600px;width:950px"/>
@@ -267,7 +267,7 @@ Figure 7. Confusion matrices w.r.to different cut-off selection
 <font size="2">  $$   FPR\space (or)\space 1- Specificity = \frac{FP}{TN+FP} $$</font> 
 
 <p align='center'> 
-<img src="/images/Posts/Error_Analysis/Sensitivity_Specificity_values.png"
+<img src="/images/Posts/Error_Analysis/Sensitivity_Specificity_values.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:400px;width:380px"/>
@@ -281,7 +281,7 @@ Figure 8. Sensitivity and Specificity Analysis w.r.to Cut-off
 
 
 <p align='center'> 
-<img src="/images/Posts/Error_Analysis/ROC Curve_example.png"
+<img src="/images/Posts/Error_Analysis/ROC Curve_example.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:400px;width:600px"/>
@@ -304,7 +304,7 @@ Youden's J index is used to select the optimal cut-off. It is a diagnostic test 
     
 
 <p align='center'> 
-<img src="/images/Posts/Error_Analysis/Youden index.png"
+<img src="/images/Posts/Error_Analysis/Youden index.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:400px;width:600px"/>
@@ -319,7 +319,7 @@ Another "optimal cut-off" is the value for which the point on the ROC curve has 
 
 
 <p align='center'> 
-<img src="/images/Posts/Error_Analysis/ROC_Euclidean Distance.png"
+<img src="/images/Posts/Error_Analysis/ROC_Euclidean Distance.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:400px;width:600px"/>

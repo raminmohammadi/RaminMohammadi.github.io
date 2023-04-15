@@ -3,7 +3,7 @@ title: Gradient Descent
 subtitle: by Jinchuan He 
 date: 2022-02-10 00:00:00
 description: 
-featured_image: '/images/demo/demo-square.jpg'
+featured_image: '/images/demo/demo-square.webp'
 author: Jinchuan He
 categories: ml
 ---
@@ -32,7 +32,7 @@ Gradient Descent is an optimization algorithm used for minimizing the cost funct
 I will use the chart to help you to understand what is gradient descent.
 <br>
     <p style="text-align: center;">
-    <img src="/images/Posts/Gradient_Descent/bear.png" width="500" height="400"><p>
+    <img src="/images/Posts/Gradient_Descent/bear.webp" width="500" height="400"><p>
 <p align='center'>Figure 1. <a href='https://www.jamitarris.com/image/I0000mAheJNe3_R0'>A Bear Climb the Hill</a></p>
 
 You can imagine a blind bear wanting to climb to the top of a hill with the fewest steps possible. When the bear started climbing, he will take big steps which he can do as long as he is not close to the top. While the bear comes closer to the top, his steps will get smaller and smaller to avoid overshooting the top point. You can think this process is using the gradient.
@@ -40,7 +40,7 @@ You can imagine a blind bear wanting to climb to the top of a hill with the fewe
 In mathamatics, we can use the below figure to explain it.
 <br>
     <p style="text-align: center;">
-    <img src="/images/Posts/Gradient_Descent/gradient descent row.jpg" width="400" height="200"><p>   
+    <img src="/images/Posts/Gradient_Descent/gradient descent row.webp" width="400" height="200"><p>   
 <p align='center'>Figure 2. <a href='http://127.0.0.1:4000/blog/gradient-descent'>Gradient Descent - Top View</a></p>
 
 You can imagine the red arrows are the steps of the bear and the center of the circle is the top point. In the beginning, the gradient range is much longer than the others.
@@ -50,7 +50,7 @@ You can imagine the red arrows are the steps of the bear and the center of the c
 When we learn some machine learning models, we need to use the gradient descent method to resolve the result. Now we need to understand how it is working.
 <br>
     <p style="text-align: center;">
-    <img src="/images/Posts/Gradient_Descent/gradient descent.jpg" width="400" height="400"><p>
+    <img src="/images/Posts/Gradient_Descent/gradient descent.webp" width="400" height="400"><p>
 <p align='center'>Figure 3. <a href='https://towardsdatascience.com/mathematical-intuition-behind-gradient-descent-f1b959a59e6d'> Gradient Descent - Front View</a></p>
         
 We hope we can get the optimized point in a short time. Therefore, we need to reduce the interactive times. The gradient descent can help us to do that.
@@ -66,7 +66,7 @@ Stochastic gradient descent (SGD) will calculate the error for each training exa
 
 <br>
     <p style="text-align: center;">
-    <img src="/images/Posts/Gradient_Descent/SGD and BGD.jpg" width="800" height="600"><p>
+    <img src="/images/Posts/Gradient_Descent/SGD and BGD.webp" width="800" height="600"><p>
 
 The image above explains the difference between SGD and BGD. SGD will iterate more times, but the time of each iteration is slow. Thus, SGD is faster than BGD.
 <p align='center'>Figure 4. <a href='https://towardsdatascience.com/a-deeper-look-into-gradient-based-learning-for-neural-networks-ad7a35b17b93'>SGD vs. GD</a></p>
