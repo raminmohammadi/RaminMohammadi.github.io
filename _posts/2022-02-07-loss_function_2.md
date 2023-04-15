@@ -3,7 +3,7 @@ title: Loss Functions - part 2
 subtitle: by Siddhartha Putti 
 date: 2022-02-07 00:00:00
 description: 
-featured_image: '/images/demo/demo-square.jpg'
+featured_image: '/images/demo/demo-square.webp'
 author: Siddhartha Putti
 categories: ml
 ---
@@ -22,7 +22,7 @@ In the previous post, We have seen how the Loss/cost function works in regressio
 
 <a href='https://datascience.stackexchange.com/questions/52144/negative-range-for-binary-cross-entropy-loss'>
 
-<img src="/images/Posts/Cost_function_2/ccel.png"
+<img src="/images/Posts/Cost_function_2/ccel.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:60px;width:500px" />
@@ -45,7 +45,7 @@ An Increase in prob decreases loss and a decrease in prob increases loss. (huh..
 
 <a href='https://ml-cheatsheet.readthedocs.io/en/latest/loss_functions.html'>
 
-<img src="/images/Posts/Cost_function_2/logloass.png"
+<img src="/images/Posts/Cost_function_2/logloass.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:250px;width:400px" />
@@ -72,7 +72,7 @@ The Hinge loss function is mainly used in Support Vector Machine settings. It is
 
 <a href='https://towardsdatascience.com/a-definitive-explanation-to-hinge-loss-for-support-vector-machines-ab6d8d3178f1'>
 
-<img src="/images/Posts/Cost_function_2/hinge.png"
+<img src="/images/Posts/Cost_function_2/hinge.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:250px;width:400px" />
@@ -97,7 +97,7 @@ You have seen what hinge loss is and how it works. Now, let's see the mathematic
 
 <a href='https://towardsdatascience.com/understanding-loss-functions-the-smart-way-904266e9393'>
 
-<img src="/images/Posts/Cost_function_2/hloss.png"
+<img src="/images/Posts/Cost_function_2/hloss.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:50px;width:400px" />

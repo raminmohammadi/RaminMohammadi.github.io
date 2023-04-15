@@ -3,7 +3,7 @@ title: Eigen Value Decomposition
 subtitle: Eigen Value Decomposition and PCA - By Yue Chen
 date: 2022-01-02 00:00:00
 description: 
-featured_image: '/images/demo/demo-square.jpg'
+featured_image: '/images/demo/demo-square.webp'
 author: Yue Chen
 categories: math
 ---
@@ -20,7 +20,7 @@ Jack: Calm down. It’s just that Paul has been reading a lot of math, God
 knows how  Jennifer are obsessed with mathematician.
 
 
-<img src="/images/Posts/PCA/P1.png" width="481" height="517" alt="">
+<img src="/images/Posts/PCA/P1.webp" width="481" height="517" alt="">
 
 
 Ashley: Oh really, tell me more about it! You know I’ve got an audition next 
@@ -35,7 +35,7 @@ list of  Whisky features, we can use PCA to summarize each whisky through
 extracting  the maximum possible information from the drink while reducing 
 the noise  and ignoring the redundant information. 
 
-<img src="/images/Posts/PCA/P2.png" width="593" height="345" alt="">
+<img src="/images/Posts/PCA/P2.webp" width="593" height="345" alt="">
 
 (The Esquire Rainbow of Whiskey)
 
@@ -56,8 +56,8 @@ summarizes  the information for you? How does it know what’s important and wha
 Jack: Good question. Perhaps I should make a little drawing (takes a napkin 
 and  starts scribbling).
 
-<img src="/images/Posts/PCA/P3.png" width="533" height="353" alt="">    <img 
-src="/images/Posts/PCA/P4.png" width="717" height="423" alt="">
+<img src="/images/Posts/PCA/P3.webp" width="533" height="353" alt="">    <img 
+src="/images/Posts/PCA/P4.webp" width="717" height="423" alt="">
 
 Then Johnny used his wind borrowed from the Charlie movie, the black line starts to spin.
 
@@ -74,69 +74,69 @@ Jack: My sweetheart, let me explain to you! Eigenvalues and eigenvectors are
 the results of eigen-decomposition of matrix.
 The decomposition can be derived from the fundamental property of eigenvectors:
 
-<img src="/images/Posts/PCA/P7.png" alt="" width="182" height="102">
+<img src="/images/Posts/PCA/P7.webp" alt="" width="182" height="102">
 
 The 2 × 2 real matrix A, may be decomposed into a diagonal matrix through  
 multiplication of a non-singular matrix B
 
-<img src="/images/Posts/PCA/P8.png" alt="" width="367" height="87">
+<img src="/images/Posts/PCA/P8.webp" alt="" width="367" height="87">
 
 Then
 
-<img src="/images/Posts/PCA/P9.png" alt="" width="376" height="87"> for some real diagonal matrix 
-<img src="/images/Posts/PCA/P10.png" alt="" width="86" height="71">
+<img src="/images/Posts/PCA/P9.webp" alt="" width="376" height="87"> for some real diagonal matrix 
+<img src="/images/Posts/PCA/P10.webp" alt="" width="86" height="71">
 
 Multiplying both sides of the equation on the left by B:
 
-<img src="/images/Posts/PCA/P11.png" alt="" width="352" height="78">
+<img src="/images/Posts/PCA/P11.webp" alt="" width="352" height="78">
 
 Jack’s dog: Oh I see! The above equation can be decomposed into two simultaneous equations:
 
-<img src="/images/Posts/PCA/P12.png" alt="" width="695" height="147">
+<img src="/images/Posts/PCA/P12.webp" alt="" width="695" height="147">
       
 Letting
  
-<img src="/images/Posts/PCA/P13.png" alt="" width="272" height="87">
+<img src="/images/Posts/PCA/P13.webp" alt="" width="272" height="87">
 
 this gives us two vector equations:
 
-<img src="/images/Posts/PCA/P14.png" alt="" width="147" height="80">
+<img src="/images/Posts/PCA/P14.webp" alt="" width="147" height="80">
  
 And can be represented by a single vector equation involving two solutions as eigenvalues:
  
-<img src="/images/Posts/PCA/P15.png" alt="" width="162" height="61">  where λ represents the two 
+<img src="/images/Posts/PCA/P15.webp" alt="" width="162" height="61">  where λ represents the two 
 eigenvalues x  and y, and u represents the vectors a and b.
 
 Shifting λu to the left-hand side and factoring u out
  
-<img src="/images/Posts/PCA/P16.png" alt="" width="242" height="67">
+<img src="/images/Posts/PCA/P16.webp" alt="" width="242" height="67">
 
 Since B is non-singular, it is essential that u is nonzero. Therefore,
 
-<img src="/images/Posts/PCA/P17.png" alt="" width="260" height="58">
+<img src="/images/Posts/PCA/P17.webp" alt="" width="260" height="58">
 
 Thus
 
-<img src="/images/Posts/PCA/P18.png" alt="" width="291" height="53">
+<img src="/images/Posts/PCA/P18.webp" alt="" width="291" height="53">
 
 giving us the solutions of the eigenvalues for the matrix A as λ = 1 or λ = 3. 
 
 And the resulting diagonal matrix from the eigen-decomposition of A is thus
-<img height="110" src="/images/Posts/PCA/P19.png" width="100"/>
+<img height="110" src="/images/Posts/PCA/P19.webp" width="100"/>
  
 Jack: Absolutely! Putting the solutions back into the above simultaneous equations
 
-<img src="/images/Posts/PCA/P20.png" alt="" width="281" height="167">
+<img src="/images/Posts/PCA/P20.webp" alt="" width="281" height="167">
  
-Solving the equations, we have <img src="/images/Posts/PCA/P21.png">
+Solving the equations, we have <img src="/images/Posts/PCA/P21.webp">
 
 Thus, the matrix B required for the eigen-decomposition of A is
 
-<img src="/images/Posts/PCA/P22.png" alt="" width="390" height="92">
+<img src="/images/Posts/PCA/P22.webp" alt="" width="390" height="92">
 
 that is:
 
-<img src="/images/Posts/PCA/P23.png" alt="" width="665" height="85">
+<img src="/images/Posts/PCA/P23.webp" alt="" width="665" height="85">
 
 Ashley: Zzzzz…. Oh! Darling, what should I say? You just keep surprising me 
 every  day! Now give me a example of PCA that happened to you.

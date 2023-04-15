@@ -3,7 +3,7 @@ title: Bias-Variance Tradeoff
 subtitle: by Siddhartha Putti 
 date: 2022-02-11 00:00:00
 description: 
-featured_image: '/images/demo/demo-square.jpg'
+featured_image: '/images/demo/demo-square.webp'
 author: Siddhartha Putti
 categories: ml
 ---
@@ -26,7 +26,7 @@ Let's go through complexity of the model.
 
 <a href='https://www.endtoend.ai/blog/bias-variance-tradeoff-in-reinforcement-learning/#:~:text=Bias%2Dvariance%20tradeoff%20is%20a,the%20data%20has%20high%20variance.'>
 
-<img src="/images/Posts/Bias_Variance_Tradeoff/underfit_right_overfit.png"
+<img src="/images/Posts/Bias_Variance_Tradeoff/underfit_right_overfit.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:200px;width:600px" ></a>
@@ -46,7 +46,7 @@ The following graph shows the bias variance tradeoff considering degree of polyn
 
 <br>
 
-<img src="/images/Posts/Bias_Variance_Tradeoff/poly2.jpeg"
+<img src="/images/Posts/Bias_Variance_Tradeoff/poly2.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:300px;width:550px" />
@@ -63,7 +63,7 @@ Lets consider L2 regularization.
 
 <br>
 
-<img src="/images/Posts/Bias_Variance_Tradeoff/poly4.jpeg"
+<img src="/images/Posts/Bias_Variance_Tradeoff/poly4.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:200px;width:450px" />
@@ -75,7 +75,7 @@ As our objective is to minimize the loss function in any setting, The decrease i
 
 <br>
 
-<img src="/images/Posts/Bias_Variance_Tradeoff/poly3.jpeg"
+<img src="/images/Posts/Bias_Variance_Tradeoff/poly3.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:300px;width:450px" />

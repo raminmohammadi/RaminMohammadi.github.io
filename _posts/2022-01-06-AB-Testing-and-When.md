@@ -3,7 +3,7 @@ title: A/B, A/A Testing, and When to Use
 subtitle: by Yanming Liu 
 date: 2022-12-07 00:00:00
 description: 
-featured_image: '/images/demo/demo-square.jpg'
+featured_image: '/images/demo/demo-square.webp'
 author: Yanming Liu
 categories: math
 ---
@@ -23,12 +23,12 @@ All of them are introduced with a logic of definition, application, and the diff
 
 A/B Testing is a randomized controllable experiment that incorporates variant A and variant B to determine which variant is more effective for given tasks. Taking the website below as an example, the click rates for the blue and green buttons can be measured by randomly showing them to visitors, therefore, we can decide which button color will matter more so as to acquire the additional exposure under the attractive color. 
 
-<img src="/images/Posts/AB_Testing/A-B_testing_example.png"
+<img src="/images/Posts/AB_Testing/A-B_testing_example.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:350px;width:600px"/>     
 <p align='center'>
-   <a href='https://en.wikipedia.org/wiki/A/B_testing#/media/File:A-B_testing_example.png'>
+   <a href='https://en.wikipedia.org/wiki/A/B_testing#/media/File:A-B_testing_example.webp'>
       Figure Credit
    </a>
 </p>

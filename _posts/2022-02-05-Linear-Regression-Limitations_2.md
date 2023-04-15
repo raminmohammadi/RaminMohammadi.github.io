@@ -3,7 +3,7 @@ title: Linear Regression Limitations - part 2
 subtitle: by Yanming Liu 
 date: 2022-02-05 00:00:00
 description: 
-featured_image: '/images/demo/demo-square.jpg'
+featured_image: '/images/demo/demo-square.webp'
 author: Yanming Liu
 categories: ml
 ---
@@ -34,7 +34,7 @@ Ex 1. Figure out the strengths and weaknesses of the closed-form method and Grad
 
 <p align='center'>
 <a href='https://medium.com/@manojgupta_rch/linear-regression-performance-evaluation-matrices-simplified-1126915a0243'>
-<img src="/images/Posts/Linear_Regression_Limitations_2/lr.JPG"></a>
+<img src="/images/Posts/Linear_Regression_Limitations_2/lr.webp"></a>
 Figure 1. <a href='https://medium.com/@manojgupta_rch/linear-regression-performance-evaluation-matrices-simplified-1126915a0243'>
 Linear Regression</a>
 </p>
@@ -55,7 +55,7 @@ letting non-linearity into linearity sometimes.
 
 <p align='center'>
 <a href='http://sam-koblenski.blogspot.com/2014/10/everyday-statistics-for-programmers_21.html'>
-<img src="/images/Posts/Linear_Regression_Limitations_2/non-linear.png" width='480' height='300' /></a>
+<img src="/images/Posts/Linear_Regression_Limitations_2/non-linear.webp" width='480' height='300' /></a>
 Figure 2: <a href='http://sam-koblenski.blogspot.com/2014/10/everyday-statistics-for-programmers_21.html'>
 Non-linearity Between Features and Target</a>
 </p>
@@ -77,7 +77,7 @@ use either of them as the input for our model building instead of all of them to
 
 <p align='center'>
 <a href='https://www.hopkinsmedicine.org/endocrinology_diabetes_metabolism/_documents/glycemia-risk-index-article.pdf'>
-<img src="/images/Posts/Linear_Regression_Limitations_2/corr.JPG" width='400' height='400'/></a>
+<img src="/images/Posts/Linear_Regression_Limitations_2/corr.webp" width='400' height='400'/></a>
 Figure 3: <a href='https://www.hopkinsmedicine.org/endocrinology_diabetes_metabolism/_documents/glycemia-risk-index-article.pdf'>
 Correlation Between Pairs of Metrics</a>
 </p>
@@ -100,7 +100,7 @@ employed for handling outliers. See section 3 in this Jupyter Notebook for [dete
 
 <p align='center'>
 <a href='http://www.turingfinance.com/regression-analysis-using-python-statsmodels-and-quandl/'>
-<img src="/images/Posts/Linear_Regression_Limitations_2/outlier.png" /></a>
+<img src="/images/Posts/Linear_Regression_Limitations_2/outlier.webp" /></a>
 Figure 4.<a href='http://www.turingfinance.com/regression-analysis-using-python-statsmodels-and-quandl/'> Regression Performance Under Existing or Removed Outlier
  </a>
 </p>

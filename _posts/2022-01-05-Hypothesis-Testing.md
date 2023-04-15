@@ -3,7 +3,7 @@ title: Hypothesis Testing and When to Use
 subtitle: by Sachini Weerasekara
 date: 2022-12-07 00:00:00
 description: 
-featured_image: '/images/demo/demo-square.jpg'
+featured_image: '/images/demo/demo-square.webp'
 author: Sachini Weerasekara
 categories: math
 ---
@@ -23,12 +23,12 @@ This read will cover what hypothesis testing is, and when and how to use it in y
 Any data science project starts with exploring a set of sample data through exploratory data analysis and inferal statistics. Then we want to use these observations to draw inferences about the entire population. 
 
 
-<img src="/images/Posts/Hypothesis_Testing/figure1.jpg"
+<img src="/images/Posts/Hypothesis_Testing/figure1.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:350px;width:600px"/>     
 <p align='center'>
-   <a href='https://en.wikipedia.org/wiki/A/B_testing#/media/File:A-B_testing_example.png'>
+   <a href='https://en.wikipedia.org/wiki/A/B_testing#/media/File:A-B_testing_example.webp'>
       Figure 1: Using samples to make inferences about the population
    </a>
 </p>
@@ -43,12 +43,12 @@ Hypothesis testing is used to determine if in the known sample, we have enough s
 
 Hypothesis testing comes after data pre-processing and model building steps. We use hypothesis testing to build confidence in the machine learning model by making sure the model makes significantly correct predictions of the population. 
 
-<img src="/images/Posts/Hypothesis_Testing/figure2.jpg"
+<img src="/images/Posts/Hypothesis_Testing/figure2.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:300px;width:600px"/>     
 <p align='center'>
-   <a href='https://en.wikipedia.org/wiki/A/B_testing#/media/File:A-B_testing_example.png'>
+   <a href='https://en.wikipedia.org/wiki/A/B_testing#/media/File:A-B_testing_example.webp'>
       Figure 2: Steps in any ML project and when to perform hypothesis testing
    </a>
 </p>
@@ -70,7 +70,7 @@ Alternative hypothesis: $H_1:$ This is the counter argument to $H_1$. Usually we
 
 2) Determine the significance level
 
-<img src="/images/Posts/Hypothesis_Testing/figure3.jpg"
+<img src="/images/Posts/Hypothesis_Testing/figure3.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:350px;width:600px"/>     
@@ -103,12 +103,12 @@ If P-value $>$ $\alpha$ ; Fail to reject $H_0$
 4) Calculate test statistic values and P-values
   
 
-<img src="/images/Posts/Hypothesis_Testing/figure4.jpg"
+<img src="/images/Posts/Hypothesis_Testing/figure4.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:230px;width:600px"/>     
 <p align='center'>
-   <a href='https://en.wikipedia.org/wiki/A/B_testing#/media/File:A-B_testing_example.png'>
+   <a href='https://en.wikipedia.org/wiki/A/B_testing#/media/File:A-B_testing_example.webp'>
       Figure 4: Test statistics of Z-test, T-test, F-test, and chi-squared test
    </a>
 </p>
@@ -127,12 +127,12 @@ Next we find the P-value associated with the test statistic. P-value is a measur
 
 ### 4. Possible errors while performing hypothesis testing <a name="possible_errors"></a>
 
-<img src="/images/Posts/Hypothesis_Testing/figure5.jpg"
+<img src="/images/Posts/Hypothesis_Testing/figure5.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:100px;width:600px"/>     
 <p align='center'>
-   <a href='https://en.wikipedia.org/wiki/A/B_testing#/media/File:A-B_testing_example.png'>
+   <a href='https://en.wikipedia.org/wiki/A/B_testing#/media/File:A-B_testing_example.webp'>
       Figure 5: Possible errors in hypothesis testing: type I error and type II error
    </a>
 </p>
@@ -144,12 +144,12 @@ Type I error: Happens when the null hypothesis is true but we reject it. The lev
 
 Type II error:  Happens when the null hypothesis is false but we fail to reject it. The probability of type II error is commonly denoted (in Figure 6) as $\beta$. 
 
-<img src="/images/Posts/Hypothesis_Testing/figure6.jpg"
+<img src="/images/Posts/Hypothesis_Testing/figure6.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:350px;width:600px"/>     
 <p align='center'>
-   <a href='https://en.wikipedia.org/wiki/A/B_testing#/media/File:A-B_testing_example.png'>
+   <a href='https://en.wikipedia.org/wiki/A/B_testing#/media/File:A-B_testing_example.webp'>
       Figure 6: Probabilities of type I and type II errors
    </a>
 </p>

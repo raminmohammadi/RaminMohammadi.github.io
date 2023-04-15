@@ -3,7 +3,7 @@ title: Lasso, Ridge, and Robust Regression
 subtitle: by Keerthi Godha
 date: 2022-02-08 00:00:00
 description: 
-featured_image: '/images/demo/demo-square.jpg'
+featured_image: '/images/demo/demo-square.webp'
 author: Keerthi Godha
 categories: ml
 ---
@@ -25,7 +25,7 @@ categories: ml
 
               
 <p align='center'>
-<img src="/images/Posts/Lasso_Ridge_Robust_Regression/Regression.png"
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/Regression.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:250px;width:250px"/>
@@ -61,7 +61,7 @@ Let's recall the Loss function of Linear Regression, which is Mean Square Error 
 <font size="3">  $$   J(θ) = \frac{1}{n} \displaystyle\sum_{i=1}^n(y - ŷ)^2  $$<br></font>
     
 <p align='center'>
-<img src="/images/Posts/Lasso_Ridge_Robust_Regression/Norm 2.png"
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/Norm 2.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:250px;width:300px"/>
@@ -76,7 +76,7 @@ The problem with MSE is that it is highly sensitive toward large errors compared
 <font size="3">  $$ J(θ) = \frac{1}{n}\displaystyle\sum_{i=1}^n|y - ŷ|$$<br>  </font>
 
 <p align='center'>
-<img src="/images/Posts/Lasso_Ridge_Robust_Regression/Norm 1.png"
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/Norm 1.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:250px;width:300px"/>
@@ -103,7 +103,7 @@ Huber loss is a combination of L2 and L1 functions, it looks like as below.<br>
  <br>        
 
 <p align='center'>
-<img src="/images/Posts/Lasso_Ridge_Robust_Regression/Huber Loss.png"
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/Huber Loss.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:250px;width:300px"/>
@@ -126,7 +126,7 @@ Overfitting occurs when the model performs well on the training data but not so 
 
               
 <p align='center'>
-<img src="/images/Posts/Lasso_Ridge_Robust_Regression/overfitting.png"
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/overfitting.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:250px;width:350px"/>
@@ -152,7 +152,7 @@ In the above image, ***black line*** tries to learn the pattern of the data poin
 
               
 <p align='center'>
-<img src="/images/Posts/Lasso_Ridge_Robust_Regression/Overfit to Good fit.png"
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/Overfit to Good fit.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:250px;width:700px"/>
@@ -219,7 +219,7 @@ It forces to get weights from the shape of Norm 1, as shown below.<br>
        
               
 <p align='center'>
-<img src="/images/Posts/Lasso_Ridge_Robust_Regression/L1 Shape.png"
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/L1 Shape.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:450px;width:380px"/>
@@ -244,7 +244,7 @@ Still confused? 😕  Let’s take a simple Regression example of price predicti
 
               
 <p align='center'>
-<img src="/images/Posts/Lasso_Ridge_Robust_Regression/ex picture 1.png"
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/ex picture 1.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:300px;width:450px"/> <br>
@@ -260,7 +260,7 @@ Lasso Shape </a>
 
 
 <p align='center'>
-<img src="/images/Posts/Lasso_Ridge_Robust_Regression/ex picture 2.png"
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/ex picture 2.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:300px;width:450px"/> <br>
@@ -275,7 +275,7 @@ Lasso Shape </a>
       
 
 <p align='center'>
-<img src="/images/Posts/Lasso_Ridge_Robust_Regression/ex picture 3.png"
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/ex picture 3.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:300px;width:450px"/><br>
@@ -356,7 +356,7 @@ Hence it is not feasible to update the weights of the features using a closed fo
 L1 and its derivative look like below. L1 gradient is 1 or -1 unless w = 0 <br>
 
 <p align='center'>
-<img src="/images/Posts/Lasso_Ridge_Robust_Regression/L1 Derivative.png"
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/L1 Derivative.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:200px;width:450px"/>
@@ -402,7 +402,7 @@ It forces to get weights from the shape of Norm 2, as shown below.
 
         
 <p align='center'>
-<img src="/images/Posts/Lasso_Ridge_Robust_Regression/L2 Shape.png"
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/L2 Shape.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:450px;width:380px"/>
@@ -442,7 +442,7 @@ Optimal θ, i.e $$ θ^* $$  will become 0 only when λ = ∞, ***so it is clear 
 L2 and its derivative look like below. 
 
 <p align='center'>
-<img src="/images/Posts/Lasso_Ridge_Robust_Regression/L2 Derivative.png"
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/L2 Derivative.webp"
      style="display: block; 
         margin-left: auto;
         margin-right: auto; height:200px;width:450px"/>

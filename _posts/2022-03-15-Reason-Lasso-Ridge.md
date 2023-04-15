@@ -3,7 +3,7 @@ title: Reasoning behind Lasso and Ridge Distribution
 subtitle: by Ishan Palit
 date: 2022-02-14 00:00:00
 description: 
-featured_image: '/images/demo/demo-square.jpg'
+featured_image: '/images/demo/demo-square.webp'
 author: Ishan Palit
 categories: ml
 ---
@@ -33,9 +33,9 @@ $$\sum_{j = 0}^{p} w_j^2 <  c, for~some~c > 0$$
 So ridge regression puts constraint on the coefficients (w). The penalty term (lambda) regularizes the coefficients such that if the coefficients take large values the optimization function is penalized. So, ridge regression shrinks the coefficients and it helps to reduce the model complexity and multi-collinearity. Going back to the equation one can see that when λ → 0 , the cost function becomes similar to the linear regression cost function. So lower the constraint (low λ) on the features, the model will resemble linear regression model.
 
 <p align='center'>
-<a href='https://miro.medium.com/v2/resize:fit:1400/format:webp/1*S1i1O3HZMD4FsHTFN5_vGQ.png'>
+<a href='https://miro.medium.com/v2/resize:fit:1400/format:webp/1*S1i1O3HZMD4FsHTFN5_vGQ.webp'>
 
-<img src="/images/Posts/Reason_Lasso_Ridge/1.jpg"
+<img src="/images/Posts/Reason_Lasso_Ridge/1.webp"
 style="display: block;
 margin-left: auto;
 margin-right: auto; height:400px;width:500px" />
@@ -62,9 +62,9 @@ The lasso performs shrinkage so that there are "corners'' in the constraint, whi
 ## Lasso and Ridge Distribution
 
 <p align='center'>
-<a href='https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Jd03Hyt2bpEv1r7UijLlpg.png'>
+<a href='https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Jd03Hyt2bpEv1r7UijLlpg.webp'>
 
-<img src="/images/Posts/Reason_Lasso_Ridge/2.jpg"
+<img src="/images/Posts/Reason_Lasso_Ridge/2.webp"
 style="display: block;
 margin-left: auto;
 margin-right: auto; height:400px;width:450px" />
@@ -80,9 +80,9 @@ Lasso tends to give sparse weights (most zeros), because the l1 regularization c
 ## Compare Ridge and Lasso :
 
 <p align='center'>
-<a href='https://online.stat.psu.edu/onlinecourses/sites/stat508/files/lesson04/ridge_regression.png'>
+<a href='https://online.stat.psu.edu/onlinecourses/sites/stat508/files/lesson04/ridge_regression.webp'>
 
-<img src="/images/Posts/Reason_Lasso_Ridge/3.jpg"
+<img src="/images/Posts/Reason_Lasso_Ridge/3.webp"
 style="display: block;
 margin-left: auto;
 margin-right: auto; height:400px;width:400px" />
@@ -96,9 +96,9 @@ The colored lines are the paths of regression coefficients shrinking towards zer
 Ridge regression shrinks all regression coefficients towards zero; the lasso tends to give a set of zero regression coefficients and leads to a sparse solution.
 
 <p align='center'>
-<a href='https://online.stat.psu.edu/onlinecourses/sites/stat508/files/lesson04/ordinary_lasso.png'>
+<a href='https://online.stat.psu.edu/onlinecourses/sites/stat508/files/lesson04/ordinary_lasso.webp'>
 
-<img src="/images/Posts/Reason_Lasso_Ridge/4.jpg"
+<img src="/images/Posts/Reason_Lasso_Ridge/4.webp"
 style="display: block;
 margin-left: auto;
 margin-right: auto; height:400px;width:400px" />

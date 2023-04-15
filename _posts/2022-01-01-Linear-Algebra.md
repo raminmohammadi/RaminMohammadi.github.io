@@ -3,7 +3,7 @@ title: Linear Algebra
 subtitle: The Robin of Dataman - By Yue Chen
 date: 2022-01-01 00:00:00
 description: 
-featured_image: '/images/demo/demo-square.jpg'
+featured_image: '/images/demo/demo-square.webp'
 author: Yue Chen
 categories: math
 ---
@@ -27,7 +27,7 @@ start with a comparative study of Scalar VS Vector.
 Scalar Definition: A scalar is a number. Examples of scalars are temperature,
 distance, speed, or mass – all quantities that have a magnitude but no 
 “direction”,  other than perhaps positive or negative.   
-<img src="/images/Posts/Linear_Algebra/p1.png" width="400" height="250">
+<img src="/images/Posts/Linear_Algebra/p1.webp" width="400" height="250">
 
 Vector Definition: A vector is a list of numbers. There are (at least) two 
 ways  to interpret what this list of numbers mean: 1. Think of the vector as 
@@ -36,7 +36,7 @@ that point in space, where each number represents the vector’s component
 that  dimension. Or 2. Think of a vector as a magnitude and a direction, e.g.
 a quantity like velocity. In this way of think of it, a vector is a directed 
 arrow pointing from the origin to the end point given by the list of numbers.  
- <img src="/images/Posts/Linear_Algebra/p2.png" width="400" height="300">
+ <img src="/images/Posts/Linear_Algebra/p2.webp" width="400" height="300">
 
 ## 2.	Matrix
 
@@ -53,16 +53,16 @@ Matrix $$ A\in \Re^{n*d}$$ is represented as $$ \begin{bmatrix}a_{11}& ... & a_{
 Definition: The transpose of an m x n matrix A is an n x m matrix obtained by 
 interchanging rows and columns of A.
 
-<img src="/images/Posts/Linear_Algebra/p5.png" width="553" height="174" alt="">
+<img src="/images/Posts/Linear_Algebra/p5.webp" width="553" height="174" alt="">
 
 Try transposing a matrix using your right hand (following this paw):
 
-<img src="/images/Posts/Linear_Algebra/p6.png" width="1004" height="384" alt="">
+<img src="/images/Posts/Linear_Algebra/p6.webp" width="1004" height="384" alt="">
 
 
 3.2 Inverse of a matrix
 
-<img src="/images/Posts/Linear_Algebra/p7.png" width="399" height="221" alt="">
+<img src="/images/Posts/Linear_Algebra/p7.webp" width="399" height="221" alt="">
 
 The inverse of matrix is another matrix, which on multiplication with the given 
 matrix gives the multiplicative identity. 
@@ -70,7 +70,7 @@ matrix gives the multiplicative identity.
 For a matrix A, its inverse is $$A^{-1}$$ and $$A.A^{-1} = A^{-1}.A = I_n$$
 where $$I_n$$ is the identity matrix.
               
-<img src="/images/Posts/Linear_Algebra/p8.png" width="237" height="200" alt="">
+<img src="/images/Posts/Linear_Algebra/p8.webp" width="237" height="200" alt="">
 
 3.3 Determinant of a matrix
 Determinant of a matrix, indirectly calculated the area covered by columns or 
@@ -89,15 +89,15 @@ $$ |W| = a*d - b*c$$
 
 Definition: The dot product is an algebraic operation that takes two same-sized vectors and returns a single number.
 
-<img src="/images/Posts/Linear_Algebra/p9.png" width="1434" height="200" alt="">
+<img src="/images/Posts/Linear_Algebra/p9.webp" width="1434" height="200" alt="">
                                  
 Geometric definition: the dot product is the product of the Euclidean magnitudes of two vectors and the cosine of the angle between two.
 
-<img src="/images/Posts/Linear_Algebra/p10.png" width="1156" height="424" alt="">
+<img src="/images/Posts/Linear_Algebra/p10.webp" width="1156" height="424" alt="">
 
 Definition of Matrix multiplication: basically, a matrix version of the dot product. Remember the result of dot product is a scalar. The result of matrix multiplication is a matrix, whose elements are the dot products of pairs of vectors in each matrix. 
 
-<img src="/images/Posts/Linear_Algebra/p11.png" width="484" height="227" alt="">
+<img src="/images/Posts/Linear_Algebra/p11.webp" width="484" height="227" alt="">
 
 
 Requirement: 
@@ -110,11 +110,11 @@ Eigenvector: Every vector (list of numbers) has a direction when it is plotted o
 
 Eigenvalue: The scalar that is used to transform (stretch/compress) an Eigenvector.
  
-<img src="/images/Posts/Linear_Algebra/eigen1.png" width="275" height="109" alt="">
+<img src="/images/Posts/Linear_Algebra/eigen1.webp" width="275" height="109" alt="">
 
 In matrix form
 
-<img src="/images/Posts/Linear_Algebra/eigen2.png" width="1056" height="371" alt="">
+<img src="/images/Posts/Linear_Algebra/eigen2.webp" width="1056" height="371" alt="">
 
 Meaning: 
 
