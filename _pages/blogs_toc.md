@@ -20,3 +20,11 @@ featured_image: /images/demo/contact.jpg
 | Blog | Author |
 |----------------|--------|{% for post in ml_posts reversed %}
 | [{{ post.title }}]({{ post.url }})|{{post.author}} |{% endfor %}
+
+## Natural Language Processing
+
+{% assign nlp_posts = site.posts | where: "categories","nlp" %}
+
+| Blog | Author |
+|----------------|--------|{% for post in nlp_posts reversed %}
+| [{{ post.title }}]({{ post.url }})|{{post.author}} |{% endfor %}
