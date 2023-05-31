@@ -19,6 +19,7 @@ collections:
     order:
       - 22_summer.md
       - 22_fall.md
+      - 23_spring.md      
   abouts:
     output: true
     permalink: /about/:slug
