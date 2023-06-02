@@ -17,12 +17,15 @@ collections:
     output: true
     permalink: /semester/:slug
     order:
-      - 22_summer.md
+      - 23_spring.md
       - 22_fall.md
-      - 23_spring.md      
+      - 22_summer.md
   abouts:
     output: true
     permalink: /about/:slug
+  tas:
+    output: true
+    permalink: /tas/:slug
 
 defaults:
   -
@@ -77,4 +80,3 @@ plugins:
 
 paginate: 6
 paginate_path: "/blog/page:num/"
-  
