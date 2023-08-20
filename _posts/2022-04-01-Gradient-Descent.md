@@ -5,7 +5,7 @@ date: 2022-02-10 00:00:00
 description: 
 featured_image: '/images/demo/demo-square.webp'
 author: Jinchuan He
-categories: ml
+categories: optimization
 ---
 
 
