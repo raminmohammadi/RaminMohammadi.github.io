@@ -76,14 +76,28 @@ This form is an iterative way to solve solutions to f ′(x) = 0 . These solutio
 
 <p style="text-align: center;"> <i>Derivation of the newton step ∆x</i></p>
 
-Taylor’s Expansion ($2^{nd}$ order)
+The $2^{nd}$ order Taylor’s Expansion is given by,
 
-$$ f (x_k + t) ≈ f (x ) + f'(x_k ) t + 1f'' (x_k ) t^2 $$
-$$ x_k + t = x_{k+1} \ \ ('t' should\ be \ optimal \ so\ \frac{df(x_k + t)}{dt}  = 0 ) $$
-$$\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0 = \frac{d (f (x_k )+f'(x_k )t+ \frac{1}{2} f''(x_k )t^2)}{dt} = f '(x_k ) + f''(x_k) t$$
-$$ \Rightarrow t = − \frac{f'(x_k)}{f''(x_k)} $$
-$$ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x_{k+1} = x_k + t ⇒ x_k − \frac{f'(x_k)}{f''(x_k)} $$
-$$ x_{k+1} = x_k −  \frac{f'(x_k)}{f''(x_k)} $$
+$$ f (x_k + t) ≈ f (x ) + f'(x_k ) * t + \frac{1}{2} f''(x_k ) * t^2 $$
+
+We can write $x_k + t$ as $x_{k+1}$ i.e., the $(k+1)^{th}$ term
+
+We know that, for 't' to be optimal, we have to solve for $$ \frac{df(x_k + t)}{dt}  = 0 $$
+
+$$\begin{aligned}
+    & \textrm{Now, } \space \frac{df(x_k + t)}{dt} = 0 \\
+    & \Rightarrow \frac{d (f (x_k )+f'(x_k ) * t+ \frac{1}{2} f''(x_k ) * t^2)}{dt}  = 0 \\
+    & \Rightarrow f '(x_k ) + f''(x_k) t  = 0 \\
+    & \Rightarrow t = − \frac{f'(x_k)}{f''(x_k)} \\
+    % & \begin{aligned}
+    %   \textrm{Now, we substitite t in} \space x_{k+1} &= x_k + t \\
+    %             \Rightarrow x_{k+1} &= x_k − \frac{f'(x_k)}{f''(x_k)}\\
+    %   \end{aligned}
+    & \textrm{Now, we substitute t in} \space x_{k+1} = x_k + t \\
+    & \Rightarrow x_{k+1} = x_k − \frac{f'(x_k)}{f''(x_k)}\\
+\end{aligned}$$
+
+<!-- $$ x_{k+1} = x_k −  \frac{f'(x_k)}{f''(x_k)} $$ -->
 
 Note:
 - dom($f$): domain of $f (x)$ i.e., set of all real numbers $x$ where $f (x)$ is defined.
@@ -112,7 +126,7 @@ I’ll simplify this by taking the classic example of hiking a mountain to its l
 - Newton’s method is very sensitive to the initial point, and can be problematic. The below image shows how big the influence of the initial point is on the convergence.
 <center>
 <p>
-    <img src="/images/Posts/Convex_Optimization_2/Initial point.png" width="400" height="250">  
+    <img src="/images/Posts/Convex_Optimization_2/initial_point.png" width="400" height="250">  
 Image credits: Wikipedia
 </p>
 </center>
@@ -126,15 +140,17 @@ Image credits: Wikipedia
 
 The basic idea is to convert the constrained optimization to an unconstrained optimization problem by multiplying the constraint with a penalty term(scalar) and adding it to the objective function.
 
-$$
+<!-- $$
 \begin{aligned}
     \Large{\min_{\theta} \quad} & \Large{f(\theta)}\\
     \textrm{s.t.} \quad & \small{ g_i(\theta) = 0} \quad \forall \ i = 1...n \\
-\end{aligned}$$
+\end{aligned}$$ -->
 
-$$
+$$ \min_{\theta} \space f(\theta) \quad\textrm{s.t.} \quad g_i(\theta) = 0 \quad \forall \ i = 1...n \quad \stackrel{\text{convert}}{\Longrightarrow} \quad \min_{\vec{\theta}} \max_{\vec{\alpha}} \underbrace{L\{\overbrace{\theta_1,\alpha_1, \ldots \alpha_n}^{\text{Lagrange multipliers}}\}}_{\text{Lagrange function}} = f(\theta) + \sum_{i=1}^n \alpha_i g_i(\theta) $$
+
+<!-- $$
 \stackrel{\text{convert}}{\Longrightarrow} \min_{\vec{\theta}} \max_{\vec{\alpha}} \underbrace{L\{\overbrace{\theta_1,\alpha_1, \ldots \alpha_n}^{\text{Lagrange multipliers}}\}}_{\text{Lagrange function}} = f(\theta) + \sum_{i=1}^n \alpha_i g_i(\theta)
-$$
+$$ -->
 
 **Solutions:**
 
@@ -153,10 +169,10 @@ You all might know the steps of the Lagrangian method already. Now let’s dive 
 
 <div style="text-align: center;">
   <div style="display: inline-block;">
-    <img src="/images/Posts/Convex_Optimization_2/lagrange Zout.png" width="400" height="250">
+    <img src="/images/Posts/Convex_Optimization_2/lagrange_zout.png" width="400" height="250">
   </div>
   <div style="display: inline-block;">
-    <img src="/images/Posts/Convex_Optimization_2/lagrange Zin.png" width="400" height="250">
+    <img src="/images/Posts/Convex_Optimization_2/lagrange_zin.png" width="400" height="250">
   </div>
 </div>
 <p style="text-align: center;">Fig: 2.4</p>
@@ -173,13 +189,10 @@ Similar to the equality constraints case, we modify the objective function and s
 
 $$
 \begin{aligned}
-    \Large{\min_{\theta}} \quad & \Large{f(\theta)}\\
+    \min_{\theta} \quad & f(\theta)\\
     \textrm{s.t.} \quad & g_i(\theta)=0 \quad \forall \ i=1 \ldots n \\
                         & h_j(\theta) \le 0 \quad \forall \ j=1 \cdots p
-\end{aligned}$$
-
-$$
-\stackrel{\text{convert}}{\Longrightarrow} \min_{\vec{\theta}} \max_{\alpha, \beta} L(\theta, \alpha, \beta) = f(\theta) + \sum_{i=1}^n \alpha_i g_i(\theta) + \sum \beta_j h_j(\theta)
+\end{aligned} \quad \stackrel{\text{convert}}{\Longrightarrow} \quad \min_{\vec{\theta}} \max_{\alpha, \beta} L(\theta, \alpha, \beta) = f(\theta) + \sum_{i=1}^n \alpha_i g_i(\theta) + \sum \beta_j h_j(\theta)
 $$
 
 **Solutions:**
@@ -237,15 +250,15 @@ $$
 
 $$
 \begin{aligned}
-    \textrm{min} \ f(x) \quad & \textrm{s.t.} \quad g(x) \le 0 \quad \quad \overset{\text{convert to}}{\implies{\quad}} \quad \quad B(x) = f (x) − \mu \log(g(x))\\
-    & \text{for} \ g(x) \rightarrow 0, -\log(g(x)) \rightarrow \infty
+    \textrm{min} \ f(x) \quad & \textrm{s.t.} \quad g(x) \le 0 \quad \quad \overset{\text{convert}}{\implies} \quad \quad B(x) = f (x) − \mu \log(g(x))\\
+    & \text{As} \ g(x) \Rightarrow 0 \textrm{ (tends to zero)}, -\log(g(x)) \rightarrow \infty \textrm{ (tends to infinity)}
 \end{aligned}$$
 
 Ex:
 
-$ \text{min} \ f(x) = x \quad \text{s.t.} \quad g(x): 5-x  \overset{\text{convert to}}{\implies} B(x) = x − \mu \log(5 − x)$
+$ \text{min} \ f(x) = x \quad \text{s.t.} \quad g(x): 5-x  \overset{\text{convert}}{\implies} B(x) = x − \mu \log(5 − x)$
 
-<img src="/images/Posts/Convex_Optimization_2/IPM.png" width="400" height="250"> 
+<img src="/images/Posts/Convex_Optimization_2/ipm.png" width="400" height="250"> 
 
 If you look at the example clearly, the barrier function $B(x)$ is not allowing the optimal x value to go beyond the constraint given. $B(x)$ is approaching infinity where x comes closer to the optimal value. It acts like a barrier stopping to cross the feasible region.
 
