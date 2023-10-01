@@ -26,6 +26,12 @@ collections:
   tas:
     output: true
     permalink: /tas/:slug
+  ml:
+    output: true
+    permalink: /ml/:slug
+  mlops:
+    output: true
+    permalink: /mlops/:slug    
 
 defaults:
   -
