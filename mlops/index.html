@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About Me
+title: MLOps
 description:
 featured_image: /images/demo/home.jpg
 ---
@@ -13,10 +13,7 @@ featured_image: /images/demo/home.jpg
 
 	<div class="wrap">
 
-		<h1>Our Teams</h1>
-		<p>A closer look inside our Machine Learning teams.</p>
-
-		<!-- {% include socials.html %} -->
+		<h1>MLOps</h1>
 
 	</div>
 
@@ -26,18 +23,11 @@ featured_image: /images/demo/home.jpg
 
 	<div class="wrap">
 
-		{% for project in site.abouts %}
-			{% if project.title == "TA Team - Machine Learning" or project.title == "TA Team - MLOps"%}
-				{% continue %}
-			{% endif %}
+		{% for project in site.mlops %}
 			<article class="post">
 
 				<div class="post__image-wrap">
-					{% if project.title == "TA Team" %}
-					<div class="post__image" style="background-image: url({{ project.featured_image | relative_url }}); background-size: 85%"></div>
-					{% else %}
 					<div class="post__image" style="background-image: url({{ project.featured_image | relative_url }}); background-size: 50%; "></div>
-					{% endif %}
 				</div>
 
 				<div class="post__content-wrap">

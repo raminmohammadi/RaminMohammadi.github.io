@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% if page.title  == "TA Team" %}
+{% if page.title  == "TA Team - Machine Learning" %}
 	{% assign image_class = "hero__overlay_custom" %}
 	{% assign cover_image = page.cover_image %}
 {% else %}
@@ -16,10 +16,12 @@ layout: default
 	</div>
 
 	<div class="wrap">
-		{% if page.title != "TA Team" %}
-		<h1>{{ page.title }}</h1>
+		{% if page.title != "TA Team - Machine Learning" %}
+			{% if page.title != "TA Team - MLOps" %}
+			<h1>{{ page.title }}</h1>
+			<p>{{ page.subtitle }}</p>
+			{% endif %}
 		{% endif %}
-		<p>{{ page.subtitle }}</p>
 	</div>
 
 </section>

@@ -1,5 +1,5 @@
 basic_settings:
-  site_title: Machine Learning For Engineering
+  site_title: ML with Ramin
   favicon_image: /images/favicon.png
 
 header_settings:
@@ -8,16 +8,32 @@ header_settings:
 
 menu_settings:
   menu_items:
-    - title: 'Text Books'
-      url: '/textbooks/'  
-    - title: 'Blogs'
-      url: '/blog/'
-    - title: 'Projects'
-      url: '/'
-    - title: 'Contact'
-      url: '/contact'
-    - title: 'Meet Our Team'
+    # - title: 'Text Books'
+    #   url: '/textbooks/'  
+    # - title: 'Blogs'
+    #   url: '/blog/'
+    # - title: 'Projects'
+    #   url: '/'
+    # - title: 'Contact'
+    #   url: '/contact'
+    # - title: 'Meet Our Team'
+    #   url: '/about/'
+    # - title: 'Text Books'
+    #   url: '/textbooks/'  
+    # - title: 'Blogs'
+    #   url: '/'
+    # - title: 'Projects'
+    #   url: '/'
+    # - title: 'Contact'
+    #   url: '/contact'
+    # - title: 'Meet Our Team'
+    #   url: '/about/'
+    - title: 'About us'
       url: '/about/'
+    - title: 'Machine Learning'
+      url: '/ml/'
+    - title: 'MLOps'
+      url: 'mlops/'
 
 footer_settings:
   footer_tagline:
