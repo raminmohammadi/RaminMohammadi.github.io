@@ -1,0 +1,591 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+
+
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+	ML with Ramin
+
+	Personal Theme by https://jekyllthemes.io
+	Premium + free Jekyll themes for your blog or website.
+
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Page Info -->
+	<link rel="shortcut icon" href="/images/favicon.png">
+	<title>Error Analysis – ML with Ramin</title>
+	<meta name="description" content="">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Error Analysis – ML with Ramin">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:image:src" content="http://localhost:4000/images/demo/demo-square.webp">
+
+	<!-- Facebook OpenGraph -->
+	<meta property="og:title" content="Error Analysis – ML with Ramin" />
+	<meta property="og:description" content="" />
+	<meta property="og:image" content="http://localhost:4000/images/demo/demo-square.webp" />
+
+	
+	<!-- Font Embed Code -->
+	<link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+	
+
+	<!-- Styles -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<!-- Icons -->
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/solid.js" integrity="sha384-GXi56ipjsBwAe6v5X4xSrVNXGOmpdJYZEEh/0/GqJ3JTHsfDsF8v0YQvZCJYAiGu" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/brands.js" integrity="sha384-0inRy4HkP0hJ038ZyfQ4vLl+F4POKbqnaUB6ewmU4dWP0ki8Q27A0VFiVRIpscvL" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/fontawesome.js" integrity="sha384-NY6PHjYLP2f+gL3uaVfqUZImmw71ArL9+Roi9o+I4+RBqArA2CfW1sJ1wkABFfPe" crossorigin="anonymous"></script>
+
+	
+	<!-- Custom Styles -->
+	<style></style>
+	
+
+	
+	<!-- Analytics Code -->
+	
+	
+
+	
+	<!-- Extra Header JS Code -->
+	
+	
+	
+</head>
+
+
+<body class="loading ajax-loading" data-site-url="http://localhost:4000" data-page-url="/blog/error-analysis">
+
+
+	<header class="header">
+
+	<div class="wrap">
+
+		
+		<a href="/" class="header__title">
+			ML with Ramin
+		</a>
+		
+
+		<div class="menu">
+			<div class="menu__toggle js-menu-toggle">
+				<div class="menu__toggle__icon"><span></span></div>
+			</div>
+			<div class="menu__wrap">
+				<ul class="menu__list">
+					
+					<li class="menu__list__item">
+						<a href="/about/" class="menu__list__item__link">About us</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/ml/" class="menu__list__item__link">Machine Learning</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/mlops/" class="menu__list__item__link">MLOps</a>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+</header>
+
+
+	<div class="loader"><svg width="120" height="30" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="60" cy="15" r="9" fill-opacity="0.3"><animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="105" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle></svg></div>
+
+	<div class="page-loader"></div>
+
+	
+	<div class="page">
+
+		<div class="page__content" data-page-title="Error Analysis – ML with Ramin">
+
+			<section class="hero hero--single">
+
+	<div class="hero__image" style="background-image: url(/images/demo/demo-square.webp)">
+		<div class="hero__overlay"></div>
+	</div>
+
+	<div class="wrap">
+
+		<h1>Error Analysis</h1>
+		<!-- <p>11 February 2022</p> -->
+		<p align="right"><b>- Keerthi Godha<b></p>
+			
+	</div>
+
+</section>
+
+<section class="single">
+
+	<div class="wrap">
+
+		<article class="single-post">
+
+			<h2 id="error-analysis-threshold---cut-off-selection">Error Analysis (Threshold - Cut-off selection)</h2>
+
+<p align="center">
+<img src="/images/Posts/Error_Analysis/Error Analysis image.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:370px;width:500px" />
+</p>
+
+<p align="center">
+Figure 1. 
+<a href="https://medium.com/@serj-smor/error-analysis-using-tf-idf-and-common-sense-c5d225acaa7b">
+Error Analysis</a>
+</p>
+
+<h3 id="table-of-contents">Table of contents</h3>
+<ol>
+  <li><a href="#error_analysis">Error Analysis</a><br /></li>
+  <li><a href="#confusion_matrix">Confusion Matrix</a><br /></li>
+  <li><a href="#metrics">Metrics</a><br />
+ 3.1 <a href="#accuracy">Accuracy</a><br />
+ 3.2 <a href="#error">Error</a><br />
+ 3.3 <a href="#precision">Precision</a><br />
+ 3.4 <a href="#recall">Recall/Sensitivity</a><br />
+ 3.5 <a href="#f1_score">F1 Score</a><br /></li>
+  <li><a href="#roc_curve">ROC Curve</a><br />
+ 4.1 <a href="#auc_curve">AUC (Area under the ROC Curve)</a><br />
+ 4.2 <a href="#cutoff_selection">Choosing Cutoff with Example</a><br /></li>
+</ol>
+
+<h2 id="1-error-analysis-">1. Error Analysis <a name="error_analysis"></a></h2>
+
+<p>In Classification, Error analysis is the process of examining the data points that an algorithm misclassified.</p>
+
+<p><em>How an algorithm decides which data point belongs to which class?</em> 
+Using a Cut off value. Right… <br /></p>
+
+<p>A cut-off point is a certain threshold value that can be used to determine an observation belongs to which particular class. For any classification problem, the output of the model is usually a probability. The cut-off in a binary classification is the probability that the prediction is true.</p>
+
+<p><strong><em>Classification accuracy alone can be deceiving when dealing with imbalanced data</em></strong> (if there is an unequal number of observations in each class). The error rate and other metrics for any classification problem are calculated with the help of a Confusion matrix</p>
+
+<p>In this post, we will learn about the Confusion matrix, its associated metrics, and Cut-off selection. We will be using Cut-off and Threshold interchangeably in this post.</p>
+
+<h2 id="2-what-is-the-confusion-matrix-">2. What is the Confusion Matrix? <a name="confusion_matrix"></a></h2>
+
+<p>A Confusion matrix is an N x N matrix used to evaluate the performance of a classification algorithm, where N is the number of target classes. The matrix compares the actual target values with those predicted by the machine learning model. This gives us a holistic view of how well our classification model is performing and what kinds of errors it is making.</p>
+
+<p>For a binary classification problem, we would have a 2 x 2 confusion matrix, for 3 classes, it is a 3 x 3 matrix, and so on.</p>
+
+<p>Let’s take a binary classification example. The target variable for binary classification has two values, which can be Yes/No (or) True/False (or) Positive/Negative, etc. A confusion matrix uses a cut-off value and then assigns each prediction into a binary Yes/No format.
+It produces four different possible outcomes. Again, <strong>a cut-off (threshold) is required to build a confusion matrix.</strong></p>
+
+<p><strong>True Positive (TP)</strong></p>
+<ul>
+  <li>The predicted value matches the actual value, where the actual value was positive and the model predicted a positive value.</li>
+</ul>
+
+<p><strong>True Negative (TN)</strong></p>
+<ul>
+  <li>The predicted value matches the actual value, where the actual value was negative and the model predicted a negative value.</li>
+</ul>
+
+<p><strong>False Positive (FP)</strong></p>
+<ul>
+  <li>The predicted value was falsely predicted, where the actual value was negative but the model predicted a positive value.</li>
+  <li>Also known as the Type 1 error</li>
+</ul>
+
+<p><strong>False Negative (FN)</strong></p>
+<ul>
+  <li>The predicted value was falsely predicted, where the actual value was positive but the model predicted a negative value.</li>
+  <li>Also known as the Type 2 error</li>
+</ul>
+
+<p align="center">
+<img src="/images/Posts/Error_Analysis/Confusion Matrix.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:300px;width:500px" />
+</p>
+<p align="center">
+Figure 2. 
+<a href="https://towardsdatascience.com/confusion-matrix-for-your-multi-class-machine-learning-model-ff9aa3bf7826">
+Confusion Matrix 
+</a>
+</p>
+
+<p><strong>What next?</strong> <br />
+ <strong><em>For any classification problem, we need to decide which metrics are more important.</em></strong> Below is the list of several metrics that are often computed from a confusion matrix for a classification problem.</p>
+
+<h2 id="3-metrics">3. Metrics<a name="metrics"></a></h2>
+<p>Accuracy and Error are the most common and intuitive measures derived from a confusion matrix. We need to choose the right metric to evaluate the performance of a classification algorithm depending on the problem statement.<br /></p>
+
+<p>Let’s look at a few metrics !!</p>
+
+<h3 id="31-accuracy">3.1 Accuracy<a name="accuracy"></a></h3>
+
+<p>Accuracy is used to find how often the classifier is correct. 
+Accuracy is the proportion of correctly classified data points among the total number of cases examined.
+The number of true positives and true negatives is divided by the number of true positives, true negatives, false positives, and false negatives.</p>
+
+<font size="3">  $$   Accuracy = \frac{Number\space of\space Correct\space Predictions}{Total\space Number\space of\space Predictions} $$</font>
+<p><br /></p>
+<font size="3">  $$   Accuracy = \frac{TP + TN}{TP + TN + FP + FN} $$</font>
+<p><br /></p>
+
+<p><strong><em>Accuracy is not a reliable metric for the real performance of a classifier when there is an unequal number of observations in each class</em></strong>, because it will yield misleading results.<br /></p>
+
+<p>Let’s take a simple classification example of a highly imbalanced dataset. If there were 100 patients with cancer, 5 patients are diagnosed with cancer and 95 patients tested negative, the classifier could easily be biased into classifying all the samples as negative(No Cancer). It’s a terrible outcome, as 5 out of all 5 cancer patients go undiagnosed.
+Though the overall accuracy would be 95%, in practice the classifier would have a 100% recognition rate for the Negative class but a 0% recognition rate for the Positive class.
+It may obscure important differences in costs associated with different errors. 
+In this case 1. keeping a healthy patient in the hospital (low cost), or 2. sending home a sick patient (very high cost).
+<br /></p>
+
+<h3 id="32-error">3.2 Error<a name="error"></a></h3>
+<p>Error is used to find how often the classifier is incorrect. Error is the proportion of misclassified data points among the total number of cases examined.
+the number of false positives and false negatives divided by the number of true positives, true negatives, false positives, and false negatives.</p>
+
+<font size="3">  $$   Error = \frac{Number\space of\space Incorrect\space Predictions}{Total\space Number\space of\space Predictions} $$</font>
+<p><br /></p>
+
+<font size="3">  $$   Error = \frac{FP + FN}{TP + TN + FP + FN} $$</font>
+<p><br /></p>
+
+<font size="3">  $$   Error = 1 - Accuracy $$</font>
+
+<h3 id="33-precision">3.3 Precision<a name="precision"></a></h3>
+<p>Precision talks about how precise/accurate the model is. Precision is the measure of correctly predicted positive observations to the total predicted positive observations. Precision is also known as the <em>Positive Predictive Value</em>. It is a good measure to determine when the costs of False Positive are high.</p>
+
+<font size="3">  $$   Precision = \frac{TP}{TP + FP} $$</font>
+<p><br /></p>
+
+<p><strong>When do we consider Precision as Evaluation Mesure in Classification?</strong><br />
+Precision is a useful measure of prediction when the classes are highly imbalanced. It is more important where False Positives are more costly than False Negatives. <strong><em>For a good classifier, Precision should ideally be 1 (high)</em></strong>. Precision becomes 1 only when both the numerator and denominator are equal. i.e TP = TP +FP, this also means FP should be zero. As FP increases, the value of the denominator becomes greater than the numerator, and the precision value decreases (which we don’t want). Precision is mainly used when we need to predict the positive class and there is a greater cost associated with false positives than with false negatives, such as in medical diagnosis or spam filtering. <br /></p>
+
+<p>For example, if a model is 99% accurate but only has 50% precision. It means that half of the time when it predicts a person is having cancer, it is not cancer. We mustn’t start treating a patient who doesn’t have cancer, but our model predicted it as having it (which is a False Positive).</p>
+
+<p>Precision is used in conjunction with the recall to trade off false positives and false negatives. It is affected by class distribution. Precision can be thought of as a measure of exactness or quality. If we want to minimize false positives, we would choose a model with high precision. 
+Conversely, if we want to minimize false negatives, we would choose a model with high recall.</p>
+
+<h3 id="34-recall">3.4 Recall<a name="recall"></a></h3>
+<p>A recall is a measure of correctly predicted positive observations over all the positive observations in the data. <strong><em>Recall is also known as Sensitivity (or) True Positive Rate.</em></strong></p>
+
+<font size="3">  $$   Recall = \frac{TP}{TP + FN} $$</font>
+<p><br /></p>
+
+<p><strong>When do we consider Recall as Evaluation Mesure in Classification?</strong><br />
+The recall is more important when False Negatives are more costly than False Positive. <strong><em>For a good classifier, Recall should ideally be 1 (high).</em></strong> It becomes 1 only when the numerator and denominator are equal i.e TP = TP +FN, this also means FN should be zero. As FN increases the value of the denominator becomes greater than the numerator and the recall value decreases (which we don’t want). The recall is mainly used when we need to predict the positive class and there is a greater cost associated with false negatives than with false positives.</p>
+
+<p>For example,</p>
+<ul>
+  <li>We were trying to detect if an apple was poisoned or not. In this case, we would want to reduce the number of False Negatives because we do not want to classify a poisoned apple as not poisoned.</li>
+  <li>Another example is that, for rare cancer data modeling, anything that doesn’t account for false negatives is a crime (in this case, we would want to reduce the number of False Negatives), because we do not want to classify a person as having cancer as not having cancer (therefore there is no treatment given to him/her because our model predicted so?). In this case, Recall is a better measure than precision.</li>
+  <li>False negatives are less of a concern for YouTube recommendations. Precision is better here, i.e a video is not supposed to be recommended to a user, however, the model is recommended(not much harm/cost involved).</li>
+</ul>
+
+<h3 id="35-f1-score">3.5 F1 Score<a name="f1_score"></a></h3>
+<p>F1 Score is the weighted average of Precision and Recall. So ideally in a good classifier, we want both precision and recall to be 1, which also means False Positives(FP) and False Negatives(FN) are zero. Therefore we need a metric that takes into account both precision and recall. F1-score is a metric that takes into account both precision and recall and is defined as follows:</p>
+
+<p>F1 Score becomes 1 only when precision and recall are both 1. F1 score is the harmonic mean of precision and recall and is a better measure than accuracy.</p>
+
+<font size="3">  $$   F1 Score = \frac{2* Precision * Recall}{Precision + Recall} $$</font>
+<p><br /></p>
+
+<p><strong>When to use F1 Score?</strong><br />
+Using accuracy as a defining metric for a model makes sense intuitively, but more often it is always advisable to use Precision and Recall too. There might be other situations where our accuracy is very high, but our precision or recall is low. Ideally for any model, we would like to completely avoid any situations such as, where the patient has cancer, but our model classifies as him not having it i.e., aim for high recall.</p>
+
+<p><strong><em>Consider an example,</em></strong> in our dataset we can consider that achieving a high recall is more important than getting high precision, we would like to detect as many cancer patients as possible. For some other models, like classifying whether a bank customer is a loan defaulter or not, it is desirable to have a high precision since the bank wouldn’t want to lose customers who were denied a loan based on the model’s prediction that they would be defaulters.</p>
+
+<p>There are also a lot of situations where both precision and recall are equally important. For example, for our model, if the doctor informs us that the patients who were incorrectly classified as suffering from cancer are equally important since they could be indicative of some other ailment, then we would aim for not only a high recall but a high precision as well. This is very easy to work with since now, instead of balancing precision and recall, we can just aim for a good F1 score and that would be indicative of a good Precision and a good Recall value as well.</p>
+
+<h2 id="4-roc-curve">4. ROC Curve<a name="roc_curve"></a></h2>
+<p>ROC curve (Receiver Operating Characteristic Curve) is a probability curve showing the performance of a classification model at all classification thresholds. It tells us how much the model is capable of distinguishing between classes. ROC shows the connection/trade-off between Sensitivity and Specificity for every possible cut-off value.</p>
+
+<p><strong>How to plot ROC Curve?</strong> <br />
+The graphical ROC curve is produced by plotting sensitivity (True Positive Rate) on the y-axis against 1–specificity (False Positive Rate) on the x-axis for the various values tabulated. A ROC curve that follows the diagonal line y=x produces false positive results at the same rate as true positive results. Therefore, we expect a diagnostic test with reasonable accuracy to have a ROC curve in the upper left triangle above the y=x line. <br /></p>
+
+<p align="center">
+<img src="/images/Posts/Error_Analysis/ROC Curve.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:400px;width:600px" />
+</p>
+<p align="center">
+Figure 3. <a href="https://datasciencestunt.com/how-to-generate-and-interpret-a-roc-curve-for-binary-classification/">
+ROC Curve </a>
+</p>
+<p><br /></p>
+
+<font size="3">  $$   TPR\space/ Recall\space/Sensitivity\space = \frac{TP}{TP+FN} $$</font>
+<p><br /></p>
+<font size="3">  $$   FPR = 1- Specificity = \frac{FP}{TN+FP} $$</font>
+<p><br /></p>
+<font size="2">$$\space \space \space (where \space Specificity = \frac{TN}{TN+FP})$$</font>
+
+<h4 id="41-aucarea-under-the-roc-curve-">4.1 AUC(Area under the ROC Curve) <a name="auc_curve"></a></h4>
+<p>AUC measures the entire two-dimensional area underneath the entire ROC curve, which represents the overall performance of the classification. ROC is a probability curve and AUC represents the degree or measure of separability. It tells how much the model is capable of distinguishing between classes. AUC takes values between 0 and 1, where 0 indicates a perfectly inaccurate classification and 1 reflects a perfectly accurate classification. The higher the AUC, the better the performance of the model at distinguishing between the positive and negative classes (i.e predicting 0 classes as 0 and 1 classes as 1).</p>
+
+<p align="center">
+<img src="/images/Posts/Error_Analysis/AUC Curve.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:400px;width:600px" />
+</p>
+<p align="center">
+Figure 4. AUC Curve 
+</p>
+
+<h4 id="42-how-to-choose-cutoff">4.2 How to choose cutoff?<a name="cutoff_selection"></a></h4>
+<p>The Threshold or Cut-off represents the probability that the prediction is true. The standard cutoff in any classification problem is 0.5, which means that the observation is classified as “positive” if the probability is greater than 0.5, and “Negative” otherwise. However, <strong><em>0.5 is not an optimal Cut-off in all the scenarios.</em></strong> <br />
+<strong>Youden’s J Index, Minimizing Euclidean distance between (1-Specificity, Sensitivity) values from the point (1,1) and Profit Maximization / Cost Minimization helps in determining the optimal threshold value depending on the problem statement.</strong></p>
+
+<p>Let’s look into these methods in detail with the below example.</p>
+
+<h5 id="example">Example:</h5>
+<p>Let’s consider a simple example of a diagnostic test performed on the group with disease and the group without the disease. When a diagnostic test is performed, the group with the disease and the group without the disease cannot be completely divided, as overlapping may exist. the ROC curve aims to classify a patient’s disease state as either positive or negative based on test results and to find the optimal cut-off value with the best diagnostic performance. <strong><em>For any diagnosis, this means that even for a certain diagnostic test, the cut-off value is not universal and should be determined for each region and each disease condition.</em></strong></p>
+
+<p align="center">
+<img src="/images/Posts/Error_Analysis/Probability_Density_example.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:400px;width:450px" /> 
+</p>
+<p align="center">
+Figure 5. <a href="https://towardsdatascience.com/comprehension-of-the-auc-roc-curve-e876191280f9">
+Overlapping datasets will always generate false positives and false negatives </a>
+</p>
+
+<ul>
+  <li>Let’s take below sample dataset with predicted probability and actual class. Predicted probability is the probability derived using our classification algorithm, and the actual class is whether a patient has cancer or not in reality.</li>
+</ul>
+
+<p align="center">
+<img src="/images/Posts/Error_Analysis/Sample Dataset.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; 
+height:750px;width:320px" />
+</p>
+<p align="center">
+Figure 6. Sample Dataset 
+</p>
+
+<ul>
+  <li>Now build a confusion matrix based on threshold values 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 and 1, derive respective True Positive Rate (Sensitivity) and False Positive Rate (1 - Specificity) to plot ROC Curve.</li>
+</ul>
+
+<p align="center"> 
+<img src="/images/Posts/Error_Analysis/Confusion Matrix_for_cutoffValues.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:600px;width:950px" />
+</p>
+<p align="center">
+Figure 7. Confusion matrices w.r.to different cut-off selection 
+</p>
+
+<ul>
+  <li>Let’s derive the True Positive Rate and False Positive Rate for each cut-off value from the above sample dataset.</li>
+</ul>
+
+<font size="2">  $$   TPR\space (or)\space Sensitivity\space = \frac{TP}{TP+FN} $$</font>
+<p><br /></p>
+<font size="2">  $$   FPR\space (or)\space 1- Specificity = \frac{FP}{TN+FP} $$</font>
+
+<p align="center"> 
+<img src="/images/Posts/Error_Analysis/Sensitivity_Specificity_values.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:400px;width:380px" />
+</p>
+
+<p align="center">
+Figure 8. Sensitivity and Specificity Analysis w.r.to Cut-off
+</p>
+
+<ul>
+  <li>Let’s plot the ROC Curve using the above sensitivity and 1-specificity.<br /></li>
+</ul>
+
+<p align="center"> 
+<img src="/images/Posts/Error_Analysis/ROC Curve_example.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:400px;width:600px" />
+</p>
+<p align="center">
+Figure 9. ROC Curve of Sample Dataset
+</p>
+
+<ul>
+  <li>The cut-off value can then be selected according to the problem statement. In our case study, we would want to reduce the FALSE NEGATIVES(classifying a cancer patient as not having cancer) as much as possible, hence we need to choose a threshold value that increases the TRUE POSITIVE RATE and reduces the FALSE POSITIVE RATE.</li>
+  <li>In our case, <strong>from the above ROC curve it is seen that, with the increase in True Positive Rate, False Positive Rate is also increasing eventually. So, we should decide the optimal cut-off depending on whether we want to detect all the positives (higher TPR) and are willing to incur some error in terms of FPR.</strong></li>
+</ul>
+
+<p>There are three ways to calculate the optimal cut-off :</p>
+<ol>
+  <li>Youden’s J Index.</li>
+  <li>Minimizing Euclidean distance between (1-Specificity, Sensitivity) from the point (1,1)</li>
+  <li>Profit Maximization / Cost Minimization</li>
+</ol>
+
+<h5 id="1-youdens-j-index">1. Youden’s J index</h5>
+<p>Youden’s J index is used to select the optimal cut-off. It is a diagnostic test that captures the maximum vertical distance between the ROC curve and diagonal line. The idea is to maximize the difference between True Positives and False Positives.</p>
+
+<p align="center"> 
+<img src="/images/Posts/Error_Analysis/Youden index.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:400px;width:600px" />
+</p>
+<p align="center">
+Figure 10. Cut-off selection with Youden index
+</p>
+
+<h5 id="2-euclidean-distance">2. Euclidean Distance</h5>
+<p>Another “optimal cut-off” is the value for which the point on the ROC curve has the minimum distance to the upper left corner (where sensitivity=1 and specificity=1).
+    <font size="3">  $$  Euclidean Distance =  \sqrt{(1-sensitivity)^2 + (1-specificity)^2} $$</font><br /></p>
+
+<p align="center"> 
+<img src="/images/Posts/Error_Analysis/ROC_Euclidean Distance.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:400px;width:600px" />
+</p>
+<p align="center">
+Figure 11. Cut-off selection with Euclidean Distance
+</p>
+
+<h5 id="3-profit-maximization--cost-minimization">3. Profit Maximization / Cost Minimization</h5>
+<p>Profit/Cost is another most useful method for determining an optimal classification probability cut-off depending on the business impact. The cost is calculated at different cutoff values to achieve a reasonable balance between false positives and false negatives. While the ROC curve helps in finding the best threshold based on the various statistics or domain expertise, a profit curve helps to pick a threshold based on the costs of true and false positive and negative predictions. It provides a sense of model sensitivity in the context of your business problem.
+<br />
+<br /></p>
+
+<p>To summarize, in this post we have learned error analysis of a Classification problem and several ways of defining optimal ʻThresholdʼ value.</p>
+
+<font size="3">$$Yayy...\space  We\space have\space reached\space  to\space  the\space  end. That's\space another\space  great\space  learning😎\space  See\space  you\space  in\space  next\space  post👋 👋$$</font>
+
+
+		</article>
+
+	</div>
+
+</section>
+
+		</div>
+
+	</div>
+
+
+	<footer class="footer">
+
+	<div class="wrap">
+
+		<p class="footer__text"></p>
+
+		<div class="footer__copyright">
+			<span>© 2023 ML with Ramin</span>
+			<a href="https://jekyllthemes.io" target="_blank">Jekyll Themes</a>
+		</div>
+
+		<ul class="socials">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://medium.com/@mohammadi.r" target="_blank" class="socials__item__link" title="Medium">
+			<i class="fab fa-medium" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://www.linkedin.com/in/ramin-mohammadi-ml/" target="_blank" class="socials__item__link" title="Linkedin">
+			<i class="fab fa-linkedin" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+</ul>
+
+	</div>
+
+</footer>
+
+
+	<!-- Javascript Assets -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/js/plugins-min.js"></script>
+	<script src="/js/personal-min.js"></script>
+
+	
+	<!-- Extra Footer JS Code -->
+	
+	
+
+
+</body>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ["\\(", "\\)"] ],
+      displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
+
+</html>

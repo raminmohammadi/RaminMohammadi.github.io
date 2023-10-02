@@ -1,0 +1,545 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+
+
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+	ML with Ramin
+
+	Personal Theme by https://jekyllthemes.io
+	Premium + free Jekyll themes for your blog or website.
+
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Page Info -->
+	<link rel="shortcut icon" href="/images/favicon.png">
+	<title>Convex Optimization - Part 2 – ML with Ramin</title>
+	<meta name="description" content="">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Convex Optimization - Part 2 – ML with Ramin">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:image:src" content="http://localhost:4000/images/demo/demo-square.webp">
+
+	<!-- Facebook OpenGraph -->
+	<meta property="og:title" content="Convex Optimization - Part 2 – ML with Ramin" />
+	<meta property="og:description" content="" />
+	<meta property="og:image" content="http://localhost:4000/images/demo/demo-square.webp" />
+
+	
+	<!-- Font Embed Code -->
+	<link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+	
+
+	<!-- Styles -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<!-- Icons -->
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/solid.js" integrity="sha384-GXi56ipjsBwAe6v5X4xSrVNXGOmpdJYZEEh/0/GqJ3JTHsfDsF8v0YQvZCJYAiGu" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/brands.js" integrity="sha384-0inRy4HkP0hJ038ZyfQ4vLl+F4POKbqnaUB6ewmU4dWP0ki8Q27A0VFiVRIpscvL" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/fontawesome.js" integrity="sha384-NY6PHjYLP2f+gL3uaVfqUZImmw71ArL9+Roi9o+I4+RBqArA2CfW1sJ1wkABFfPe" crossorigin="anonymous"></script>
+
+	
+	<!-- Custom Styles -->
+	<style></style>
+	
+
+	
+	<!-- Analytics Code -->
+	
+	
+
+	
+	<!-- Extra Header JS Code -->
+	
+	
+	
+</head>
+
+
+<body class="loading ajax-loading" data-site-url="http://localhost:4000" data-page-url="/blog/convex-optimization-2">
+
+
+	<header class="header">
+
+	<div class="wrap">
+
+		
+		<a href="/" class="header__title">
+			ML with Ramin
+		</a>
+		
+
+		<div class="menu">
+			<div class="menu__toggle js-menu-toggle">
+				<div class="menu__toggle__icon"><span></span></div>
+			</div>
+			<div class="menu__wrap">
+				<ul class="menu__list">
+					
+					<li class="menu__list__item">
+						<a href="/about/" class="menu__list__item__link">About us</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/ml/" class="menu__list__item__link">Machine Learning</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/mlops/" class="menu__list__item__link">MLOps</a>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+</header>
+
+
+	<div class="loader"><svg width="120" height="30" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="60" cy="15" r="9" fill-opacity="0.3"><animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="105" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle></svg></div>
+
+	<div class="page-loader"></div>
+
+	
+	<div class="page">
+
+		<div class="page__content" data-page-title="Convex Optimization - Part 2 – ML with Ramin">
+
+			<section class="hero hero--single">
+
+	<div class="hero__image" style="background-image: url(/images/demo/demo-square.webp)">
+		<div class="hero__overlay"></div>
+	</div>
+
+	<div class="wrap">
+
+		<h1>Convex Optimization - Part 2</h1>
+		<!-- <p>11 August 2023</p> -->
+		<p align="right"><b>- Shamhith Kamasani<b></p>
+			
+	</div>
+
+</section>
+
+<section class="single">
+
+	<div class="wrap">
+
+		<article class="single-post">
+
+			<h2 id="convex-optimization">Convex Optimization</h2>
+
+<p>Convex optimization is of two types:</p>
+<ol>
+  <li>Unconstrained</li>
+  <li>Constrained (Equality &amp; Inequality).</li>
+</ol>
+
+<p>Let’s learn a few convex optimization techniques from the below list.</p>
+
+<div style="display: inline-block; width: 30%; vertical-align: top; ">
+  <p style="text-align: center; white-space: nowrap;"><strong>Unconstrained Optimization</strong></p>
+  <ul style="text-align: left; padding-left: 20px;">
+    <li>Gradient Descent</li>
+    <li>Newton’s Method</li>
+  </ul>
+</div>
+<div style="display: inline-block; width: 30%; vertical-align: top;">
+  <p style="text-align: center; white-space: nowrap;"><strong>Equality Constrained</strong></p>
+  <ul style="text-align: left; padding-left: 20px;">
+    <li>Lagrangian Method</li>
+    <li>Newton’s Method</li>
+  </ul>
+</div>
+<div style="display: inline-block; width: 30%; vertical-align: top;">
+  <p style="text-align: center; white-space: nowrap;"><strong>Inequality Constrained</strong></p>
+  <ul style="text-align: left; padding-left: 20px;">
+    <li>Barrier’s Method</li>
+    <li>Lagrangian Method</li>
+  </ul>
+</div>
+
+<h2 id="1-unconstrained-optimization">1. Unconstrained Optimization</h2>
+
+<h4 id="11-gradient-descent"><strong>1.1 Gradient Descent</strong>:</h4>
+
+<p>I encourage you to refer to “Gradient Descent” by Jinchuan He on blog’s page.</p>
+
+<h4 id="12-newtons-method-"><strong>1.2 Newton’s Method :</strong></h4>
+
+<p>Newton’s method, as outlined below, is sometimes called the damped Newton method or guarded Newton method, If there is fixed step size t = 1 then it is pure Newton method</p>
+
+<p>Given a starting point $x \in \textrm{dom} \space f, \textrm{tolerance} \space \epsilon &gt; 0$.</p>
+
+<p><strong>Repeat the following steps:</strong></p>
+
+<ol>
+  <li>Compute the Newton step and decrement $∆ x,λ(x).$</li>
+  <li>Stopping criteria. quit if $(\lambda^2) / 2 ≤ ε.$</li>
+  <li>Line search. Choose step size t by backtracking line search.</li>
+  <li>Update. $x := x + t∆ x.$</li>
+</ol>
+
+<p style="text-align: center;">
+    <b>General forms of Newton’s Method:</b>
+</p>
+
+<ul>
+  <li>Find $x$ satisfying $ g(x) = 0$ . (Finding roots of $ g(x) = 0 $)</li>
+</ul>
+
+\[\Rightarrow x_{k+1} = x_k − \frac{g(x_k )}{g′(x_k )}\]
+
+<p>This form is an iterative way to solve for roots of differentiable function g(x), used mainly in calculus</p>
+
+<ul>
+  <li>Find $x$ minimizing $f (x)$ (at min $f (x) ⇒ f ′(x) = 0$ )</li>
+</ul>
+
+\[\Rightarrow x_{k+1} = x_{k} −\frac{f ′(x_k )} {f ′′(x_k )}\]
+
+<p>This form is an iterative way to solve solutions to f ′(x) = 0 . These solutions may be minima, maxima, or saddle points. This form is more relevant to Convex Optimization</p>
+
+<p style="text-align: center;"> <i>Derivation of the newton step ∆x</i></p>
+
+<p>The $2^{nd}$ order Taylor’s Expansion is given by,</p>
+
+\[f (x_k + t) ≈ f (x ) + f'(x_k ) * t + \frac{1}{2} f''(x_k ) * t^2\]
+
+<p>We can write $x_k + t$ as $x_{k+1}$ i.e., the $(k+1)^{th}$ term</p>
+
+<p>We know that, for ‘t’ to be optimal, we have to solve for \(\frac{df(x_k + t)}{dt}  = 0\)</p>
+
+\[\begin{aligned}
+    &amp; \textrm{Now, } \space \frac{df(x_k + t)}{dt} = 0 \\
+    &amp; \Rightarrow \frac{d (f (x_k )+f'(x_k ) * t+ \frac{1}{2} f''(x_k ) * t^2)}{dt}  = 0 \\
+    &amp; \Rightarrow f '(x_k ) + f''(x_k) t  = 0 \\
+    &amp; \Rightarrow t = − \frac{f'(x_k)}{f''(x_k)} \\
+    % &amp; \begin{aligned}
+    %   \textrm{Now, we substitite t in} \space x_{k+1} &amp;= x_k + t \\
+    %             \Rightarrow x_{k+1} &amp;= x_k − \frac{f'(x_k)}{f''(x_k)}\\
+    %   \end{aligned}
+    &amp; \textrm{Now, we substitute t in} \space x_{k+1} = x_k + t \\
+    &amp; \Rightarrow x_{k+1} = x_k − \frac{f'(x_k)}{f''(x_k)}\\
+\end{aligned}\]
+
+<!-- $$ x_{k+1} = x_k −  \frac{f'(x_k)}{f''(x_k)} $$ -->
+
+<p>Note:</p>
+<ul>
+  <li>dom($f$): domain of $f (x)$ i.e., set of all real numbers $x$ where $f (x)$ is defined.</li>
+  <li>Backtracking line search is a way to find out the hyperparameter- learning rate “ $t$ “</li>
+</ul>
+
+<p><strong>Intuition:</strong>
+Newton’s optimization method approximates the objective function by a quadratic function around the current point. By fitting a quadratic function, we can find the minimum or maximum of the quadratic function, which is close to the true minimum or maximum of the original function.</p>
+
+<p>The 1st derivative gives slope of $f (x)$, 2nd derivative/ Hessian Matrix gives curvature of $f (x)$</p>
+
+<p>Comparison between Redline - Newton’s method &amp; Greenline - Gradient Descent for minimizing a func- tion. Newton’s method reaches minimum point faster by taking the curvature of</p>
+
+<center>
+<p>
+    <img src="/images/Posts/Convex_Optimization_2/newtons.jpeg" width="400" height="250" />
+</p>
+Image credits: Wikipedia
+</center>
+
+<p><br /> 
+<br /> 
+I’ll simplify this by taking the classic example of hiking a mountain to its lowest point. In gradient descent, you take the steepest descent at each step, so you miss out on the information of how the overall terrain is, let’s say obstacles, cliffs, and valleys are neglected and consume more time to navigate through all the obstacles. Now in Newton’s method you have information on the landscape of the whole terrain, which helps you avoid obstacles and reach the lowest point of the mountain much faster.</p>
+
+<h6 id="additional-information">Additional Information:</h6>
+
+<ul>
+  <li>Newton’s method is very sensitive to the initial point, and can be problematic. The below image shows how big the influence of the initial point is on the convergence.</li>
+</ul>
+<center>
+<p>
+    <img src="/images/Posts/Convex_Optimization_2/initial_point.png" width="400" height="250" />  
+Image credits: Wikipedia
+</p>
+</center>
+
+<ul>
+  <li>In the upgraded Quasi-Newton approach, we can avoid calculating hessian and its inverse</li>
+  <li>We can also solve constrained optimization problems, which broadly includes writing the Lagrange function and solving it similar to Newton’s method discussed above; I highly recommend you to read into it</li>
+</ul>
+
+<h2 id="2-constrained-optimization">2. Constrained Optimization</h2>
+
+<h4 id="21-lagrangian-multipliersequality-constrained-"><strong>2.1 Lagrangian Multipliers(equality constrained) :</strong></h4>
+
+<p>The basic idea is to convert the constrained optimization to an unconstrained optimization problem by multiplying the constraint with a penalty term(scalar) and adding it to the objective function.</p>
+
+<!-- $$
+\begin{aligned}
+    \Large{\min_{\theta} \quad} & \Large{f(\theta)}\\
+    \textrm{s.t.} \quad & \small{ g_i(\theta) = 0} \quad \forall \ i = 1...n \\
+\end{aligned}$$ -->
+
+\[\min_{\theta} \space f(\theta) \quad\textrm{s.t.} \quad g_i(\theta) = 0 \quad \forall \ i = 1...n \quad \stackrel{\text{convert}}{\Longrightarrow} \quad \min_{\vec{\theta}} \max_{\vec{\alpha}} \underbrace{L\{\overbrace{\theta_1,\alpha_1, \ldots \alpha_n}^{\text{Lagrange multipliers}}\}}_{\text{Lagrange function}} = f(\theta) + \sum_{i=1}^n \alpha_i g_i(\theta)\]
+
+<!-- $$
+\stackrel{\text{convert}}{\Longrightarrow} \min_{\vec{\theta}} \max_{\vec{\alpha}} \underbrace{L\{\overbrace{\theta_1,\alpha_1, \ldots \alpha_n}^{\text{Lagrange multipliers}}\}}_{\text{Lagrange function}} = f(\theta) + \sum_{i=1}^n \alpha_i g_i(\theta)
+$$ -->
+
+<p><strong>Solutions:</strong></p>
+
+\[\begin{aligned}
+&amp; \left.\frac{\partial L}{\partial \theta}\right|_{\theta^*, \alpha} = \frac{\partial f(\theta)}{\partial \theta} + \alpha_i \frac{\partial g_i(\theta)}{\partial \theta} \Rightarrow \theta^* \\
+&amp; \left.\frac{\partial L}{\partial \alpha}\right|_{\theta, \alpha^*} \Rightarrow g_i(\theta)=0 \Rightarrow \alpha^* \quad \text{[substitute} \ \alpha^* \  \text{in first equation to get} \ \theta^*] 
+\end{aligned}\]
+
+<ul>
+  <li>Lagrange multiplier $α$ or $\lambda \in \mathbb{R}$</li>
+  <li>An $\alpha$ exists such that partial derivative of objective function $f (x)$ at optimal point $x^∗$ is equal to product of $\alpha$ and partial derivative $g(x^∗).$</li>
+</ul>
+
+<p>You all might know the steps of the Lagrangian method already. Now let’s dive into the intuition of the method and why it makes sense to multiply a scalar to constraint, and adding it to objective function solves our problem.</p>
+
+<p><strong>Intuition:</strong></p>
+
+<div style="text-align: center;">
+  <div style="display: inline-block;">
+    <img src="/images/Posts/Convex_Optimization_2/lagrange_zout.png" width="400" height="250" />
+  </div>
+  <div style="display: inline-block;">
+    <img src="/images/Posts/Convex_Optimization_2/lagrange_zin.png" width="400" height="250" />
+  </div>
+</div>
+<p style="text-align: center;">Fig: 2.4</p>
+
+<p>Let’s understand this figure. Firstly, picture the graph in 3d contour plot. Our goal is to find the maximum point of f (x,y) satisfying constraint g(x,y) = c. To get there, consider contour plot of f (x,y) {contour plot is nothing but a collection of all the curves f (x,y) = d1,d2,….dn }, there exists one such curve that is tangent to the constraint function. This indicates their tangents are same for both objective function and constraint, But this also means that their normal vector to the tangents are also related. (relation can be seen in the next image, where $\lambda$ - Lagrange multiplier)</p>
+
+<p>Solving this above relation simultaneously with the constraint g(x,y) = c gives us the solutions of the functions, which is the same as above derivation.</p>
+
+<h4 id="lagrange-optimization-inequality-constraints"><strong>Lagrange optimization (Inequality constraints):</strong></h4>
+
+<p>Similar to the equality constraints case, we modify the objective function and solve for the solutions.</p>
+
+\[\begin{aligned}
+    \min_{\theta} \quad &amp; f(\theta)\\
+    \textrm{s.t.} \quad &amp; g_i(\theta)=0 \quad \forall \ i=1 \ldots n \\
+                        &amp; h_j(\theta) \le 0 \quad \forall \ j=1 \cdots p
+\end{aligned} \quad \stackrel{\text{convert}}{\Longrightarrow} \quad \min_{\vec{\theta}} \max_{\alpha, \beta} L(\theta, \alpha, \beta) = f(\theta) + \sum_{i=1}^n \alpha_i g_i(\theta) + \sum \beta_j h_j(\theta)\]
+
+<p><strong>Solutions:</strong></p>
+
+\[\begin{aligned}
+&amp; \left.\frac{\partial L}{\partial \theta}\right|_{\theta^*, \alpha, \beta} = \frac{\partial f(\theta)}{\partial \theta} + \alpha_i \frac{\partial g_i(\theta)}{\partial \theta} + \beta_j \frac{\partial h_j(\theta)}{\partial \theta} \\
+&amp; \left.\frac{\partial L}{\partial \alpha}\right|_{\theta, \alpha^*, \beta} = g_i(\theta) \Rightarrow \alpha^* \quad \text{[substitute} \ \alpha^* \ \text{and} \ \beta^* \ \text{in first equation to get} \ \theta^*] \\
+&amp; \left.\frac{\partial L}{\partial \beta}\right|_{\theta, \alpha, \beta^*} = h_j(\theta) \Rightarrow \beta^* \quad
+\end{aligned}\]
+
+<p>Now we have to check if our solutions are actually the optimal solutions .</p>
+
+<p>Don’t you worry KKT conditions got you, If our solution satisfies all the conditions then we can be sure it is optimal.</p>
+
+<h4 id="kkt-karush-kuhn-tucker-conditions"><strong>K.K.T (karush-kuhn-Tucker) conditions.</strong></h4>
+
+<ul>
+  <li>$\frac{\partial L}{\partial \theta}\bigg|_{\theta, \alpha, \beta} = 0$ [Stationarity condition]</li>
+  <li>$\frac{\partial L}{\partial \alpha}\bigg|_{θ,α,β} = 0$ [Primal feasibility]</li>
+  <li>$\frac{∂L}{∂β}\bigg|_{θ,α,β} ≤ 0 $ [Primal feasibility]</li>
+  <li>$β_j ≥ 0$ [Dual feasibility]</li>
+  <li>$\sumα_ig_i(θ) = 0\ , \ \sumβ_j h_j (θ) = 0 \ \ $[Complementany slackness]</li>
+</ul>
+
+<p>I’ll help you understand these conditions with a simple example; Consider a production company that aims to maximize its profit by deciding how many units of two products, X and Y, to produce. The company faces a budget constraint and a resource constraint, along to maximize profit.</p>
+
+<ul>
+  <li><strong>Stationarity</strong> : Implies that the rate at which profit increases with respect to changes in the production quantities should be balanced with the sensitivity of the constraints (budget and resource) to changes in production quantities</li>
+  <li><strong>Primal Feasibility</strong> : Means that the production quantities of products X and Y should satisfy the budget constraint and the resource constraint.</li>
+  <li><strong>Dual Feasibility</strong> : It means that the dual variables corresponding to the budget constraint and the resource constraint should be non-negative.</li>
+  <li><strong>Complementary Slackness</strong> : If the budget constraint is fully utilized (binding), its dual variable is positive, indicating the marginal value of additional budget. If the resource constraint has some remaining capacity (slack), its dual variable is zero, indicating that it does not affect the objective function.</li>
+</ul>
+
+<h4 id="barriers-method--interior-point-methodipm"><strong>Barriers Method  Interior Point Method(IPM):</strong></h4>
+
+<p>This very vaguely can be called an extension to Lagrangian method. Our aim remains same , converting constrained to unconstrained optimization problem. Once this is done, we can apply algorithms like Gradient descent and Newton’s method to solve it.</p>
+
+<p>Let’s see how it works with a simple example.</p>
+
+\[\begin{aligned}
+    \textrm{Objective function:} \quad &amp; \textrm{Maximize the area} \ f(l,w) = \textrm{length} (l) * \textrm{width} (w)\\
+    \textrm{Constraint:} \quad &amp; \textrm{Perimeter i.e.,} \quad \textrm{s.t.} \quad 2*l+2*w \le 100\\
+\end{aligned}\]
+
+<p>To apply the barrier method, we introduce a penalty term that penalizes violations of the perimeter constraint. The penalty term can be defined as the negative logarithm of the difference between the actual perimeter and the allowed maximum perimeter.</p>
+
+<p>Now modified objective function looks something like this:</p>
+
+\[\begin{aligned}
+    \textrm{Objective function:} \quad &amp; \textrm{Maximize} \ B(l,w) = l*w − \mu*\log(100 − (2*l + 2*w)) \newline
+                                       &amp;  \mu \ \textrm{is barrier parameter }(\mu &gt; 0)
+\end{aligned}\]
+
+<h6 id="intuition-"><strong>Intuition :</strong></h6>
+
+\[\begin{aligned}
+    \textrm{min} \ f(x) \quad &amp; \textrm{s.t.} \quad g(x) \le 0 \quad \quad \overset{\text{convert}}{\implies} \quad \quad B(x) = f (x) − \mu \log(g(x))\\
+    &amp; \text{As} \ g(x) \Rightarrow 0 \textrm{ (tends to zero)}, -\log(g(x)) \rightarrow \infty \textrm{ (tends to infinity)}
+\end{aligned}\]
+
+<p>Ex:</p>
+
+<p>$ \text{min} \ f(x) = x \quad \text{s.t.} \quad g(x): 5-x  \overset{\text{convert}}{\implies} B(x) = x − \mu \log(5 − x)$</p>
+
+<p><img src="/images/Posts/Convex_Optimization_2/ipm.png" width="400" height="250" /></p>
+
+<p>If you look at the example clearly, the barrier function $B(x)$ is not allowing the optimal x value to go beyond the constraint given. $B(x)$ is approaching infinity where x comes closer to the optimal value. It acts like a barrier stopping to cross the feasible region.</p>
+
+<p>If you think about it, It’s so beautiful how a simple log function helps in solving optimization problems soo efficiently</p>
+
+<p><strong>Additional Information:</strong></p>
+
+<ul>
+  <li>The barrier method can be seen as a bridge between feasibility and optimality in optimization problems. By gradually reducing the barrier coefficient, it navigates the tradeoff between satisfying constraints and optimizing the objective function.</li>
+  <li>Similar to Newton’s method, It can be sensitive to the choice of the initial point; a poor initial point, far from the feasible region, may lead to slow convergence or failure to find a feasible solution.</li>
+  <li>Similar approach is followed if we are given equality constraints too. Hope you aren’t afraid of convex optimization anymore :)</li>
+</ul>
+
+<h6 id="references">References:</h6>
+<p>[1]<a href="https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf"><em>Convex Optimization</em> by Stephen Boyd</a><br />
+[2] <em>Pattern Recognition and Machine Learning</em> by Christopher Bishop<br />
+[3]<a href="https://www.youtube.com/watch?v=bJ0Kkf4u9bo&amp;t=430s"><em>Interior Point method  constrained Optimization</em>(Youtube ) </a><br />
+[4]<a href="https://www.youtube.com/watch?v=VZLkGbL71Zk"><em>Constraints and Barrier Method</em>(Youtube ) </a><br />
+[5]<a href="https://www.youtube.com/watch?v=U0xlKuFqCuI&amp;t=1075s"><em>Newton’s Method Linear Approximation</em>(Youtube ) </a><br />
+[6]<a href="https://www.youtube.com/watch?v=-RdOwhmqP5s&amp;t=86s"><em>Influence of Initial point(Newton’s Method)</em>(Youtube ) </a></p>
+
+
+		</article>
+
+	</div>
+
+</section>
+
+		</div>
+
+	</div>
+
+
+	<footer class="footer">
+
+	<div class="wrap">
+
+		<p class="footer__text"></p>
+
+		<div class="footer__copyright">
+			<span>© 2023 ML with Ramin</span>
+			<a href="https://jekyllthemes.io" target="_blank">Jekyll Themes</a>
+		</div>
+
+		<ul class="socials">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://medium.com/@mohammadi.r" target="_blank" class="socials__item__link" title="Medium">
+			<i class="fab fa-medium" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://www.linkedin.com/in/ramin-mohammadi-ml/" target="_blank" class="socials__item__link" title="Linkedin">
+			<i class="fab fa-linkedin" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+</ul>
+
+	</div>
+
+</footer>
+
+
+	<!-- Javascript Assets -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/js/plugins-min.js"></script>
+	<script src="/js/personal-min.js"></script>
+
+	
+	<!-- Extra Footer JS Code -->
+	
+	
+
+
+</body>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ["\\(", "\\)"] ],
+      displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
+
+</html>

@@ -1,0 +1,362 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+
+
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+	ML with Ramin
+
+	Personal Theme by https://jekyllthemes.io
+	Premium + free Jekyll themes for your blog or website.
+
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Page Info -->
+	<link rel="shortcut icon" href="/images/favicon.png">
+	<title>Bias-Variance Tradeoff – ML with Ramin</title>
+	<meta name="description" content="">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Bias-Variance Tradeoff – ML with Ramin">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:image:src" content="http://localhost:4000/images/demo/demo-square.webp">
+
+	<!-- Facebook OpenGraph -->
+	<meta property="og:title" content="Bias-Variance Tradeoff – ML with Ramin" />
+	<meta property="og:description" content="" />
+	<meta property="og:image" content="http://localhost:4000/images/demo/demo-square.webp" />
+
+	
+	<!-- Font Embed Code -->
+	<link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+	
+
+	<!-- Styles -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<!-- Icons -->
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/solid.js" integrity="sha384-GXi56ipjsBwAe6v5X4xSrVNXGOmpdJYZEEh/0/GqJ3JTHsfDsF8v0YQvZCJYAiGu" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/brands.js" integrity="sha384-0inRy4HkP0hJ038ZyfQ4vLl+F4POKbqnaUB6ewmU4dWP0ki8Q27A0VFiVRIpscvL" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/fontawesome.js" integrity="sha384-NY6PHjYLP2f+gL3uaVfqUZImmw71ArL9+Roi9o+I4+RBqArA2CfW1sJ1wkABFfPe" crossorigin="anonymous"></script>
+
+	
+	<!-- Custom Styles -->
+	<style></style>
+	
+
+	
+	<!-- Analytics Code -->
+	
+	
+
+	
+	<!-- Extra Header JS Code -->
+	
+	
+	
+</head>
+
+
+<body class="loading ajax-loading" data-site-url="http://localhost:4000" data-page-url="/blog/bias-variance-tradeoff">
+
+
+	<header class="header">
+
+	<div class="wrap">
+
+		
+		<a href="/" class="header__title">
+			ML with Ramin
+		</a>
+		
+
+		<div class="menu">
+			<div class="menu__toggle js-menu-toggle">
+				<div class="menu__toggle__icon"><span></span></div>
+			</div>
+			<div class="menu__wrap">
+				<ul class="menu__list">
+					
+					<li class="menu__list__item">
+						<a href="/about/" class="menu__list__item__link">About us</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/ml/" class="menu__list__item__link">Machine Learning</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/mlops/" class="menu__list__item__link">MLOps</a>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+</header>
+
+
+	<div class="loader"><svg width="120" height="30" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="60" cy="15" r="9" fill-opacity="0.3"><animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="105" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle></svg></div>
+
+	<div class="page-loader"></div>
+
+	
+	<div class="page">
+
+		<div class="page__content" data-page-title="Bias-Variance Tradeoff – ML with Ramin">
+
+			<section class="hero hero--single">
+
+	<div class="hero__image" style="background-image: url(/images/demo/demo-square.webp)">
+		<div class="hero__overlay"></div>
+	</div>
+
+	<div class="wrap">
+
+		<h1>Bias-Variance Tradeoff</h1>
+		<!-- <p>10 February 2022</p> -->
+		<p align="right"><b>- Siddhartha Putti<b></p>
+			
+	</div>
+
+</section>
+
+<section class="single">
+
+	<div class="wrap">
+
+		<article class="single-post">
+
+			<h1 id="bias-variance-tradeoff">Bias Variance Tradeoff</h1>
+
+<p>To start of with,<br />
+Bias is an error introduced in the model due to the oversimplification of the algorithm used(which means it doesn’t fit the data properly) which is also called as underfitting. Imagine fitting a linear regression to a dataset that has a non-linear pattern, No matter how many more observations you collect, a linear regression won’t be able to model the curves in that data! This is known as under-fitting.</p>
+
+<p>Variance is error introduced in the model due to a too complex algorithm, which means the model basically remembers the training data and produces lower error while training but fails in test dataset. which is also termed as overfitting.</p>
+
+<p><br /></p>
+
+<p>Let’s go through complexity of the model.</p>
+
+<p><br /></p>
+
+<p align="center">
+
+<a href="https://www.endtoend.ai/blog/bias-variance-tradeoff-in-reinforcement-learning/#:~:text=Bias%2Dvariance%20tradeoff%20is%20a,the%20data%20has%20high%20variance.">
+
+<img src="/images/Posts/Bias_Variance_Tradeoff/underfit_right_overfit.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:200px;width:600px" /></a>
+Figure 1. <a href="https://www.endtoend.ai/blog/bias-variance-tradeoff-in-reinforcement-learning/#:~:text=Bias%2Dvariance%20tradeoff%20is%20a,the%20data%20has%20high%20variance.">  endtoend.ai</a>
+
+</p>
+
+<p><br /></p>
+
+<p>Say, the complexity of the model is defined by degree of polynomial. now, you fit a model with degree of polynomial ‘d’ and get some estimates of how well your fitted hypothesis will generalise to new examples. In the above image you can interpret how well various degrees of polynomials fits to the data, i.e the increase in complexity of the model increases variance in the model(overfitting).</p>
+
+<p>Now, how do you choose right degree of polynomial for your dataset, one potential method you can follow is cross validation.</p>
+
+<p>Now that we have two kinds of error we define the right degree of polynomial by cross validations error and trian error. we never choose test error as a choice of defining a model performance or parameter tuning.</p>
+
+<p>The following graph shows the bias variance tradeoff considering degree of polynomail (model complexity) and error on cross validation and train data.</p>
+
+<p><br /></p>
+
+<p><img src="/images/Posts/Bias_Variance_Tradeoff/poly2.webp" style="display: block;          margin-left: auto;         margin-right: auto; height:300px;width:550px" /></p>
+
+<p><br /></p>
+
+<p>Refer to the bias and variance combination of validation and train error from the image. As the degree of polynomial increases the model tends to remember the data thus training have low error, but in cross validation the model performs poor. you need to select a degree of polynomial where both bias and variance are low. Hence, the name TRADEOFF.</p>
+
+<p>The other important method often used in conventional machine learning to tackle bias variance tradeoff is by using REGULARIZATION.</p>
+
+<p>I will not got into nuts and bolts of regularization, but we will see the effect of regularization parameter in overfitting of data.</p>
+
+<p>Lets consider L2 regularization.</p>
+
+<p><br /></p>
+
+<p><img src="/images/Posts/Bias_Variance_Tradeoff/poly4.webp" style="display: block;          margin-left: auto;         margin-right: auto; height:200px;width:450px" /></p>
+
+<p><br /></p>
+
+<p>As our objective is to minimize the loss function in any setting, The decrease in lambda values should increase the values of Theta, as the overall loss should be decreased. that means the values of theta are still higher which means the model have high variance(overfitting). Remember that higher values of theta is same as higher value of degree of polynomial.</p>
+
+<p><br /></p>
+
+<p><img src="/images/Posts/Bias_Variance_Tradeoff/poly3.webp" style="display: block;          margin-left: auto;         margin-right: auto; height:300px;width:450px" /></p>
+
+<p><br /></p>
+
+<p>As previously said, even here we consider a sweet spot for the lambda value using cross validation error to balance bias and variance. There is no escaping the relationship between bias and variance in machine learning. Increasing the bias 
+will decrease the variance. Increasing the variance will decrease bias.</p>
+
+<p><br /></p>
+
+<p>Some tips if your model isnt working:</p>
+
+<ul>
+  <li>Get more training data - fix high variance problem</li>
+  <li>If your hypothesis already suffering from high bias, getting more data doesn’t solve the problem.</li>
+  <li>Try smaller set of features - fixes high variance problem</li>
+  <li>Try getting additions features(feature engineering) - fixes high bias problem</li>
+  <li>Try adding polynomial features - fixes high bias problem</li>
+  <li>Try decreasing or increasing learning rate and regularization parameters.</li>
+</ul>
+
+<p><br /></p>
+
+<p>USEFUL FINDINGS: (from external source)</p>
+<ol>
+  <li>The k-nearest neighbor algorithm has low bias and high variance, but the trade-off can be changed 
+by increasing the value of k which increases the number of neighbors that contribute to the 
+prediction and in turn increases the bias of the model.</li>
+  <li>The support vector machine algorithm has low bias and high variance, but the trade-off can be 
+changed by increasing the C parameter that influences the number of violations of the margin 
+allowed in the training data which increases the bias but decreases the variance.</li>
+  <li>The decision tree has low bias and high variance, you can decrease the depth of the tree or use 
+fewer attributes.</li>
+  <li>The linear regression has low variance and high bias, you can increase the number of features or 
+use another regression that better fits the data.</li>
+</ol>
+
+<p>Best!<br />
+Siddhartha Putti<br />
+putti.s@northeastern.edu</p>
+
+
+		</article>
+
+	</div>
+
+</section>
+
+		</div>
+
+	</div>
+
+
+	<footer class="footer">
+
+	<div class="wrap">
+
+		<p class="footer__text"></p>
+
+		<div class="footer__copyright">
+			<span>© 2023 ML with Ramin</span>
+			<a href="https://jekyllthemes.io" target="_blank">Jekyll Themes</a>
+		</div>
+
+		<ul class="socials">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://medium.com/@mohammadi.r" target="_blank" class="socials__item__link" title="Medium">
+			<i class="fab fa-medium" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://www.linkedin.com/in/ramin-mohammadi-ml/" target="_blank" class="socials__item__link" title="Linkedin">
+			<i class="fab fa-linkedin" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+</ul>
+
+	</div>
+
+</footer>
+
+
+	<!-- Javascript Assets -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/js/plugins-min.js"></script>
+	<script src="/js/personal-min.js"></script>
+
+	
+	<!-- Extra Footer JS Code -->
+	
+	
+
+
+</body>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ["\\(", "\\)"] ],
+      displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
+
+</html>

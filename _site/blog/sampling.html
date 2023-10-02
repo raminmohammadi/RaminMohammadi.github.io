@@ -1,0 +1,435 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+
+
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+	ML with Ramin
+
+	Personal Theme by https://jekyllthemes.io
+	Premium + free Jekyll themes for your blog or website.
+
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Page Info -->
+	<link rel="shortcut icon" href="/images/favicon.png">
+	<title>Sampling Techniques – ML with Ramin</title>
+	<meta name="description" content="">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Sampling Techniques – ML with Ramin">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:image:src" content="http://localhost:4000/images/demo/demo-square.webp">
+
+	<!-- Facebook OpenGraph -->
+	<meta property="og:title" content="Sampling Techniques – ML with Ramin" />
+	<meta property="og:description" content="" />
+	<meta property="og:image" content="http://localhost:4000/images/demo/demo-square.webp" />
+
+	
+	<!-- Font Embed Code -->
+	<link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+	
+
+	<!-- Styles -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<!-- Icons -->
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/solid.js" integrity="sha384-GXi56ipjsBwAe6v5X4xSrVNXGOmpdJYZEEh/0/GqJ3JTHsfDsF8v0YQvZCJYAiGu" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/brands.js" integrity="sha384-0inRy4HkP0hJ038ZyfQ4vLl+F4POKbqnaUB6ewmU4dWP0ki8Q27A0VFiVRIpscvL" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/fontawesome.js" integrity="sha384-NY6PHjYLP2f+gL3uaVfqUZImmw71ArL9+Roi9o+I4+RBqArA2CfW1sJ1wkABFfPe" crossorigin="anonymous"></script>
+
+	
+	<!-- Custom Styles -->
+	<style></style>
+	
+
+	
+	<!-- Analytics Code -->
+	
+	
+
+	
+	<!-- Extra Header JS Code -->
+	
+	
+	
+</head>
+
+
+<body class="loading ajax-loading" data-site-url="http://localhost:4000" data-page-url="/blog/sampling">
+
+
+	<header class="header">
+
+	<div class="wrap">
+
+		
+		<a href="/" class="header__title">
+			ML with Ramin
+		</a>
+		
+
+		<div class="menu">
+			<div class="menu__toggle js-menu-toggle">
+				<div class="menu__toggle__icon"><span></span></div>
+			</div>
+			<div class="menu__wrap">
+				<ul class="menu__list">
+					
+					<li class="menu__list__item">
+						<a href="/about/" class="menu__list__item__link">About us</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/ml/" class="menu__list__item__link">Machine Learning</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/mlops/" class="menu__list__item__link">MLOps</a>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+</header>
+
+
+	<div class="loader"><svg width="120" height="30" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="60" cy="15" r="9" fill-opacity="0.3"><animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="105" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle></svg></div>
+
+	<div class="page-loader"></div>
+
+	
+	<div class="page">
+
+		<div class="page__content" data-page-title="Sampling Techniques – ML with Ramin">
+
+			<section class="hero hero--single">
+
+	<div class="hero__image" style="background-image: url(/images/demo/demo-square.webp)">
+		<div class="hero__overlay"></div>
+	</div>
+
+	<div class="wrap">
+
+		<h1>Sampling Techniques</h1>
+		<!-- <p>13 February 2022</p> -->
+		<p align="right"><b>- Siddartha Putti<b></p>
+			
+	</div>
+
+</section>
+
+<section class="single">
+
+	<div class="wrap">
+
+		<article class="single-post">
+
+			<p>In this post, we will go through what sampling is and the different methods to choose for different problems.</p>
+
+<p>Some of the sampling methods we cover in this post are:</p>
+
+<ul>
+  <li>Random Sampling</li>
+  <li>Stratified Sampling</li>
+  <li>Cluster Sampling</li>
+  <li>Convenience Sampling</li>
+  <li>Systematic Sampling</li>
+  <li>Gibb’s Sampling</li>
+</ul>
+
+<p><br /></p>
+
+<ul>
+  <li><strong>Random Sampling:</strong></li>
+</ul>
+
+<p>Simple random sampling is a technique to sample a small segment of the population from a whole population. In terms of data, sample random data points from the whole data set.</p>
+
+<p>So what exactly does the random sample do? well, the probability of selecting a random data point from the whole data set is equal to every other data point. so, there is no kind of bias imposed on sampling data from the population.</p>
+
+<p><br /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># you can achieve similar thing in python by:
+
+import random 
+a =  [1, 2, 3, 4, 5]
+random.sample(a,2)
+
+&gt;&gt; [1, 3]
+
+# for pandas dataframe
+
+import pandas as pd
+import numpy as np
+population = pd.DataFrame(np.array([[1,2,3],[4,5,6],[7,8,9]]))
+
+population.sample(n = 1)
+
+&gt;&gt;   0 1 2 
+&gt;&gt; 2 7 8 9
+
+# returns 2nd row which is [7, 8, 9]
+</code></pre></div></div>
+
+<ul>
+  <li><strong>Stratified Sampling:</strong></li>
+</ul>
+
+<p>If you have chosen Random sampling to sample from a population, let’s say men and women, but every time you sample, you are getting men for most of the time, at least out of 10 random samples from a population of 100, 9 of them are men. even if you have the same probability of sampling outcomes, there’s a chance that you get this kind of output.</p>
+
+<p>But the scope/objective is to sample random but from a subclass having an equal sample population. (say class 0 is men and class 1 is women- 2 subclasses).</p>
+
+<p>This is where stratified sampling is necessary, in terms of data set, suppose you have a classification problem but you need an almost equal number of samples from both the classes in a batch of data so you don’t bias your learning step. Random stratified sampling samples the same number of data points from different classes in the dataset.</p>
+
+<p>Another scenario of data sets to have stratified sampling is, let’s say you have class imbalanced dataset, you wanted to split the dataset to have proportionate classes into train and validation sets.
+Stratified ensures that relative class frequencies are approximately preserved in each train and validation fold.</p>
+
+<p><a href="https://scikit-learn.org/stable/modules/cross_validation.html#stratification"> click here  and Jump to section 3.1.2.2 for more implimentation details in sklearn </a></p>
+
+<p><br /></p>
+
+<p align="center">
+
+<a href="https://www.scribbr.com/methodology/stratified-sampling/">
+
+<img src="/images/Posts/Sampling/stratified-sample-7.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:250px;width:500px" />
+&gt;
+Image credits <a href="https://www.scribbr.com/methodology/stratified-sampling/"> scribbr</a>
+</a>
+</p>
+
+<p><br /></p>
+
+<ul>
+  <li><strong>Cluster Sampling</strong></li>
+</ul>
+
+<p>Cluster sampling is somewhat the same as stratified sampling. cluster sampling is a probability sampling method in which you segregate the population into respective clusters and randomly select some of the samples from the clusters. The clusters are basically each be a mini representation of the population as a whole.</p>
+
+<p>Let’s say you wanted to get all the board scores of medical students in the US. for this task you need to go to every other school and record the scores or collect them electronically in a database. Instead, break them into clusters. As the entire cluster is representative of the population as a whole. i.e consider schools from texas as a cluster, in general students in medical school are intelligent and probably have the same male-to-female ratio. In this aspect, they represent all the medical schools as a whole.</p>
+
+<p>Texas is a chosen cluster, now randomly pick a cluster let’s say Boston medical school, and evaluate with chosen cluster(texas). randomly selecting and sampling from the clusters allows you to imitate simple random sampling, which in turn supports the validity of your results.</p>
+
+<p>If the clusters are not representative, then random sampling will allow you to gather data on a diverse array of clusters, which should still provide you with an overview of the population as a whole. <a href="https://www.scribbr.com/methodology/cluster-sampling/#:~:text=What%20is%20cluster%20sampling%3F,the%20population%20as%20a%20whole."> Reference </a></p>
+
+<ul>
+  <li><strong>Convenience Sampling.</strong></li>
+</ul>
+
+<p>It is one of the non-probability samplings where you select the sample from the population that is close to hand(which describes the name convenience). For instance, in a magic show asking people to volunteer. In this example, the criteria is nothing but people are available and willing to contribute/participate. This type of sampling method does not require that a simple random sample is generated since the only criterion is whether the participants agree to participate.</p>
+
+<p>This is not recommended in reality because it doesn’t provide any representation of the population. But it can be handy in some situations. for example, a college student wants to record how many hours an average student studies on the night of an examination, in this case, he can call a bunch of his friends and record the hours, or go to a library and do a short survey. The collected samples may not be a representation of the population of interest and therefore be a source of bias.</p>
+
+<p>On contrary, from the same example above, if the town has most of the people as college students and the student makes surveys in the available libraries, this may have a fair chance to be a representation of the population. i.e larger sample size will reduce the chance of sampling error occurring.</p>
+
+<ul>
+  <li><strong>Systematic Sampling</strong></li>
+</ul>
+
+<p>Systematic sampling is a probability sampling method, where we select every Kth element/sample on a list of population. Observe that if the population is random, this can be viewed as simple random sampling. The most commonly used type of systematic sampling is the equiprobability method. In this method, the population list is treated as circular, and every Kth element is sampled.</p>
+
+<p>With that being said, it can be represented as K = N/n where n: sample size, N: population size</p>
+
+<p>This is similar to simple random sampling because each sample chosen from the population has an equal probability of selection. However it is not true in all cases, for example, samples with at least two samples adjacent to each other will never be chosen by systematic sampling, i.e not every possible sample of a particular size has an equal probability of being chosen.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systematic sampling On a dataframe
+
+def systematic_sampling(df, step):
+
+    #  df - pandas dataframe
+    # step - value of k (every kth sample to be chosen)
+ 
+    indexes = np.arange(0, len(df), step=step)
+    systematic_sample = df.iloc[indexes]
+    return systematic_sample
+
+
+</code></pre></div></div>
+
+<ul>
+  <li><strong>Gibb’s Sampling</strong></li>
+</ul>
+
+<p>This is only significant if you are sampling from a multivariate distribution. Until now we have seen a single dimension distribution sampling. Gibb’s sampling is useful for 2 or more dimensional distributions.</p>
+
+<p>When do we use Gibb’s sampling:</p>
+
+<ol>
+  <li>When sampling from a joint distribution P(X, Y) is difficult. i.e getting a pair of x and y is difficult.</li>
+  <li>It is easier to sample from a conditional distribution i.e P(X/Y).</li>
+</ol>
+
+<p>Assume p(x/y) is a normal distribution, this means if you have a fixed value y and you need to sample x, you need a single variable normal distribution with provided mean and standard deviation/variance.</p>
+
+<p>Steps:</p>
+
+<ol>
+  <li>We start by initializing some (Xo, Yo) from the population.</li>
+  <li>From the first sample keep the Yo fixed, and sample the new X1 from the conditional distribution X1 ~ P(X1/Yo). i.e sample the new value is X from the given existing value of Y.</li>
+  <li>Now, from step 2, we sample the new value for Y1, provided the existing value of updated X(form step2) from the conditional distribution Y1 ~ P(Y1/X1)</li>
+</ol>
+
+<p>Repeat steps 2,3 as many times as you need for the number of samples.</p>
+
+<p>Some of the problems from Gibb’s sampling:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    |
+    v
+    y-axis
+
+&gt;&gt; 1  0    0.5
+&gt;&gt; 0  0.5  0
+&gt;&gt;    0    1      &lt;- x-axis
+
+</code></pre></div></div>
+
+<p>From the above examples, consider 0, 0.5 are the probabilities for you to move/shift/sample the data and you are at position (0,0), if you want to sample any of the X, Y directions, you have a low probability of choosing a sample(since you can only choose X or Y from the steps 2 and 3), hence you stay at the same position, therefore you’ll never get a chance to sample from (1,1).</p>
+
+<p>This is also applicable to the high density/probability case. since you’ll not have 2 dimensions all the time, the sampling may also get stuck at high density/probability areas, and never sample from low probability samples. Although Gibb’s sampling is efficient this make Gibb’s sampling a very long time to converge.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Gibbs_sampling"></a></p>
+
+<p>-Siddhartha Putti <br />
+putti.s@northeastern.edu</p>
+
+
+
+		</article>
+
+	</div>
+
+</section>
+
+		</div>
+
+	</div>
+
+
+	<footer class="footer">
+
+	<div class="wrap">
+
+		<p class="footer__text"></p>
+
+		<div class="footer__copyright">
+			<span>© 2023 ML with Ramin</span>
+			<a href="https://jekyllthemes.io" target="_blank">Jekyll Themes</a>
+		</div>
+
+		<ul class="socials">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://medium.com/@mohammadi.r" target="_blank" class="socials__item__link" title="Medium">
+			<i class="fab fa-medium" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://www.linkedin.com/in/ramin-mohammadi-ml/" target="_blank" class="socials__item__link" title="Linkedin">
+			<i class="fab fa-linkedin" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+</ul>
+
+	</div>
+
+</footer>
+
+
+	<!-- Javascript Assets -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/js/plugins-min.js"></script>
+	<script src="/js/personal-min.js"></script>
+
+	
+	<!-- Extra Footer JS Code -->
+	
+	
+
+
+</body>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ["\\(", "\\)"] ],
+      displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
+
+</html>

@@ -1,0 +1,735 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+
+
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+	ML with Ramin
+
+	Personal Theme by https://jekyllthemes.io
+	Premium + free Jekyll themes for your blog or website.
+
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Page Info -->
+	<link rel="shortcut icon" href="/images/favicon.png">
+	<title>Lasso, Ridge, and Robust Regression – ML with Ramin</title>
+	<meta name="description" content="">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Lasso, Ridge, and Robust Regression – ML with Ramin">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:image:src" content="http://localhost:4000/images/demo/demo-square.webp">
+
+	<!-- Facebook OpenGraph -->
+	<meta property="og:title" content="Lasso, Ridge, and Robust Regression – ML with Ramin" />
+	<meta property="og:description" content="" />
+	<meta property="og:image" content="http://localhost:4000/images/demo/demo-square.webp" />
+
+	
+	<!-- Font Embed Code -->
+	<link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+	
+
+	<!-- Styles -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<!-- Icons -->
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/solid.js" integrity="sha384-GXi56ipjsBwAe6v5X4xSrVNXGOmpdJYZEEh/0/GqJ3JTHsfDsF8v0YQvZCJYAiGu" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/brands.js" integrity="sha384-0inRy4HkP0hJ038ZyfQ4vLl+F4POKbqnaUB6ewmU4dWP0ki8Q27A0VFiVRIpscvL" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/fontawesome.js" integrity="sha384-NY6PHjYLP2f+gL3uaVfqUZImmw71ArL9+Roi9o+I4+RBqArA2CfW1sJ1wkABFfPe" crossorigin="anonymous"></script>
+
+	
+	<!-- Custom Styles -->
+	<style></style>
+	
+
+	
+	<!-- Analytics Code -->
+	
+	
+
+	
+	<!-- Extra Header JS Code -->
+	
+	
+	
+</head>
+
+
+<body class="loading ajax-loading" data-site-url="http://localhost:4000" data-page-url="/blog/lasso-ridge-robust-regression">
+
+
+	<header class="header">
+
+	<div class="wrap">
+
+		
+		<a href="/" class="header__title">
+			ML with Ramin
+		</a>
+		
+
+		<div class="menu">
+			<div class="menu__toggle js-menu-toggle">
+				<div class="menu__toggle__icon"><span></span></div>
+			</div>
+			<div class="menu__wrap">
+				<ul class="menu__list">
+					
+					<li class="menu__list__item">
+						<a href="/about/" class="menu__list__item__link">About us</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/ml/" class="menu__list__item__link">Machine Learning</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/mlops/" class="menu__list__item__link">MLOps</a>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+</header>
+
+
+	<div class="loader"><svg width="120" height="30" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="60" cy="15" r="9" fill-opacity="0.3"><animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="105" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle></svg></div>
+
+	<div class="page-loader"></div>
+
+	
+	<div class="page">
+
+		<div class="page__content" data-page-title="Lasso, Ridge, and Robust Regression – ML with Ramin">
+
+			<section class="hero hero--single">
+
+	<div class="hero__image" style="background-image: url(/images/demo/demo-square.webp)">
+		<div class="hero__overlay"></div>
+	</div>
+
+	<div class="wrap">
+
+		<h1>Lasso, Ridge, and Robust Regression</h1>
+		<!-- <p>07 February 2022</p> -->
+		<p align="right"><b>- Keerthi Godha<b></p>
+			
+	</div>
+
+</section>
+
+<section class="single">
+
+	<div class="wrap">
+
+		<article class="single-post">
+
+			<h1 id="lasso-ridge-and-robust-regression">Lasso, Ridge, and Robust Regression</h1>
+
+<h3 id="table-of-contents">Table of contents</h3>
+<ol>
+  <li><a href="#regression">Introduction to Regression</a><br /></li>
+  <li><a href="#robust_regression">Robust Regression</a> <br /></li>
+  <li><a href="#overfitting">What is Overfitting</a><br /></li>
+  <li><a href="#regularization">Regularization and types of Regularization</a><br />
+ 4.1 <a href="#lasso_regression">Lasso Regression</a><br />
+ 4.2 <a href="#ridge_regression">Ridge Regression</a><br /></li>
+</ol>
+
+<h2 id="1-regression-">1. Regression <a name="regression"></a></h2>
+
+<p><strong><em>Regression</em></strong> is a predictive modeling technique in machine learning, which predicts continuous outcomes by investigating the relationship between independent/input variables and a dependent variable/output.</p>
+
+<p align="center">
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/Regression.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:250px;width:250px" />
+</p>
+<p align="center">
+Figure 1. <a href="https://medium.com/swlh/classical-machine-learning-7efc6674fca1">
+Regression </a>
+</p>
+
+<p>Linear regression finds the best line (or hyperplane) that best describes the linear relationship between the input variable (X) and the target variable (y). Robust, Lasso, and Ridge regressions are part of the Linear Regression family, where input parameters and output parameters are assumed to have a Linear relationship. <br /></p>
+
+<h4 id="linear-regression-is-a-good-practice-for-the-below-scenarios">Linear Regression is a good practice for the below scenarios.</h4>
+
+<ul>
+  <li>Linear Regression performs well when the dataset is linearly separable. It is used to find the nature of the relationship between the input and output variables.</li>
+  <li>Linear Regression is easier to implement, and interpret and very efficient to train.</li>
+</ul>
+
+<h4 id="problems-with-linear-regression">Problems with Linear Regression.</h4>
+<ul>
+  <li>Linear Regression is limited to datasets having Linear Relationships.</li>
+  <li>Linear Regression is Sensitive to Outliers.</li>
+  <li>Linear Regression is prone to noise and overfitting.</li>
+  <li>Linear Regression assumes that the input variables are independent of each other, hence any multicollinearity must be removed.<br />
+<br /></li>
+</ul>
+
+<h5 id="lets-see-the-first-problem-of-linear-regression-which-is-outliers">Let’s see the first problem of Linear Regression, <strong><em>which is Outliers.</em></strong></h5>
+<p>As the data may contain outliers in real-world cases, the model fitting can be biased. Robust regression aims at overcoming this problem.</p>
+
+<h2 id="2-robust-regression-">2. Robust Regression <a name="robust_regression"></a></h2>
+<p>Robust regression is an alternative approach to ordinary linear regression when the data contains outliers. It provides much better regression coefficient estimates when outliers are present in the data.</p>
+
+<p>Let’s recall the Loss function of Linear Regression, which is Mean Square Error (MSE) i.e Norm 2. It increases sharply with the size of the residual.<br /><strong>Residual:</strong> The difference between the predicted value and the actual value.<br /></p>
+
+<font size="3">  $$   J(θ) = \frac{1}{n} \displaystyle\sum_{i=1}^n(y - ŷ)^2  $$<br /></font>
+
+<p align="center">
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/Norm 2.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:250px;width:300px" />
+Figure 2. Norm 2 
+</p>
+<p align="center">
+Figure 2. Norm 2 
+</p>
+
+<p>The problem with MSE is that it is highly sensitive toward large errors compared to small ones(i.e outliers). So, the alternative is to use the sum of the absolute value of residuals as a loss function instead of squaring the residual, i.e Norm 1. <strong><em>This achieves robustness.</em></strong> However, it is hard to work with in practice because the absolute value function is not differentiable at 0.<br /></p>
+
+<font size="3">  $$ J(θ) = \frac{1}{n}\displaystyle\sum_{i=1}^n|y - ŷ|$$<br />  </font>
+
+<p align="center">
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/Norm 1.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:250px;width:300px" />
+</p>
+<p align="center">
+Figure 3. Norm 1
+</p>
+
+<p><strong>Huber loss</strong> solves this problem. It preserves the differentiability of a function like Norm 2 and is insensitive to outliers like Norm 1.
+Huber loss is a combination of L2 and L1 functions, it looks like as below.<br /></p>
+
+<font size="3"> $$ \begin{aligned} 
+         J(θ) &amp; = 
+         \begin{cases}
+             \frac{1}{2}e^2  &amp; \text{where}\space ,  \space \text{e ≤ 𝜹}\\
+             (𝜹|e| - \frac{𝜹^2}{2}) \space  &amp; \text{where}\space , \space \text{e &gt; 𝜹} \\
+         \end{cases}\\[3pt]
+          \label{equ:yannibel}
+       \end{aligned} 
+       $$ 
+       </font>
+<p><br /></p>
+
+<p align="center">
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/Huber Loss.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:250px;width:300px" />
+ 
+</p>
+<p align="center">
+Figure 4. Huber Loss
+</p>
+
+<h4 id="working-of-robust-regression">Working of Robust Regression:</h4>
+<p>Robust regression is also called <strong><em>Random Sample Consensus (RANSAC)</em></strong>. It tries to separate data into outliers and inliers and it then fits the model only on the inliers. It calculates the errors (i.e. residuals) between all points and the model (i.e linear line). Points whose error is less than a predefined threshold are classified as inliers and the rest are classified as outliers.<br />
+<br /></p>
+
+<h5 id="lets-see-the-second-problem-of-linear-regression-which-is-overfitting">Let’s see the second problem of Linear Regression, <strong><em>which is Overfitting.</em></strong></h5>
+<p>What is Overfitting, and how is it related to Lasso and Ridge Regression?</p>
+
+<h2 id="3-overfitting-">3. Overfitting <a name="overfitting"></a></h2>
+<p>Overfitting occurs when the model performs well on the training data but not so well on unseen/test data. This happens when the model learns the data as well as the noise in the training set.</p>
+
+<p align="center">
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/overfitting.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:250px;width:350px" />
+</p>
+<p align="center">
+Figure 5. <a href="https://satishgunjal.com/underfitting_overfitting/">
+Overfitting </a>
+</p>
+
+<p>In the above image, <strong><em>black line</em></strong> tries to learn the pattern of the data points by finding the relationship between input and target variables. However, the <strong><em>blue curve</em></strong> memorizes the pattern. In this way, the model won’t be able to adapt to new data as it’s too focused on the training data.</p>
+
+<p><strong><em>Overfitting</em></strong> is observed in the below scenarios.</p>
+<ol>
+  <li>When we increase the degree of freedom (increasing polynomials in the equation) for regression models, they tend to overfit.</li>
+  <li>When the model is biased towards any specific features, the model assigns large coefficients/weights to respective features.</li>
+  <li>The number of predictor variables(p) in a given set exceeds the number of observations(n) (so-called p » n problems).
+<br /> 
+<br /></li>
+</ol>
+
+<h5 id="now-the-regularization-comes-into-the-picture-regularization-is-required-whenever-there-is-overfitting">Now the Regularization comes into the picture. Regularization is required whenever there is overfitting.</h5>
+
+<h2 id="4-regularization-">4. Regularization <a name="regularization"></a></h2>
+<p><strong><em>Regularization</em></strong> prevents the model from overfitting the data by adding extra information to it <strong>(which is a penalty)</strong>, especially when there is a large variance between train and test set performances.</p>
+
+<p align="center">
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/Overfit to Good fit.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:250px;width:700px" />
+
+</p>
+<p align="center">
+Figure 6. <a href="https://www.simplilearn.com/tutorials/machine-learning-tutorial/regularization-in-machine-learning">
+Regularization </a>
+</p>
+
+<p>Let’s take the below Linear equation.<br />
+$X_1$, $X_2$ …. $X_n$ are input variables, $Y$ represents the dependent/target variable.<br /></p>
+
+<font size="3">$$Y  =  θ_0 + θ_1X_1 + θ_2X_2 + . . . . . . + θ_nX_n $$ </font>
+
+<p>$θ_0$ is a Bias term and $θ_0$, $θ_1$, $θ_2$ $. . . .$ $θ_n$ represents the coefficients/weights estimates of dependent variables $X_1$, $X_2$ $. . . .$ $X_n$ respectively.</p>
+
+<p>Below is the hypothesis, which gives the relationship between input variables and the target variable.<br /></p>
+
+<font size="3"> $$ \begin{aligned} 
+         y = h_θ(x_i) &amp; =  θ_0 + θ_1x_1 + θ_2x_2 + . . . . . . + θ_nx_n \\ 
+                  &amp; = θ_0x_0 + θ_1x_1 + θ_2x_2 + . . . . . . + θ_nx_n, \space \space  where \space  x_0 =1 \\
+                  &amp; = \displaystyle\sum_{i=1}^n θ_ix_i \\
+                  &amp; = θ^Tx \\
+\end{aligned} $$ </font>
+
+<p>The model fitting involves a cost/loss function known as the sum of squares, which is the sum of the squared differences between the actual Y value and predicted value using the defined hypothesis.<br /></p>
+
+<font size="4"> $$L(θ) = \displaystyle\sum_{i=1}^n (y_i -h_θ(x_i))^2 $$ </font>
+
+<p>The minimum value of the cost function represents the relationship between X and Y in the best possible manner. So,  <strong><em>our goal is to reduce the cost function (i.e error difference) using best weights by adjusting the regularization factor.</em></strong>
+<br /></p>
+
+<p><strong>There are 2 types of regularization.</strong><br /></p>
+<ol>
+  <li>Lasso Regularization</li>
+  <li>Ridge Regularizations</li>
+</ol>
+
+<h2 id="41-lasso-regression-">4.1 Lasso Regression <a name="lasso_regression"></a></h2>
+<p>The full form of LASSO is <strong><em>‘Least Absolute Shrinkage and Selection Operation’.</em></strong> 
+It is a type of Linear Regression/Prediction method that performs both Variable selection and regularization to enhance the prediction accuracy by penalizing the model for the sum of absolute values of the weights.<br /><br />
+Lasso Regression uses <strong><em>L1 regularization technique</em></strong>. This technique is used in feature selection using a Shrinkage method. <strong><em>The penalty term in Lasso regression is equal to the absolute value of the magnitude of the coefficient.</em></strong><br /><br /></p>
+
+<h5 id="why-dont-we-directly-add-model-parameters-as-a-penalty">Why don’t we directly add model parameters as a penalty?</h5>
+<p>Because, our model parameters can be negative, adding them might decrease our loss instead of increasing it. To circumvent this, we can either take their absolute values(Lasso) or square our model parameters(Ridge).</p>
+
+<font size="4"> $$ L1 = ║θ║_1 = \displaystyle\sum_{i=1}^n ┃θ_i┃$$ </font>
+
+<h3 id="working-of-lasso-regression">Working of Lasso Regression:</h3>
+<p>In Linear Regression, during the training phase, if the model feels like any specific features are particularly important, the model may place a large weight on those features (i.e assigns large coefficient values). The model is not penalized for its choice of weights, at all. This sometimes leads to overfitting in small datasets.
+Hence, to avoid overfitting Lasso and Ridge regressions are used.<br /></p>
+
+<h3 id="l1-regularization">L1 Regularization:</h3>
+<p>L1 regularization adds a penalty term to the loss function, which is the sum of absolute values of the magnitude of the coefficient. The job of L1 regularization is to minimize the size of all coefficients and allows some coefficients to be minimized to zero, which removes a few input predictors from the model. <br /></p>
+
+<font size="4"> $$ L(θ) =  \displaystyle\sum_{i=1}^n (y_i-h_θ(x_i))^2 + λ \displaystyle\sum_{i=1}^n 
+  ┃θ_i┃$$ </font>
+
+<p>It forces to get weights from the shape of Norm 1, as shown below.<br /></p>
+
+<p align="center">
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/L1 Shape.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:450px;width:380px" />
+</p>
+<p align="center">
+Figure 7. <a href="https://www.datacamp.com/tutorial/tutorial-lasso-ridge-regression">
+Lasso Regression Shape </a>
+</p>
+
+<p><strong>Least Absolute Shrinkage in Lasso is:</strong> The coefficients determined in the linear regression are shrunk towards the central point as the mean by introducing a penalty.<br /></p>
+<ul>
+  <li>Lambda (λ) is the penalty term that denotes the amount of shrinkage.<br /></li>
+  <li>Lambda (λ) can get values between 0 to ∞
+<br /></li>
+</ul>
+
+<p><strong>Selection Operation in Lasso is:</strong>  The shrinkage of these coefficients based on the λ value provided leads to some form of automatic feature selection. As the λ value increases, coefficients decrease and eventually <strong><em>become zero</em></strong>. This way, lasso regression provides a type of automatic feature selection by eliminating insignificant input variables from the model, which do not contribute much to the prediction task.<br /></p>
+
+<p>Still confused? 😕  Let’s take a simple Regression example of price prediction for better understanding.<br /></p>
+
+<ul>
+  <li>X represents the age of the house, and Y represents the price. Below is what the data looks like.<br /></li>
+</ul>
+
+<p align="center">
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/ex picture 1.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:300px;width:450px" /> <br />
+</p>
+<p align="center">
+Figure 8. <a href="https://machinelearningcompass.com/machine_learning_models/elastic_net_regression/">
+Lasso Shape </a>
+</p>
+
+<ul>
+  <li>Then split the dataset into train and test sets and train the model using linear regression with the training set.<br /></li>
+  <li><strong><em>Blue circles</em></strong> represent training set data, <strong><em>green circles</em></strong> represent test data, and the <strong><em>blue line</em></strong> represents the relationship between input variable age and target variable Price.<br /></li>
+  <li>The below graph clearly shows that the linear line passed through all the training data with very minimal training error. However, the same line resulted in errors <strong>e1</strong> and <strong>e2</strong> in the case of test data.<br /></li>
+</ul>
+
+<p align="center">
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/ex picture 2.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:300px;width:450px" /> <br />
+</p>
+<p align="center">
+Figure 9. <a href="https://machinelearningcompass.com/machine_learning_models/elastic_net_regression/">
+Lasso Shape </a>
+</p>
+
+<ul>
+  <li>This clearly shows that our model is overfitting with training data. Coming up with another linear line (yellow line) tends to overfit less and performs well on test data with less error, shown as below graph. <br />
+<br /></li>
+</ul>
+
+<p align="center">
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/ex picture 3.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:300px;width:450px" /><br />
+</p>
+<p align="center">
+Figure 10. <a href="https://machinelearningcompass.com/machine_learning_models/elastic_net_regression/">
+Lasso Shape </a>
+</p>
+
+<p>Let’s say the main cause behind overfitting is large coefficients/weights (i.e. θ values) corresponding to input variables, the goal now is to reduce these weights.<br /></p>
+
+<p><strong><em>Let’s extend the same example:</em></strong> We want to predict the price of a house based on the age of the house, Sq.ft, #No. of. Rooms, Neighborhood, and #Avg Temperature. <br /></p>
+
+<p>As per the hypothesis,</p>
+
+\[Price (y_{pred}) = \theta_0 + θ_1 * Age + θ_2 * Sq.ft + θ_3 * \#No. of. Rooms + θ_4 * Neighborhood + θ_5* Avg \; Temperature\]
+
+<p>From the above hypothesis, the age of the house, Sq.ft, and #No. of. Rooms are the most relevant features. However, the Neighborhood is less relevant, and the average temperature might be irrelevant to derive the price of the house.<br /></p>
+
+<p>Remember, I mentioned in working on lasso Regression that during the training phase if the model feels like any specific features are particularly important, the model may place a large weight on those features, which causes overfitting.<br /></p>
+
+<h4 id="in-lasso-regression">In Lasso Regression,</h4>
+<p><strong>Equal importance is given to all features during Feature selection</strong></p>
+
+<p>Consider the weights/coefficients corresponding to 5 input features as below.<br />
+This is just an example.<br /></p>
+
+\[θ  = [θ_0, θ_1 , θ_2 , θ_3 , θ_4 , θ_5] \\
+   θ  = [5, 10, 8, 6, 4, 2]\]
+
+<p>\(\begin{aligned} 
+        Lasso  \space / \space L1 \space  penalty &amp; =   \space |θ_0+θ_1+θ_2+θ_3+θ_4+θ_5| \\ 
+                &amp;  =\space |5| + |10| + |8| + |6| + |4| + |2| = 35 \\
+\end{aligned}\)
+<br /></p>
+
+<p>If we shrink each parameter by 1, The penalty looks like the below. <br />
+\(\begin{aligned} 
+        θ_0 &amp; \space =&gt; \space   |4| + |10| + |8| + |6| + |4| + |2| = 34 \\
+        age \space of \space the \space house &amp; \space =&gt; \space   |5| + |9| + |8| + |6| + |4| + |2| = 34  \\ 
+              Sq.ft  &amp; \space =&gt; \space |5| + |10| + |7| + |6| + |4| + |2| = 34\\
+              No. of. Rooms  &amp; \space =&gt; \space |5| + |10| + |8| + |5| + |4| + |2| = 34\\
+              Neighborhood  &amp; \space =&gt; \space |5| + |10| + |8| + |6| + |3| + |2| = 34\\
+              Avg \space Temp  &amp; \space =&gt; \space |5| + |10| + |8| + |6| + |4| + |1| = 34\\
+\end{aligned}\)
+<br /></p>
+
+<p><br />
+This means that, by reducing each parameter by one, <strong><em>our penalty is reduced from 35 to 34</em></strong>.
+<strong>Since the lasso penalty consists of the absolute model parameters, large values are not considered more strongly than smaller values.</strong> This means that the lasso penalty gives the same importance to all parameters, it would not prioritize minimizing any particular model parameter, unlike the ridge penalty, which prioritizes large parameters.<br />
+<br /></p>
+
+<p><strong>Feature Selection in Lasso Regression:</strong>
+Trying to minimize the cost function, Lasso regression will automatically select those features that are useful and discards the useless or redundant features.
+As the λ value increases, coefficients decrease and eventually <strong><em>become zero</em></strong>. This way, lasso regression eliminates insignificant variables from our model.</p>
+
+<font size="3"> $$ L(θ) =  \displaystyle\sum_{i=1}^n (y_i-h_θ(x_i))^2 + λ \displaystyle\sum_{i=1}^n 
+  ┃θ_i┃$$ </font>
+
+<p>Let’s try to minimize the loss function of Lasso Regression <br /></p>
+<ul>
+  <li>When <strong>λ = 0</strong>, the regularization term becomes 0, and the objective becomes similar to simple linear regression, hence no coefficients are eliminated from the equation.<br /></li>
+  <li>As <strong>λ increases</strong>, more coefficients are set to zero and eliminated. In theory, λ = infinity means all coefficients are eliminated.<br /></li>
+  <li>Hence, we need to choose λ efficiently to have the right kind of Lasso regression.<br /></li>
+</ul>
+
+<p>Let’s try to solve this problem mathematically.
+For a single data point, consider
+      <br /><br />
+ \(\begin{aligned} 
+         h_θ(X_i) &amp; =   Xθ\\ 
+               L(θ) &amp; =(y-xθ)^2 + λ \displaystyle\sum_{i=1}^n |θ| \\
+                  &amp; = y^2 + 2xyθ + x^2θ^2 + λ \displaystyle\sum_{i=1}^n |θ| \\
+\end{aligned}\)
+ <br />
+ We need gradient term to update weights, but It is observed from above that, L1 is not differentiable at 0 as L1 is a continuous function, hence there is no closed form solution in Lasso Regression.
+Hence it is not feasible to update the weights of the features using a closed form solution or gradient descent, so Lasso uses something called coordinate descent to update the weights. <br /><br />
+L1 and its derivative look like below. L1 gradient is 1 or -1 unless w = 0 <br /></p>
+
+<p align="center">
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/L1 Derivative.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:200px;width:450px" />
+</p>
+<p align="center">
+Figure 11. <a href="https://www.kaggle.com/general/212262">
+L1 Derivative </a>
+</p>
+
+<h5 id="lets-see-the-third-problem-of-linear-regression-which-is-multicollinearity">Let’s see the third problem of Linear Regression, <strong><em>which is Multicollinearity.</em></strong></h5>
+<p>What is Multicollinearity, and why is it a problem?</p>
+
+<h2 id="42-ridge-regression-">4.2 Ridge Regression <a name="ridge_regression"></a></h2>
+<p>Ridge Regression is an enhancement of regular linear regression, used for the analysis of multicollinearity in multiple regression data, which results in fewer overfit models.<br /></p>
+
+<h5 id="what-is-multicollinearity">What is multicollinearity?</h5>
+<p>The actual purpose of a regression equation is to tell us the individual impact of each of the explanatory variables on the dependent/target variable and that is captured by the regression coefficients.
+However, when two or more predictors in a regression model are highly related to one another, this means that an independent variable can be predicted from another independent variable in a regression model but does not provide unique and/or independent information to the regression.
+<strong>Multicollinearity can be a problem in a regression model because we would not be able to distinguish between the individual effects of the independent variables on the dependent variable.<br /></strong>
+<br />
+Ridge regression uses <strong><em>L2 regularization technique.</em></strong> This technique is used to deal with multicollinearity problems by constructing the coefficient and by keeping all the variables. <strong><em>The penalty term in Ridge regression is equal to the sum of squared magnitude” of the coefficient.</em></strong><br /></p>
+
+<font size="4"> $$ L2 = ║θ║^2_2 = \displaystyle\sum_{i=1}^n θ_i^2 $$ </font>
+
+<h3 id="l2-regularization">L2 Regularization:</h3>
+<p>L2 regularization adds a penalty term to the loss function, which is the sum of the squared magnitude of the coefficients. The job of Ridge regularization is to penalize a model based on the sum of the squared coefficient values using the L2 penalty.<br /></p>
+
+<font size="4"> $$ L(θ) =  \displaystyle\sum_{i=1}^n (y_i-h_θ(x))^2 + λ \displaystyle\sum_{i=1}^n 
+ θ_i^2 $$ </font>
+
+<h5 id="l2ridge-regularization-is-used-when">L2/Ridge regularization is used when,</h5>
+<ul>
+  <li>The number of predictor variables in a given set exceeds the number of observations.<br /></li>
+  <li>The data set has multicollinearity (correlations between predictor variables).<br /></li>
+</ul>
+
+<h5 id="using-ridge-regularization">Using Ridge regularization</h5>
+<ul>
+  <li>It penalizes the magnitude of coefficients of features.<br /></li>
+  <li>Minimizes the error between the actual and predicted observation.<br />
+<br /></li>
+</ul>
+
+<p>It forces to get weights from the shape of Norm 2, as shown below.</p>
+
+<p align="center">
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/L2 Shape.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:450px;width:380px" />
+</p>
+<p align="center">
+Figure 12. <a href="https://www.datacamp.com/tutorial/tutorial-lasso-ridge-regression">
+Ridge Regression Shape </a>
+</p>
+
+<p>Let’s try to minimize the loss function of Ridge Regression.
+The amount of shrinkage is controlled by λ which multiplies the ridge penalty effect of λ on the ridge:</p>
+<ul>
+  <li>When <strong>λ = 0</strong>, the objective becomes similar to simple linear regression. So we get the same coefficients as simple linear regression.</li>
+  <li>As <strong>λ increases</strong>, more coefficients are set to zero and eliminated because of infinite weightage on the square of coefficients. In theory, λ = infinity means all coefficients are eliminated.</li>
+  <li>If <strong>0 &lt; λ &lt; ∞</strong>, the magnitude of λ decides the weightage given to the different parts of the objective.</li>
+</ul>
+
+<p>Let’s try to solve this mathematically.
+For a single data point, consider<br />
+      <br />
+\(\begin{aligned} 
+         h_θ(X_i) \space &amp; = \space Xθ\\ 
+               L(θ) \space &amp; = \space (y-xθ)^2 + λ \displaystyle\sum_{i=1}^n θ^2 \\
+                  &amp; \space = \space y^2 + 2xyθ + x^2θ^2 + λ \displaystyle\sum_{i=1}^n θ^2 \\
+\end{aligned}\)</p>
+
+<p>Apply first-order derivative w.r.to θ to find local minima, <br /></p>
+
+\[\begin{aligned} 
+         \frac{ƏL2}{Əθ} \space &amp; = \space - 2xy + 2x^2θ + 2λθ\\ 
+              θ \space &amp; = \space \frac{xy}{x^2+λ} \\
+\end{aligned}\]
+
+<p>Optimal θ, i.e \(θ^*\)  will become 0 only when λ = ∞, <strong><em>so it is clear that in ridge regression, coefficients can never become zero.</em></strong></p>
+
+<p>L2 and its derivative look like below.</p>
+
+<p align="center">
+<img src="/images/Posts/Lasso_Ridge_Robust_Regression/L2 Derivative.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:200px;width:450px" />
+</p>
+<p align="center">
+Figure 13. <a href="https://www.kaggle.com/general/212262">
+L2 Derivative </a>
+</p>
+
+<p><br /></p>
+
+<p><strong>Unequal importance given to all features during Feature selection</strong></p>
+
+<p>Let’s see the working of Ridge Regression
+Consider the weights/coefficients corresponding to 5 input features as below.<br />
+This is just an example. <br /></p>
+
+\[θ  = [θ_0, θ_1 , θ_2 , θ_3 , θ_4 , θ_5] \\
+θ  = [5, 10, 8, 6, 4, 2]\]
+
+<p>\(\begin{aligned} 
+        Ridge  \space / \space L2 \space  penalty &amp; =   \space θ_0^2+θ_1^2+θ_2^2+θ_3^2+θ_4^2+θ_5^2 \\ 
+                &amp;  =\space 25 + 100 + 64 + 36 + 16 + 4 = 245 \\
+\end{aligned}\)
+<br /></p>
+
+<p>If we shrink each parameter by 1, The penalty looks like the below. <br />
+\(\begin{aligned} 
+            θ_0 &amp; \space =&gt; \space  16 + 100 + 64 + 36 + 16 + 4 = 236 \\ 
+        age \space of \space the \space house &amp; \space =&gt; \space  25 + 81 + 64 + 36 + 16 + 4 = 226 \\ 
+              Sq.ft  &amp; \space =&gt; \space 25 + 100 + 49 + 36 + 16 + 4 = 230\\
+              No. of. Rooms  &amp; \space =&gt; \space 25 + 100 + 64 + 25 + 16 + 4 = 234\\
+              Neighborhood  &amp; \space =&gt; \space 25 + 100 + 64 + 36 + 9 + 4 = 238\\
+              Avg \space Temp  &amp; \space =&gt; \space 25 + 100 + 64 + 36 + 16 + 1 = 242\\
+\end{aligned}\)
+<br /></p>
+
+<p>By shrinking \(θ_0\) from 5 to 4, the ridge penalty is reduced by 9, from 245 to 236<br />
+      by shrinking the age parameter from 10 to 9, the ridge penalty is reduced by 19, from 245 to 226<br />
+      by shrinking the Year manufactured parameter from 8 to 7, the ridge penalty is reduced by 15, from 245 to 230<br />
+      by shrinking the Origin parameter from 6 to 5, the ridge penalty is reduced by 9, from 245 to 234<br />
+      by shrinking the Income parameter from 4 to 3, the ridge penalty is reduced by 8, from 245 to 238<br />
+      by shrinking the Temp parameter from 2 to 1, the ridge penalty is reduced by 3, from 245 to 242<br /></p>
+
+<p><strong><em>The reduction in penalty is not the same in the case of all features</em></strong>. Since the ridge penalty squares the individual model parameter, the large values are taken into account much heavier than smaller values. <strong><em>This means that our ridge regression model would prioritize minimizing large model parameters over small model parameters.</em></strong> This is usually a good thing because if our parameters are already small, they don’t need to be reduced even further.<br /></p>
+
+<p>To summarize, in this post we have learned definition of regularization, types of differet Regulizations and differences between Lasso, Ridge and Robust Regressions with examples.</p>
+
+<p>Yayyy, wasn’t it great learning 😎 See you in the next post 👋 👋</p>
+
+
+		</article>
+
+	</div>
+
+</section>
+
+		</div>
+
+	</div>
+
+
+	<footer class="footer">
+
+	<div class="wrap">
+
+		<p class="footer__text"></p>
+
+		<div class="footer__copyright">
+			<span>© 2023 ML with Ramin</span>
+			<a href="https://jekyllthemes.io" target="_blank">Jekyll Themes</a>
+		</div>
+
+		<ul class="socials">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://medium.com/@mohammadi.r" target="_blank" class="socials__item__link" title="Medium">
+			<i class="fab fa-medium" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://www.linkedin.com/in/ramin-mohammadi-ml/" target="_blank" class="socials__item__link" title="Linkedin">
+			<i class="fab fa-linkedin" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+</ul>
+
+	</div>
+
+</footer>
+
+
+	<!-- Javascript Assets -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/js/plugins-min.js"></script>
+	<script src="/js/personal-min.js"></script>
+
+	
+	<!-- Extra Footer JS Code -->
+	
+	
+
+
+</body>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ["\\(", "\\)"] ],
+      displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
+
+</html>

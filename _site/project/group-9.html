@@ -1,0 +1,441 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+
+
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+	ML with Ramin
+
+	Personal Theme by https://jekyllthemes.io
+	Premium + free Jekyll themes for your blog or website.
+
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Page Info -->
+	<link rel="shortcut icon" href="/images/favicon.png">
+	<title>AQI Forecasting With Beijing Air Quality – ML with Ramin</title>
+	<meta name="description" content="Ayush Soni, Divyangana Pandey and Radhika Jayachandran">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="AQI Forecasting With Beijing Air Quality – ML with Ramin">
+	<meta name="twitter:description" content="Ayush Soni, Divyangana Pandey and Radhika Jayachandran">
+	<meta name="twitter:image:src" content="http://localhost:4000/images/Projects/group_9/thumbnail.webp">
+
+	<!-- Facebook OpenGraph -->
+	<meta property="og:title" content="AQI Forecasting With Beijing Air Quality – ML with Ramin" />
+	<meta property="og:description" content="Ayush Soni, Divyangana Pandey and Radhika Jayachandran" />
+	<meta property="og:image" content="http://localhost:4000/images/Projects/group_9/thumbnail.webp" />
+
+	
+	<!-- Font Embed Code -->
+	<link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+	
+
+	<!-- Styles -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<!-- Icons -->
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/solid.js" integrity="sha384-GXi56ipjsBwAe6v5X4xSrVNXGOmpdJYZEEh/0/GqJ3JTHsfDsF8v0YQvZCJYAiGu" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/brands.js" integrity="sha384-0inRy4HkP0hJ038ZyfQ4vLl+F4POKbqnaUB6ewmU4dWP0ki8Q27A0VFiVRIpscvL" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/fontawesome.js" integrity="sha384-NY6PHjYLP2f+gL3uaVfqUZImmw71ArL9+Roi9o+I4+RBqArA2CfW1sJ1wkABFfPe" crossorigin="anonymous"></script>
+
+	
+	<!-- Custom Styles -->
+	<style></style>
+	
+
+	
+	<!-- Analytics Code -->
+	
+	
+
+	
+	<!-- Extra Header JS Code -->
+	
+	
+	
+</head>
+
+
+<body class="loading ajax-loading" data-site-url="http://localhost:4000" data-page-url="/project/group-9">
+
+
+	<header class="header">
+
+	<div class="wrap">
+
+		
+		<a href="/" class="header__title">
+			ML with Ramin
+		</a>
+		
+
+		<div class="menu">
+			<div class="menu__toggle js-menu-toggle">
+				<div class="menu__toggle__icon"><span></span></div>
+			</div>
+			<div class="menu__wrap">
+				<ul class="menu__list">
+					
+					<li class="menu__list__item">
+						<a href="/about/" class="menu__list__item__link">About us</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/ml/" class="menu__list__item__link">Machine Learning</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/mlops/" class="menu__list__item__link">MLOps</a>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+</header>
+
+
+	<div class="loader"><svg width="120" height="30" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="60" cy="15" r="9" fill-opacity="0.3"><animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="105" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle></svg></div>
+
+	<div class="page-loader"></div>
+
+	
+	<div class="page">
+
+		<div class="page__content" data-page-title="AQI Forecasting With Beijing Air Quality – ML with Ramin">
+
+			<section class="hero hero--single">
+
+	<div class="hero__image" style="background-image: url(/images/Projects/group_9/thumbnail.webp)">
+		<div class="hero__overlay"></div>
+	</div>
+
+	<div class="wrap">
+
+		<h1>AQI Forecasting With Beijing Air Quality</h1>
+		<p>Group-9</p>
+
+	</div>
+
+</section>
+
+<section class="single">
+
+	<div class="wrap">
+
+		<article class="single-post">
+
+			<h3 id="team-details">Team Details:</h3>
+
+<ul>
+  <li>Ayush Soni - <em>soni.ay@northeastern.edu</em></li>
+  <li>Divyangana Pandey - <em>pandey.di@northeastern.edu</em></li>
+  <li>Radhika Jayachandran - <em>jayachandran.r@northeastern.edu</em></li>
+</ul>
+
+<h3 id="i-introduction">I. Introduction:</h3>
+
+<p>Development in industrialization and advancement of technology has led to an increase in pollutant levels in the air. In China, this has led to an increase in extreme weather conditions such as a higher recorded increase in temperature, haze, smog and adverse effects on health conditions to the residents of these areas.
+The research on the concentration of these pollutants will provide the information required for the improvement of significant health, environmental conditions, and benefits to the economy while reducing costs on solutions to reduce air pollution.</p>
+
+<p><img width="591" alt="image" src="/images/Projects/group_9/Image_1.webp" /></p>
+
+<p>The Air Quality Index is a metric that quantitatively describes the number of pollutants suspended in the air to briefly describe the air quality in an area. The air’s concentration of pollutants such as PM2.5, PM10, CO, O3, SO2 and NO2 indicates the overall air quality. However, other meteorological conditions also play a pivotal role in the quality of air.</p>
+
+<h4 id="ii-problem-definition">I.I. Problem Definition:</h4>
+
+<p>Through this project, we aim to research and incorporate complex nonlinear relationships between the concentration of air pollutants and meteorological variables across a given period. Implement and build a prediction system based on individual pollutant concentration levels that can predict air quality. Doing so will make the information on the air quality index more flexible and useful. Systems that can generate warnings based on air quality are required and important for a change as they may play an important role in health alerts when air pollution levels may exceed specified levels. By the end of this classroom project, we aim to establish a relationship between the concentration of pollutants and its correlation with AQI (Air Quality Index).</p>
+
+<p><img width="703" alt="image" src="/images/Projects/group_9/Image_2.webp" /></p>
+
+<h3 id="ii-data-description">II. Data Description:</h3>
+
+<p>The dataset was procured from the very versatile website for the Data Science dataset, UCI ML. The dataset records hourly pollutant concentrations from twelve different controlled air quality monitoring centres across China.</p>
+
+<h4 id="iii-data-features">II.I. Data Features:</h4>
+
+<p>The data set selected by us comprises of eighteen dimensions and four lakh instances across the timeline of March 1st, 2013, to February 28th, 2017. Below we listed the types of features to gauge a better understanding of our data:</p>
+
+<p><img width="481" alt="image" src="/images/Projects/group_9/Image_3.webp" /></p>
+
+<h4 id="iiii-data-cleaning-and-preprocessing">II.II. Data Cleaning and Preprocessing:</h4>
+
+<p>To prepare the data for exploration and model fitting, we first combined the data files that were separated by record for each unique station. After combining these files we performed various exploratory data analyses to study and understand the recorded data and the following were the changes made to attain our target:</p>
+
+<ul>
+  <li>Columns ‘year’, ‘month’, ‘day’ and ‘hour’ were combined to create a Date – Time column such that we can distinguish the records per each day per time.</li>
+  <li>There were no duplicate records of Date – Time in the dataset, hence no rows were dropped.</li>
+</ul>
+
+<h4 id="iiiii-feature-engineering">II.III. Feature Engineering</h4>
+
+<p>The recorded data for these pollutants were converted to their standard unit from the recorded unit. The above calculations were achieved by the formulae:</p>
+
+<p><img width="489" alt="image" src="/images/Projects/group_9/Image_4.webp" /></p>
+
+<ul>
+  <li>All Null values within the data were replaced by their median for each day recorded by each station. While checking the data we noted that there exist days with a whole 24-hour period where no data was recorded. We replaced these null values with 0.</li>
+  <li>Further to obtain the AQI Index of individual pollutants, a rolling window average for each pollutant must be obtained. This data is then segregated into various classifications of AQI and the max value is recorded as the quality index for the given day. The category of AQI is defined as per the standardized government information.</li>
+  <li>AQI is calculated using the formula given below:</li>
+</ul>
+
+<p><img width="409" alt="image" src="/images/Projects/group_9/Image_5.webp" /></p>
+
+<p><img width="645" alt="image" src="/images/Projects/group_9/Image_6.webp" /></p>
+
+<h4 id="iiiv-data-exploration">II.IV. Data Exploration:</h4>
+
+<p><em>Pie Chart - Percentage of Days Within Each Air Quality Classification:</em></p>
+
+<p><img width="433" alt="image" src="/images/Projects/group_9/Image_7.webp" /></p>
+
+<p>Python has functional visualization libraries that can explore and project your data in creative and pictorial ways. Here we plotted a pie chart of the count of different AQI indexes to show where the air quality stands within the region.</p>
+
+<p><em>Box Plot – Air Quality Index Across Months:</em></p>
+
+<p><img width="469" alt="image" src="/images/Projects/group_9/Image_8.webp" /></p>
+
+<p>The boxplot gives us a picture of the ranges of AQI for each month to get an idea of which months have the best air quality and the average air quality across each month.</p>
+
+<p><em>Heat Map – Correlation Matrix Between Input Features:</em></p>
+
+<p><img width="416" alt="image" src="/images/Projects/group_9/Image_9.webp" /></p>
+
+<p>As we can see above the heat map gives us the level of correlation between our input features from the dataset. This can help remove features that are highly correlated.</p>
+
+<p><em>Time series – Pollutant Concentration Across Time:</em></p>
+
+<p><img width="536" alt="image" src="/images/Projects/group_9/Image_10.webp" /></p>
+
+<p>The time series gives us the effect of each pollutant and its curve on air quality over the years.</p>
+
+<h3 id="iii-model-implementation">III. Model Implementation:</h3>
+
+<p>We processed and analyzed our data through regression models to obtain accurate predictions. Machine learning models use techniques that find the relationship between dependent and independent variables. These techniques can be used in forecasting, prediction, time series modelling etc. Some of the modelling techniques we learned in the classroom setting that can be applied accurately in our AQI prediction project are Linear regression, Logistic regression and Naïve Bayes.</p>
+
+<p><img width="208" alt="image" src="/images/Projects/group_9/Image_11.webp" /></p>
+
+<h4 id="iiii-linear-regression">III.I. Linear Regression:</h4>
+
+<p>Linear regression is a method of fitting independent variables with dependent variables into a line in n dimensions where n is the total number of features or variables within our data. The model also minimizes the total error while trying to fit all the data points in one line and learning continuously by optimizing parameters. Optimization is carried out by using gradient descent. Gradient descent partially derives the loss function and all parameters are updated by subtracting the previous value with the derivative time the learning rate. The learning rate is tuned by the trial and error method. The equation of multivariate linear regression is given by:</p>
+
+<p><img width="368" alt="image" src="/images/Projects/group_9/Image_12.webp" /></p>
+
+<p>Where,
+Yi = estimate of ith component of dependent variable y
+n = independent variables</p>
+
+<p><img width="576" alt="image" src="/images/Projects/group_9/Image_13.webp" /></p>
+
+<h5 id="results">Results:</h5>
+
+<p>The linear regression model was run for various parameters in order to obtain the most accurate results.</p>
+
+<p><img width="591" alt="image" src="/images/Projects/group_9/Image_14.webp" /></p>
+
+<h4 id="iiiii-logistic-regression">III.II. Logistic Regression:</h4>
+
+<p>The primary idea behind Logistic regression is to establish a relationship between an input feature and a predictor variable which is often a categorical one for classification. There are different types of logistic regression models depending upon the number of classes the data is required to be segregated into:</p>
+
+<p><em>Binary classification:</em> This involves predicting if the sample falls into class 0 or 1. For example, an email is a spam or ham. The sigmoid function is used to calculate values for logistic regression involving two classes. Sigmoid pushes the input values to fall within the range [0,1].</p>
+
+<p><img width="202" alt="image" src="/images/Projects/group_9/Image_15.webp" /></p>
+
+<p><em>Multiclass logistic regression:</em> It is used to classify records into more than two classes. A SoftMax function is used to calculate the probabilities. For a given sample we calculate the probability of it belonging to each of the n classes. The sum of all probabilities for each sample should add up to 1. We classify a record belonging to a particular class by selecting the one with the highest probability.
+For our dataset, we have engineered a new column called AQI_encoded by using the below logic. This helps us to fit the data into a multinomial Logistic Regression model. The target classes are one-hot encoded before calculating the probabilities.</p>
+
+<p><img width="433" alt="image" src="/images/Projects/group_9/Image_16.webp" /></p>
+
+<h5 id="results-1">Results:</h5>
+
+<p><img width="563" alt="image" src="/images/Projects/group_9/Image_17.webp" /></p>
+
+<p><img width="499" alt="image" src="/images/Projects/group_9/Image_18.webp" /></p>
+
+<h4 id="iiiiii-naive-bayes">III.III. Naive Bayes:</h4>
+
+<p>The core of a Naive Bayes model is prediction, diagnosis and reasoning. Variables generated randomly are represented by nodes and conditional probability is the information between these nodes. We combine conditional probability with prior probability to obtain a posteriori probability in order to achieve the effect of prediction. It is a simple model widely used due to its speed and faster learning rate. Bayes theorem helps us calculate the Probability of A happening provided B has occurred with the assumption of independence.</p>
+
+<p><img width="486" alt="image" src="/images/Projects/group_9/Image_19.webp" /></p>
+
+<p><em>The following formula is used for calculate probability:</em></p>
+
+<p><img width="331" alt="image" src="/images/Projects/group_9/Image_20.webp" /></p>
+
+<p>The Probability of event Bi occurring such that event A has occurred is given by the above formulae.</p>
+
+<p>The Gaussian Naive Bayes functions are typically derived from probabilities of the lower-order estimates from the training data. These may easily be updated as new training data come in. Because you just need to estimate the mean and standard deviation from your training data, the Gaussian (or Normal) distribution is the simplest to deal with. The assumption that the continuous values associated with each class are distributed according to a normal (or Gaussian) distribution is frequently made when working with continuous data. The characteristics and likelihood is predicated on:</p>
+
+<p><img width="245" alt="image" src="/images/Projects/group_9/Image_21.webp" /></p>
+
+<p>Assuming variance is,</p>
+<ul>
+  <li>is independent of Y (i.e., σi),</li>
+  <li>or independent of Xi (i.e., σk)</li>
+  <li>or both (i.e., σ)</li>
+</ul>
+
+<p>The AQI classification categories were encoded into the below values in order to classify our predictions:</p>
+
+<p><img width="440" alt="image" src="/images/Projects/group_9/Image_22.webp" /></p>
+
+<h5 id="results-2">Results:</h5>
+
+<p>Below are the results obtained by applying batch size to data split while running the model:</p>
+
+<p><img width="561" alt="image" src="/images/Projects/group_9/Image_23.webp" /></p>
+
+<p><img width="613" alt="image" src="/images/Projects/group_9/Image_24.webp" /></p>
+
+<p><img width="570" alt="image" src="/images/Projects/group_9/Image_25.webp" /></p>
+
+<h3 id="v-conclusion">V. Conclusion:</h3>
+
+<p>The air quality prediction model based on machine learning is used to predict the air quality in Beijing. The aim of the project was to research and study the various Machine Learning models available in order to implement the best fit for our dataset. As a team, we had the opportunity to clean the data, observe the importance of pollutants and their impact on the quality of air and implement ML algorithms to predict the AQI and observe how the predicted value differs from the original value. The following factors are used for the evaluation of the model, Temp, Pressure, SO2, NO2, O3, CO, PM10 and PM2.5 and the calculated AQI value is used as the target. The model is trained and verified by using the historical data on air quality to obtain comprehensive accuracy. The results show that the Linear Regression model predicted the air quality with a 68% accuracy, followed by Logistic Regression at 46.78% and Naive Bayes at 43.29%. In addition, wind, precipitation and other environmental conditions also play a factor that directly affects the quality of air. Therefore, taking these factors would help further improve the accuracy of our models and is one of the future research directions.</p>
+
+<h3 id="vi-references">VI. References:</h3>
+
+<ol>
+  <li>https://archive.ics.uci.edu/ml/datasets/Beijing+Multi-Site+Air-Quality+Data</li>
+  <li>http://www.ijsei.com/papers/ijsei-67117-18.pdf</li>
+  <li>https://iopscience.iop.org/article/10.1088/1742-6596/2010/1/012011/pdf</li>
+  <li>BC. Liu, et al, “Urban air quality forecasting based on multi-dimensional collaborative Support Vector Regression (SVR): A case study of Beijing-TianjinShijiazhuang”, PLOS, 2017</li>
+</ol>
+
+
+
+		</article>
+
+	</div>
+
+</section>
+
+		</div>
+
+	</div>
+
+
+	<footer class="footer">
+
+	<div class="wrap">
+
+		<p class="footer__text"></p>
+
+		<div class="footer__copyright">
+			<span>© 2023 ML with Ramin</span>
+			<a href="https://jekyllthemes.io" target="_blank">Jekyll Themes</a>
+		</div>
+
+		<ul class="socials">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://medium.com/@mohammadi.r" target="_blank" class="socials__item__link" title="Medium">
+			<i class="fab fa-medium" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://www.linkedin.com/in/ramin-mohammadi-ml/" target="_blank" class="socials__item__link" title="Linkedin">
+			<i class="fab fa-linkedin" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+</ul>
+
+	</div>
+
+</footer>
+
+
+	<!-- Javascript Assets -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/js/plugins-min.js"></script>
+	<script src="/js/personal-min.js"></script>
+
+	
+	<!-- Extra Footer JS Code -->
+	
+	
+
+
+</body>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ["\\(", "\\)"] ],
+      displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
+
+</html>

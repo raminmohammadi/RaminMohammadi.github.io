@@ -1,0 +1,432 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+
+
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+	ML with Ramin
+
+	Personal Theme by https://jekyllthemes.io
+	Premium + free Jekyll themes for your blog or website.
+
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Page Info -->
+	<link rel="shortcut icon" href="/images/favicon.png">
+	<title>Parameter Estimation - ERM, MLE & MAP – ML with Ramin</title>
+	<meta name="description" content="">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Parameter Estimation - ERM, MLE & MAP – ML with Ramin">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:image:src" content="http://localhost:4000/images/demo/demo-square.webp">
+
+	<!-- Facebook OpenGraph -->
+	<meta property="og:title" content="Parameter Estimation - ERM, MLE & MAP – ML with Ramin" />
+	<meta property="og:description" content="" />
+	<meta property="og:image" content="http://localhost:4000/images/demo/demo-square.webp" />
+
+	
+	<!-- Font Embed Code -->
+	<link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+	
+
+	<!-- Styles -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<!-- Icons -->
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/solid.js" integrity="sha384-GXi56ipjsBwAe6v5X4xSrVNXGOmpdJYZEEh/0/GqJ3JTHsfDsF8v0YQvZCJYAiGu" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/brands.js" integrity="sha384-0inRy4HkP0hJ038ZyfQ4vLl+F4POKbqnaUB6ewmU4dWP0ki8Q27A0VFiVRIpscvL" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/fontawesome.js" integrity="sha384-NY6PHjYLP2f+gL3uaVfqUZImmw71ArL9+Roi9o+I4+RBqArA2CfW1sJ1wkABFfPe" crossorigin="anonymous"></script>
+
+	
+	<!-- Custom Styles -->
+	<style></style>
+	
+
+	
+	<!-- Analytics Code -->
+	
+	
+
+	
+	<!-- Extra Header JS Code -->
+	
+	
+	
+</head>
+
+
+<body class="loading ajax-loading" data-site-url="http://localhost:4000" data-page-url="/blog/mle-map">
+
+
+	<header class="header">
+
+	<div class="wrap">
+
+		
+		<a href="/" class="header__title">
+			ML with Ramin
+		</a>
+		
+
+		<div class="menu">
+			<div class="menu__toggle js-menu-toggle">
+				<div class="menu__toggle__icon"><span></span></div>
+			</div>
+			<div class="menu__wrap">
+				<ul class="menu__list">
+					
+					<li class="menu__list__item">
+						<a href="/about/" class="menu__list__item__link">About us</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/ml/" class="menu__list__item__link">Machine Learning</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/mlops/" class="menu__list__item__link">MLOps</a>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+</header>
+
+
+	<div class="loader"><svg width="120" height="30" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="60" cy="15" r="9" fill-opacity="0.3"><animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="105" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle></svg></div>
+
+	<div class="page-loader"></div>
+
+	
+	<div class="page">
+
+		<div class="page__content" data-page-title="Parameter Estimation - ERM, MLE & MAP – ML with Ramin">
+
+			<section class="hero hero--single">
+
+	<div class="hero__image" style="background-image: url(/images/demo/demo-square.webp)">
+		<div class="hero__overlay"></div>
+	</div>
+
+	<div class="wrap">
+
+		<h1>Parameter Estimation - ERM, MLE & MAP</h1>
+		<!-- <p>03 January 2022</p> -->
+		<p align="right"><b>- Sai Akhilesh Ande<b></p>
+			
+	</div>
+
+</section>
+
+<section class="single">
+
+	<div class="wrap">
+
+		<article class="single-post">
+
+			<p>To better understand the concepts, let’s first review a few terminologies.</p>
+
+<h5 id="1-model">1. Model</h5>
+
+<p>In Machine Learning, our <strong>goal</strong> is often to build <strong>good machine-learning models</strong>. By “good”, we mean that they should generalize well i.e, perform well on the unseen data(like the test data).</p>
+
+<ul>
+  <li>A model can be viewed as a <strong>probabilistic model</strong> or as a <strong>non-probabilistic model(function)</strong></li>
+  <li>Every model has its own set of parameters(the weights and bias).
+    <ul>
+      <li>e.g. A Linear Regression model \(y = \theta_0 + \theta^T.x\) has the parameters {$\theta_0, \theta$} which correspond to bias and weights.</li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="2-learning---trainingparameter-estimation">2. Learning - Training/Parameter Estimation</h5>
+
+<p><strong>Learning</strong> can be understood as finding the hidden patterns and structure in data by optimizing the parameters(weights) of a model.</p>
+
+<ul>
+  <li>We call this process of learning:
+    <ul>
+      <li><strong>Training</strong> when we view the model as a non-probabilistic model(function)</li>
+      <li><strong>Parameter Estimation</strong> when we view the model as a probabilistic model</li>
+    </ul>
+  </li>
+  <li>In this learning process, we adjust the model parameters based on the training data using some optimization techniques like Gradient Descent, Adam, RMSProp, etc.</li>
+  <li>For <strong>non-probabilistic models</strong>, we follow the principle of <strong>Empirical Risk Minimization</strong> which directly provides an optimization problem for finding good parameters.</li>
+  <li>For <strong>probabilistic models</strong>, we use the principles of <strong>Maximum Likelihood Estimation(MLE)</strong>, <strong>Maximum a Posteriori(MAP)</strong> or <strong>Expectation Maximization(EM)</strong> to find a good set of parameters.</li>
+</ul>
+
+<h5 id="3-parametric-distributions">3. Parametric Distributions</h5>
+<p><ins><strong>Parametric Distribution:</strong></ins> A parametric distribution is based on a mathematical function whose shape and range are determined by one or more distribution parameters.</p>
+
+<ul>
+  <li>Gaussian/Normal Distribution is an example of parametric distribution with $\mu$ and $\sigma$ as its parameters. Hence, it is often written as $N(\mu,\sigma^2)$.</li>
+  <li>Once, we know its parameters we can determine the probability of a data point $x$ by plugging it into the probability density function of the Normal Distribution which is</li>
+</ul>
+
+<p>$f(x) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{\frac{-(x-\mu)^2}{2\sigma^2}}$</p>
+
+<h3 id="empirical-risk-minimization">Empirical Risk Minimization</h3>
+
+<p>We follow these steps</p>
+
+<ol>
+  <li>Choose a hypothesis function for the model</li>
+  <li>Choose a loss function for training</li>
+  <li>Choose a learning procedure using optimization</li>
+</ol>
+
+<p>e.g: In the non-probabilistic view of Linear Regression,</p>
+
+<ul>
+  <li><strong>Hypothesis function:</strong> $h_{\theta}(x) = \theta_0 + \theta^T.x$</li>
+  <li><strong>Loss function:</strong> $L(y_n,\hat{y_n}) = L(y_n, h_{\theta}(x)) = \sum_{i=1}^{m} (y_n - h_{\theta}(x))^2$</li>
+  <li><strong>Learning procedure:</strong> Closed-form solution under certain conditions or Gradient Descent</li>
+</ul>
+
+<h3 id="maximum-likelihood-estimation-mle">Maximum Likelihood Estimation (MLE)</h3>
+
+<p>Rather than guessing some function might make a good estimator, we would like to have some principle from which we can derive specific functions that are good estimators for different models. The most common such principle is the <strong>Maximum Likelihood</strong> principle.</p>
+
+<p>The idea behind <strong>Maximum Likelihood Estimation(MLE)</strong> is to define a function of parameters called <strong>Likelihood function</strong> that enables us to find(estimate) a model(more precisely its parameters $\theta$) that fits the data well.</p>
+
+<ul>
+  <li>The estimation problem is focused on the <strong>Likelihood function</strong> or more precisely its negative log-likelihood.</li>
+  <li>We want to maximize the likelihood function(more precisely log-likelihood) or minimize the negative log-likelihood(like in the case of Logistic Regression) in order to obtain the optimal parameters for the model.</li>
+</ul>
+
+<p>Consider a dataset of <em>m</em> examples \(\mathbb{D} = \{x^{(1)},...,x^{(m)} \}\) drawn independently from the true but unknown data-generating distribution $p_{data}(x)$</p>
+
+<p>Let $x$ be a random variable representing the data and $p_{model}(x;\theta)$ be a parametric family of probability distributions parametrized by $\theta$. In other words, $p_{model}(x;\theta)$ maps any configuration(data point $x$) to a real number estimating the true probability $p_{data}(x)$</p>
+
+<p>The Likelihood function, \(L_{D}(\theta)\) is given by \(p_{model}(\mathbb{D}\mid\theta)\)</p>
+
+<ul>
+  <li>Note that $\theta$ is fixed but its value is still unknown at this point and our goal is to find the set of values for $\theta$ which maximizes the likelihood function.</li>
+  <li>The notation \(L_{D}(\theta)\) emphasizes the fact that the dataset \(\mathbb{D}\) is fixed and the parameter $\theta$ is varying.</li>
+  <li>We often often drop the reference to $D$ and write it as $L(\theta)$ as it really is a function of $\theta$.</li>
+  <li>Since our data is fixed(as it has been observed), by varying the values of the paramers $\theta$, $L(\theta)$ tells us how <ins><strong>likely</strong></ins> a particular setting of $\theta$ is for the given dataset \(\mathbb{D}\).</li>
+  <li>Thus, the Maximum Likelihood Estimator gives us the most likely parameter set $\theta$ for the given dataset \(\mathbb{D}\).</li>
+</ul>
+
+\[\begin{aligned}
+    \textrm{The Likelihood} &amp; \textrm{ function is given by,}\\
+    L(\theta) &amp; = p_{model}(\mathbb{D};\theta) \\
+              &amp; = p_{model}(x^{(1)},...,x^{(m)};\theta) \\
+              &amp; \textrm{If we assume all data points are i.i.d (independent and identically distributed)} \\
+              &amp; \textrm{1. independent:} \quad p(x_1,x_2) = p(x_1)*p(x_2) \\
+              &amp; \textrm{2. identically distributed:} \quad \textrm{Each } x_i \textrm{  is sampled from the same distribution i.e.,} \quad x_i \sim p_{model}(x; \theta) \\
+    \textrm{Now, }\\
+    L(\theta) &amp; = p_{model}(x^{(1)};\theta)*p_{model}(x^{(2)};\theta)*...*p_{model}(x^{(m)};\theta) \quad \textrm{[ i.i.d ]}\\
+              &amp; = \prod_{i=1}^{m} \space p_{model}(x^{(i)};\theta) \\
+    \textrm{Applying log, }\\
+    \log{L(\theta)} &amp; = \sum_{i=1}^{m} \log{p_{model}(x^{(i)};\theta)} \\
+    \textrm{The Maximum} &amp; \textrm{ Likelihood Estimator for $\theta$ is defined as,}\\
+    \hat{\theta}_{ML} &amp; = \underset{\theta}{\arg \max} \quad L(\theta) \\
+                      &amp; = \underset{\theta}{\arg \max} \quad \log{L(\theta)} \\
+                      &amp; = \underset{\theta}{\arg \max} \quad \sum_{i=1}^{m} \log{p_{model}(x^{(i)};\theta)} \\
+                      &amp; \textrm{Note:}\\
+                      &amp; \textrm{1. By applying log, the product of probabilities is replaced by the sum of log-probabilities}\\
+                      &amp; \textrm{which is a more convenient but equivalent optimization problem.}\\
+                      &amp; \textrm{2. Working with logarithms is desirable because of numerical stability: on a large dataset, multiplying}\\
+                      &amp; \textrm{many probabilities can underflow to zero.}\\
+                      &amp; \textrm{3. Taking the logarithm of the likelihood does not change its arg max because the log function}\\
+                      &amp; \textrm{is monotonically increasing over positive arguments and so the same } \theta \textrm{ will maximize both}\\
+                      &amp; \textrm{probability and its logarithm.}
+\end{aligned}\]
+
+<h4 id="mle-in-supervised-learning">MLE in Supervised Learning</h4>
+
+<p>Let’s now consider the supervised learning setting, where we have a dataset $\mathbb{D} = {(x^{(1)}, y^{(1)}),…,(x^{(m)}, y^{(m)})}$.</p>
+
+<p>We are interested in constructing a predictor that takes a feature vector $x_n$ as input and produces a prediction $y_n$ (or something close to it), i.e., given a vector $x_n$, we want the probability distribution of the label $y_n$. In other words, we specify the conditional probability distribution of the labels given the examples for the particular parameter setting $\theta$.</p>
+
+<p>Let’s assume the data points are i.i.d.</p>
+
+<p>The Maximum Likelihood estimate is given by,</p>
+
+\[\begin{aligned}
+    \hat{\theta}_{ML} &amp; = \underset{\theta}{\arg \max} \quad L(\theta) \\
+                      &amp; = \underset{\theta}{\arg \max} \quad p(\mathcal{Y}|\mathcal{X}; \theta) \\
+                      &amp; = \underset{\theta}{\arg \max} \quad \prod_{i=1}^{m} \space p(y_n | x_n ; \theta) \\
+                      &amp; = \underset{\theta}{\arg \max} \quad \sum_{i=1}^{m} \space \log{p(y^{(i)} | x^{(i)} ; \theta)} \\
+\end{aligned}\]
+
+<p>Thus, the goal is to find a good parameter vector $\theta$ that explains the data ${(x^{(1)}, y^{(1)}),…,(x^{(m)}, y^{(m)})}$ well i.e., maximizes the likelihood.</p>
+
+<ul>
+  <li>We typically use the <strong>Negative Log-Likelihood(NLL)</strong> function as the Loss/Error function (like in the case of Logistic Regression).</li>
+</ul>
+
+<h4 id="maximum-a-posteriori-estimation">Maximum A Posteriori Estimation</h4>
+
+<p>If we have prior knowledge about the distribution of parameters $\theta$, we can multiply an additional term to the likelihood. The additional term is a prior probability distribution on parameters $p(\theta)$.</p>
+
+<p>For a given prior, after observing some data $x$, we update the distribution of $\theta$ using <strong>Bayes Theorem</strong> which gives us a principled tool to update our probability distributions of random variables.</p>
+
+<p>It allows us compute a <strong>posterior distribution</strong>, $ p(\theta | x) $ on the parameters $\theta$ using prior distribution, $p(\theta)$ and the likelihood function, $p(x | \theta)$</p>
+
+\[p(\theta | x) = \frac{p(x | \theta)*p(\theta)}{p(x)}\]
+
+<p>We are interested in finding the parameters $\theta$ that maximize the posterior. The distribution $p(x)$ in the denominator does not depend on $\theta$ and hence can be ignored.</p>
+
+\[p(\theta | x) \propto p(x | \theta)*p(\theta)\]
+
+<p>The Maximum A Posteriori estimate is given by,</p>
+
+\[\begin{aligned}
+    \hat{\theta}_{MAP} &amp; = \underset{\theta}{\arg \max} \quad p(\theta | x)\\
+                      &amp; = \underset{\theta}{\arg \max} \quad L(\theta)*p(\theta) \\
+                      &amp; = \underset{\theta}{\arg \max} \quad p(x | \theta)*p(\theta) \\
+\end{aligned}\]
+
+<ul>
+  <li>MAP Estimate with Gaussian Likelihood and Gaussian prior on parameters gives Ridge Regression.
+    <ul>
+      <li>\(y \mid x,\theta \sim N(\theta^T x, \sigma^2)\) and \(\theta \sim N(0, \frac{1}{\lambda}I )\)</li>
+    </ul>
+  </li>
+  <li>MAP Estimate with Gaussian Likelihood and Laplace prior on parameters gives Lasso Regression.
+    <ul>
+      <li>\(y \mid x,\theta \sim N(\theta^T x, \sigma^2)\) and \(\theta \sim Laplace(0, \frac{1}{\lambda}I )\)</li>
+    </ul>
+  </li>
+</ul>
+
+
+		</article>
+
+	</div>
+
+</section>
+
+		</div>
+
+	</div>
+
+
+	<footer class="footer">
+
+	<div class="wrap">
+
+		<p class="footer__text"></p>
+
+		<div class="footer__copyright">
+			<span>© 2023 ML with Ramin</span>
+			<a href="https://jekyllthemes.io" target="_blank">Jekyll Themes</a>
+		</div>
+
+		<ul class="socials">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://medium.com/@mohammadi.r" target="_blank" class="socials__item__link" title="Medium">
+			<i class="fab fa-medium" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://www.linkedin.com/in/ramin-mohammadi-ml/" target="_blank" class="socials__item__link" title="Linkedin">
+			<i class="fab fa-linkedin" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+</ul>
+
+	</div>
+
+</footer>
+
+
+	<!-- Javascript Assets -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/js/plugins-min.js"></script>
+	<script src="/js/personal-min.js"></script>
+
+	
+	<!-- Extra Footer JS Code -->
+	
+	
+
+
+</body>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ["\\(", "\\)"] ],
+      displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
+
+</html>

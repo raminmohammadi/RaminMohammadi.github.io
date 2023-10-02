@@ -13,8 +13,8 @@ featured_image: /images/demo/home.jpg
 
 	<div class="wrap">
 
-		<h1>Top Runner Students Projects</h1>
-		<p>Top student projects across each semester</p>
+		<!-- <h1>Welcome to the Machine Learning and MLOps Professor's Hub</h1> -->
+		<p>Your Gateway to Cutting-Edge AI Education and Real-World Implementation</p>
 
 		{% include socials.html %}
 
@@ -22,41 +22,13 @@ featured_image: /images/demo/home.jpg
 
 </section>
 
-<!-- <section class="listing">
-
-	<div class="wrap">
-
-		{% for project in site.projects reversed %}
-
-		<article class="post">
-
-			<div class="post__image-wrap">
-				<div class="post__image" style="background-image: url({{ project.featured_image | relative_url }})"></div>
-			</div>
-
-			<div class="post__content-wrap">
-				<div class="post__content">
-					<h2 class="post__title"><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
-					<p class="post__subtitle">{{ project.subtitle }}</p>
-					<p class="post__description">{{ project.description }}</p>
-				</div150px )150px )>
-			</div>
-
-		</article>
-
-		{% endfor %}
-
-	</div>
-
-</section> -->
-
 <section class="single">
 
 	<div class="wrap">
 
 		<article class="single-post">
 
-		{%- assign page = site.pages | where: 'title', 'Projects - Table of Contents' | first-%}
+		{%- assign page = site.pages | where: 'title', 'Main Page' | first-%}
 		{{page.content}}
 
 		</article>

@@ -1,0 +1,456 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+
+
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+	ML with Ramin
+
+	Personal Theme by https://jekyllthemes.io
+	Premium + free Jekyll themes for your blog or website.
+
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Page Info -->
+	<link rel="shortcut icon" href="/images/favicon.png">
+	<title>Understanding Different Types of Text Embeddings in NLP – ML with Ramin</title>
+	<meta name="description" content="">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Understanding Different Types of Text Embeddings in NLP – ML with Ramin">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:image:src" content="http://localhost:4000/images/demo/demo-square.jpg">
+
+	<!-- Facebook OpenGraph -->
+	<meta property="og:title" content="Understanding Different Types of Text Embeddings in NLP – ML with Ramin" />
+	<meta property="og:description" content="" />
+	<meta property="og:image" content="http://localhost:4000/images/demo/demo-square.jpg" />
+
+	
+	<!-- Font Embed Code -->
+	<link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+	
+
+	<!-- Styles -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<!-- Icons -->
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/solid.js" integrity="sha384-GXi56ipjsBwAe6v5X4xSrVNXGOmpdJYZEEh/0/GqJ3JTHsfDsF8v0YQvZCJYAiGu" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/brands.js" integrity="sha384-0inRy4HkP0hJ038ZyfQ4vLl+F4POKbqnaUB6ewmU4dWP0ki8Q27A0VFiVRIpscvL" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/fontawesome.js" integrity="sha384-NY6PHjYLP2f+gL3uaVfqUZImmw71ArL9+Roi9o+I4+RBqArA2CfW1sJ1wkABFfPe" crossorigin="anonymous"></script>
+
+	
+	<!-- Custom Styles -->
+	<style></style>
+	
+
+	
+	<!-- Analytics Code -->
+	
+	
+
+	
+	<!-- Extra Header JS Code -->
+	
+	
+	
+</head>
+
+
+<body class="loading ajax-loading" data-site-url="http://localhost:4000" data-page-url="/blog/embeddings">
+
+
+	<header class="header">
+
+	<div class="wrap">
+
+		
+		<a href="/" class="header__title">
+			ML with Ramin
+		</a>
+		
+
+		<div class="menu">
+			<div class="menu__toggle js-menu-toggle">
+				<div class="menu__toggle__icon"><span></span></div>
+			</div>
+			<div class="menu__wrap">
+				<ul class="menu__list">
+					
+					<li class="menu__list__item">
+						<a href="/about/" class="menu__list__item__link">About us</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/ml/" class="menu__list__item__link">Machine Learning</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/mlops/" class="menu__list__item__link">MLOps</a>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+</header>
+
+
+	<div class="loader"><svg width="120" height="30" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="60" cy="15" r="9" fill-opacity="0.3"><animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="105" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle></svg></div>
+
+	<div class="page-loader"></div>
+
+	
+	<div class="page">
+
+		<div class="page__content" data-page-title="Understanding Different Types of Text Embeddings in NLP – ML with Ramin">
+
+			<section class="hero hero--single">
+
+	<div class="hero__image" style="background-image: url(/images/demo/demo-square.jpg)">
+		<div class="hero__overlay"></div>
+	</div>
+
+	<div class="wrap">
+
+		<h1>Understanding Different Types of Text Embeddings in NLP</h1>
+		<!-- <p>22 March 2022</p> -->
+		<p align="right"><b>- Ramin Mohammadi<b></p>
+			
+	</div>
+
+</section>
+
+<section class="single">
+
+	<div class="wrap">
+
+		<article class="single-post">
+
+			<p>Text embeddings are the building blocks of natural language processing (NLP) algorithms. They are used to transform text data into numerical vectors that can be fed into machine learning models. Text embeddings can be created at various levels of granularity, including characters, words, and sentences. In this tutorial, we’ll explore the different types of text embeddings, including character embedding, word embedding, sentence embedding, and byte pair encoding.</p>
+
+<h2 id="what-are-text-embeddings">What are Text Embeddings?</h2>
+
+<p>Text embeddings are numerical representations of text data that capture its semantic meaning. They are created using unsupervised learning techniques that analyze the context and relationships between words in a corpus of text data. The resulting embeddings can be used as input to machine learning models for a variety of NLP tasks, such as text classification, sentiment analysis, and machine translation.</p>
+
+<h3 id="character-embedding">Character Embedding</h3>
+
+<p>Character embedding is a type of text embedding that represents each character in a text sequence as a numerical vector. This approach is often used when working with text data that contains rare or out-of-vocabulary words. By breaking down the text into its constituent characters, character embedding can capture the morphology and syntax of the text, regardless of the vocabulary size.</p>
+
+<p>Here’s an example of how to create a character embedding using Python and the keras library:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="n">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+<span class="kn">from</span> <span class="n">tensorflow.keras.preprocessing.text</span> <span class="kn">import</span> <span class="n">Tokenizer</span>
+<span class="kn">from</span> <span class="n">tensorflow.keras.preprocessing.sequence</span> <span class="kn">import</span> <span class="n">pad_sequences</span>
+<span class="kn">from</span> <span class="n">tensorflow.keras.layers</span> <span class="kn">import</span> <span class="n">Embedding</span>
+<span class="kn">from</span> <span class="n">tensorflow.keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
+
+<span class="n">words</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="sh">"</span><span class="s">apple</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">orange</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">banana</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">grape</span><span class="sh">"</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="c1"># Create a character-level tokenizer
+</span><span class="n">tokenizer</span> <span class="o">=</span> <span class="nc">Tokenizer</span><span class="p">(</span><span class="n">char_level</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">oov_token</span><span class="o">=</span><span class="sh">"</span><span class="s">&lt;OOV&gt;</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">tokenizer</span><span class="p">.</span><span class="nf">fit_on_texts</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+<span class="n">char_index</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="p">.</span><span class="n">word_index</span>
+
+<span class="c1"># Encode the words
+</span><span class="n">sequences</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="p">.</span><span class="nf">texts_to_sequences</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+
+<span class="c1"># Pad the sequences
+</span><span class="n">max_length</span> <span class="o">=</span> <span class="nf">max</span><span class="p">([</span><span class="nf">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="k">for</span> <span class="n">seq</span> <span class="ow">in</span> <span class="n">sequences</span><span class="p">])</span>
+<span class="n">padded_sequences</span> <span class="o">=</span> <span class="nf">pad_sequences</span><span class="p">(</span><span class="n">sequences</span><span class="p">,</span> <span class="n">maxlen</span><span class="o">=</span><span class="n">max_length</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="sh">"</span><span class="s">post</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="c1"># Define the embedding model
+</span><span class="n">embedding_dim</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="n">vocab_size</span> <span class="o">=</span> <span class="nf">len</span><span class="p">(</span><span class="n">char_index</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="nc">Sequential</span><span class="p">([</span>
+    <span class="nc">Embedding</span><span class="p">(</span><span class="n">input_dim</span><span class="o">=</span><span class="n">vocab_size</span><span class="p">,</span> <span class="n">output_dim</span><span class="o">=</span><span class="n">embedding_dim</span><span class="p">,</span> <span class="n">input_length</span><span class="o">=</span><span class="n">max_length</span><span class="p">),</span>
+<span class="p">])</span>
+
+<span class="c1"># Generate character embeddings
+</span><span class="n">char_embeddings</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="nf">predict</span><span class="p">(</span><span class="n">padded_sequences</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Character embeddings:</span><span class="sh">"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nf">enumerate</span><span class="p">(</span><span class="n">words</span><span class="p">):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Word: </span><span class="si">{</span><span class="n">word</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">char_emb</span> <span class="ow">in</span> <span class="nf">enumerate</span><span class="p">(</span><span class="n">char_embeddings</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+        <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">  Char </span><span class="si">{</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s">: </span><span class="si">{</span><span class="n">char_emb</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+
+
+<span class="c1"># Get the index of the character "a"
+</span><span class="n">char_idx</span> <span class="o">=</span> <span class="n">char_index</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">a</span><span class="sh">"</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Get the embedding matrix from the Embedding layer
+</span><span class="n">embedding_matrix</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="n">layers</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">get_weights</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># # Get the embedding for the character "a"
+</span><span class="n">char_a_embedding</span> <span class="o">=</span> <span class="n">embedding_matrix</span><span class="p">[</span><span class="n">char_idx</span><span class="p">]</span>
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Embedding for character </span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="s">:</span><span class="sh">"</span><span class="p">,</span> <span class="n">char_a_embedding</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>In this example, we create a character-level tokenizer using the Tokenizer class from keras. We then use the tokenizer to convert the text data into numerical sequences of characters, and pad the sequences to ensure they are all the same length. We does not train the embedding for the sepcific task as the numerical example of word2vec in Vectorization
+blog does, and we just define the model with a single Embedding layer as a example for the simple embeddings. Then call <code class="language-plaintext highlighter-rouge">model.predict</code> instead of <code class="language-plaintext highlighter-rouge">model.fit</code> on the padded data to generate the character embeddings. Knowing the dimension of padded sequences, embedding matrix, and char_embeddings will assit you with the understanding of this code, please ask chatGPT to confirm this.</p>
+
+<h3 id="word-embedding">Word Embedding</h3>
+
+<p>Word embedding is a type of text embedding that represents each word in a text sequence as a numerical vector. This approach is often used when working with text data that contains a relatively large vocabulary size. By breaking down the text into its constituent words, word embedding can capture the semantic meaning and relationships between words in the text.</p>
+
+<p>For numerical example, see the one in Vectorization blog, and compare the difference with the one in character embeddings in terms of implementation ways and given tasks.</p>
+
+<h3 id="sentence-embedding">Sentence Embedding</h3>
+
+<p>Sentence embedding is a type of text embedding that represents each sentence in a text corpus as a numerical vector. This approach is often used when working with text data that contains longer sequences of text, such as paragraphs or documents. By summarizing the semantic meaning of each sentence in the corpus, sentence embedding can capture the overall meaning and context of the text.</p>
+
+<p>Here’s an example of how to create a sentence embedding using Tensorflow and Keras,</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+<span class="kn">from</span> <span class="n">tensorflow.keras.preprocessing.text</span> <span class="kn">import</span> <span class="n">Tokenizer</span>
+<span class="kn">from</span> <span class="n">tensorflow.keras.preprocessing.sequence</span> <span class="kn">import</span> <span class="n">pad_sequences</span>
+<span class="kn">from</span> <span class="n">tensorflow.keras.layers</span> <span class="kn">import</span> <span class="n">Embedding</span><span class="p">,</span> <span class="n">GlobalAveragePooling1D</span>
+<span class="kn">from</span> <span class="n">tensorflow.keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
+
+<span class="n">sentences</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="sh">"</span><span class="s">I love machine learning.</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">Deep learning is fascinating.</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">Natural language processing is a subfield of artificial intelligence.</span><span class="sh">"</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="c1"># Create a word-level tokenizer
+</span><span class="n">tokenizer</span> <span class="o">=</span> <span class="nc">Tokenizer</span><span class="p">(</span><span class="n">oov_token</span><span class="o">=</span><span class="sh">"</span><span class="s">&lt;OOV&gt;</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">tokenizer</span><span class="p">.</span><span class="nf">fit_on_texts</span><span class="p">(</span><span class="n">sentences</span><span class="p">)</span>
+<span class="n">word_index</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="p">.</span><span class="n">word_index</span>
+
+<span class="c1"># Encode the sentences
+</span><span class="n">sequences</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="p">.</span><span class="nf">texts_to_sequences</span><span class="p">(</span><span class="n">sentences</span><span class="p">)</span>
+
+<span class="c1"># Pad the sequences
+</span><span class="n">max_length</span> <span class="o">=</span> <span class="nf">max</span><span class="p">([</span><span class="nf">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="k">for</span> <span class="n">seq</span> <span class="ow">in</span> <span class="n">sequences</span><span class="p">])</span>
+<span class="n">padded_sequences</span> <span class="o">=</span> <span class="nf">pad_sequences</span><span class="p">(</span><span class="n">sequences</span><span class="p">,</span> <span class="n">maxlen</span><span class="o">=</span><span class="n">max_length</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="sh">"</span><span class="s">post</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="c1"># Define the embedding model
+</span><span class="n">embedding_dim</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="n">vocab_size</span> <span class="o">=</span> <span class="nf">len</span><span class="p">(</span><span class="n">word_index</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="nc">Sequential</span><span class="p">([</span>
+    <span class="nc">Embedding</span><span class="p">(</span><span class="n">input_dim</span><span class="o">=</span><span class="n">vocab_size</span><span class="p">,</span> <span class="n">output_dim</span><span class="o">=</span><span class="n">embedding_dim</span><span class="p">,</span> <span class="n">input_length</span><span class="o">=</span><span class="n">max_length</span><span class="p">),</span>
+    <span class="nc">GlobalAveragePooling1D</span><span class="p">(),</span>
+<span class="p">])</span>
+
+<span class="c1"># Generate sentence embeddings
+</span><span class="n">sentence_embeddings</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="nf">predict</span><span class="p">(</span><span class="n">padded_sequences</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Sentence embeddings:</span><span class="sh">"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">emb</span> <span class="ow">in</span> <span class="nf">enumerate</span><span class="p">(</span><span class="n">sentence_embeddings</span><span class="p">):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Sentence </span><span class="si">{</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s">: </span><span class="si">{</span><span class="n">emb</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Output:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sentence embeddings:
+Sentence 1: [-0.00010269  0.00750268  0.01172061 -0.02027113 -0.00212045 -0.01125387
+ -0.0130327  -0.01406111 -0.01669746  0.03088781  0.0110696   0.00854814
+  0.0155106   0.01087279 -0.01596794 -0.01844954]
+Sentence 2: [-0.00298612  0.01048899  0.00338774 -0.03776908 -0.01171835 -0.00342189
+ -0.03417958 -0.01213398 -0.0055492   0.03442742  0.00192641  0.00010407
+  0.01639477  0.00306632 -0.026868   -0.01939041]
+Sentence 3: [ 0.01340608 -0.00078986 -0.0013294   0.01496422 -0.01185604  0.00092309
+  0.00330739  0.00237165 -0.01248339  0.00533317  0.01867088 -0.01010449
+ -0.01195448  0.00528855  0.00105715 -0.00977207]
+</code></pre></div></div>
+
+<p>In this example, we created a simple model with an Embedding layer and a GlobalAveragePooling1D layer to generate sentence embeddings. The Embedding layer generates word embeddings, and the GlobalAveragePooling1D layer averages the word embeddings to obtain a single vector representing the whole sentence. You can experiment with different embedding dimensions and model architectures to obtain better sentence embeddings.</p>
+
+<h3 id="byte-pair-encoding">Byte Pair Encoding</h3>
+
+<p>Byte pair encoding (BPE) is a type of text encoding that represents each word in a text sequence as a series of byte pairs. This approach is often used when working with text data that contains a large vocabulary size and many rare or out-of-vocabulary words. By breaking down words into smaller subword units, BPE can capture the morphology and syntax of the text, while reducing the overall vocabulary size.</p>
+
+<p>Here’s an example of how to create a BPE encoding using Python and the sentencepiece library:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">tokenizers</span>
+<span class="kn">from</span> <span class="n">tokenizers</span> <span class="kn">import</span> <span class="n">Tokenizer</span><span class="p">,</span> <span class="n">trainers</span><span class="p">,</span> <span class="n">pre_tokenizers</span><span class="p">,</span> <span class="n">decoders</span>
+<span class="kn">from</span> <span class="n">tokenizers.models</span> <span class="kn">import</span> <span class="n">BPE</span>
+
+<span class="c1"># Sample text data
+</span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="sh">"</span><span class="s">This is an example.</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">Byte Pair Encoding is popular.</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">BPE is used for tokenization.</span><span class="sh">"</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="c1"># Initialize BPE tokenizer
+</span><span class="n">tokenizer</span> <span class="o">=</span> <span class="nc">Tokenizer</span><span class="p">(</span><span class="nc">BPE</span><span class="p">())</span>
+
+<span class="c1"># Pre-tokenize the text data
+</span><span class="n">tokenizer</span><span class="p">.</span><span class="n">pre_tokenizer</span> <span class="o">=</span> <span class="n">pre_tokenizers</span><span class="p">.</span><span class="nc">Whitespace</span><span class="p">()</span>
+
+<span class="c1"># Train BPE tokenizer on the text data
+</span><span class="n">trainer</span> <span class="o">=</span> <span class="n">trainers</span><span class="p">.</span><span class="nc">BpeTrainer</span><span class="p">(</span><span class="n">vocab_size</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">min_frequency</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">tokenizer</span><span class="p">.</span><span class="nf">train_from_iterator</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">trainer</span><span class="o">=</span><span class="n">trainer</span><span class="p">)</span>
+
+<span class="c1"># Tokenize a new sentence using the trained BPE tokenizer
+</span><span class="n">sentence</span> <span class="o">=</span> <span class="sh">"</span><span class="s">This is an example of using BPE.</span><span class="sh">"</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Tokenized IDs: </span><span class="si">{</span><span class="n">output</span><span class="p">.</span><span class="n">ids</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Tokenized text: </span><span class="si">{</span><span class="n">output</span><span class="p">.</span><span class="n">tokens</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="c1"># Decode the tokenized IDs back to the original text
+</span><span class="n">decoded_text</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="p">.</span><span class="nf">decode</span><span class="p">(</span><span class="n">output</span><span class="p">.</span><span class="n">ids</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Decoded text: </span><span class="si">{</span><span class="n">decoded_text</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Output:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Tokenized IDs: [62, 26, 33, 66, 17, 9, 22, 20, 12, 48, 58, 0]
+Tokenized text: ['This', 'is', 'an', 'example', 'o', 'f', 'u', 's', 'i', 'ng', 'BPE', '.']
+Decoded text: This is an example o f u s i ng BPE .
+</code></pre></div></div>
+
+<p>In this example, we first import the necessary modules from the tokenizers library and create a BPE tokenizer. We then train the tokenizer on our sample text data and tokenize a new sentence using the trained BPE tokenizer. Finally, we decode the tokenized IDs back to the original text.</p>
+
+<p>Please note that this example doesn’t involve TensorFlow or Keras directly, but the tokenizers library is compatible with both, and you can easily use the tokenized text with TensorFlow or Keras models for various NLP tasks.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+<p>Text embeddings are a powerful tool for transforming text data into numerical vectors that can be fed into machine learning models. Depending on the type of text data you are working with, different types of embeddings may be more appropriate. Character embedding, word embedding, sentence embedding, and byte pair encoding each have their own strengths and weaknesses, and can be used to extract different levels of semantic meaning from text data. By understanding the differences between these types of embeddings, you can choose the right approach for your NLP project and create more accurate and effective models.</p>
+
+
+
+		</article>
+
+	</div>
+
+</section>
+
+		</div>
+
+	</div>
+
+
+	<footer class="footer">
+
+	<div class="wrap">
+
+		<p class="footer__text"></p>
+
+		<div class="footer__copyright">
+			<span>© 2023 ML with Ramin</span>
+			<a href="https://jekyllthemes.io" target="_blank">Jekyll Themes</a>
+		</div>
+
+		<ul class="socials">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://medium.com/@mohammadi.r" target="_blank" class="socials__item__link" title="Medium">
+			<i class="fab fa-medium" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://www.linkedin.com/in/ramin-mohammadi-ml/" target="_blank" class="socials__item__link" title="Linkedin">
+			<i class="fab fa-linkedin" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+</ul>
+
+	</div>
+
+</footer>
+
+
+	<!-- Javascript Assets -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/js/plugins-min.js"></script>
+	<script src="/js/personal-min.js"></script>
+
+	
+	<!-- Extra Footer JS Code -->
+	
+	
+
+
+</body>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ["\\(", "\\)"] ],
+      displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
+
+</html>

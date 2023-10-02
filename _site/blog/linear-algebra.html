@@ -7,7 +7,7 @@
 
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-	Machine Learning For Engineering
+	ML with Ramin
 
 	Personal Theme by https://jekyllthemes.io
 	Premium + free Jekyll themes for your blog or website.
@@ -20,19 +20,19 @@
 
 	<!-- Page Info -->
 	<link rel="shortcut icon" href="/images/favicon.png">
-	<title>Linear Algebra – Machine Learning For Engineering</title>
+	<title>Linear Algebra – ML with Ramin</title>
 	<meta name="description" content="">
 
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="Linear Algebra – Machine Learning For Engineering">
+	<meta name="twitter:title" content="Linear Algebra – ML with Ramin">
 	<meta name="twitter:description" content="">
-	<meta name="twitter:image:src" content="http://localhost:4000/images/demo/demo-square.jpg">
+	<meta name="twitter:image:src" content="http://localhost:4000/images/demo/demo-square.webp">
 
 	<!-- Facebook OpenGraph -->
-	<meta property="og:title" content="Linear Algebra – Machine Learning For Engineering" />
+	<meta property="og:title" content="Linear Algebra – ML with Ramin" />
 	<meta property="og:description" content="" />
-	<meta property="og:image" content="http://localhost:4000/images/demo/demo-square.jpg" />
+	<meta property="og:image" content="http://localhost:4000/images/demo/demo-square.webp" />
 
 	
 	<!-- Font Embed Code -->
@@ -75,7 +75,7 @@
 
 		
 		<a href="/" class="header__title">
-			Machine Learning For Engineering
+			ML with Ramin
 		</a>
 		
 
@@ -87,19 +87,15 @@
 				<ul class="menu__list">
 					
 					<li class="menu__list__item">
-						<a href="/blog/" class="menu__list__item__link">Blog</a>
+						<a href="/about/" class="menu__list__item__link">About us</a>
 					</li>
 					
 					<li class="menu__list__item">
-						<a href="/" class="menu__list__item__link">Projects</a>
+						<a href="/ml/" class="menu__list__item__link">Machine Learning</a>
 					</li>
 					
 					<li class="menu__list__item">
-						<a href="/contact" class="menu__list__item__link">Contact</a>
-					</li>
-					
-					<li class="menu__list__item">
-						<a href="/about/" class="menu__list__item__link">Meet Our Team</a>
+						<a href="/mlops/" class="menu__list__item__link">MLOps</a>
 					</li>
 					
 				</ul>
@@ -118,19 +114,20 @@
 	
 	<div class="page">
 
-		<div class="page__content" data-page-title="Linear Algebra – Machine Learning For Engineering">
+		<div class="page__content" data-page-title="Linear Algebra – ML with Ramin">
 
 			<section class="hero hero--single">
 
-	<div class="hero__image" style="background-image: url(/images/demo/demo-square.jpg)">
+	<div class="hero__image" style="background-image: url(/images/demo/demo-square.webp)">
 		<div class="hero__overlay"></div>
 	</div>
 
 	<div class="wrap">
 
 		<h1>Linear Algebra</h1>
-		<p>22 May 2022</p>
-
+		<!-- <p>31 December 2021</p> -->
+		<p align="right"><b>- Yue Chen<b></p>
+			
 	</div>
 
 </section>
@@ -159,7 +156,7 @@ start with a comparative study of Scalar VS Vector.</p>
 <p>Scalar Definition: A scalar is a number. Examples of scalars are temperature,
 distance, speed, or mass – all quantities that have a magnitude but no 
 “direction”,  other than perhaps positive or negative. <br />
-<img src="/images/Posts/Linear_Algebra/p1.png" width="400" height="250" /></p>
+<img src="/images/Posts/Linear_Algebra/p1.webp" width="400" height="250" /></p>
 
 <p>Vector Definition: A vector is a list of numbers. There are (at least) two 
 ways  to interpret what this list of numbers mean: 1. Think of the vector as 
@@ -168,7 +165,7 @@ that point in space, where each number represents the vector’s component
 that  dimension. Or 2. Think of a vector as a magnitude and a direction, e.g.
 a quantity like velocity. In this way of think of it, a vector is a directed 
 arrow pointing from the origin to the end point given by the list of numbers.<br />
- <img src="/images/Posts/Linear_Algebra/p2.png" width="400" height="300" /></p>
+ <img src="/images/Posts/Linear_Algebra/p2.webp" width="400" height="300" /></p>
 
 <h2 id="2-matrix">2.	Matrix</h2>
 
@@ -177,8 +174,7 @@ arrow pointing from the origin to the end point given by the list of numbers.<br
 <p><strong>Definition</strong>: Matrices are logical and convenient representations of large 
 sets of real numbers or variables, which are arranged in arrays of rows and columns.</p>
 
-<p>Matrix <script type="math/tex">A\in \Re^{n*d}</script> is represented as <script type="math/tex">% <![CDATA[
-\begin{bmatrix}a_{11}& ... & a_{1,d} \\ . & ... & .\\ . & ... & . \\ a_{n,1} & ... & a_{n,d} \end{bmatrix} %]]></script></p>
+<p>Matrix \(A\in \Re^{n*d}\) is represented as \(\begin{bmatrix}a_{11}&amp; ... &amp; a_{1,d} \\ . &amp; ... &amp; .\\ . &amp; ... &amp; . \\ a_{n,1} &amp; ... &amp; a_{n,d} \end{bmatrix}\)</p>
 
 <h2 id="3-properties-of-matrix">3. Properties of matrix</h2>
 
@@ -186,47 +182,46 @@ sets of real numbers or variables, which are arranged in arrays of rows and colu
 Definition: The transpose of an m x n matrix A is an n x m matrix obtained by 
 interchanging rows and columns of A.</p>
 
-<p><img src="/images/Posts/Linear_Algebra/p5.png" width="553" height="174" alt="" /></p>
+<p><img src="/images/Posts/Linear_Algebra/p5.webp" width="553" height="174" alt="" /></p>
 
 <p>Try transposing a matrix using your right hand (following this paw):</p>
 
-<p><img src="/images/Posts/Linear_Algebra/p6.png" width="1004" height="384" alt="" /></p>
+<p><img src="/images/Posts/Linear_Algebra/p6.webp" width="1004" height="384" alt="" /></p>
 
 <p>3.2 Inverse of a matrix</p>
 
-<p><img src="/images/Posts/Linear_Algebra/p7.png" width="399" height="221" alt="" /></p>
+<p><img src="/images/Posts/Linear_Algebra/p7.webp" width="399" height="221" alt="" /></p>
 
 <p>The inverse of matrix is another matrix, which on multiplication with the given 
 matrix gives the multiplicative identity.</p>
 
-<p>For a matrix A, its inverse is <script type="math/tex">A^{-1}</script> and <script type="math/tex">A.A^{-1} = A^{-1}.A = I_n</script>
-where <script type="math/tex">I_n</script> is the identity matrix.</p>
+<p>For a matrix A, its inverse is \(A^{-1}\) and \(A.A^{-1} = A^{-1}.A = I_n\)
+where \(I_n\) is the identity matrix.</p>
 
-<p><img src="/images/Posts/Linear_Algebra/p8.png" width="237" height="200" alt="" /></p>
+<p><img src="/images/Posts/Linear_Algebra/p8.webp" width="237" height="200" alt="" /></p>
 
 <p>3.3 Determinant of a matrix
 Determinant of a matrix, indirectly calculated the area covered by columns or 
 rows of a matrix.</p>
 
-<p>For a matrix  <script type="math/tex">% <![CDATA[
-W = \begin{bmatrix}a & b \\ c 
-& d \end{bmatrix} %]]></script> the determinant calculated as:</p>
+<p>For a matrix  \(W = \begin{bmatrix}a &amp; b \\ c 
+&amp; d \end{bmatrix}\) the determinant calculated as:</p>
 
-<script type="math/tex; mode=display">|W| = a*d - b*c</script>
+\[|W| = a*d - b*c\]
 
 <h2 id="4-dot-product-and-matrix-multiplication">4.	Dot product and matrix multiplication</h2>
 
 <p>Definition: The dot product is an algebraic operation that takes two same-sized vectors and returns a single number.</p>
 
-<p><img src="/images/Posts/Linear_Algebra/p9.png" width="1434" height="200" alt="" /></p>
+<p><img src="/images/Posts/Linear_Algebra/p9.webp" width="1434" height="200" alt="" /></p>
 
 <p>Geometric definition: the dot product is the product of the Euclidean magnitudes of two vectors and the cosine of the angle between two.</p>
 
-<p><img src="/images/Posts/Linear_Algebra/p10.png" width="1156" height="424" alt="" /></p>
+<p><img src="/images/Posts/Linear_Algebra/p10.webp" width="1156" height="424" alt="" /></p>
 
 <p>Definition of Matrix multiplication: basically, a matrix version of the dot product. Remember the result of dot product is a scalar. The result of matrix multiplication is a matrix, whose elements are the dot products of pairs of vectors in each matrix.</p>
 
-<p><img src="/images/Posts/Linear_Algebra/p11.png" width="484" height="227" alt="" /></p>
+<p><img src="/images/Posts/Linear_Algebra/p11.webp" width="484" height="227" alt="" /></p>
 
 <p>Requirement: 
  the 1st matrix must have the same number of columns as the 2nd matrix has rows.</p>
@@ -237,11 +232,11 @@ W = \begin{bmatrix}a & b \\ c
 
 <p>Eigenvalue: The scalar that is used to transform (stretch/compress) an Eigenvector.</p>
 
-<p><img src="/images/Posts/Linear_Algebra/eigen1.png" width="275" height="109" alt="" /></p>
+<p><img src="/images/Posts/Linear_Algebra/eigen1.webp" width="275" height="109" alt="" /></p>
 
 <p>In matrix form</p>
 
-<p><img src="/images/Posts/Linear_Algebra/eigen2.png" width="1056" height="371" alt="" /></p>
+<p><img src="/images/Posts/Linear_Algebra/eigen2.webp" width="1056" height="371" alt="" /></p>
 
 <p>Meaning:</p>
 
@@ -278,7 +273,7 @@ W = \begin{bmatrix}a & b \\ c
 		<p class="footer__text"></p>
 
 		<div class="footer__copyright">
-			<span>© 2022 Machine Learning For Engineering</span>
+			<span>© 2023 ML with Ramin</span>
 			<a href="https://jekyllthemes.io" target="_blank">Jekyll Themes</a>
 		</div>
 
@@ -379,7 +374,7 @@ MathJax.Hub.Config({
     }
 });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
 
 
 </html>

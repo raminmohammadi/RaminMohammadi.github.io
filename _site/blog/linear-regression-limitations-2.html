@@ -1,0 +1,371 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+
+
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+	ML with Ramin
+
+	Personal Theme by https://jekyllthemes.io
+	Premium + free Jekyll themes for your blog or website.
+
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Page Info -->
+	<link rel="shortcut icon" href="/images/favicon.png">
+	<title>Linear Regression Limitations - part 2 – ML with Ramin</title>
+	<meta name="description" content="">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Linear Regression Limitations - part 2 – ML with Ramin">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:image:src" content="http://localhost:4000/images/demo/demo-square.webp">
+
+	<!-- Facebook OpenGraph -->
+	<meta property="og:title" content="Linear Regression Limitations - part 2 – ML with Ramin" />
+	<meta property="og:description" content="" />
+	<meta property="og:image" content="http://localhost:4000/images/demo/demo-square.webp" />
+
+	
+	<!-- Font Embed Code -->
+	<link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+	
+
+	<!-- Styles -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<!-- Icons -->
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/solid.js" integrity="sha384-GXi56ipjsBwAe6v5X4xSrVNXGOmpdJYZEEh/0/GqJ3JTHsfDsF8v0YQvZCJYAiGu" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/brands.js" integrity="sha384-0inRy4HkP0hJ038ZyfQ4vLl+F4POKbqnaUB6ewmU4dWP0ki8Q27A0VFiVRIpscvL" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/fontawesome.js" integrity="sha384-NY6PHjYLP2f+gL3uaVfqUZImmw71ArL9+Roi9o+I4+RBqArA2CfW1sJ1wkABFfPe" crossorigin="anonymous"></script>
+
+	
+	<!-- Custom Styles -->
+	<style></style>
+	
+
+	
+	<!-- Analytics Code -->
+	
+	
+
+	
+	<!-- Extra Header JS Code -->
+	
+	
+	
+</head>
+
+
+<body class="loading ajax-loading" data-site-url="http://localhost:4000" data-page-url="/blog/linear-regression-limitations-2">
+
+
+	<header class="header">
+
+	<div class="wrap">
+
+		
+		<a href="/" class="header__title">
+			ML with Ramin
+		</a>
+		
+
+		<div class="menu">
+			<div class="menu__toggle js-menu-toggle">
+				<div class="menu__toggle__icon"><span></span></div>
+			</div>
+			<div class="menu__wrap">
+				<ul class="menu__list">
+					
+					<li class="menu__list__item">
+						<a href="/about/" class="menu__list__item__link">About us</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/ml/" class="menu__list__item__link">Machine Learning</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/mlops/" class="menu__list__item__link">MLOps</a>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+</header>
+
+
+	<div class="loader"><svg width="120" height="30" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="60" cy="15" r="9" fill-opacity="0.3"><animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="105" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle></svg></div>
+
+	<div class="page-loader"></div>
+
+	
+	<div class="page">
+
+		<div class="page__content" data-page-title="Linear Regression Limitations - part 2 – ML with Ramin">
+
+			<section class="hero hero--single">
+
+	<div class="hero__image" style="background-image: url(/images/demo/demo-square.webp)">
+		<div class="hero__overlay"></div>
+	</div>
+
+	<div class="wrap">
+
+		<h1>Linear Regression Limitations - part 2</h1>
+		<!-- <p>04 February 2022</p> -->
+		<p align="right"><b>- Yanming Liu<b></p>
+			
+	</div>
+
+</section>
+
+<section class="single">
+
+	<div class="wrap">
+
+		<article class="single-post">
+
+			<h2 id="table-of-contents">Table of contents</h2>
+
+<ol>
+  <li>Linear Regression (LR)</li>
+  <li>LR Assumes Linear Relationship Between Features And Target</li>
+  <li>Features Should be Independent</li>
+  <li>Prone to Outliers</li>
+  <li>Summary</li>
+</ol>
+
+<h2 id="1-linear-regression-lr">1. Linear Regression (LR)</h2>
+
+<p>Linear regression is a simple, but efficient approach when you start to learn supervised learning with the goal of predicting the relationship between the features and target. 
+Suppose that we have a dataset $D={(X_1, Y_1), (X_2, Y_2), \ldots, (X_n, Y_n)}$, where $x_i \in R^{1}$ for simplicity. The idea is to use an linear equation, $\hat{Y_i} = b_0 + b_1X_i$, 
+to approximate the real target value, $Y_i$.</p>
+
+<p>Moreover, $b_0, b_1$ should be calculated using the <a href="https://en.wikipedia.org/wiki/Least_squares">Least Square Method</a>. In the method, we get the sum of square of differences 
+between target and the predicted one, $J(b_0, b_1) = \sum_{i=1}^{n}(e_i)^2, e_i = Y_i - \hat{Y_i}$, then we solve $b_0, b_0$ by letting the derivative of $J$ with respect to $b_i$ equal to $0$. 
+Instead of using this close-form solution, <a href="https://www.youtube.com/watch?v=yFPLyDwVifc">Gradient Descent</a> would be another option to get those parameters.</p>
+
+<p>Want more? check <a href="https://zhuanlan.zhihu.com/p/25434586">Math Details Behind LR</a>.
+Ex 1. Figure out the strengths and weaknesses of the closed-form method and Gradient Descent, and determine under which condition you may apply what.</p>
+
+<p align="center">
+<a href="https://medium.com/@manojgupta_rch/linear-regression-performance-evaluation-matrices-simplified-1126915a0243">
+<img src="/images/Posts/Linear_Regression_Limitations_2/lr.webp" /></a>
+Figure 1. <a href="https://medium.com/@manojgupta_rch/linear-regression-performance-evaluation-matrices-simplified-1126915a0243">
+Linear Regression</a>
+</p>
+
+<p>Now, let us start to illustrate the limitations of this method.</p>
+
+<h2 id="2-linear-relationship-between-features-and-target">2. Linear-Relationship between Features and Target</h2>
+
+<p><strong>The biggest problem is the model can not handle non-linearity for the regression tasks. Here are two examples.</strong></p>
+
+<ul>
+  <li>One team explores the relationship between weight and age for students. Normally, students will grow weight along with age, then reach a plain and last a similar weight for several years, then decrease when they become old. Can linear regression display such a trend successfully? Of course not. As a consequence, finding the approximate model to suit your data is an essential part of a promising classification/regression result.</li>
+  <li>See the exponential data in the below image, we never can find an accurate linear line to represent 
+those points, for their non-linearity nature.</li>
+</ul>
+
+<p>If you still want to use linear regression in the task with exponential data, \(Users = e^{a * Time}\), what can you do? Think the following steps, let $Y=log_{e}{Users},
+Y = a*Time$. Now, we have a linear relationship between $Time$ and $Y$, go ahead for solving the parameter $a$. This tells us that you can apply some math transformation following your intuition or domain knowledge, 
+letting non-linearity into linearity sometimes.</p>
+
+<p align="center">
+<a href="http://sam-koblenski.blogspot.com/2014/10/everyday-statistics-for-programmers_21.html">
+<img src="/images/Posts/Linear_Regression_Limitations_2/non-linear.webp" width="480" height="300" /></a>
+Figure 2: <a href="http://sam-koblenski.blogspot.com/2014/10/everyday-statistics-for-programmers_21.html">
+Non-linearity Between Features and Target</a>
+</p>
+
+<h2 id="3-features-should-be-independent">3. Features Should be Independent</h2>
+
+<p><strong>If features are correlated, it does harm the performance of our linear model.</strong> Different metrics will mark this relationship of features for various data type. To remove the demage, We may apply some data reduction techniques to confirm the independence among features.</p>
+
+<p>For those features with the data type of numeric, we calculate
+<strong><a href="https://www.wallstreetmojo.com/pearson-correlation-coefficient/">Pearson Correlation Coefficient</a></strong> among variables to see if it is related. For example, researchers develop a model to predict the clinician ranking based on seven standard metrics as the label of the heatmap shows. 
+Values in the graph represent correlation coefficients. The larger/deeper the value/color is, the more related these two features are. We can clearly see that VLow is closely related to CV and Low as coefficients are 0.74 and 0.75, 
+respectively.</p>
+
+<p>For independent comparison among categorical feature, <strong>Chi-Square Test</strong> are conducted. See <a href="http://sites.utexas.edu/sos/guided/inferential/categorical/chi2/">a hand-on example</a> and know how to <a href="https://www.analyticsvidhya.com/blog/2021/06/decoding-the-chi-square-test%e2%80%8a-%e2%80%8ause-along-with-implementation-and-visualization/">implement &amp;
+visualize the Chi-Square Test</a>.</p>
+
+<p>For those higher correlated features, we may just 
+use either of them as the input for our model building instead of all of them to remove the potential hazard on performance. <strong>You can remove them by hand or use lasso regression in an automatic way.</strong></p>
+
+<p align="center">
+<a href="https://www.hopkinsmedicine.org/endocrinology_diabetes_metabolism/_documents/glycemia-risk-index-article.pdf">
+<img src="/images/Posts/Linear_Regression_Limitations_2/corr.webp" width="400" height="400" /></a>
+Figure 3: <a href="https://www.hopkinsmedicine.org/endocrinology_diabetes_metabolism/_documents/glycemia-risk-index-article.pdf">
+Correlation Between Pairs of Metrics</a>
+</p>
+
+<h2 id="4-prone-to-outliers">4. Prone to Outliers</h2>
+
+<p><strong>Outlier has an impact on our linear regression model.</strong> Outlier are those extreme values far away from the mean value. By <strong>removing outliers</strong> of the data points, we achieve a better approximate line for all data as the graph illustrates.</p>
+
+<p>Similarly, a robust model equation integrating with the <strong>regularization</strong>
+will offset the damage that those outliers bring to the performance. <a href="https://datascience.stackexchange.com/questions/63900/how-regularization-helps-to-get-rid-of-outliers">L-1 regularization is robust against outliers</a> as it uses the absolute value between the estimated outlier and the penalization term. 
+<u>Ex 2. Think why this would work? </u> No idea about regurlarization? Find the <a href="https://charlesliuyx.github.io/2017/10/03/%E3%80%90%E7%9B%B4%E8%A7%82%E8%AF%A6%E8%A7%A3%E3%80%91%E4%BB%80%E4%B9%88%E6%98%AF%E6%AD%A3%E5%88%99%E5%8C%96/">intuitive understanding
+for regularization</a> here.</p>
+
+<p>To find those outliers, statistic summary, scatter plots(numeric), boxplots(categorical) can be 
+conducted for a intuitive visualization. Then, two criterias such as Z-scores or IQR are used to
+detect those outliers quantitively. Finally, domain knowledge or statistical extraction will be 
+employed for handling outliers. See section 3 in this Jupyter Notebook for <a href="https://colab.research.google.com/drive/1MvH8etxr6MqnAiqRjvoPp_w-5Ri9FRIm#scrollTo=JAsUO94rU2AFprepr">detection &amp; handle of outliers</a>.</p>
+
+<p align="center">
+<a href="http://www.turingfinance.com/regression-analysis-using-python-statsmodels-and-quandl/">
+<img src="/images/Posts/Linear_Regression_Limitations_2/outlier.webp" /></a>
+Figure 4.<a href="http://www.turingfinance.com/regression-analysis-using-python-statsmodels-and-quandl/"> Regression Performance Under Existing or Removed Outlier
+ </a>
+</p>
+
+<h2 id="5-summary">5. Summary</h2>
+<p>In this chapter, we review linear regression for its formula, and how to solve them in two ways, close-form solution, and Gradient Descent. Then we introduce three major limitations for linear regression and point out the potential
+ways to avoid them whether in data processing or model robustness if you stick to this method.</p>
+
+<p>Before we leave,</p>
+<ul>
+  <li>Summarize the key point in each paragraph for logistics.</li>
+  <li>Solve Ex 1-2 for those who are interested.</li>
+  <li>Always feel free to read more online to gain a super understanding of the limitations of linear regression.</li>
+</ul>
+
+
+		</article>
+
+	</div>
+
+</section>
+
+		</div>
+
+	</div>
+
+
+	<footer class="footer">
+
+	<div class="wrap">
+
+		<p class="footer__text"></p>
+
+		<div class="footer__copyright">
+			<span>© 2023 ML with Ramin</span>
+			<a href="https://jekyllthemes.io" target="_blank">Jekyll Themes</a>
+		</div>
+
+		<ul class="socials">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://medium.com/@mohammadi.r" target="_blank" class="socials__item__link" title="Medium">
+			<i class="fab fa-medium" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://www.linkedin.com/in/ramin-mohammadi-ml/" target="_blank" class="socials__item__link" title="Linkedin">
+			<i class="fab fa-linkedin" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+</ul>
+
+	</div>
+
+</footer>
+
+
+	<!-- Javascript Assets -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/js/plugins-min.js"></script>
+	<script src="/js/personal-min.js"></script>
+
+	
+	<!-- Extra Footer JS Code -->
+	
+	
+
+
+</body>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ["\\(", "\\)"] ],
+      displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
+
+</html>

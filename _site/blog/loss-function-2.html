@@ -1,0 +1,445 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+
+
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+	ML with Ramin
+
+	Personal Theme by https://jekyllthemes.io
+	Premium + free Jekyll themes for your blog or website.
+
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Page Info -->
+	<link rel="shortcut icon" href="/images/favicon.png">
+	<title>Loss Functions - part 2 – ML with Ramin</title>
+	<meta name="description" content="">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Loss Functions - part 2 – ML with Ramin">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:image:src" content="http://localhost:4000/images/demo/demo-square.webp">
+
+	<!-- Facebook OpenGraph -->
+	<meta property="og:title" content="Loss Functions - part 2 – ML with Ramin" />
+	<meta property="og:description" content="" />
+	<meta property="og:image" content="http://localhost:4000/images/demo/demo-square.webp" />
+
+	
+	<!-- Font Embed Code -->
+	<link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+	
+
+	<!-- Styles -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<!-- Icons -->
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/solid.js" integrity="sha384-GXi56ipjsBwAe6v5X4xSrVNXGOmpdJYZEEh/0/GqJ3JTHsfDsF8v0YQvZCJYAiGu" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/brands.js" integrity="sha384-0inRy4HkP0hJ038ZyfQ4vLl+F4POKbqnaUB6ewmU4dWP0ki8Q27A0VFiVRIpscvL" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/fontawesome.js" integrity="sha384-NY6PHjYLP2f+gL3uaVfqUZImmw71ArL9+Roi9o+I4+RBqArA2CfW1sJ1wkABFfPe" crossorigin="anonymous"></script>
+
+	
+	<!-- Custom Styles -->
+	<style></style>
+	
+
+	
+	<!-- Analytics Code -->
+	
+	
+
+	
+	<!-- Extra Header JS Code -->
+	
+	
+	
+</head>
+
+
+<body class="loading ajax-loading" data-site-url="http://localhost:4000" data-page-url="/blog/loss-function-2">
+
+
+	<header class="header">
+
+	<div class="wrap">
+
+		
+		<a href="/" class="header__title">
+			ML with Ramin
+		</a>
+		
+
+		<div class="menu">
+			<div class="menu__toggle js-menu-toggle">
+				<div class="menu__toggle__icon"><span></span></div>
+			</div>
+			<div class="menu__wrap">
+				<ul class="menu__list">
+					
+					<li class="menu__list__item">
+						<a href="/about/" class="menu__list__item__link">About us</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/ml/" class="menu__list__item__link">Machine Learning</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/mlops/" class="menu__list__item__link">MLOps</a>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+</header>
+
+
+	<div class="loader"><svg width="120" height="30" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="60" cy="15" r="9" fill-opacity="0.3"><animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="105" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle></svg></div>
+
+	<div class="page-loader"></div>
+
+	
+	<div class="page">
+
+		<div class="page__content" data-page-title="Loss Functions - part 2 – ML with Ramin">
+
+			<section class="hero hero--single">
+
+	<div class="hero__image" style="background-image: url(/images/demo/demo-square.webp)">
+		<div class="hero__overlay"></div>
+	</div>
+
+	<div class="wrap">
+
+		<h1>Loss Functions - part 2</h1>
+		<!-- <p>06 February 2022</p> -->
+		<p align="right"><b>- Siddhartha Putti<b></p>
+			
+	</div>
+
+</section>
+
+<section class="single">
+
+	<div class="wrap">
+
+		<article class="single-post">
+
+			<h1 id="loss-functions-in-classification">Loss functions in Classification</h1>
+
+<p>In the previous post, We have seen how the Loss/cost function works in regression and when to use which cost function. let us also see how that works for classification settings. Let’s dive in!</p>
+
+<h2 id="graduate-level">Graduate Level</h2>
+
+<ul>
+  <li><strong>Binary Cross Entropy Loss function:</strong><br />
+<br /></li>
+</ul>
+
+<p align="center">
+
+<a href="https://datascience.stackexchange.com/questions/52144/negative-range-for-binary-cross-entropy-loss">
+
+<img src="/images/Posts/Cost_function_2/ccel.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:60px;width:500px" />
+</a>
+
+Image credits <a href="https://datascience.stackexchange.com/questions/52144/negative-range-for-binary-cross-entropy-loss"> stackexchange</a>
+
+</p>
+
+<p><br /></p>
+
+<p>That’s a lot in the equation. to break it down, firstly we see why there is log loss in the equation. we know that log is a monotonically increasing function in total, so using log doesn’t affect distribution but there will be a change in scale. As we are finding log of probabilities, when the prob increases to reach 1, the log(1) reaches zero i.e loss is zero, this makes sense doesn’t it?</p>
+
+<p>An Increase in prob decreases loss and a decrease in prob increases loss. (huh…ah moment)</p>
+
+<p><br /></p>
+
+<p align="center">
+
+<a href="https://ml-cheatsheet.readthedocs.io/en/latest/loss_functions.html">
+
+<img src="/images/Posts/Cost_function_2/logloass.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:250px;width:400px" />
+</a>
+
+Image credits <a href="https://ml-cheatsheet.readthedocs.io/en/latest/loss_functions.html"> ml-cheatsheet</a>
+
+</p>
+
+<p><br /></p>
+
+<p>The plot above gives us a clear picture —as the predicted probability of the true class gets closer to zero, the loss increases exponentially.</p>
+
+<p>In the above equation Yi refers to a class, let’s say 0,1 as class labels, class 0 makes the first term ‘0’ and class 1 makes the second term ‘0’, basically you are computing loss value with different probs having different classes.</p>
+
+<ul>
+  <li><strong>Hinge Loss:</strong></li>
+</ul>
+
+<p>The Hinge loss function is mainly used in Support Vector Machine settings. It is meant to be used with binary classification where target values are within the set.</p>
+
+<p><br /></p>
+
+<p align="center">
+
+<a href="https://towardsdatascience.com/a-definitive-explanation-to-hinge-loss-for-support-vector-machines-ab6d8d3178f1">
+
+<img src="/images/Posts/Cost_function_2/hinge.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:250px;width:400px" />
+</a>
+
+Image credits <a href="https://towardsdatascience.com/a-definitive-explanation-to-hinge-loss-for-support-vector-machines-ab6d8d3178f1"> towardsdatascience</a>
+
+</p>
+
+<p><br /></p>
+
+<p>Let’s break down how the loss function works for SVM with the above representation:</p>
+<ul>
+  <li>If the distance from the boundary is 0 (meaning that the datapoint is on the boundary), then we incur a loss size of 1.</li>
+  <li>A negative distance from the boundary gives a high hinge loss. which says that we are on the wrong side of the boundary i.e misclassification.</li>
+  <li>A positive distance from the boundary gives a low hinge loss, or zero hinge loss, and the further we are away from the boundary the lower our hinge loss will be. (when correctly classified)</li>
+</ul>
+
+<p>You have seen what hinge loss is and how it works. Now, let’s see the mathematical formulation of hinge loss.</p>
+
+<p><br /></p>
+
+<p align="center">
+
+<a href="https://towardsdatascience.com/understanding-loss-functions-the-smart-way-904266e9393">
+
+<img src="/images/Posts/Cost_function_2/hloss.webp" style="display: block; 
+        margin-left: auto;
+        margin-right: auto; height:50px;width:400px" />
+</a>
+
+Image credits <a href="https://towardsdatascience.com/understanding-loss-functions-the-smart-way-904266e9393"> towardsdatascience</a>
+
+</p>
+
+<p><br /></p>
+
+<p>Note that y should be the “raw” output of the classifier’s decision function, not the predicted class label. For instance, in linear SVMs, y = w.x + b.</p>
+
+<p>If the training data can be separated by a linear boundary, then any boundary which does so will have a hinge loss of zero— the lowest achievable value.</p>
+
+<p>Only if the training data is not linearly separable will the best boundary have a nonzero (positive, worse) hinge loss. In that case, the hinge loss preference will prefer to choose the boundary so that whichever misclassified points are not too far on the wrong side.</p>
+
+<p><br /></p>
+
+<h2 id="post-graduate-level">Post Graduate Level</h2>
+
+<ul>
+  <li><strong>KL Divergence: Kullback–Leibler</strong></li>
+</ul>
+
+<p>let me start with the concept of information. Information is defined as</p>
+
+<p align="center">
+<font size="5">
+    <strong> I = - log( p(x) ) </strong> </font>
+</p>
+
+<p>We know that probability is between 0 and 1 and for the values, less than 1 the log is -ve,</p>
+<ul>
+  <li>If prob is very small, - log of a very small number is large</li>
+  <li>If prob is large, - log is very small,</li>
+</ul>
+
+<p>You should have got the intuition by now, <strong>The greater the prob the less information you get. The less the prob the more information you get.</strong></p>
+
+<p>let’s say an event you know will occur at high prob, there is no additional information you gain because you already know the event is going to happen if someone says the asteroid is going to hit in the next 5 secs. In this case, you gained much information from an unlikely event, for which prob is less.</p>
+
+<p>Another concept relevant to Information is the ‘average of information’ - <strong>entropy: expectation of information.</strong></p>
+
+<p align="center">
+<font size="5">
+    <strong>H = - sum( p(x)*log(p(x)) ) </strong> </font>
+<p>
+
+Now relating all together
+
+**KL-divergence is a measure of dissimilarity of two distributions.** 
+
+KL(p||q) = lets put it this way  
+
+           entropy(p) - entropy(q) {average info from p dsitribution - average info of q distribution}
+
+But if you see KL(p||q) is one distribution with respect to other 
+
+so that changes to 
+
+<p align="center"> 
+<font size="5">
+<strong>KL(p||q) = - sum( p(x)*log(q(x)) ) + sum( p(x)*log(p(x)) )</strong> </font>
+<p>
+
+i.e (avg info of q with respect to p - avg info of p) 
+
+There are two important things in KL-Divergence: 
+- It is always greater than zero
+- It is not symmetric i.e KL(q||p) ≠ KL(p||q)
+
+Uses: 
+
+- Let's say you are using autoencoders and you don't want your decoder to mimic the input, thus KLD is used as a loss metric to find out how the decoded sequence diverges from the input sequence. 
+- It's specifically used to measure how different two distributions are. 
+
+But, what about the loss functions in place that are used in high-level settings such as Generative Adversarial Networks like: 
+- minimax loss
+- Wasserstein loss
+
+Well, that's a post for another what-if! 
+
+You kind of took a mini post-graduate degree in loss functions! KUDOS
+
+-Siddhartha Putti <br />
+putti.s@northeastern.edu
+
+
+
+</p></p></p></p>
+
+
+		</article>
+
+	</div>
+
+</section>
+
+		</div>
+
+	</div>
+
+
+	<footer class="footer">
+
+	<div class="wrap">
+
+		<p class="footer__text"></p>
+
+		<div class="footer__copyright">
+			<span>© 2023 ML with Ramin</span>
+			<a href="https://jekyllthemes.io" target="_blank">Jekyll Themes</a>
+		</div>
+
+		<ul class="socials">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://medium.com/@mohammadi.r" target="_blank" class="socials__item__link" title="Medium">
+			<i class="fab fa-medium" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://www.linkedin.com/in/ramin-mohammadi-ml/" target="_blank" class="socials__item__link" title="Linkedin">
+			<i class="fab fa-linkedin" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+</ul>
+
+	</div>
+
+</footer>
+
+
+	<!-- Javascript Assets -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/js/plugins-min.js"></script>
+	<script src="/js/personal-min.js"></script>
+
+	
+	<!-- Extra Footer JS Code -->
+	
+	
+
+
+</body>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ["\\(", "\\)"] ],
+      displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
+
+</html>
