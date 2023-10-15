@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Main Page
 subtitle: 
 description: Your Gateway to Cutting-Edge AI Education and Real-World Implementation
