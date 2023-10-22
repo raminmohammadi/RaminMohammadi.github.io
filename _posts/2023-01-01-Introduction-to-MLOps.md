@@ -15,7 +15,7 @@ overview: "Introduction"
 
 Welcome to the exciting world of MLOps, where machine learning meets operations, and data science transforms into real-world impact. In today's data-driven era, organizations worldwide are harnessing the power of artificial intelligence and machine learning to gain a competitive edge, make informed decisions, and enhance user experiences. Yet, as the complexity and volume of machine learning projects grow, so do the challenges in managing and deploying these models efficiently and effectively. This is where MLOps comes into play, bridging the gap between data science and IT operations to streamline the machine learning lifecycle.
 
-<img src="/images/MLOps/MLOps-Neal-Analytics.webp" width="500" height="500"><p>
+<img src="/images/MLOps/MLOps-Neal-Analytics.webp" width="500" height="500" alt="Neal Analytics"><p>
 
 
 ## The Essence of MLOps
