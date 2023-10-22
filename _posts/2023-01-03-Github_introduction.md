@@ -3,12 +3,15 @@ title: 3. Introduction to GitHub
 subtitle: 
 date: 2023-08-12 00:00:00
 description: 
-featured_image: '/images/demo/demo-square.webp'
+featured_image: '/images/MLOps/github.webp'
 author: 
 course: MLOps
 categories: mlops
 overview: "Basics,  Terminology"
 ---
+
+<img src="/images/MLOps/github_for_ML.webp" width="500" height="500" alt="analyticsinsight"><p>
+
 
 # GitHub and GitHub Actions for MLOps
 
@@ -29,6 +32,9 @@ In MLOps, teamwork is critical. GitHub allows multiple contributors to collabora
 ### 3. Code Repository
 
 GitHub serves as a repository for your code. You can store, organize, and share your machine learning models and data pipelines. This is crucial for managing and deploying ML solutions.
+
+<img src="/images/MLOps/github_actions.webp" width="500" height="500" alt="innerjoin"><p>
+
 
 ## GitHub Actions
 
