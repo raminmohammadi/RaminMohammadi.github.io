@@ -3,6 +3,7 @@ title: Blogs - Table of Contents
 subtitle: 
 description: 
 featured_image: /images/demo/contact.jpg
+course: ML
 ---
 
 ## Linear Algebra, Probability and Statistics
