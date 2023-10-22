@@ -2,7 +2,7 @@
 title: Blogs - Table of Contents
 subtitle: 
 description: 
-featured_image: /images/demo/contact.jpg
+featured_image: /images/MLOps/1-MLOps-NVIDIA-invert-final.webp
 course: MLOps
 ---
 
