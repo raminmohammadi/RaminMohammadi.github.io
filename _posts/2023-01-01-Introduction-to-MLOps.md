@@ -16,7 +16,7 @@ overview: "Introduction"
 Welcome to the exciting world of MLOps, where machine learning meets operations, and data science transforms into real-world impact. In today's data-driven era, organizations worldwide are harnessing the power of artificial intelligence and machine learning to gain a competitive edge, make informed decisions, and enhance user experiences. Yet, as the complexity and volume of machine learning projects grow, so do the challenges in managing and deploying these models efficiently and effectively. This is where MLOps comes into play, bridging the gap between data science and IT operations to streamline the machine learning lifecycle.
 
 <img src="/images/MLOps/MLOps-Neal-Analytics.webp" width="500" height="500" alt="Neal Analytics"><p>
-
+<p align='center'> Figure 1. Neal Analytics</p>
 
 ## The Essence of MLOps
 
@@ -25,7 +25,7 @@ MLOps, a portmanteau of "Machine Learning" and "Operations," is a set of practic
 MLOps introduces a structured approach to managing machine learning projects, covering various stages of the ML lifecycle, from data preprocessing and model training to deployment and ongoing monitoring. This approach allows organizations to extract maximum value from their machine learning investments, improve collaboration between data scientists and operations teams, and mitigate the inherent challenges of scaling and maintaining AI systems.
 
 <img src="/images/MLOps/ML-pipeline-Gartner-1280.webp" width="500" height="500"><p>
-
+<p align='center'> Figure 2. Gartner</p>
 
 ## Key Concepts in MLOps
 

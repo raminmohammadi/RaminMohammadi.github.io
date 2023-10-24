@@ -11,7 +11,7 @@ overview: "Basics,  Terminology"
 ---
 
 <img src="/images/MLOps/github_for_ML.webp" width="500" height="500" alt="analyticsinsight"><p>
-
+<p align='center'> Figure 1. Analytics Insight</p>
 
 # GitHub and GitHub Actions for MLOps
 
@@ -34,7 +34,7 @@ In MLOps, teamwork is critical. GitHub allows multiple contributors to collabora
 GitHub serves as a repository for your code. You can store, organize, and share your machine learning models and data pipelines. This is crucial for managing and deploying ML solutions.
 
 <img src="/images/MLOps/github_actions.webp" width="500" height="500" alt="innerjoin"><p>
-
+<p align='center'> Figure 2. Inner Join</p>
 
 ## GitHub Actions
 
