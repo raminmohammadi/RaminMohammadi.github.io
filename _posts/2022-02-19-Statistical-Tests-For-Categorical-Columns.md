@@ -160,16 +160,16 @@ Fisher's Exact Test is a statistical significance test used in the analysis of c
 
 $$P(X=a)=\frac{\binom{a+c}{a}\binom{a+b}{a}}{\binom{n}{a}}$$
 
-  - Where: 
+Where: 
        
-      -- $\binom{a+c}{a}$ is the number of ways to choose $a$ successes from $a+c$ trials.
-
-      -- $n$ is the total number of observations.
+ - $\binom{a+c}{a}$ is the number of ways to choose $a$ successes from $a+c$ trials.
+ - $n$ is the total number of observations.
 
 #### When to Use:
-     - **Small Sample Sizes**: Especially when the expected frequencies are small (less than 5). The Chi-Square test, in contrast, might not be accurate with small sample sizes.
-     - **Exact P-values**: When you need to compute exact p-values, regardless of the sample size.
-     - **2x2 Tables**: Fisher's Exact Test is typically used for 2x2 contingency tables. For larger tables, computational challenges arise, although there are generalizations of the test for larger tables.
+
+- **Small Sample Sizes**: Especially when the expected frequencies are small (less than 5). The Chi-Square test, in contrast, might not be accurate with small sample sizes.
+- **Exact P-values**: When you need to compute exact p-values, regardless of the sample size.
+- **2x2 Tables**: Fisher's Exact Test is typically used for 2x2 contingency tables. For larger tables, computational challenges arise, although there are generalizations of the test for larger tables.
 
 
 ```python

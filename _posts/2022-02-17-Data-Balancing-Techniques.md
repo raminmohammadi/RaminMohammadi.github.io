@@ -23,7 +23,7 @@ This situation highlights the importance of addressing imbalanced class issues i
 An indispensable and straightforward metric for evaluating classification problems is the confusion matrix. This metric provides a comprehensive snapshot of a model's performance, making it an excellent initial point for any classification model assessment. We encapsulate a majority of the derived metrics from the confusion matrix in the following graphical representation.
 
 
-<img src="/images/Posts/Data_Balancing_Techniques/confusion_matrix.jpeg" width="400" height="250">
+<img src="/images/Posts/Data_Balancing_Techniques/confusion_matrix.webp" width="400" height="250">
 
 <div align="center">Figure 1 : <a href='https://medium.com/geekculture/a-quick-overview-of-evaluation-metrics-for-classification-models-3aaa578113fb'> Confusion Matrix </a> </div>
 
@@ -53,7 +53,7 @@ To put it in a relatable example, think of a medical test. A high AUC means the 
 
 This curve is like a visual representation of how well our model is doing its job. The higher and farther to the left the curve is, the better our model is at distinguishing between different groups.
 
-<img src="/images/Posts/Data_Balancing_Techniques/Roc_curve.png" width="400" height="250">
+<img src="/images/Posts/Data_Balancing_Techniques/Roc_curve.webp" width="400" height="250">
 <div align="center">Figure 2 : <a href='https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5'> ROC Curve </a> </div>
 
 
@@ -69,7 +69,7 @@ Let's imagine a scenario where we have two distinct classes: C0 and C1. Now, her
 
 To give you a visual, we've crafted a representative dataset of 50 points. On the right, you'll find the theoretical distributions of both classes, perfectly reflecting their respective proportions.
 
-<img src="/images/Posts/Data_Balancing_Techniques/imbalanced_example.png" width="400" height="250">
+<img src="/images/Posts/Data_Balancing_Techniques/imbalanced_example.webp" width="400" height="250">
 <div align="center">Figure 3 : In our Gaussian example, if the means are different enough with respect to the variances, even imbalanced classes can be well separable</div>
 <p>&nbsp;</p>
 
@@ -80,7 +80,7 @@ To give you a visual, we've crafted a representative dataset of 50 points. On th
 
 Finally, we should keep in mind that a classifier has a theoretical minimal error probability. For a classifier of this kind (one feature, two classes), we can mention that, graphically, the theoretical minimal error probability is given by the area under the minimum of the two curves.
 
-<img src="/images/Posts/Data_Balancing_Techniques/imbalanced_example_2.jpeg" width="400" height="250">
+<img src="/images/Posts/Data_Balancing_Techniques/imbalanced_example_2.webp" width="400" height="250">
 <div align="center">Figure 4 : Illustration of the theoretical minimal error for different degree of separability of two classes.
 </div>
 <p>&nbsp;</p>
@@ -114,18 +114,18 @@ These methods are often presented as great ways to balance the dataset before fi
 2. **Oversampling** : Oversampling aims to mitigate this issue by increasing the representation of the minority class. Oversampling is a valuable tool for improving the performance of models on imbalanced datasets. However, it's important to evaluate its impact on the overall model and consider potential drawbacks such as overfitting. It's often used in conjunction with other techniques like undersampling or algorithm-level approaches for comprehensive handling of imbalanced data.
 3. **Generating Synthetic Data** : Generating synthetic data is a technique used to address imbalanced datasets. It involves creating new, artificial data points that are similar to the existing minority class samples. This helps balance the class distribution and can improve the performance of machine learning models. There are various methods to generate synthetic data, with one of the most popular being the Synthetic Minority Over-sampling Technique (SMOTE). SMOTE works by identifying a minority class sample and creating synthetic examples along the line segments joining its nearest neighbors. This effectively increases the representation of the minority class without duplicating existing data points. Other techniques, such as ADASYN (Adaptive Synthetic Sampling), focus on generating data points in regions that are harder to learn, giving more weight to those samples.
 
-<img src="/images/Posts/Data_Balancing_Techniques/sampling.png" width="400" height="250">
+<img src="/images/Posts/Data_Balancing_Techniques/sampling.webp" width="400" height="250">
 <div align="center">Figure 5 : Sampling Techniques</div>
 
 <p>&nbsp;</p>
 
 <div> </div>
-<img src="/images/Posts/Data_Balancing_Techniques/smote.jpeg" width="400" height="250">
+<img src="/images/Posts/Data_Balancing_Techniques/smote.webp" width="400" height="250">
 <div align="center">Figure 6 : <a href='https://towardsdatascience.com/smote-synthetic-data-augmentation-for-tabular-data-1ce28090debc'> Generating Synthetic Data </a> </div>
 
 All these approaches aim at rebalancing (partially or fully) the dataset. But should we rebalance the dataset to have as much data of both classes ? Or should the majority class stay the most represented ? If so, in what proportions should we rebalance ?
 
-<img src="/images/Posts/Data_Balancing_Techniques/imbalanced_image_3.jpeg" width="400" height="250">
+<img src="/images/Posts/Data_Balancing_Techniques/imbalanced_image_3.webp" width="400" height="250">
 <div align="center">Figure 7 : Illustration of the effect that different degrees of majority class undersampling have on the model decisions.</div>
 
 When using a resampling method (for example to get as much data from C0 than from C1), we show the wrong proportions of the two classes to the classifier during the training. The classifier learned this way will then have a lower accuracy on the future real test data than the classifier trained on the unchanged dataset. Indeed, the true proportions of classes are important to know for classifying a new point and that information has been lost when resampling the dataset.
@@ -146,7 +146,7 @@ We can easily implement Stratified Sampling by following these steps:
 * Partitioning the dataset into strata: in this step, the population is divided into homogeneous subgroups based on similar features. Each instance of the population must belong to one and only one stratum.
 * Apply Simple Random Sampling for each stratum: random samples are taken from each stratum with the same proportion defined in the first step.
 
-<img src="/images/Posts/Data_Balancing_Techniques/stratified_sampling.png" width="400" height="250">
+<img src="/images/Posts/Data_Balancing_Techniques/stratified_sampling.webp" width="400" height="250">
 <div align="center">Figure 8 : Stratified Sampling Techniques</div>
 
 ### BalancedBaggingClassifier
@@ -159,7 +159,7 @@ We discussed in the previous subsection the fact that resampling the training da
 
 However, it remains possible to obtain better results in terms of accuracy by enriching the dataset with an additional feature (or more). Let’s go back to our first example where classes were not well separable: maybe can we find a new additional feature that can help distinguish between the two classes and, so, improve the classifier accuracy.
 
-<img src="/images/Posts/Data_Balancing_Techniques/feature_addition.jpeg" width="400" height="250">
+<img src="/images/Posts/Data_Balancing_Techniques/feature_addition.webp" width="400" height="250">
 <div align="center">Figure 9 : New Features may lead to class seperation</div>
 
 <p>&nbsp;</p>
@@ -188,20 +188,20 @@ Then, we can redefine our objective function: we don’t target the best accurac
 
 From a theoretical point of view, we don’t want to minimise the error probability defined above but the expected prediction cost given by :
 <p>&nbsp;</p>
-<img src="/images/Posts/Data_Balancing_Techniques/equation.jpg" width="400" height="250">
+<img src="/images/Posts/Data_Balancing_Techniques/equation.webp" width="400" height="250">
 <p>&nbsp;</p>
 where C(.) defines the classifier function. So, if we want to minimise the expected prediction cost, the theoretical best classifier C(.) minimises
 <p>&nbsp;</p>
-<img src="/images/Posts/Data_Balancing_Techniques/equation_2.jpg" width="400" height="250">
+<img src="/images/Posts/Data_Balancing_Techniques/equation_2.webp" width="400" height="250">
 <p>&nbsp;</p>
 
 or equivalently, dividing by the density of x, C(.) minimises
 <p>&nbsp;</p>
-<img src="/images/Posts/Data_Balancing_Techniques/equation_3.jpg" width="400" height="250">
+<img src="/images/Posts/Data_Balancing_Techniques/equation_3.webp" width="400" height="250">
 <p>&nbsp;</p>
 So, with this objective function, the best classifier from a theoretical point of view will then be such that:
 <p>&nbsp;</p>
-<img src="/images/Posts/Data_Balancing_Techniques/equation_4.jpg" width="400" height="250">
+<img src="/images/Posts/Data_Balancing_Techniques/equation_4.webp" width="400" height="250">
 <p>&nbsp;</p>
 Notice that we recover the expression of the “classic” classifier (focus on accuracy) when costs are equal.
 
@@ -210,19 +210,19 @@ Notice that we recover the expression of the “classic” classifier (focus on 
 One first possible way to take into account the cost in our classifier is to do it after the training. The idea is, first, to train a classifier the basic way to output the following probabilities
 
 <p>&nbsp;</p>
-<img src="/images/Posts/Data_Balancing_Techniques/equation_5.jpg" width="400" height="250">
+<img src="/images/Posts/Data_Balancing_Techniques/equation_5.webp" width="400" height="250">
 <p>&nbsp;</p>
 without assuming any costs. Then, the predicted class will be C0 if
 
 <p>&nbsp;</p>
-<img src="/images/Posts/Data_Balancing_Techniques/equation_6.jpg" width="400" height="250">
+<img src="/images/Posts/Data_Balancing_Techniques/equation_6.webp" width="400" height="250">
 <p>&nbsp;</p>
 and C1 otherwise.
 
 Here, it doesn’t matter which classifier we are using as long as it outputs the probability of each class for a given point. In our main example, we can fit a Bayes classifier on our data and we can then reweight the obtained probabilities to adjust the classifier with the costs errors as described.
 
 <p>&nbsp;</p>
-<img src="/images/Posts/Data_Balancing_Techniques/probability_threshold.jpg" width="400" height="250">
+<img src="/images/Posts/Data_Balancing_Techniques/probability_threshold.webp" width="400" height="250">
 <div align="center">Figure 10</div>
 <p>&nbsp;</p>
 
@@ -244,7 +244,7 @@ For some other models (for example Bayes classifier), resampling methods can be 
 * oversample the minority class by a factor P01/P10 (cardinality of the minority class should be multiplied by P01/P10)
 * undersample the majority class by a factor P10/P01 (cardinality of the majority class should be multiplied by P10/P01)
 
-<img src="/images/Posts/Data_Balancing_Techniques/class_reweight.jpg" width="400" height="250">
+<img src="/images/Posts/Data_Balancing_Techniques/class_reweight.webp" width="400" height="250">
 <div align="center">Figure 11</div>
 
 ### Code Samples
@@ -302,7 +302,7 @@ It provides a variety of methods to undersample and oversample.
 One of such methods it provides is called Tomek Links. Tomek links are pairs of examples of opposite classes in close vicinity.
 In this algorithm, we end up removing the majority element from the Tomek link, which provides a better decision boundary for a classifier.
 
-<img src="/images/Posts/Data_Balancing_Techniques/tomek_links.png" width="400" height="250">
+<img src="/images/Posts/Data_Balancing_Techniques/tomek_links.webp" width="400" height="250">
 <div align="center">Figure 12 : Tomek Links</div>
 <p>&nbsp;</p>
 
@@ -328,7 +328,7 @@ Resampled dataset shape Counter({1: 897, 0: 100})
 
 In SMOTE (Synthetic Minority Oversampling Technique) we synthesize elements for the minority class, in the vicinity of already existing elements.
 
-<img src="/images/Posts/Data_Balancing_Techniques/smote.png" width="400" height="250">
+<img src="/images/Posts/Data_Balancing_Techniques/smote.webp" width="400" height="250">
 <div align="center">Figure 13 : SMOTE</div>
 <p>&nbsp;</p>
 

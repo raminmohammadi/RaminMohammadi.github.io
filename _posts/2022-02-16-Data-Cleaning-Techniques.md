@@ -11,7 +11,7 @@ categories: ml
 
 **Data cleaning** is a critical step in the data preprocessing pipeline that involves the identification and resolution of errors and inconsistencies in your dataset. The significance of this process is aptly captured by the saying, "Garbage In, Garbage Out." In other words, the quality of the input data influences the quality of the results obtained from any data analysis or modeling efforts. In this article, we will explore various data cleaning techniques that can be applied holisticly for both continous and discrete data with clear concept explanation, example code, Pros and Cons of using the method, which will help you better understand the problem at hand
 
-<img src="/images/Posts/Data_Cleaning_Techniques/image_1.png" width="400" height="250">
+<img src="/images/Posts/Data_Cleaning_Techniques/image_1.webp" width="400" height="250">
 
 First lets define Numerical columns and types of data in numerical columns
 
@@ -25,7 +25,7 @@ Certainly! While there isn't a one-size-fits-all way to clean data because every
 
 ## The Dataset
 
-Imagine we have a dataset containing information about customer orders in an e-commerce platform. The dataset includes various numerical columns, such as order quantities, prices, and delivery times. 
+Imagine we have a dataset containing information about customer orders in an e-commerce platform. The dataset includes various numerical columns, such as order quantities, prices, and delivery times.
 
 ```python
 # Import the necessary libraries
@@ -136,7 +136,7 @@ df['column_name'].interpolate(method='linear', inplace=True)
 
 The Z-score measures how many standard deviations a data point is away from the mean. Data points with Z-scores beyond a certain threshold (often 2 or 3 standard deviations) are considered outliers. Here are various ways to handle outliers once they are detected:
 
-<img src="/images/Posts/Data_Cleaning_Techniques/Screenshot 2023-11-01 at 12.16.55 AM.png" width="400" height="250">
+<img src="/images/Posts/Data_Cleaning_Techniques/image_2.webp" width="400" height="250">
 
 **Python Code:**
 
@@ -161,7 +161,7 @@ outliers = np.where(z_scores > threshold)
 
 The Interquartile Range (IQR) is a statistical measure used to assess the spread or dispersion of a dataset, particularly in the context of its middle 50%. It's a valuable tool for identifying and understanding the variability of data. The IQR is defined as the range between the first quartile (Q1) and the third quartile (Q3) of a dataset, representing the range within which the central 50% of the data falls.
 
-<img src="/images/Posts/Data_Cleaning_Techniques/Screenshot 2023-11-05 at 9.01.11 PM.png" width="400" height="250">
+<img src="/images/Posts/Data_Cleaning_Techniques/image_3.webp" width="400" height="250">
 
 **Python Code:**
 
@@ -267,7 +267,7 @@ x is the original data point.
 **Ex:**
 Consider Original data as {1, 10, 100, 1000} lets see how the data transforms after applying log to it
 
-<img src="/images/Posts/Data_Cleaning_Techniques/Screenshot 2023-11-05 at 10.51.53 AM.png" width="400" height="250">
+<img src="/images/Posts/Data_Cleaning_Techniques/image_4.webp" width="400" height="250">
 
 **Python code:**
 
@@ -430,7 +430,7 @@ Binning or discretization is a data preprocessing technique used to transform co
 
 **Method:** Divide the data range into predefined bins or intervals and assign data points to these bins.
 
-<img src="/images/Posts/Data_Cleaning_Techniques/image_1.png" width="400" height="250">
+<img src="/images/Posts/Data_Cleaning_Techniques/image_5.webp" width="400" height="250">
 
 **Python Code:**
 
