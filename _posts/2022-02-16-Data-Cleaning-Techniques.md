@@ -9,7 +9,7 @@ categories: ml
 ---
 
 
-**Data cleaning** is a critical step in the data preprocessing pipeline that involves the identification and resolution of errors and inconsistencies in your dataset. The significance of this process is aptly captured by the saying, "Garbage In, Garbage Out." In other words, the quality of the input data influences the quality of the results obtained from any data analysis or modeling efforts. In this article, we will explore various data cleaning techniques that can be applied holisticly for both continous and discrete data with clear concept explanation, example code, Pros and Cons of using the method, which will help you better understand the problem at hand
+**Data cleaning** is a critical step in the data preprocessing pipeline that involves the identification and resolution of errors and inconsistencies in your dataset. The significance of this process is aptly captured by the saying, "Garbage In, Garbage Out." In other words, the quality of the input data influences the quality of the results obtained from any data analysis or modeling efforts. In this article, we will explore various data cleaning techniques that can be applied holistically for both continuous and discrete data with clear concept explanation, example code, Pros and Cons of using the method, which will help you better understand the problem at hand
 
 <img src="/images/Posts/Data_Cleaning_Techniques/image_1.webp" width="400" height="250">
 
