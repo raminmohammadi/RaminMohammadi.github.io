@@ -114,7 +114,7 @@ For pairs of variables in which one variable is quantitative, while the other is
 
 ## ANOVA Test
 
-In the ANalysis Of VAriance (ANOVA) test, variance is used as a comparative parameter among multiple groups. We group by the qualitative variable and get the mean of the quantitative variable across the qualitative variable groups. Hypothesis test is made use of here. The null hypothesis is if the mean of two or more groups is equal. The alternate hypothesis is if at least one of the group's mean is different. We use the p-value (p<0.5) to reject the null hypothesis. If the null hypothesis is accepted, it means that there is no dependence between the features.
+In the ANalysis Of VAriance (ANOVA) test, variance is used as a comparative parameter among multiple groups. We group by the qualitative variable and get the mean of the quantitative variable across the qualitative variable groups. Hypothesis test is made use of here. The null hypothesis is if the mean of two or more groups is equal. The alternate hypothesis is if at least one of the group's mean is different. We use the p-value (p<0.5) to reject the null hypothesis. If the null hypothesis is accepted, means there's not enough evidence to conclude a difference in means among the groups.
 ANOVA can be one-way or two-way. One-way ANOVA is implemented when the variable has three or more independent groups. Here, we talk about one-way ANOVA.
 
 <img src="/images/Posts/Statistical_Tests_For_Numerical_Columns/ANOVA.webp">
