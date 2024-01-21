@@ -13,13 +13,24 @@ collections:
   projects:
     output: true
     permalink: /project/:slug
-  projects_toc:
+  projects_mlops:
+    output: true
+    23_fall:
+      output: true
+      group_7:
+        output: true
+  projects_toc_ml:
     output: true
     permalink: /semester/:slug
     order:
       - 23_spring.md
       - 22_fall.md
       - 22_summer.md
+  projects_toc_mlops:
+    output: true
+    permalink: /semester/:slug
+    order:
+      - 23_fall.md
   abouts:
     output: true
     permalink: /about/:slug
@@ -60,15 +71,27 @@ defaults:
   -
     scope:
       path: ""
+      type: "projects_mlops"
+    values:
+      layout: "project"      
+  -
+    scope:
+      path: ""
       type: "abouts"
     values:
       layout: "about"
   -
     scope:
       path: ""
-      type: "projects_toc"
+      type: "projects_toc_ml"
     values:
-      layout: "project"      
+      layout: "project"
+  -
+    scope:
+      path: ""
+      type: "projects_toc_mlops"
+    values:
+      layout: "project"     
 
 markdown: kramdown
 
