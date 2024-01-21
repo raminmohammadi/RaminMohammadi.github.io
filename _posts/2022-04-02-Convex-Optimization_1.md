@@ -52,7 +52,7 @@ $$
     \textrm{s.t.} \quad & \small{x,y ≥ 0}\\
 \end{aligned}$$
 
-<img src="/images/Posts/Convex_Optimization_1/circle.jpeg" width="400" height="250">
+<img src="/images/Posts/Convex_Optimization_1/circle.webp" width="400" height="250">
 
 (NOTE: Constraints aren’t mandatory to call it an optimization problem)  
 
@@ -110,7 +110,7 @@ $$
     \textrm{s.t.} \quad & \small{f_{i}(x) \le b_{i}, \quad i=1,2...,m\\}
 \end{aligned}$$
 
-<img src="/images/Posts/Convex_Optimization_1/parabola_.jpeg" width="400" height="250">
+<img src="/images/Posts/Convex_Optimization_1/parabola_.webp" width="400" height="250">
 
 **4 ways to say if it is a convex function:**
 1. $\frac{∂^2f(θ)}{∂^2θ} ≥ 0$ 
