@@ -22,19 +22,20 @@ featured_image: /images/demo/home.jpg
 <section class="listing">
 
 	<div class="wrap">
-
-		{% for project in site.ml %}
+		
+		<!-- for each file(page) in _ml folder  -->
+		{% for page in site.ml %} 
 			<article class="post">
 
 				<div class="post__image-wrap">
-					<div class="post__image" style="background-image: url({{ project.featured_image | relative_url }}); background-size: 50%; "></div>
+					<div class="post__image" style="background-image: url({{ page.featured_image | relative_url }}); background-size: 50%; "></div>
 				</div>
 
 				<div class="post__content-wrap">
 					<div class="post__content">
-						<h2 class="post__title"><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
-						<p class="post__subtitle">{{ project.subtitle }}</p>
-						<p class="post__description">{{ project.description }}</p>
+						<h2 class="post__title"><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h2>
+						<p class="post__subtitle">{{ page.subtitle }}</p>
+						<p class="post__description">{{ page.description }}</p>
 					</div>
 				</div>
 
