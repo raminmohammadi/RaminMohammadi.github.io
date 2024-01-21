@@ -1,4 +1,5 @@
 ---
+featured_image: '/images/Projects/mlops/23_fall/group_7/thumbnail.webp'
 ---
 
 ### Outline:
