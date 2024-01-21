@@ -112,7 +112,7 @@ Comparison between Redline - Newton’s method & Greenline - Gradient Descent fo
 
 <center>
 <p>
-    <img src="/images/Posts/Convex_Optimization_2/newtons.jpeg" width="400" height="250">
+    <img src="/images/Posts/Convex_Optimization_2/newtons.webp" width="400" height="250">
 </p>
 Image credits: Wikipedia
 </center>
@@ -126,7 +126,7 @@ I’ll simplify this by taking the classic example of hiking a mountain to its l
 - Newton’s method is very sensitive to the initial point, and can be problematic. The below image shows how big the influence of the initial point is on the convergence.
 <center>
 <p>
-    <img src="/images/Posts/Convex_Optimization_2/initial_point.png" width="400" height="250">  
+    <img src="/images/Posts/Convex_Optimization_2/initial_point.webp" width="400" height="250">  
 Image credits: Wikipedia
 </p>
 </center>
@@ -169,10 +169,10 @@ You all might know the steps of the Lagrangian method already. Now let’s dive 
 
 <div style="text-align: center;">
   <div style="display: inline-block;">
-    <img src="/images/Posts/Convex_Optimization_2/lagrange_zout.png" width="400" height="250">
+    <img src="/images/Posts/Convex_Optimization_2/lagrange_zout.webp" width="400" height="250">
   </div>
   <div style="display: inline-block;">
-    <img src="/images/Posts/Convex_Optimization_2/lagrange_zin.png" width="400" height="250">
+    <img src="/images/Posts/Convex_Optimization_2/lagrange_zin.webp" width="400" height="250">
   </div>
 </div>
 <p style="text-align: center;">Fig: 2.4</p>
@@ -258,7 +258,7 @@ Ex:
 
 $ \text{min} \ f(x) = x \quad \text{s.t.} \quad g(x): 5-x  \overset{\text{convert}}{\implies} B(x) = x − \mu \log(5 − x)$
 
-<img src="/images/Posts/Convex_Optimization_2/ipm.png" width="400" height="250"> 
+<img src="/images/Posts/Convex_Optimization_2/ipm.webp" width="400" height="250"> 
 
 If you look at the example clearly, the barrier function $B(x)$ is not allowing the optimal x value to go beyond the constraint given. $B(x)$ is approaching infinity where x comes closer to the optimal value. It acts like a barrier stopping to cross the feasible region.
 
