@@ -6,6 +6,14 @@ featured_image: '/images/MLOps/1-MLOps-NVIDIA-invert-final.webp'
 course: MLOps
 ---
 
+## Table of contents
+
+1. [MLOps - Concepts & Tools](#mlops)<br>
+2. [GitHub Labs](#github)<br>
+3. [MLflow Labs](#mlflow)<br>
+4. [DVC & Airflow Labs](#dvc-and-airflow)<br>
+5. [Data Labeling Labs](#data-labeling) 
+
 ## MLOps
 
 {% assign mlops_posts = site.posts | where: "categories","mlops" %}
@@ -36,4 +44,12 @@ course: MLOps
 
 | Lab | Overview |
 |----------------|--------|{% for post in dvc_airflow_posts reversed %}
+| [{{ post.title }}]({{ post.url }})|{{post.overview}} |{% endfor %}
+
+## Data Labeling
+
+{% assign data_labeling_posts = site.posts | where: "categories","data_labeling" %}
+
+| Lab | Overview |
+|----------------|--------|{% for post in data_labeling_posts reversed %}
 | [{{ post.title }}]({{ post.url }})|{{post.overview}} |{% endfor %}
