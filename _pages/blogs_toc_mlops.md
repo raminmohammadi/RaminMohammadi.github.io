@@ -8,11 +8,12 @@ course: MLOps
 
 ## Table of contents
 
-1. [MLOps - Concepts & Tools](#mlops)<br>
-2. [GitHub Labs](#github)<br>
-3. [MLflow Labs](#mlflow)<br>
-4. [DVC & Airflow Labs](#dvc-and-airflow)<br>
-5. [Data Labeling Labs](#data-labeling) 
+1. [MLOps - Concepts & Tools](#mlops)
+2. [GitHub Labs](#github)
+3. [MLflow Labs](#mlflow)
+4. [DVC Labs](#dvc)
+5. [Airflow Labs](#airflow)
+6. [Data Labeling Labs](#data-labeling)
 
 ## MLOps
 
@@ -38,13 +39,23 @@ course: MLOps
 |----------------|--------|{% for post in mlflow_posts reversed %}
 | [{{ post.title }}]({{ post.url }})|{{post.overview}} |{% endfor %}
 
-## DVC and Airflow
+## DVC
 
-{% assign dvc_airflow_posts = site.posts | where: "categories","dvc_airflow" %}
+{% assign dvc_posts = site.posts | where: "categories","dvc" %}
 
 | Lab | Overview |
-|----------------|--------|{% for post in dvc_airflow_posts reversed %}
+|----------------|--------|{% for post in dvc_posts reversed %}
 | [{{ post.title }}]({{ post.url }})|{{post.overview}} |{% endfor %}
+
+## Airflow
+
+{% assign airflow_posts = site.posts | where: "categories","airflow" %}
+
+| Lab | Overview |
+|----------------|--------|{% for post in airflow_posts reversed %}
+| [{{ post.title }}]({{ post.url }})|{{post.overview}} |{% endfor %}
+
+
 
 ## Data Labeling
 

@@ -12,12 +12,12 @@ overview: Snorkel - Slicing Functions(SF)
 
 ### Prerequisites
 
-1. [Data Labeling Lab-1]({% link _posts/2023-05-01-Data-Labeling_1.md %})
-2. [Data Labeling Lab-2]({% link _posts/2023-05-02-Data-Labeling_2.md %})
+1. [Data Labeling Lab-1]({% link _posts/2023-06-01-Data-Labeling_1.md %})
+2. [Data Labeling Lab-2]({% link _posts/2023-06-02-Data-Labeling_2.md %})
 
 ## Setting up the lab
 
-1. Setup the lab as described in [Data Labeling Lab-1]({% link _posts/2023-05-01-Data-Labeling_1.md %}).
+1. Setup the lab as described in [Data Labeling Lab-1]({% link _posts/2023-06-01-Data-Labeling_1.md %}).
 2. Open `03_spam_data_slicing_tutorial.ipynb`.
 3. Select the correct virtual environment in your jupyter-lab and follow through.
 

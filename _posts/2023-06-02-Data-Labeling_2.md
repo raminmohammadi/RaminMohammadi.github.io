@@ -12,11 +12,11 @@ overview: Snorkel - Transformation Functions(TF)
 
 ### Prerequisites
 
-1. [Data Labeling Lab-1]({% link _posts/2023-05-01-Data-Labeling_1.md %})
+1. [Data Labeling Lab-1]({% link _posts/2023-06-01-Data-Labeling_1.md %})
 
 ## Setting up the lab
 
-1. Setup the lab as described in [Data Labeling Lab-1]({% link _posts/2023-05-01-Data-Labeling_1.md %}).
+1. Setup the lab as described in [Data Labeling Lab-1]({% link _posts/2023-06-01-Data-Labeling_1.md %}).
 2. Open `02_spam_data_augmentation_tutorial.ipynb`.
 3. Select the correct virtual environment in your jupyter-lab and follow through.
 
