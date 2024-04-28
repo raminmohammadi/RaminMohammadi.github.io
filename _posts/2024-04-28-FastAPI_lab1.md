@@ -12,7 +12,7 @@ overview: "FastAPI"
 
 ## Getting Started
 
-1. **Fork this Repository**: Click the "Fork" button at the top right of this [repository](https://github.com/raminmohammadi/MLOps/) to create your own copy.
+1. **Fork this Repository**: Click the "Fork" button at the top right of this [**repository**](https://github.com/raminmohammadi/MLOps/) to create your own copy.
 3. **Clone Your Repository**:
    ```bash
    git clone https://github.com/your-username/your-forked-repo.git
@@ -51,6 +51,7 @@ All the functions which should be used as API should be prefixed by `@app.get("/
 Using `async` in FastAPI allows for non-blocking operations, enabling the server to handle other requests while waiting for I/O tasks, like database queries or model loading, to complete. This leads to improved concurrency and resource utilization, enhancing the application's ability to manage multiple simultaneous requests efficiently
 
 ## Data Models in FASTAPI
+
 ```Python
 class IrisData(BaseModel):
     petal_length: float
@@ -58,16 +59,20 @@ class IrisData(BaseModel):
     petal_width:float
     sepal_width:float
 ```
+
 The `IrisData` class is a [Pydantic model](https://docs.pydantic.dev/latest/concepts/models/) which defines the expected structure of the data for a request body. When you use it as a type annotation for a route operation parameter, FastAPI will perform the following actions:
 
 - Request Body Reading: FastAPI will read the request body as JSON.
 - Data Conversion: It will convert the corresponding types, if necessary.
 - Data Validation: It will validate the data. If the data is invalid, it will return a 422 Unprocessable Entity error response with details about what was incorrect.
 
+
 ```Python
 class IrisResponse(BaseModel):
     response:int
 ```
+
+
 The `IrisResponse` class is another Pydantic model that defines the structure of the response data for an endpoint. When you specify response_model=IrisResponse in a route operation, it tells FastAPI to:
 
 - Serialize the Output: Convert the output data to JSON format according to the IrisResponse model.
@@ -94,6 +99,7 @@ Error handling in FastAPI can be effectively managed using the HTTPException cla
 - Instantiation: The HTTPException class is instantiated with at least two arguments: status_code and detail. The status_code argument is an integer that represents the HTTP status code (e.g., 404 for Not Found, 400 for Bad Request). The detail argument is a string or any JSON-encodable object that describes the error.
 - Response: When an HTTPException is raised, FastAPI sends an HTTP response with the status code specified. The detail provided in the HTTPException is sent as the body of the response in JSON format.
 
+
 ```Python
 from fastapi import FastAPI, HTTPException
 
@@ -106,9 +112,13 @@ async def read_item(item_id: int):
         raise HTTPException(status_code=404, detail=f"Item with ID {item_id} not found")
     return item
 ```
+
+
 In this example, `get_item_by_id` is a function that retrieves an item based on its ID. If no item with the given ID is found, an HTTPException with a 404 Not Found status code is raised, and the detail message is customized to include the ID of the item that was not found.
 
 FastAPI will catch this exception and return a response with a 404 status code and a JSON body like this:
+
+
 ```JSON
 {
     "detail": "Item with ID 1 not found"
