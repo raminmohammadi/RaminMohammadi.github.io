@@ -13,7 +13,7 @@ overview: "Flask - API"
 
 ## Getting Started
 
-1. **Fork this Repository**: Click the "Fork" button at the top right of this [repository](https://github.com/raminmohammadi/MLOps/) to create your own copy.
+1. **Fork this Repository**: Click the "Fork" button at the top right of this [**repository**](https://github.com/raminmohammadi/MLOps/) to create your own copy.
 3. **Clone Your Repository**:
    ```bash
    git clone https://github.com/your-username/your-forked-repo.git
