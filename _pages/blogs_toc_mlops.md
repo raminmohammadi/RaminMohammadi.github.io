@@ -80,7 +80,7 @@ course: MLOps
 
 ## FLASK
 
-{% assign docker_posts = site.posts | where: "categories","flask" %}
+{% assign flask_posts = site.posts | where: "categories","flask" %}
 | Lab | Overview |
 |----------------|--------|{% for post in flask_posts reserved %}
 | [{{ post.title }}]({{ post.url }})|{{post.overview}} |{% endfor %} 
@@ -88,7 +88,7 @@ course: MLOps
 
 ## FASTAPI
 
-{% assign docker_posts = site.posts | where: "categories","fastapi" %}
+{% assign fastapi_posts = site.posts | where: "categories","fastapi" %}
 | Lab | Overview |
 |----------------|--------|{% for post in fastapi_posts reserved %}
 | [{{ post.title }}]({{ post.url }})|{{post.overview}} |{% endfor %} 
