@@ -16,6 +16,7 @@ course: MLOps
 - [Airflow](#airflow)
 - [Data Labeling](#data-labeling)
 - [Docker](#docker)
+- [FLASK](#flask)
 
 ## MLOps
 
@@ -73,4 +74,12 @@ course: MLOps
 {% assign docker_posts = site.posts | where: "categories","docker" %}
 | Lab | Overview |
 |----------------|--------|{% for post in docker_posts reserved %}
+| [{{ post.title }}]({{ post.url }})|{{post.overview}} |{% endfor %} 
+
+
+## FLASK
+
+{% assign docker_posts = site.posts | where: "categories","flask" %}
+| Lab | Overview |
+|----------------|--------|{% for post in flask_posts reserved %}
 | [{{ post.title }}]({{ post.url }})|{{post.overview}} |{% endfor %} 
