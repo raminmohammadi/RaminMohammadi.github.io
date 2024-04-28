@@ -17,6 +17,7 @@ course: MLOps
 - [Data Labeling](#data-labeling)
 - [Docker](#docker)
 - [FLASK](#flask)
+- [FASTAPI](#fastapi)
 
 ## MLOps
 
@@ -82,4 +83,12 @@ course: MLOps
 {% assign docker_posts = site.posts | where: "categories","flask" %}
 | Lab | Overview |
 |----------------|--------|{% for post in flask_posts reserved %}
+| [{{ post.title }}]({{ post.url }})|{{post.overview}} |{% endfor %} 
+
+
+## FASTAPI
+
+{% assign docker_posts = site.posts | where: "categories","fastapi" %}
+| Lab | Overview |
+|----------------|--------|{% for post in fastapi_posts reserved %}
 | [{{ post.title }}]({{ post.url }})|{{post.overview}} |{% endfor %} 
