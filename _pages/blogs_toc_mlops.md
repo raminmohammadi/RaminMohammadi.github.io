@@ -8,12 +8,14 @@ course: MLOps
 
 ## Table of contents
 
-1. [MLOps - Concepts & Tools](#mlops)
-2. [GitHub Labs](#github)
-3. [MLflow Labs](#mlflow)
-4. [DVC Labs](#dvc)
-5. [Airflow Labs](#airflow)
-6. [Data Labeling Labs](#data-labeling)
+- [Table of contents](#table-of-contents)
+- [MLOps](#mlops)
+- [GitHub](#github)
+- [MLflow](#mlflow)
+- [DVC](#dvc)
+- [Airflow](#airflow)
+- [Data Labeling](#data-labeling)
+- [Docker](#docker)
 
 ## MLOps
 
@@ -64,3 +66,11 @@ course: MLOps
 | Lab | Overview |
 |----------------|--------|{% for post in data_labeling_posts reversed %}
 | [{{ post.title }}]({{ post.url }})|{{post.overview}} |{% endfor %}
+
+
+## Docker
+
+{% assign docker_posts = site.posts | where: "categories","docker" %}
+| Lab | Overview |
+|----------------|--------|{% for post in docker_posts reserved %}
+| [{{ post.title }}]({{ post.url }})|{{post.overview}} |{% endfor %} 
