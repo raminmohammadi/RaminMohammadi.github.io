@@ -14,11 +14,13 @@ overview: "FastAPI"
 
 1. **Fork this Repository**: Click the "Fork" button at the top right of this [**repository**](https://github.com/raminmohammadi/MLOps/) to create your own copy.
 3. **Clone Your Repository**:
+
    ```bash
    git clone https://github.com/your-username/your-forked-repo.git
    cd your-forked-repo
 
    ```
+
 4. GitHub account
 5. Basic knowledge of Python and machine learning
 6. Git command-line tool (optional)
@@ -35,6 +37,7 @@ You will need to install fastapi and uvicorn to proceed ahead
 The instance of FASTAPI class can be defined as `app = FASTAPI()` When you run a FastAPI application, you often pass this app instance to an ASGI server uvicorn. The server then uses the app instance to handle incoming web requests and send responses based on the routes and logic you’ve defined in your FastAPI application.
 
 To run a FASTAPI application
+
 ```
 uvicorn myapp:app --reload
 ```
@@ -52,12 +55,16 @@ Using `async` in FastAPI allows for non-blocking operations, enabling the server
 
 ## Data Models in FASTAPI
 
+
+
 ```Python
+
 class IrisData(BaseModel):
     petal_length: float
     sepal_length:float
     petal_width:float
     sepal_width:float
+
 ```
 
 The `IrisData` class is a [Pydantic model](https://docs.pydantic.dev/latest/concepts/models/) which defines the expected structure of the data for a request body. When you use it as a type annotation for a route operation parameter, FastAPI will perform the following actions:
@@ -68,8 +75,10 @@ The `IrisData` class is a [Pydantic model](https://docs.pydantic.dev/latest/conc
 
 
 ```Python
+
 class IrisResponse(BaseModel):
     response:int
+
 ```
 
 
@@ -100,7 +109,9 @@ Error handling in FastAPI can be effectively managed using the HTTPException cla
 - Response: When an HTTPException is raised, FastAPI sends an HTTP response with the status code specified. The detail provided in the HTTPException is sent as the body of the response in JSON format.
 
 
+
 ```Python
+
 from fastapi import FastAPI, HTTPException
 
 app = FastAPI()
@@ -111,6 +122,7 @@ async def read_item(item_id: int):
     if item is None:
         raise HTTPException(status_code=404, detail=f"Item with ID {item_id} not found")
     return item
+
 ```
 
 
@@ -120,9 +132,11 @@ FastAPI will catch this exception and return a response with a 404 status code a
 
 
 ```JSON
+
 {
     "detail": "Item with ID 1 not found"
 }
+
 ```
 
 For more information on how to handle errors in FASTAPI refer to this [documentation](https://fastapi.tiangolo.com/tutorial/handling-errors/)
