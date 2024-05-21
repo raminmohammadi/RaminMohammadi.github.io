@@ -11,3 +11,9 @@ featured_image: /images/demo/contact.jpg
 | Project | Team |
 |----------------|--------|{% for project in projects reversed %}
 | [{{ project.title }}]({{ project.url }})|{{project.description}} |{% endfor %}
+
+{% assign projects = site.projects | where: "semester","24_spring"  | where: 'course', 'MLOps' %}
+
+| Project | Team |
+|----------------|--------|{% for project in projects reversed %}
+| [{{ project.title }}]({{ project.url }})|{{project.description}} |{% endfor %}

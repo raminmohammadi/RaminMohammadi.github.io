@@ -3,7 +3,7 @@ featured_image: '/images/Projects/mlops/23_fall/group_7/thumbnail.webp'
 ---
 
 ### Outline:
-1. [Introduction]({% link _projects/2024-01-01-f23-group-7.md %} ){:target="_blank"}<br>
+1. [Introduction]({% link _projects/mlops/2024-01-01-f23-group-7.md %} ){:target="_blank"}<br>
 2. [Scoping]( {% link _projects_mlops/23_fall/group_7/scoping.md %} ){:target="_blank"}<br>
 3. [Data]( {% link _projects_mlops/23_fall/group_7/data.md %} ){:target="_blank"}<br>
 4. [Modeling]( {% link _projects_mlops/23_fall/group_7/modeling.md %} ){:target="_blank"}<br>
