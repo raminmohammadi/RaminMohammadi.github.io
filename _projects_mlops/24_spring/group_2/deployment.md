@@ -1,4 +1,4 @@
----
+24_spring---
 featured_image: '/images/Projects/mlops/23_fall/group_7/thumbnail.webp'
 ---
 
@@ -51,7 +51,7 @@ This table provides a detailed overview of each workflow file in the `.github/wo
 - **Activity**: Validates the MLOps bundle configurations, ensuring all integration settings conform to required standards.
 - **Details**: Checks configurations across all branches involved but primarily focuses on updates to the main branch. Includes validation steps that check both staging and production configurations to ensure consistency and readiness before deployment.
 
-![image](/images/Projects/mlops/24_spring/group_2/image_7.png)
+![image](/images/Projects/mlops/24_spring/group_2/image_7.webp)
 
 ## Testing:
 
@@ -60,7 +60,7 @@ This table provides a detailed overview of each workflow file in the `.github/wo
 - **Activity**: Runs unit and integration tests to validate code integrity and integration readiness, ensuring the codebase is reliable and functional.
 - **Details**: Typically runs in a test or staging environment within Databricks to validate the code before it moves to the actual staging process.
   
-![image](/images/Projects/mlops/24_spring/group_2/image_8.png)
+![image](/images/Projects/mlops/24_spring/group_2/image_8.webp)
 
 ## Dev to Staging:
 
@@ -81,7 +81,7 @@ This table provides a detailed overview of each workflow file in the `.github/wo
 - **Activity**: Manages the deployment of project bundles to the production environment.
 - **Details**: Validates the bundle for production settings and deploys it, followed by running the actual production-level tasks (such as data processing or model training tasks defined in the Databricks notebooks).
 
-![image](/images/Projects/mlops/24_spring/group_2/image_9.png)
+![image](/images/Projects/mlops/24_spring/group_2/image_9.webp)
 
 ## Model Training Workflows Overview
 
@@ -106,7 +106,7 @@ The `model_resources.yml` file specifies the configuration for various machine l
    - **Notebook**: `04_Deploy_model_as_endpoint.ipynb`
    - **Function**: Deploys the trained model as an accessible endpoint, once it passes the offline evaluation.
 
-![image](/images/Projects/mlops/24_spring/group_2/image_22.png)
+![image](/images/Projects/mlops/24_spring/group_2/image_22.webp)
 
 ## Integration with GitHub Workflows
 
@@ -115,7 +115,7 @@ The integration of these workflows within the CI/CD pipeline occurs as follows:
 - **Staging Deployment**: Upon successful tests and validation, the `LLMOps-bundle-cd-staging.yml` workflow deploys the bundle, including the trained models, to the staging environment. This stage is crucial for real-world testing under controlled conditions.
 - **Production Deployment**: Finally, the `LLMOps-bundle-cd-prod.yml` workflow handles the deployment of the models to the production environment after ensuring that all criteria are met in the staging review. This workflow also triggers the final model training jobs in production, processing new data as needed.
 
-![image](/images/Projects/mlops/24_spring/group_2/image_23.png)
+![image](/images/Projects/mlops/24_spring/group_2/image_23.webp)
 
 ## Data Flow and Permissions
 
