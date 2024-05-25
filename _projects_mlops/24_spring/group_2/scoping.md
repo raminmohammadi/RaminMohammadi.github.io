@@ -4,7 +4,7 @@ featured_image: '/images/Projects/mlops/24_spring/group_2/thumbnail.webp'
 
 ## Outline:
 
-1. [Introduction]({% link _projects/mlops/2024-01-01-s24-group-2.md %} ){:target="_blank"}<br>
+1. [Introduction]({% link _projects/mlops/2024-01-01-s24-group-2.md %} )<br>{:target="_blank"}<br>
 2. [Scoping]( {% link _projects_mlops/24_spring/group_2/scoping.md %} ){:target="_blank"}<br>
 3. [Setup on Azure & Databricks]( {% link _projects_mlops/24_spring/group_2/setup.md %} ){:target="_blank"}(Optional)<br>
 4. [Data]( {% link _projects_mlops/24_spring/group_2/data.md %} ){:target="_blank"}<br>
