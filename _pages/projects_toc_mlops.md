@@ -17,7 +17,7 @@ course: MLOps
 {% assign projects = site.projects | where: "semester","24_spring"  | where: 'course', 'MLOps' %}
 
 | Project | Team |
-|----------------|--------|{% for project in projects reversed %}
+|----------------|--------|{% for project in projects %}
 | [{{ project.title }}]({{ project.url }})|{{project.description}} |{% endfor %}
 
 ## Fall 2023
@@ -25,5 +25,5 @@ course: MLOps
 {% assign projects = site.projects | where: "semester","23_fall"  | where: 'course', 'MLOps' %}
 
 | Project | Team |
-|----------------|--------|{% for project in projects reversed %}
+|----------------|--------|{% for project in projects %}
 | [{{ project.title }}]({{ project.url }})|{{project.description}} |{% endfor %}
