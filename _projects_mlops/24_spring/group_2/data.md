@@ -1,5 +1,5 @@
 ---
-featured_image: '//images/Projects/mlops/24_spring/group_2/Projects/mlops/23_fall/group_7/thumbnail.webp'
+featured_image: '/images/Projects/mlops/24_spring/group_2/thumbnail.webp'
 ---
 
 ## Outline:
@@ -29,7 +29,7 @@ streamlit run app.py
 ### Step 2: File Upload Processing
 
 Upon receiving file uploads, the web application undertakes several key actions to ensure the data is correctly received and prepared for storage.
-- **Upload Endpoint**: Streamlit's st.file_uploader component can be used for file uploads. Users can upload PDF and ZIP files using this component, which accepts files through a simple drag-and-drop interface or a file dialog. 
+- **Upload Endpoint**: Streamlit's st.file_uploader component can be used for file uploads. Users can upload PDF and ZIP files using this component, which accepts files through a simple drag-and-drop interface or a file dialog.
 - **File Validation and Processing**:
   - Direct PDF uploads are stored in the "Ingested-PDFs" directory within the "pdfscontainer" container of Azure Blob Storage.
   - ZIP files undergo extraction, and each contained PDF is individually uploaded to the same Azure Blob Storage location, ensuring a structured and organized storage of the documents.
@@ -49,9 +49,6 @@ container_client = blob_service_client.get_container_client(azure_container_name
 ### Step 4: Handling Anomalies and Alerts
 
 In the data ingestion and processing pipeline, encountering anomalies and errors is inevitable. Addressing these issues proactively is crucial for maintaining the integrity and reliability of the pipeline. This section outlines the procedures for handling corrupted PDFs and unsupported file types.
-
-
-![image](/images/Projects/mlops/24_spring/group_2/image_29.webp)
 
 ## Corrupted PDFs
 
@@ -80,7 +77,7 @@ The integration with Auto Loader facilitates the efficient processing of newly a
 
 - **From ADLS Gen2 to Databricks**:
   - **Auto Loader Utilization**: Auto Loader is employed to incrementally and efficiently process new data files as they arrive in cloud storage, supporting a variety of file formats and storage solutions.
-  - **Ingesting PDF Documents**: Auto Loader is specifically configured to ingest PDF documents stored in Azure Blob Storage, transforming them into a Delta Lake table with paths and binary content. This enables the structured storage and accessibility of unstructured PDF data.
+- **Ingesting PDF Documents**: Auto Loader is specifically configured to ingest PDF documents stored in Azure Blob Storage, transforming them into a Delta Lake table with paths and binary content. This enables the structured storage and accessibility of unstructured PDF data.
 - **Key Components of Auto Loader Configuration**:
   - **Format Specification** ('cloudFiles'): Directs Spark to utilize Auto Loader for data ingestion.
   - **File Format** ('BINARYFILE'): Ensures PDF documents are ingested in binary form.
@@ -112,7 +109,6 @@ Data Version Control is integral to managing and tracking the evolution of data 
 - **Incremental Processing**: Efficiently processing only the changed data, reducing computational overhead and speeding up data pipelines.
 - **Data Evolution Analysis**: Understanding how data evolves over time by providing a detailed record of changes.
 - **Reconstructing Data States**: Offering the ability to reconstruct the state of the data at any point in time, which is essential for auditing, rollback, and historical analysis.
-
 
 ## Time Travel for Accessing Historical Data
 
@@ -152,21 +148,18 @@ def read_as_chunk(batch_iter: Iterator[pd.Series]) -> Iterator[pd.Series]:
 ### Step 7: Embedding Computation
 
 With textual data segmented, the next step is to compute embeddings for each chunk, transforming the textual data into a vector space.
-
 - **Foundation Model for generating Embedding**: Databricks BGE (Big Model Embeddings) Foundation Model endpoints are employed to generate embeddings, leveraging advanced AI models to convert text chunks into high-dimensional vectors.
 - **Embedding Storage**: The computed embeddings, along with the original text chunks, are stored in a Delta Lake table `databricks_pdf_documentation`. This structured format enables efficient vector search indexing and retrieval processes.
 
 ### Step 8: Vector Search Indexing
 
 The development of a Self-Managed Vector Search Index marks the next phase, enhancing the pipeline's ability to perform efficient similarity searches.
-
 - **Index Creation**: Using Databricks Vector Search, we configure and establish a Self-Managed Vector Search Index, key to enabling efficient similarity searches.
 - **Delta Lake Integration**: The Delta Lake table, now containing both text chunks and their embeddings, is synchronized with the Vector Search Index. This ensures updates to the data are reflected within the index, maintaining the accuracy and relevancy of search results.
 
 ### Step 9: Similarity Search and Retrieval
 
 The culmination of the pipeline is the use of computed embeddings to perform similarity searches against the Vector Search Index, identifying the most relevant documents or text chunks for specific queries.
-
 - **Query Processing**: Queries are transformed into embeddings, comparable to those of the stored documents, enabling the identification of semantically similar content.
 - **Security and Filtering**: The similarity search includes support for filters, allowing for content-sensitive retrieval based on criteria like user permissions or content relevance.
 

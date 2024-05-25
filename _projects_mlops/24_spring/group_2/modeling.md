@@ -1,5 +1,5 @@
 ---
-featured_image: '/images/Projects/mlops/23_fall/group_7/thumbnail.webp'
+featured_image: '/images/Projects/mlops/24_spring/group_2/thumbnail.webp'
 ---
 
 ## Outline:
@@ -12,8 +12,6 @@ featured_image: '/images/Projects/mlops/23_fall/group_7/thumbnail.webp'
 6. [Deployment]( {% link _projects_mlops/24_spring/group_2/deployment.md %} ){:target="_blank"}<br>
 7. [Monitoring]( {% link _projects_mlops/24_spring/group_2/monitoring.md %} ){:target="_blank"}<br>
 8. [Cost Analysis]( {% link _projects_mlops/24_spring/group_2/cost.md %} ){:target="_blank"}<br>
-
-## Advance Chatbot Chain
 
 ### Step 1: Exploring Langchains
 
@@ -29,25 +27,21 @@ To maintain the relevance and accuracy of the chatbot's responses, especially in
 
 ### Step 3: Conversation History to Prompt
 
-**History Integration**:
-- The chatbot incorporates a user's conversation history to provide context to the responses. By understanding the flow of the conversation and the topics discussed previously, the chatbot can generate more accurate and contextually appropriate responses. This method helps in maintaining continuity in conversations and avoids repetitive or conflicting information.
+**History Integration**: The chatbot incorporates a user's conversation history to provide context to the responses. By understanding the flow of the conversation and the topics discussed previously, the chatbot can generate more accurate and contextually appropriate responses. This method helps in maintaining continuity in conversations and avoids repetitive or conflicting information.
 
 ### Step 4: Improved Document Retrieval Based on Chat History
 
-**Document Vector Retrieval**:
-- This process enhances the retrieval of documents by using both the current query and the chat history as inputs. By considering the broader context provided by the conversation history, the system can perform more targeted searches, improving the relevance of the documents it retrieves and thus the quality of the information provided in responses.
+**Document Vector Retrieval**: This process enhances the retrieval of documents by using both the current query and the chat history as inputs. By considering the broader context provided by the conversation history, the system can perform more targeted searches, improving the relevance of the documents it retrieves and thus the quality of the information provided in responses.
 
 ### Step 5: Retrieving Docs from Vector Store
 
-**Top Document Retrieval**:
-- The system uses vector search technology to identify and retrieve documents that are most semantically similar to the query, based on cosine similarity metrics. This approach ensures that the documents fetched are highly relevant to the current user query, facilitating more accurate and informative answers.
+**Top Document Retrieval**: The system uses vector search technology to identify and retrieve documents that are most semantically similar to the query, based on cosine similarity metrics. This approach ensures that the documents fetched are highly relevant to the current user query, facilitating more accurate and informative answers.
+
 
 ### Step 6: Registering Model to Unity Catalog through MLflow
 
-**Experiment Run and Model Logging**:
-- This step involves using MLflow, a platform to manage the ML lifecycle, including experimentation, reproducibility, and deployment. Chatbot models are rigorously tested and their parameters logged during experiments. This detailed recording facilitates understanding model behavior and ensures that the model can be reliably reproduced and deployed.
+**Experiment Run and Model Logging**: This step involves using MLflow, a platform to manage the ML lifecycle, including experimentation, reproducibility, and deployment. Chatbot models are rigorously tested and their parameters logged during experiments. This detailed recording facilitates understanding model behavior and ensures that the model can be reliably reproduced and deployed.
 
 ### Step 7: Invoking the Model
 
-**Model Deployment and Invocation**:
-- Once the model is fully trained, tested, and registered, it is deployed into a production environment where it can be invoked to handle real-world interactions. The model can be loaded and executed to respond to user inputs, completing the cycle from development to deployment.
+**Model Deployment and Invocation**: Once the model is fully trained, tested, and registered, it is deployed into a production environment where it can be invoked to handle real-world interactions. The model can be loaded and executed to respond to user inputs, completing the cycle from development to deployment.

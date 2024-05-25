@@ -1,5 +1,5 @@
 ---
-featured_image: '/images/Projects/mlops/23_fall/group_7/thumbnail.webp'
+featured_image: '/images/Projects/mlops/24_spring/group_2/thumbnail.webp'
 ---
 
 ## Outline:
@@ -25,6 +25,7 @@ Register for an Azure account by visiting the sign-up page, providing your detai
 
 After logging into the Azure Portal, navigate to "Resource Groups" from the navigation pane or search bar. Create a new resource group by clicking "Add" or "Create resource group," specify its details such as name, subscription, and region, then review your settings and confirm by clicking "Create." This container will organize related resources for your Azure solutions.
 
+  
 ### Step 3: Creation of Storage Account (ADLS Gen2) inside the Resource Group
 
 Begin by selecting "Create a resource" in the Azure Portal, then search for and create a "Storage account". In the "Basics" tab, provide details such as subscription, resource group, and region. Enable "Hierarchical namespace" under the "Advanced" tab to select the account type suitable for ADLS Gen2. Review your configurations and click "Create". Once created, access your storage account in the Azure Portal to manage and configure settings.
@@ -37,16 +38,16 @@ To create a Databricks workspace, start by opening the Azure Marketplace from yo
 
 #### 4.1.  Setting Up Azure Blob Storage, Configuring Access, and Creating Metastore
 
-- Create Storage Infrastructure: Begin by creating a new ADLS Gen2 storage account in the Azure portal, enabling the hierarchical namespace as required. Within this storage account, create a container to hold the metadata and managed data for the Unity Catalog Metastore.
-- Set Up Access and Permissions: Establish an "Access Connector for Azure Databricks" in the Azure portal to serve as a managed identity for Databricks to access the storage container. Assign the 'Storage Blob Data Contributor' role to this connector using the IAM policy to ensure appropriate access levels.
-- Configure Azure Databricks Workspace and Metastore: Create an Azure Databricks workspace, selecting a premium tier for access controls, and log in. Navigate to create a Metastore by specifying the name, region, and path of the ADLS Gen2 container. Input the access container ID and link the Metastore to the necessary Databricks workspace by assigning and enabling it through the workspace settings.
+   - Create Storage Infrastructure: Begin by creating a new ADLS Gen2 storage account in the Azure portal, enabling the hierarchical namespace as required. Within this storage account, create a container to hold the metadata and managed data for the Unity Catalog Metastore.
+   - Set Up Access and Permissions: Establish an "Access Connector for Azure Databricks" in the Azure portal to serve as a managed identity for Databricks to access the storage container. Assign the 'Storage Blob Data Contributor' role to this connector using the IAM policy to ensure appropriate access levels.
+   - Configure Azure Databricks Workspace and Metastore: Create an Azure Databricks workspace, selecting a premium tier for access controls, and log in. Navigate to create a Metastore by specifying the name, region, and path of the ADLS Gen2 container. Input the access container ID and link the Metastore to the necessary Databricks workspace by assigning and enabling it through the workspace settings.
 
 ![image](/images/Projects/mlops/24_spring/group_2/image_3.webp)
 
 #### Step 4.2:  Creation of Catalogs and Schema and Assigning Permissions
 
-- Navigate and Set Up Catalog: Click on the Catalog icon to access the Catalog section. Select the desired catalog from the pane on the left. Then, click 'Create schema' in the detail pane to initiate the setup. Enter the schema's name and, optionally, add a comment to describe its purpose. If necessary, specify a managed storage location, ensuring you have the required 'CREATE MANAGED STORAGE' privilege on the designated external location.
-- Assign Permissions to Schema: Establish appropriate permissions for the newly created schema by referencing Unity Catalog privileges and securable objects guidelines, ensuring secure and proper access management. All necessary permissions have been established, allowing user to customize settings according to their organization's specific requirements.
+   - Navigate and Set Up Catalog: Click on the Catalog icon to access the Catalog section. Select the desired catalog from the pane on the left. Then, click 'Create schema' in the detail pane to initiate the setup. Enter the schema's name and, optionally, add a comment to describe its purpose. If necessary, specify a managed storage location, ensuring you have the required 'CREATE MANAGED STORAGE' privilege on the designated external location.
+   - Assign Permissions to Schema: Establish appropriate permissions for the newly created schema by referencing Unity Catalog privileges and securable objects guidelines, ensuring secure and proper access management. All necessary permissions have been established, allowing user to customize settings according to their organization's specific requirements.
 
 ![image](/images/Projects/mlops/24_spring/group_2/image_4.webp)
 
@@ -58,7 +59,7 @@ In the Databricks workspace, navigate to 'User Settings' via the sidebar, procee
 
 #### Step 4.4:  Installing libraries on Cluster
 
-We are manually installing all the required libraries while creating the cluster. Since, we can’t create a conda environment as it is not supported on [Azure](https://learn.microsoft.com/en-us/azure/databricks/archive/legacy/conda).
+We are manually installing all the required libraries while creating the cluster. Since, we can’t create a conda environment. As it is not supported on Azure[https://learn.microsoft.com/en-us/azure/databricks/archive/legacy/conda].
 
 ## Project Setup on Github Guide
 
