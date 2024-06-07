@@ -1,4 +1,5 @@
 ---
+title: 'Cost Analysis'
 featured_image: '/images/Projects/mlops/24_spring/group_2/thumbnail.webp'
 ---
 
