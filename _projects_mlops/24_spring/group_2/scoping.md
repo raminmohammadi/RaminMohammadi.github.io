@@ -13,8 +13,6 @@ featured_image: '/images/Projects/mlops/24_spring/group_2/thumbnail.webp'
 7. [Monitoring]( {% link _projects_mlops/24_spring/group_2/monitoring.md %} ){:target="_blank"}<br>
 8. [Cost Analysis]( {% link _projects_mlops/24_spring/group_2/cost.md %} ){:target="_blank"}<br>
 
-This project aims to develop and deploy an advanced chatbot using the Retrieval-Augmented Generation (RAG) model integrated with Azure Databiricks. The objective is to enhance the chatbot's ability to provide accurate, relevant, and contextually appropriate responses based on a dynamic knowledge base. Key technologies involved include Delta Tables for efficient data storage, MLFlow for lifecycle management of the RAG model, and serverless architectures to facilitate scalable deployments.
-
 ## 1. Dataset Information
 
   - **Data Ingestion:** Data will be sourced primarily from structured and unstructured documents, including PDFs and HTML pages, pertinent to user queries.
