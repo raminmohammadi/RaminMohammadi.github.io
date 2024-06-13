@@ -77,6 +77,7 @@ social_settings:
   soundcloud_url: ''
   spotify_url: ''
   bandcamp_url: ''
+  podcast_url: 'https://practicalai.fm/273'
   linkedin_url: 'https://www.linkedin.com/in/ramin-mohammadi-ml/'
 
 color_settings:
