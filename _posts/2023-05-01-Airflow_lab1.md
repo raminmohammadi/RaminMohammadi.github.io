@@ -2,12 +2,19 @@
 title: Airflow Lab-1
 subtitle: 
 date: 2024-02-19 00:00:00
-description: 
+description: lab credits - Dhanush, blog credits - Sai Akhilesh Ande
 featured_image: '/images/demo/demo-square.webp'
-author: 
+author: Sai Akhilesh Ande
 course: MLOps
 categories: airflow
 overview: "Docker, Airflow-DAGs"
+---
+
+#### **Note:**
+1. Currenlty **Airflow** (`pip install apache-airflow`) installation is only supported for Linux based systems(MacOS, Ubuntu, etc.). On Windows, you can install it via WSL2 or use (virtual box/vmware) to install a Linux OS.
+2. However, this specific lab uses **Airflow's Docker image** to run Airflow (without any installation). Hence, **this specific lab can be run on Windows, MacOS and Linux**.
+3. It is important to understand that this lab doesn't require any virtual environment or installation of packages. We will just just specify all required packages to Docker and it will install them in a container environment. That's the advantage of Docker.
+
 ---
 
 This lab revolves around two key modules:
@@ -33,14 +40,11 @@ The workflow involves the following steps:
 
 ## Setting up the lab
 
-**Note:** If you'd like to save your work files to GitHub, setup your working directory similar to [Github Lab-1]({% link _posts/2023-02-01-GitHub_lab1.md %}) and add your virtual environment and other necessary files to `.gitignore`. If you just want to run the lab locally, follow the below steps.
+**Note:** If you'd like to save your work files to GitHub, setup your working directory similar to [Github Lab-1]({% link _posts/2023-02-01-GitHub_lab1.md %}) and add necessary files to `.gitignore`. If you just want to run the lab locally, follow the below steps.
 
 1. Open the local **mlops_labs** directory using Visual Studio Code(VSC) and open a new terminal(**use cmd for windows**) inside VSC.
 2. Create a new working directory for this lab(e.g. **airflow_lab1**).
 3. Move into the working directory using the command **cd airflow_lab1** in your terminal.
-4. Get the **requirements.txt** file from [here](https://github.com/raminmohammadi/MLOps/blob/main/Labs/Airflow_Labs/Lab_1/requirements.txt).
-5. Create a virtual environment(e.g. **airflow_lab1_env**).
-6. Activate the environment and install the required packages using **pip install -r requirements.txt**.
 
 ## Getting the necessary files
 
@@ -53,8 +57,6 @@ Get the required files for this lab from the MLOps repo.
 ```
     mlops_labs/
     └── airflow_lab1/
-        ├── requirements.txt
-        ├── airflow_lab1_env/
         └── dags/
             ├── data/
             │   ├── file.csv  
@@ -62,7 +64,7 @@ Get the required files for this lab from the MLOps repo.
             ├── model/        
             ├── src/
             │   ├── __init__.py
-            │   └── lab2.py
+            │   └── lab.py
             └── airflow.py
 ```
 
@@ -86,34 +88,37 @@ We use Airflow to author workflows as directed acyclic graphs (DAGs) of tasks. T
 
 You should allocate at least 4GB memory for the Docker Engine (ideally 8GB).
 
-
 ## Running an Apache Airflow DAG Pipeline in Docker
 
-
-This guide provides detailed steps to set up and run an Apache Airflow Directed Acyclic Graph (DAG) pipeline within a Docker container using Docker Compose. The pipeline is named **your_python_dag**".
+This guide provides detailed steps to set up and run an Apache Airflow Directed Acyclic Graph (DAG) pipeline within a Docker container using Docker Compose. The pipeline is named **Airflow_Lab1**".
 
 1. Make sure `Docker Desktop` is up and running.
-2. In this lab, we will run `Airflow` inside `Docker`. Hence, we didn't list it in `requirements.txt` file and install using `pip`. Refer [Running Airflow in Docker](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html#running-airflow-in-docker).
-3. You can check if you have enough memory by running this command (optional)
+2. In this lab, we will run `Airflow` inside `Docker`. Hence, this lab doesn't have a `requirements.txt` file.
+3. You can check if you have enough memory by running this command (optional).
     ```bash
     docker run --rm "debian:bullseye-slim" bash -c 'numfmt --to iec $(echo $(($(getconf _PHYS_PAGES) * $(getconf PAGE_SIZE))))'
     ```
-4. Fetch [docker-compose.yaml](https://airflow.apache.org/docs/apache-airflow/2.5.1/docker-compose.yaml).
+4. Fetch `docker-compose.yaml`.
     ```bash
     # mac and linux users 
-    curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.8.1/docker-compose.yaml'
+    curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.9.2/docker-compose.yaml'
 
     # windows users 
-    curl -o docker-compose.yaml https://airflow.apache.org/docs/apache-airflow/2.8.1/docker-compose.yaml
+    curl -o docker-compose.yaml https://airflow.apache.org/docs/apache-airflow/2.9.2/docker-compose.yaml
     ```
-5. Setting the right Airflow user. This will create a `.env` file.
+5. Create required directories.
     ```bash
     # mac and linux users
-    mkdir -p ./logs ./plugins ./working_data
+    mkdir -p ./dags ./logs ./plugins ./config
     
-    # windows users
-    mkdir logs plugins working_data
+    # windows users (if using cmd)
+    mkdir dags logs plugins config
 
+    # windows users (if using powershell)
+    mkdir dags, logs, plugins, config
+    ```
+5. Setting the right Airflow user. This will create a `.env` file.
+    ```
     echo -e "AIRFLOW_UID=$(id -u)" > .env
     ```
     - If you are on windows platform, replace the content of `.env` file with the following.
@@ -150,7 +155,7 @@ This guide provides detailed steps to set up and run an Apache Airflow Directed 
     ```
 9. Enable port forwarding. Windows users click "allow" in the pop-up window.
 10. Visit `localhost:8080` and login with credentials set on step `2.d`.
-11. You will see your dag(**your_python_dag**) as shown in the below image. For this lab, you are already given a dag script - `dags/airflow.py`.
+11. You will see your dag(**Airflow_Lab1**) as shown in the below image. For this lab, you are already given a dag script - `dags/airflow.py`.
     <img src="/images/Posts/MLOps/airflow_lab1/image_1.webp" width="100%">
     You can create more dags with similar scripts.
     - BashOperator
@@ -164,7 +169,7 @@ This guide provides detailed steps to set up and run an Apache Airflow Directed 
     - Monitor the progress of the DAG in the Airflow web interface. You can view logs, task status, and task execution details in airflow UI and also in `logs` directory.
     - Once the DAG completes its execution, check any output or artifacts produced by your functions and tasks.
 
-13. Click on your dag(**your_python_dag**) -> **Graph** tab -> click on the last rectangle box in the graph(**load_model_task**) -> **Logs** tab. You will find the result of the workflow i.e., **optimal number of clusters** as shown in the below image.
+13. Click on your dag(**Airflow_Lab1**) -> **Graph** tab -> click on the last rectangle box in the graph(**load_model_task**) -> **Logs** tab. You will find the result of the workflow i.e., **optimal number of clusters** as shown in the below image.
     <img src="/images/Posts/MLOps/airflow_lab1/image_2.webp" width="100%">
 13. Explore UI and add user `Security > List Users`. (optional)
 14. To stop Airflow, we have to stop the docker containers. For this, we have to open a new terminal(cmd for windows), activate the virtual enviroment and run the following command.
@@ -177,24 +182,21 @@ This guide provides detailed steps to set up and run an Apache Airflow Directed 
 ```
     mlops_labs/
     └── airflow_lab1/
-        ├── airflow_lab1_env/
         ├── config/
         ├── dags/
-        │   ├── airflow.py # Your DAG script
-        │   ├── data/ # Directory for data/
-        │   │   ├── file.csv
+        │   ├── data/
+        │   │   ├── file.csv  
         │   │   └── test.csv
+        │   ├── model/
+        │   │   └── model.sav
         │   ├── src/
         │   │   ├── __init__.py
-        │   │   └── lab2.py # Data processing and modeling functions
-        │   └── model/
-        │       └── model2.sav
+        │   │   └── lab.py #
+        │   └── airflow.py # Your DAG script
         ├── logs/
         ├── plugins/
-        ├── working_data/
         ├── .env
-        ├── docker-compose.yaml
-        └── requirements.txt
+        └── docker-compose.yaml
 ```
 
 **Note:** If your working in a git repo, make sure to add `__pycache__` to `.gitignore`.
@@ -205,7 +207,7 @@ This part of the lab provides a detailed explanation of the **dags/airflow.py** 
 
 #### Script Overview
 
-The script defines an Airflow DAG named `your_python_dag` that consists of several tasks. Each task represents a specific operation in a data processing and modeling workflow. The script imports necessary libraries, sets default arguments for the DAG, creates PythonOperators for each task, defines task dependencies, and provides command-line interaction with the DAG.
+The script defines an Airflow DAG named `Airflow_Lab1` that consists of several tasks. Each task represents a specific operation in a data processing and modeling workflow. The script imports necessary libraries, sets default arguments for the DAG, creates PythonOperators for each task, defines task dependencies, and provides command-line interaction with the DAG.
 
 #### Importing Libraries
 
@@ -214,11 +216,11 @@ The script defines an Airflow DAG named `your_python_dag` that consists of sever
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 from datetime import datetime, timedelta
-from src.lab2 import load_data, data_preprocessing, build_save_model, load_model_elbow
+from src.lab import load_data, data_preprocessing, build_save_model, load_model_elbow
 from airflow import configuration as conf
 ```
 
-The script starts by importing the required libraries and modules. Notable imports include the `DAG` and `PythonOperator` classes from the `airflow` package, datetime manipulation functions, and custom functions from the `src.lab2` module.
+The script starts by importing the required libraries and modules. Notable imports include the `DAG` and `PythonOperator` classes from the `airflow` package, datetime manipulation functions, and custom functions from the `src.lab` module.
 
 #### Enable pickle support for XCom, allowing data to be passed between tasks
 
@@ -239,11 +241,11 @@ default_args = {
 
 Default arguments for the DAG are specified in a dictionary named default_args. These arguments include the DAG owner's name, the start date, the number of retries, and the retry delay in case of task failure.
 
-#### Create a DAG instance named 'your_python_dag' with the defined default arguments
+#### Create a DAG instance named 'Airflow_Lab1' with the defined default arguments
 
 ``` python 
 dag = DAG(
-    'your_python_dag',
+    'Airflow_Lab1',
     default_args=default_args,
     description='Your Python DAG Description',
     schedule_interval=None,  # Set the schedule interval or use None for manual triggering
@@ -251,7 +253,7 @@ dag = DAG(
 )
 ```
 
-Here, the DAG object is created with the name `your_python_dag` and the specified default arguments. The description provides a brief description of the DAG, and `schedule_interval` defines the execution schedule (in this case, it's set to None for manual triggering). `catchup` is set to False to prevent backfilling of missed runs.
+Here, the DAG object is created with the name `Airflow_Lab1` and the specified default arguments. The description provides a brief description of the DAG, and `schedule_interval` defines the execution schedule (in this case, it's set to None for manual triggering). `catchup` is set to False to prevent backfilling of missed runs.
 
 #### Task to load data, calls the 'load_data' Python function
 
@@ -282,7 +284,7 @@ The `data_preprocessing_task` depends on the `load_data_task` and calls the `dat
 build_save_model_task = PythonOperator(
     task_id='build_save_model_task',
     python_callable=build_save_model,
-    op_args=[data_preprocessing_task.output, "model2.sav"],
+    op_args=[data_preprocessing_task.output, "model.sav"],
     provide_context=True,
     dag=dag,
 )
@@ -295,7 +297,7 @@ The `build_save_model_task` depends on the `data_preprocessing_task` and calls t
 load_model_task = PythonOperator(
     task_id='load_model_task',
     python_callable=load_model_elbow,
-    op_args=["model2.sav", build_save_model_task.output],
+    op_args=["model.sav", build_save_model_task.output],
     dag=dag,
 )
 ```
