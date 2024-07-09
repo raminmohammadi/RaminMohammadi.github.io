@@ -2,7 +2,7 @@
 title: Airflow Lab-1
 subtitle: 
 date: 2024-02-19 00:00:00
-description: lab credits - Dhanush, blog credits - Sai Akhilesh Ande
+description: 
 featured_image: '/images/demo/demo-square.webp'
 author: Sai Akhilesh Ande
 course: MLOps
@@ -10,14 +10,17 @@ categories: airflow
 overview: "Docker, Airflow-DAGs"
 ---
 
+- Lab Credits: [Dhanush Kumar Shankar]( {% link _tas/Dhanush Kumar Shankar.md %} )
+- Blog Credits: [Sai Akhilesh Ande]( {% link _tas/Sai Akhilesh Ande.md %} )
+
+---
+
 #### **Note:**
 1. Currenlty **Airflow** (`pip install apache-airflow`) installation is only supported for Linux based systems(MacOS, Ubuntu, etc.). On Windows, you can install it via WSL2 or use (virtual box/vmware) to install a Linux OS.
 2. However, this specific lab uses **Airflow's Docker image** to run Airflow (without any installation). Hence, **this specific lab can be run on Windows, MacOS and Linux**.
 3. It is important to understand that this lab doesn't require any virtual environment or installation of packages. We will just just specify all required packages to Docker and it will install them in a container environment. That's the advantage of Docker.
 
----
-
-This lab revolves around two key modules:
+#### This lab revolves around two key modules:
 1. **Docker:** A platform for developing, shipping, and running applications in containers.
 2. **Airflow:** A platform to programmatically author, schedule, and monitor workflows.
 
