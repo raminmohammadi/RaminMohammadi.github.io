@@ -44,6 +44,9 @@ The workflow involves the following steps:
 4. Create a virtual environment(e.g. **fastapi_lab1_env**).
 5. Activate the environment and install the required packages using `pip install -r requirements.txt`.
 
+**Note:**
+- **fastapi[all]** in **requirements.txt** will install optional additional dependencies for fastapi which contains **uvicorn** too. 
+
 ## Project structure
 
 ```
