@@ -78,7 +78,7 @@ mlops_labs
     ```
 3. To serve the trained model as an API, run:
     ```bash
-    uvicorn app:main --reload
+    uvicorn main:app --reload
     ```
 4. Testing endpoints - to view the documentation of your api model you can use [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) (or) [http://localhost:8000/docs](http://localhost:8000/docs) after you run you run your FastAPI app.
     
