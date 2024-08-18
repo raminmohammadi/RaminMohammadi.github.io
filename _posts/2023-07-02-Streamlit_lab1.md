@@ -71,7 +71,7 @@ mlops_labs/
    
    The server will be launched and running at [http://localhost:8501](http://localhost:8501)
    
-   ![dashboard](/images/Posts/MLOps/Streamlit_lab1/dashboard_offline.png)
+   ![dashboard](/images/Posts/MLOps/Streamlit_lab1/dashboard_offline.webp)
 
     
 3. We see that the Backend is **offline**. This is because, we only launched the front-end interface using Streamlit. To launch the backend, we need to run FastAPI instance as we did in the FastAPI lab1. For this, open a new terminal in VSC.
@@ -92,11 +92,11 @@ mlops_labs/
    uvicorn main:app --reload
    ```
 6. Now, refresh the Streamlit webpage. You will notice that the backend is online.
-   ![dashboard](/images/Posts/MLOps/Streamlit_lab1/dashboard_online.png)
+   ![dashboard](/images/Posts/MLOps/Streamlit_lab1/dashboard_online.webp)
 7. Now, Click on "Browse files" and upload the test.json file located at **streamlit_lab1/data/test.json**. You will see the preview of the json file once uploaded.
-   ![dashboard](/images/Posts/MLOps/Streamlit_lab1/dashboard_preview.png)
+   ![dashboard](/images/Posts/MLOps/Streamlit_lab1/dashboard_preview.webp)
 8. Click on **predict** button. The model will predict on the test datapoint in `test.json` and returns the name of the Iris flower class it belongs to.
-   ![dashboard](/images/Posts/MLOps/Streamlit_lab1/dashboard_predict.png) 
+   ![dashboard](/images/Posts/MLOps/Streamlit_lab1/dashboard_predict.webp) 
 
 ## Streamlit Introduction
 
@@ -113,7 +113,7 @@ streamlit hello
 
 This will start a server on default port `8501` with an interactive dashboard. The hello world streamlit dashboard showcases some intresting usecases, so don't forget to click around and explore further.
 
-![](/images/Posts/MLOps/Streamlit_lab1/hello_world_streamlit.png)
+![](/images/Posts/MLOps/Streamlit_lab1/hello_world_streamlit.webp)
 
 ## Building the UI Step-by-step
 When creating a dashboard, the initial phase involves determining its layout structure. For this particular demonstration, we will incorporate a side panel and a primary body section. The side panel will serve as a navigation tool, enabling us to access various pages within the application, monitor the health of the backend system, and input test features for the model.
@@ -209,13 +209,13 @@ with st.sidebar:
 The following components are used to show different colored boxes:
 
 1. [`st.success`](https://docs.streamlit.io/library/api-reference/status/st.success): shows a green box with message 
-   ![](/images/Posts/MLOps/Streamlit_lab1/st_sucess.png)
+   ![](/images/Posts/MLOps/Streamlit_lab1/st_sucess.webp)
 2. [`st.info`](https://docs.streamlit.io/library/api-reference/status/st.info): shows a blue box with message
-   ![](/images/Posts/MLOps/Streamlit_lab1/st_info.png)
+   ![](/images/Posts/MLOps/Streamlit_lab1/st_info.webp)
 3. [`st.warning`](https://docs.streamlit.io/library/api-reference/status/st.warning): shows a yellow box with message
-   ![](/images/Posts/MLOps/Streamlit_lab1/st_warning.png)
+   ![](/images/Posts/MLOps/Streamlit_lab1/st_warning.webp)
 4. [`st.error`](https://docs.streamlit.io/library/api-reference/status/st.error): shows a red box with message
-   ![](/images/Posts/MLOps/Streamlit_lab1/st_error.png)
+   ![](/images/Posts/MLOps/Streamlit_lab1/st_error.webp)
 
 To allow users to select the sepal length, sepal width, petal length, and petal width, we will create sliders for each of these features. The sliders will have a range from the minimum to the maximum value observed for the respective feature in the dataset. You can adjust the minimum and maximum bounds of the sliders as needed.
 
@@ -246,11 +246,11 @@ The above function accepts two arguments: a message to display to the user, and 
 
 Check the documentation for additional arguments [`st.file_uploader`](https://docs.streamlit.io/library/api-reference/widgets/st.file_uploader). 
 
-![](/images/Posts/MLOps/Streamlit_lab1/st_file_uploader.png)
+![](/images/Posts/MLOps/Streamlit_lab1/st_file_uploader.webp)
 
 It is important to note that since the permitted file type is set to json, if the user attempts to upload a file of any other format, such as CSV, Streamlit will display a warning message. In this scenario, the application will not proceed with sending a prediction request.
 
-![](/images/Posts/MLOps/Streamlit_lab1/st_file_uploader_not_permitted.png)
+![](/images/Posts/MLOps/Streamlit_lab1/st_file_uploader_not_permitted.webp)
 
 The [`st.json`](https://docs.streamlit.io/library/api-reference/data/st.json) widget provides a convenient way to preview the contents of the uploaded JSON file. This preview functionality allows the user to validate and ensure the information is correct before proceeding with the prediction process.
 
@@ -278,7 +278,7 @@ Finally, to finish the sidebar panel, let's add the most important element, i.e.
 predict_button = st.button('Predict')
 ```
 
-![](/images/Posts/MLOps/Streamlit_lab1/predict_button.png)
+![](/images/Posts/MLOps/Streamlit_lab1/predict_button.webp)
 
 [`st.button docs`](https://docs.streamlit.io/library/api-reference/widgets/st.button)
 
@@ -305,10 +305,10 @@ The [`st.empty`](https://docs.streamlit.io/library/api-reference/layout/st.empty
 In Streamlit, the [`st.spinner`](https://docs.streamlit.io/library/api-reference/status/st.spinner) and [`st.toast`](https://docs.streamlit.io/library/api-reference/status/st.toast) are two utility functions that will help us create better user experiences and provide feedback to users while their requests are being processed or completed.
 
 1. `st.spinner`: Function is used to display a spinning animation or progress indicator to the user.
-   ![](/images/Posts/MLOps/Streamlit_lab1/st_spinner.png)
+   ![](/images/Posts/MLOps/Streamlit_lab1/st_spinner.webp)
 
 2. `st.toast`: Function is used to display a temporary message or notification to the user
-   ![](/images/Posts/MLOps/Streamlit_lab1/st_toast.png)
+   ![](/images/Posts/MLOps/Streamlit_lab1/st_toast.webp)
 
 Finally, piecing together all this information gives
 
