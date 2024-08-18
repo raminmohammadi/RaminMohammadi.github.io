@@ -6,7 +6,7 @@ description:
 featured_image: '/images/demo/demo-square.webp'
 author: Sai Akhilesh Ande
 course: MLOps
-categories: fastapi
+categories: api
 overview: "FastAPI"
 ---
 
