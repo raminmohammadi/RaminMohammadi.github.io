@@ -8,7 +8,6 @@ course: MLOps
 
 ## Table of contents
 
-- [Table of contents](#table-of-contents)
 - [MLOps](#mlops)
 - [GitHub](#github)
 - [MLflow](#mlflow)
@@ -16,8 +15,7 @@ course: MLOps
 - [Airflow](#airflow)
 - [Data Labeling](#data-labeling)
 - [Docker](#docker)
-- [FLASK](#flask)
-- [FASTAPI](#fastapi)
+- [API Labs](#api-labs)
 
 ## MLOps
 
@@ -74,21 +72,13 @@ course: MLOps
 
 {% assign docker_posts = site.posts | where: "categories","docker" %}
 | Lab | Overview |
-|----------------|--------|{% for post in docker_posts reserved %}
+|----------------|--------|{% for post in docker_posts reversed %}
 | [{{ post.title }}]({{ post.url }})|{{post.overview}} |{% endfor %} 
 
 
-## FLASK
+## API Labs
 
-{% assign flask_posts = site.posts | where: "categories","flask" %}
+{% assign flask_posts = site.posts | where: "categories","api" %}
 | Lab | Overview |
-|----------------|--------|{% for post in flask_posts reserved %}
-| [{{ post.title }}]({{ post.url }})|{{post.overview}} |{% endfor %} 
-
-
-## FASTAPI
-
-{% assign fastapi_posts = site.posts | where: "categories","fastapi" %}
-| Lab | Overview |
-|----------------|--------|{% for post in fastapi_posts reserved %}
-| [{{ post.title }}]({{ post.url }})|{{post.overview}} |{% endfor %} 
+|----------------|--------|{% for post in flask_posts reversed %}
+| [{{ post.title }}]({{ post.url }})|{{post.overview}} |{% endfor %}
