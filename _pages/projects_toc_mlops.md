@@ -12,6 +12,14 @@ course: MLOps
 |--------|----------|{% for term in terms %}
 | [{{ term.title }}]({{ term.url }}) | {{ term.course }} |{% endfor %} -->
 
+## Fall 2024
+
+{% assign projects = site.projects | where: "semester","24_fall"  | where: 'course', 'MLOps' %}
+
+| Project | Team |
+|----------------|--------|{% for project in projects %}
+| [{{ project.title }}]({{ project.url }})|{{project.description}} |{% endfor %}
+
 ## Spring 2024
 
 {% assign projects = site.projects | where: "semester","24_spring"  | where: 'course', 'MLOps' %}
