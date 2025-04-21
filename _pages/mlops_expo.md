@@ -7,7 +7,7 @@ course: MLOps
 
 ## Spring 2025
 
-{% assign projects = site.projects_mlops_expo | where: "semester", "25_spring" | where: "course", "MLOps" %}
+{% assign expo projects = site.projects_mlops_expo | where: "semester", "25_spring" | where: "course", "MLOps" %}
 {% for project in projects %}
 {{ project.content }}
 {% endfor %}
@@ -16,7 +16,7 @@ course: MLOps
 
 ## Fall 2024
 
-{% assign projects = site.projects_mlops_expo | where: "semester", "24_fall" | where: "course", "MLOps" %}
+{% assign expo projects = site.projects_mlops_expo | where: "semester", "24_fall" | where: "course", "MLOps" %}
 {% for project in projects %}
 {{ project.content }}
 {% endfor %}
