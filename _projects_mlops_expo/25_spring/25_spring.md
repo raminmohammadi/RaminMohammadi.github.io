@@ -4,19 +4,21 @@ description: Top 5 teams selected in the Spring 2025 MLOps Expo
 semester: 25_spring
 course: MLOps
 layout: project
-permalink: /mlops/expo/spring-2025/
+permalink: _projects_mlops_expo/25_spring/25_spring.md
 ---
 
 ### 📅 Spring 2025 MLOps Expo  
 **Date:** April 21, 2025  
 **Participants:** 110 students in IE7305
 
+![Spring 2025 Expo](/images/expo/IMG_6817.jpg)
+
 **Top 5 Teams:**
 
-| Project                                           | Team         |
-|--------------------------------------------------|--------------|
-| Real-Time Health Monitoring with GCP             | Team Alpha   |
-| Smart Retail Pricing Engine                      | Team Beta    |
-| Disaster Response Forecasting Pipeline           | Team Gamma   |
-| Automated Contract Analyzer with Vertex AI       | Team Sigma   |
-| Energy Demand Forecasting for Microgrids         | Team Delta   |
+| Project                                           | Achievement         |
+|--------------------------------------------------|---------------------|
+| GradeAI (Educational Chatbot)                    | 1st place           |
+| LinkedIn Lens                                    | 2nd place           |
+| AuditPulse – A Continuous Financial Auditing System | 3rd place       |
+| Steam Select: A Steam Game Recommendation System | 4th place           |
+| Shopping Assistant – A Speaking Chatbot          | 5th place           |

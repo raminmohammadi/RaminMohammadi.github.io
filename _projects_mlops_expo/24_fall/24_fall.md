@@ -4,7 +4,7 @@ description: Top 3 teams selected in the Fall 2024 MLOps Expo
 semester: 24_fall
 course: MLOps
 layout: project
-permalink: /mlops/expo/fall-2024/
+permalink: _projects_mlops_expo/24_fall/24_fall.md
 ---
 
 ### 📅 Fall 2024 MLOps Expo  
@@ -13,8 +13,8 @@ permalink: /mlops/expo/fall-2024/
 
 **Top 3 Teams:**
 
-| Project                                           | Team         |
+| Project                                           | Achievement         |
 |--------------------------------------------------|--------------|
-| MLOps for Smart City Infrastructure              | Team Nova    |
-| Predictive Maintenance for Manufacturing         | Team Flux    |
-| Federated Learning in Healthcare                 | Team Quanta  |
+| Research computing rag chatbot              | 1st place   |
+| LLM-Powered course registration chatbot         | 2nd place    |
+| Healthcare Automation and AI-Enabled Patient Management System                 | 3rd place  |
