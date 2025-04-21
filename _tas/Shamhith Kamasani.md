@@ -8,9 +8,4 @@ layout: about
 
 <img src="/images/TAs/Shamhith Kamasani.webp" width="400" height="500" />
 
-I\'m a final year Data Analytics Engineering grad student, glad to be a
-Teaching Assistant under Prof. Ramin Mohammadi, Ph.D. I had a great time
-with 7300; I hope you all enjoy it too. I look forward to learning more
-while helping you. You can reach out to me on Teams or mail me anytime.
-I will assist you to my best. I\'m also down for writing blogs,
-basketball & poker.
+I am a final-year Data Analytics Engineering student, deeply interested in Generative AI, MLOps, and entrepreneurial ventures. I recently completed a co-op at FM Mutual Insurance as a Generative AI Engineer, where I focused on building an LLM application for Prescriptive Maintenance using tools like AWS Sagemaker, Bedrock, and Promptflow. I’m always open to new ideas and collaboration—brainstorming, startup ventures, or hands-on product development, feel free to reach out on Teams or by email (kamasani.s@northeastern.edu). I'm also down for photo walks, basketball, and poker.

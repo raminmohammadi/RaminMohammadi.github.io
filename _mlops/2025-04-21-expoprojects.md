@@ -1,38 +1,30 @@
 ---
 layout: default
-title: Projects
-description: Top Student Projects
-featured_image: /images/demo/home.jpg
+title: MLOps Expo Archive
+description: View top student projects from each semester's MLOps Expo
+featured_image: /images/mlops/expo_banner.jpg
 ---
 
 <section class="hero">
+  <div class="hero__image" style="background-image: url({{ page.featured_image | relative_url }})">
+    <div class="hero__overlay"></div>
+  </div>
 
-	<div class="hero__image" style="background-image: url({{ page.featured_image | relative_url }})">
-		<div class="hero__overlay"></div>
-	</div>
-
-	<div class="wrap">
-
-		<h1>Top Student Projects – MLOps Expo</h1>
-		<p>Click below to explore top-ranked student projects from each semester's MLOps Expo.</p>
-
-	</div>
-
+  <div class="wrap">
+    <h1>MLOps Expo Archive</h1>
+    <p>Explore top student teams and projects presented at each semester’s MLOps Expo.</p>
+  </div>
 </section>
 
 <section class="single">
+  <div class="wrap">
+    <article class="single-post">
 
-	<div class="wrap">
+    | Semester    | Expo Date         | View               |
+    |-------------|-------------------|--------------------|
+    | Spring 2025 | April 21, 2025    | [Go to Expo →](/mlops/expo/spring-2025) |
+    | Fall 2024   | December 18, 2024 | [Go to Expo →](/mlops/expo/fall-2024)   |
 
-		<article class="single-post">
-
-		| Semester | Date | Link |
-		|----------|------|------|
-		| Spring 2025 | April 21, 2025 | [View Projects](/mlops/expo/spring-2025) |
-		| Fall 2024 | December 18, 2024 | [View Projects](/mlops/expo/fall-2024) |
-
-		</article>
-
-	</div>
-
+    </article>
+  </div>
 </section>
