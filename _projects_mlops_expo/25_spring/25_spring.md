@@ -4,8 +4,9 @@ description: Top 5 teams selected in the Spring 2025 MLOps Expo
 semester: 25_spring
 course: MLOps
 layout: project
-permalink: _projects_mlops_expo/25_spring/25_spring.md
+permalink: /mlops/expo/spring-2025/
 ---
+
 
 ### 📅 Spring 2025 MLOps Expo  
 **Date:** April 21, 2025  

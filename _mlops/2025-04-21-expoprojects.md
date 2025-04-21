@@ -32,12 +32,12 @@ featured_image: /images/expo/IMG_6817.jpg
           <tr>
             <td>Spring 2025</td>
             <td>April 21, 2025</td>
-            <td><a href="/_projects_mlops_expo/25_spring/25_spring.md">Go to Expo →</a></td>
+            <td><a href="/mlops/expo/spring-2025/">Go to Expo →</a></td>
           </tr>
           <tr>
             <td>Fall 2024</td>
             <td>December 18, 2024</td>
-            <td><a href="/_projects_mlops_expo/24_fall/24_fall.md">Go to Expo →</a></td>
+            <td><a href="/mlops/expo/fall-2024/">Go to Expo →</a></td>
           </tr>
         </tbody>
       </table>
