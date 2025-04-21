@@ -2,7 +2,7 @@
 layout: default
 title: MLOps Expo
 description: View top student projects from each semester's MLOps Expo
-featured_image: /images/mlops/expo_banner.jpg
+featured_image: /images/expo/IMG_6817.jpg
 ---
 
 <section class="hero">
@@ -22,8 +22,8 @@ featured_image: /images/mlops/expo_banner.jpg
 
     | Semester    | Expo Date         | View               |
     |-------------|-------------------|--------------------|
-    | Spring 2025 | April 21, 2025    | [Go to Expo →](/mlops/expo/spring-2025) |
-    | Fall 2024   | December 18, 2024 | [Go to Expo →](/mlops/expo/fall-2024)   |
+    | Spring 2025 | April 21, 2025    | [Go to Expo →](/_projects_mlops_expo/25_spring) |
+    | Fall 2024   | December 18, 2024 | [Go to Expo →](/_projects_mlops_expo/24_fall)   |
 
     </article>
   </div>
