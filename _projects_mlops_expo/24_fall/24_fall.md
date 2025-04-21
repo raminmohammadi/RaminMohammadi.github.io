@@ -4,9 +4,8 @@ description: Top 3 teams selected in the Fall 2024 MLOps Expo
 semester: 24_fall
 course: MLOps
 layout: project
-permalink: /mlops/expo/fall-2024/
+permalink: _projects_mlops_expo/24_fall/
 ---
-
 
 ### 📅 Fall 2024 MLOps Expo  
 **Date:** December 18, 2024  
