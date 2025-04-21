@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MLOps Expo Archive
+title: MLOps Expo
 description: View top student projects from each semester's MLOps Expo
 featured_image: /images/mlops/expo_banner.jpg
 ---
