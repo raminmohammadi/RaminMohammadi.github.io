@@ -1,7 +1,7 @@
 ---
 title: MLOps Expo - Project Index
 description: Top student teams from each semester's MLOps Expo
-featured_image: /images/mlops/expo_banner.jpg
+featured_image: /images/expo/IMG_6817.jpg
 course: MLOps
 ---
 
