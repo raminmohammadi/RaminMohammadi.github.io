@@ -20,10 +20,27 @@ featured_image: /images/expo/IMG_6817.jpg
   <div class="wrap">
     <article class="single-post">
 
-    | Semester    | Expo Date         | View               |
-    |-------------|-------------------|--------------------|
-    | Spring 2025 | April 21, 2025    | [Go to Expo →](/_projects_mlops_expo/25_spring) |
-    | Fall 2024   | December 18, 2024 | [Go to Expo →](/_projects_mlops_expo/24_fall)   |
+      <table>
+        <thead>
+          <tr>
+            <th>Semester</th>
+            <th>Expo Date</th>
+            <th>View</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Spring 2025</td>
+            <td>April 21, 2025</td>
+            <td><a href="/_projects_mlops_expo/25_spring">Go to Expo →</a></td>
+          </tr>
+          <tr>
+            <td>Fall 2024</td>
+            <td>December 18, 2024</td>
+            <td><a href="/_projects_mlops_expo/24_fall">Go to Expo →</a></td>
+          </tr>
+        </tbody>
+      </table>
 
     </article>
   </div>
