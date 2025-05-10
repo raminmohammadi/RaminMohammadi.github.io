@@ -1,10 +1,12 @@
 ---
 title: Spring 2025 MLOps Expo Projects
 description: Top 5 teams selected in the Spring 2025 MLOps Expo
-semester: 25_spring
+semester: Spring 2025
 course: MLOps
 layout: project
 permalink: /mlops/expo/spring-2025/
+expo: true
+expo_date: April 21, 2025
 ---
 
 

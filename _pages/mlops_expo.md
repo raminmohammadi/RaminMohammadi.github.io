@@ -5,18 +5,8 @@ featured_image: /images/expo/IMG_6817.jpg
 course: MLOps
 ---
 
-## Spring 2025
+{% assign projects = site.projects | where: 'expo', true %}
 
-{% assign spring_projects = site.projects_mlops_expo | where: "semester", "25_spring" | where: "course", "MLOps" %}
-{% for project in spring_projects %}
-{{ project.content }}
-{% endfor %}
-
----
-
-## Fall 2024
-
-{% assign fall_projects = site.projects_mlops_expo | where: "semester", "24_fall" | where: "course", "MLOps" %}
-{% for project in fall_projects %}
-{{ project.content }}
-{% endfor %}
+| Semester | Expo Date | View
+|----------------|--------|{% for project in projects %}
+| {{project.semester}} |{{project.expo_date}} | [Go to Expo →]({{ project.url }}) |{% endfor %}
